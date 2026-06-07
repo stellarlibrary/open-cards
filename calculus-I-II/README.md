@@ -1,105 +1,733 @@
-# Calculus I / II Knowledge Cards
+# Calculus I/II Knowledge Cards Requirements Document
 
-A deck of bite-sized knowledge cards covering Calculus I and Calculus II.
-Each card lives in its own markdown file with a **Front** (prompt) and **Back** (explanation).
+## 1. Project Overview
 
-## Calculus I
+This project aims to design and produce a high-quality knowledge card system for college-level Calculus I and Calculus II students.
 
-### Precalculus Review
+The cards are intended to help students:
 
-- [Card 1: Function basics](01-precalculus-review/card-01-function-basics.md)
-- [Card 2: Common function families](01-precalculus-review/card-02-common-function-families.md)
-- [Card 3: Exponent rules](01-precalculus-review/card-03-exponent-rules.md)
-- [Card 4: Logarithm rules](01-precalculus-review/card-04-logarithm-rules.md)
+* Understand core calculus concepts deeply
+* Remember important equations and theorems
+* Build intuition behind formulas
+* Connect different calculus ideas
+* Review efficiently on mobile devices
+* Improve long-term learning, not only short-term exam performance
 
-### Limits and Continuity
+The cards should be suitable for teaching assistants, instructors, and students. They should be concise enough for one-screen mobile reading, but rich enough to support real conceptual learning.
 
-- [Card 5: Informal meaning of a limit](02-limits-and-continuity/card-05-informal-meaning-of-a-limit.md)
-- [Card 6: One-sided limits](02-limits-and-continuity/card-06-one-sided-limits.md)
-- [Card 7: Direct substitution](02-limits-and-continuity/card-07-direct-substitution.md)
-- [Card 8: Indeterminate form 0/0](02-limits-and-continuity/card-08-indeterminate-form-0-over-0.md)
-- [Card 9: Important trig limit](02-limits-and-continuity/card-09-important-trig-limit.md)
-- [Card 10: Continuity at a point](02-limits-and-continuity/card-10-continuity-at-a-point.md)
-- [Card 11: Types of discontinuities](02-limits-and-continuity/card-11-types-of-discontinuities.md)
-- [Card 12: Intermediate Value Theorem](02-limits-and-continuity/card-12-intermediate-value-theorem.md)
+The primary reference textbook is *Calculus: Early Transcendentals, 10th Edition*. Other standard calculus textbooks and high-quality online educational materials may also be referenced when useful.
 
-### Derivatives
+---
 
-- [Card 13: Derivative definition](03-derivatives/card-13-derivative-definition.md)
-- [Card 14: Derivative as a function](03-derivatives/card-14-derivative-as-a-function.md)
-- [Card 15: Power rule](03-derivatives/card-15-power-rule.md)
-- [Card 16: Constant and constant multiple rules](03-derivatives/card-16-constant-and-constant-multiple-rules.md)
-- [Card 17: Sum and difference rules](03-derivatives/card-17-sum-and-difference-rules.md)
-- [Card 18: Product rule](03-derivatives/card-18-product-rule.md)
-- [Card 19: Quotient rule](03-derivatives/card-19-quotient-rule.md)
-- [Card 20: Chain rule](03-derivatives/card-20-chain-rule.md)
-- [Card 21: Derivatives of exponential functions](03-derivatives/card-21-derivatives-of-exponential-functions.md)
-- [Card 22: Derivatives of logarithmic functions](03-derivatives/card-22-derivatives-of-logarithmic-functions.md)
-- [Card 23: Basic trig derivatives](03-derivatives/card-23-basic-trig-derivatives.md)
-- [Card 24: Implicit differentiation](03-derivatives/card-24-implicit-differentiation.md)
-- [Card 25: Logarithmic differentiation](03-derivatives/card-25-logarithmic-differentiation.md)
+## 2. Target Users
 
-### Applications of Derivatives
+### Primary Users
 
-- [Card 26: Tangent line equation](04-applications-of-derivatives/card-26-tangent-line-equation.md)
-- [Card 27: Increasing and decreasing functions](04-applications-of-derivatives/card-27-increasing-and-decreasing-functions.md)
-- [Card 28: Critical points](04-applications-of-derivatives/card-28-critical-points.md)
-- [Card 29: First Derivative Test](04-applications-of-derivatives/card-29-first-derivative-test.md)
-- [Card 30: Concavity](04-applications-of-derivatives/card-30-concavity.md)
-- [Card 31: Inflection points](04-applications-of-derivatives/card-31-inflection-points.md)
-- [Card 32: Second Derivative Test](04-applications-of-derivatives/card-32-second-derivative-test.md)
-- [Card 33: Optimization problem strategy](04-applications-of-derivatives/card-33-optimization-problem-strategy.md)
-- [Card 34: Related rates strategy](04-applications-of-derivatives/card-34-related-rates-strategy.md)
-- [Card 35: L'Hôpital's Rule](04-applications-of-derivatives/card-35-lhopitals-rule.md)
-- [Card 36: Linear approximation](04-applications-of-derivatives/card-36-linear-approximation.md)
-- [Card 37: Differentials](04-applications-of-derivatives/card-37-differentials.md)
+College students taking Calculus I and Calculus II.
 
-### Integrals and the Fundamental Theorem of Calculus
+### Secondary Users
 
-- [Card 38: Antiderivative](05-integrals-and-ftc/card-38-antiderivative.md)
-- [Card 39: Basic power integral](05-integrals-and-ftc/card-39-basic-power-integral.md)
-- [Card 40: Definite integral](05-integrals-and-ftc/card-40-definite-integral.md)
-- [Card 41: Riemann sum](05-integrals-and-ftc/card-41-riemann-sum.md)
-- [Card 42: Fundamental Theorem of Calculus, Part 1](05-integrals-and-ftc/card-42-ftc-part-1.md)
-- [Card 43: Fundamental Theorem of Calculus, Part 2](05-integrals-and-ftc/card-43-ftc-part-2.md)
-- [Card 44: Average value of a function](05-integrals-and-ftc/card-44-average-value-of-a-function.md)
+Teaching assistants, instructors, tutors, and self-learners who want structured conceptual review materials.
 
-## Calculus II
+---
 
-### Integration Techniques
+## 3. Learning Goals
 
-- [Card 45: Substitution method](06-integration-techniques/card-45-substitution-method.md)
-- [Card 46: Integration by parts](06-integration-techniques/card-46-integration-by-parts.md)
-- [Card 47: Trig integrals: odd power of sine](06-integration-techniques/card-47-trig-integrals-odd-power-of-sine.md)
-- [Card 48: Trig integrals: odd power of cosine](06-integration-techniques/card-48-trig-integrals-odd-power-of-cosine.md)
-- [Card 49: Trig integrals: even powers](06-integration-techniques/card-49-trig-integrals-even-powers.md)
-- [Card 50: Trig substitution](06-integration-techniques/card-50-trig-substitution.md)
-- [Card 51: Partial fractions](06-integration-techniques/card-51-partial-fractions.md)
-- [Card 52: Improper integral](06-integration-techniques/card-52-improper-integral.md)
-- [Card 53: Convergence of p-integrals](06-integration-techniques/card-53-convergence-of-p-integrals.md)
+The knowledge card system should help students achieve the following goals:
 
-### Applications of Integration
+1. Understand the meaning behind major calculus concepts.
+2. Remember key equations, formulas, and theorems.
+3. Develop visual, geometric, and intuitive interpretations.
+4. Connect formulas with simple examples.
+5. Avoid common misconceptions.
+6. Build a coherent mental map of Calculus I and II.
+7. Prepare for problem solving through understanding, not memorization alone.
 
-- [Card 54: Area between curves](07-applications-of-integration/card-54-area-between-curves.md)
-- [Card 55: Disk method](07-applications-of-integration/card-55-disk-method.md)
-- [Card 56: Washer method](07-applications-of-integration/card-56-washer-method.md)
-- [Card 57: Shell method](07-applications-of-integration/card-57-shell-method.md)
-- [Card 58: Arc length](07-applications-of-integration/card-58-arc-length.md)
-- [Card 59: Surface area of revolution](07-applications-of-integration/card-59-surface-area-of-revolution.md)
-- [Card 60: Work](07-applications-of-integration/card-60-work.md)
+The primary emphasis should be:
 
-### Sequences and Series
+* 70% conceptual understanding
+* 20% equation and theorem memory
+* 10% simple application
 
-- [Card 61: Sequence](08-sequences-and-series/card-61-sequence.md)
-- [Card 62: Series](08-sequences-and-series/card-62-series.md)
-- [Card 63: Geometric series](08-sequences-and-series/card-63-geometric-series.md)
-- [Card 64: p-series](08-sequences-and-series/card-64-p-series.md)
-- [Card 65: Divergence Test](08-sequences-and-series/card-65-divergence-test.md)
-- [Card 66: Integral Test](08-sequences-and-series/card-66-integral-test.md)
-- [Card 67: Direct Comparison Test](08-sequences-and-series/card-67-comparison-test.md)
-- [Card 68: Limit Comparison Test](08-sequences-and-series/card-68-limit-comparison-test.md)
+The cards should not be designed primarily as exam-cram materials. Exam performance is an important outcome, but it should come from stronger understanding.
 
-## Notes
+---
 
-- Math is rendered using standard markdown math (`$...$` inline and `$$...$$` display).
-- This deck is a work in progress; planned future sections include Power/Taylor Series, Parametric & Polar, and Intro Differential Equations.
+## 4. Content Scope
+
+The project covers the standard Calculus I and Calculus II curriculum.
+
+## 4.1 Calculus I Scope
+
+### Chapter 1: Functions and Models
+
+Key topics:
+
+* Function notation
+* Domain and range
+* Graph interpretation
+* Function transformations
+* Function composition
+* Inverse functions
+* Exponential functions
+* Logarithmic functions
+* Trigonometric review
+
+### Chapter 2: Limits and Continuity
+
+Key topics:
+
+* Meaning of limits
+* One-sided limits
+* Infinite limits
+* Limits at infinity
+* Limit laws
+* Direct substitution
+* Indeterminate form $0/0$
+* Factoring method
+* Rationalizing method
+* Squeeze theorem
+* Continuity
+* Intermediate Value Theorem
+
+### Chapter 3: Derivatives
+
+Key topics:
+
+* Derivative as instantaneous rate of change
+* Tangent line interpretation
+* Derivative definition
+* Differentiability and continuity
+* Power rule
+* Product rule
+* Quotient rule
+* Chain rule
+* Trigonometric derivatives
+* Exponential derivatives
+* Logarithmic derivatives
+* Implicit differentiation
+* Related rates
+
+### Chapter 4: Applications of Derivatives
+
+Key topics:
+
+* Critical numbers
+* Increasing and decreasing functions
+* Local extrema
+* Concavity
+* Inflection points
+* First derivative test
+* Second derivative test
+* Curve sketching
+* Optimization
+* Mean Value Theorem
+* Rolle’s Theorem
+* L’Hôpital’s Rule
+
+### Chapter 5: Integrals
+
+Key topics:
+
+* Antiderivatives
+* Indefinite integrals
+* Definite integrals
+* Area under a curve
+* Riemann sums
+* Net area
+* Total area
+* Fundamental Theorem of Calculus
+* Substitution rule
+* Average value of a function
+
+### Chapter 6: Applications of Integrals
+
+Key topics:
+
+* Area between curves
+* Volumes by slicing
+* Disk method
+* Washer method
+* Shell method
+* Motion problems
+* Accumulated change
+
+---
+
+## 4.2 Calculus II Scope
+
+### Chapter 7: Techniques of Integration
+
+Key topics:
+
+* Integration strategy
+* Integration by parts
+* Trigonometric integrals
+* Trigonometric substitution
+* Partial fractions
+* Improper integrals
+* Numerical integration
+
+### Chapter 8: Further Applications of Integration
+
+Key topics:
+
+* Arc length
+* Surface area of revolution
+* Work
+* Fluid force
+* Center of mass
+
+### Chapter 9: Differential Equations
+
+Key topics:
+
+* Basic differential equations
+* Slope fields
+* Separable equations
+* Exponential growth and decay
+* Logistic growth
+
+### Chapter 10: Parametric and Polar Curves
+
+Key topics:
+
+* Parametric equations
+* Eliminating the parameter
+* Parametric derivatives
+* Parametric area
+* Polar coordinates
+* Polar graphs
+* Polar area
+* Slope in polar form
+
+### Chapter 11: Sequences and Series
+
+Key topics:
+
+* Sequences
+* Sequence convergence
+* Infinite series
+* Geometric series
+* Telescoping series
+* Divergence test
+* Integral test
+* $p$-series
+* Direct comparison test
+* Limit comparison test
+* Alternating series test
+* Ratio test
+* Root test
+* Absolute convergence
+* Conditional convergence
+
+### Chapter 12: Power Series and Taylor Series
+
+Key topics:
+
+* Power series
+* Center of a power series
+* Radius of convergence
+* Interval of convergence
+* Endpoint testing
+* Differentiating power series
+* Integrating power series
+* Taylor polynomials
+* Taylor series
+* Maclaurin series
+* Taylor error
+
+---
+
+## 5. Card Types
+
+The card system should include four major card types.
+
+## 5.1 Concept Cards
+
+Purpose: explain the meaning of a major idea.
+
+Examples:
+
+* What is a limit?
+* What is a derivative?
+* What is an integral?
+* What is an infinite series?
+
+Recommended structure:
+
+* Big Idea
+* Intuition
+* Equation Meaning
+* Simple Example
+* Remember
+
+## 5.2 Equation Cards
+
+Purpose: help students understand and remember important formulas.
+
+Examples:
+
+* Derivative definition
+* Chain rule
+* Integration by parts
+* Taylor series formula
+
+Recommended structure:
+
+* Formula
+* Meaning of Each Part
+* Why It Makes Sense
+* Simple Example
+* Remember
+
+## 5.3 Theorem Cards
+
+Purpose: explain major theorems in a clear and memorable way.
+
+Examples:
+
+* Intermediate Value Theorem
+* Mean Value Theorem
+* Fundamental Theorem of Calculus
+* Alternating Series Test
+
+Recommended structure:
+
+* Theorem Statement
+* Meaning
+* Why It Matters
+* Simple Example
+* Remember
+
+## 5.4 Connection Cards
+
+Purpose: help students connect related ideas.
+
+Examples:
+
+* Limit and continuity
+* Derivative and slope
+* Integral and accumulation
+* Sequence and series
+
+Recommended structure:
+
+* Concept A
+* Concept B
+* Connection
+* Simple Example
+* Remember
+
+---
+
+## 6. Standard Card Structure
+
+Each card should use the following default structure:
+
+```md
+# Card Title
+
+## 🧠 Big Idea
+
+Explain the concept in simple, student-friendly language.
+
+## 📐 Equation Meaning
+
+Show the main equation, formula, or theorem. Explain what each part means.
+
+## 👀 Intuition
+
+Give a visual, geometric, or real-world interpretation.
+
+## 🔍 Simple Example
+
+Use one small example to make the idea concrete.
+
+## 🔑 Remember
+
+Give one short memory sentence.
+```
+
+Optional sections may be added when useful:
+
+```md
+## ⚠️ Careful
+```
+
+Use this section only when there is an important misconception.
+
+```md
+## 🔗 Connection
+```
+
+Use this section when the card should connect to another concept.
+
+```md
+## Why It Matters
+```
+
+Use this section for major theorems or ideas that are central to later calculus.
+
+---
+
+## 7. Card Length Requirements
+
+Each card should be designed for mobile reading, especially for an iPhone Pro Max-sized screen.
+
+### Standard Card Length
+
+Recommended length:
+
+* 220–320 words per card
+
+### Important Concept Card Length
+
+For foundational concepts, slightly longer cards are allowed:
+
+* 350–420 words
+
+Examples of concepts that may need longer cards:
+
+* Limit
+* Derivative
+* Integral
+* Fundamental Theorem of Calculus
+* Taylor Series
+
+### Length Constraints
+
+Each card should avoid:
+
+* Very short summaries that feel incomplete
+* Long textbook-style explanations
+* Dense paragraphs
+* Too many examples
+* Too many formulas on one card
+
+Each card should focus on one concept only.
+
+---
+
+## 8. Writing Style Requirements
+
+The writing style should be:
+
+* Clear
+* Conceptual
+* Friendly
+* Precise
+* Student-centered
+* Not too formal
+* Not too casual
+* Suitable for college-level learners
+
+The cards should explain mathematics in plain English before using formal notation.
+
+Good style:
+
+```md
+A limit describes where the function is heading as the input gets closer to a value.
+```
+
+Avoid overly compressed style:
+
+```md
+Limit: value approached by function as independent variable approaches specified point.
+```
+
+Avoid too much exam-oriented language:
+
+```md
+Use this trick to get points on the test.
+```
+
+Preferred language:
+
+```md
+This method reveals the simpler behavior hidden inside the expression.
+```
+
+---
+
+## 9. Equation Formatting Requirements
+
+All equations must use Markdown LaTeX.
+
+### Inline Equations
+
+Use `$...$`.
+
+Example:
+
+```md
+A function is continuous at $x=a$ when $\lim_{x \to a} f(x)=f(a)$.
+```
+
+### Display Equations
+
+Use:
+
+```md
+$$
+...
+$$
+```
+
+Example:
+
+```md
+$$
+\lim_{x \to a} f(x)=L
+$$
+```
+
+Do not use raw `\[` and `\]` display equation syntax.
+
+### Formula Explanation
+
+Every major equation should be followed by a plain-English explanation of what the symbols mean.
+
+Example:
+
+```md
+$$
+\lim_{x \to a} f(x)=L
+$$
+
+This means that as the input $x$ moves closer to $a$, the output $f(x)$ moves closer to $L$.
+```
+
+---
+
+## 10. Visual and Layout Requirements
+
+Cards should be visually scannable.
+
+Each card should use:
+
+* One clear title
+* Short sections
+* Limited paragraph length
+* Consistent emojis or icons
+* Proper spacing between sections
+* One major formula or theorem when possible
+* One small example only
+
+Recommended section icons:
+
+* 🧠 Big Idea
+* 📐 Equation Meaning
+* 👀 Intuition
+* 🔍 Simple Example
+* ⚠️ Careful
+* 🔗 Connection
+* 🔑 Remember
+
+The visual hierarchy should make the card easy to read on a phone.
+
+---
+
+## 11. Content Quality Requirements
+
+Each card must satisfy the following quality bar:
+
+1. The card explains one concept clearly.
+2. The card contains a meaningful big idea.
+3. The card explains at least one equation, theorem, or important relationship when relevant.
+4. The card includes intuition, not just formal rules.
+5. The card includes a simple example.
+6. The card includes a memory hook.
+7. The card avoids unnecessary exam tricks.
+8. The card avoids overly long textbook-style exposition.
+9. The card can be read in about 1–2 minutes.
+10. The card helps students remember and understand, not just calculate.
+
+---
+
+## 12. Initial Production Plan
+
+The first milestone should focus on Chapter 2: Limits and Continuity.
+
+Recommended first batch:
+
+1. What Does a Limit Mean?
+2. One-Sided Limits
+3. When a Limit Does Not Exist
+4. Infinite Limits
+5. Limits at Infinity
+6. Limit Laws
+7. Direct Substitution
+8. Understanding the Form $0/0$
+9. Fixing $0/0$ by Factoring
+10. Fixing Radicals by Rationalizing
+11. Squeeze Theorem
+12. Continuity Has Three Conditions
+13. Removable, Jump, and Infinite Discontinuities
+14. Intermediate Value Theorem
+
+This chapter is a good starting point because limits are the foundation for derivatives, integrals, continuity, and infinite series.
+
+---
+
+## 13. Success Criteria
+
+The card system is successful if students can:
+
+1. Explain a concept in their own words after reading a card.
+2. Understand the meaning of a formula, not only memorize it.
+3. Recall key theorems with their conditions.
+4. Recognize common misconceptions.
+5. Connect new concepts to previous concepts.
+6. Review a chapter quickly before class or after class.
+7. Use the cards as a reliable study companion throughout Calculus I and II.
+
+For teaching assistants, the cards should be useful for:
+
+* Recitation preparation
+* Quick concept review
+* Office hour explanations
+* Supplementary learning materials
+* Mobile-friendly student review
+
+---
+
+## 14. Example Card Standard
+
+A final card should look like this:
+
+```md
+# What Does a Limit Mean?
+
+## 🧠 Big Idea
+
+A limit describes the value that a function is getting close to.
+
+When we write $\lim_{x \to a} f(x)=L$, we are not asking what happens exactly at $x=a$. We are asking what happens when $x$ gets closer and closer to $a$.
+
+The limit is about nearby behavior.
+
+## 📐 Equation Meaning
+
+$$
+\lim_{x \to a} f(x)=L
+$$
+
+This means:
+
+- $x \to a$: the input $x$ moves closer to $a$
+- $f(x) \to L$: the output $f(x)$ moves closer to $L$
+
+The important idea is movement: input approaches one value, output approaches another value.
+
+## 👀 Intuition
+
+Imagine walking toward a door.
+
+The limit is the door you are approaching. It does not matter whether you actually step through the door.
+
+In the same way, a function can approach a value even if it is not defined at that exact point.
+
+## 🔍 Simple Example
+
+Let
+
+$$
+f(x)=\frac{x^2-1}{x-1}
+$$
+
+At $x=1$, the function is undefined.
+
+But for $x \neq 1$,
+
+$$
+\frac{x^2-1}{x-1}
+=
+\frac{(x-1)(x+1)}{x-1}
+=
+x+1
+$$
+
+So near $x=1$, the function behaves like $x+1$.
+
+Therefore,
+
+$$
+\lim_{x \to 1} f(x)=2
+$$
+
+## ⚠️ Careful
+
+The limit is not always the same as the function value.
+
+A function can have a limit even if the function value is missing.
+
+## 🔑 Remember
+
+A limit is about where the function is heading, not where it is defined.
+```
+
+---
+
+## 15. Out of Scope for Initial Version
+
+The initial version should not focus on:
+
+* Full exam problem sets
+* Long proofs
+* Multi-step homework solutions
+* Advanced real analysis definitions
+* Highly technical edge cases
+* Dense symbolic derivations
+* Multiple examples per card
+
+These may be added later as separate learning materials, but they should not dominate the knowledge card format.
+
+---
+
+## 16. Future Extensions
+
+Future versions may include:
+
+* Visual graph cards
+* Interactive quiz cards
+* Spaced repetition review mode
+* Chapter summary cards
+* Formula-only quick review cards
+* Common misconception cards
+* Exam strategy cards
+* Instructor-facing teaching notes
+* Student self-check questions
+* Card difficulty levels
+* Tags by topic, chapter, and concept type
+
+Possible tags:
+
+```md
+#limit
+#continuity
+#derivative
+#integral
+#theorem
+#formula
+#intuition
+#misconception
+#calculus1
+#calculus2
+```
+
+---
+
+# Final Requirement Summary
+
+The Calculus I/II Knowledge Cards should be a mobile-first, concept-first learning system.
+
+Each card should explain one calculus idea clearly through:
+
+* Plain-language meaning
+* Equation or theorem interpretation
+* Intuition
+* A simple example
+* A memory hook
+
+The system should prioritize deep understanding and long-term memory over short-term exam tricks, while still supporting better performance in calculus courses.
