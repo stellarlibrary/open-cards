@@ -1,0 +1,500 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'; img-src data:; form-action 'none'; base-uri 'none'"><title>The Canadian Shield: Old Rocks, Young Lakes | OpenCards</title><style>:root {
+  color-scheme: light;
+  --paper: #fffcf6;
+  --surface: #f2efe8;
+  --line: #ded8ce;
+  --ink: #23241f;
+  --subtle: #56594f;
+  --accent: #16584d;
+  --signal: #8c4d2b;
+  --accent-pale: #dcebe5;
+  --font: system-ui, -apple-system, "PingFang SC", "Hiragino Sans", "Apple SD Gothic Neo", sans-serif;
+  --display: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, "Songti SC", serif;
+  --mono: ui-monospace, SFMono-Regular, Menlo, monospace;
+}
+* { box-sizing: border-box; }
+.single { margin: 0; padding: clamp(10px, 3vw, 32px); background: #eae8df; color: var(--ink); }
+.single .study-card { margin-inline: auto; max-width: 720px; }
+.theme-english { --accent: #5e3a79; --accent-pale: #ece3f4; }
+.theme-language { --accent: #893c53; --accent-pale: #f4e3e7; }
+.theme-math { --accent: #284983; --accent-pale: #e3eaf7; }
+.theme-science { --accent: #16584d; --accent-pale: #dcebe5; }
+.theme-history { --accent: #7d461d; --accent-pale: #f2e6d5; }
+.theme-art { --accent: #8c3d35; --accent-pale: #f1e2dd; }
+.theme-nature { --accent: #29634c; --accent-pale: #dcece0; }
+.theme-practical { --accent: #405d22; --accent-pale: #e7edd8; }
+.study-card {
+  background: var(--paper); color: var(--ink); font: 16px/1.53 var(--font); min-width: 0;
+  border: 1px solid var(--line); border-top: 5px solid var(--accent); border-radius: 12px;
+  box-shadow: 0 2px 6px #211d1911; overflow-wrap: anywhere;
+}
+.card-head { padding: 18px 22px 10px; }
+.card-kicker {
+  display: flex; justify-content: space-between; gap: .75rem; align-items: baseline;
+  color: var(--accent); font-weight: 750; font-size: .73rem; letter-spacing: .025em;
+}
+.card-kicker .ordinal { font: 650 .77rem/1.3 var(--mono); white-space: nowrap; }
+.card-title { font: 700 clamp(1.55rem, 3.8vw, 2.4rem)/1.12 var(--display); margin: .55rem 0 0; text-wrap: pretty; }
+.theme-math .card-title, .theme-science .card-title, .theme-practical .card-title { font-family: var(--font); }
+.theme-language.lang-ja .card-title, .kind-element .card-title { letter-spacing: .01em; }
+.kind-kana .card-title { font-size: 2rem; }
+.card-main { display: grid; align-content: start; gap: .95rem; padding: 8px 22px 18px; }
+.card-main > * { min-width: 0; }
+.card-copy > :first-child, .answer-copy > :first-child { margin-top: 0; }
+.card-copy > :last-child, .answer-copy > :last-child { margin-bottom: 0; }
+.card-copy p, .answer-body p { margin: .5em 0; }
+.passage-list { padding-inline-start: 1.25em; }
+.passage-list li + li { margin-top: .18em; }
+.card-copy code, .answer-body code {
+  background: var(--surface); padding: .08em .25em; border-radius: 4px; font: .9em var(--mono);
+}
+.card-copy pre, .answer-body pre {
+  overflow: auto; white-space: pre; margin: .65rem 0; padding: .75rem;
+  background: #262b2c; color: #f5f5ec; border-radius: 7px; tab-size: 4;
+}
+.card-copy pre code, .answer-body pre code { background: none; padding: 0; overflow-wrap: normal; }
+.poem .context { font-family: var(--display); font-size: 1.05em; line-height: 1.75; }
+.mini-label {
+  display: block; color: var(--accent); margin: 0 0 .4rem; font: 750 .72rem/1.25 var(--font);
+  letter-spacing: .09em; text-transform: uppercase;
+}
+.question {
+  border-inline-start: 3px solid var(--accent); background: var(--accent-pale);
+  padding: .7rem .8rem; border-radius: 0 7px 7px 0;
+}
+.question .mini-label { margin-bottom: .28rem; }
+.question .stem { font-weight: 650; }
+.choices {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 123px), 1fr));
+  gap: .28rem .4rem; margin: .5rem 0 0; padding: 0; list-style: none;
+}
+.choices.long { grid-template-columns: 1fr; }
+.choices li {
+  display: flex; align-items: baseline; gap: .3em; border: 1px solid var(--line); padding: .28rem .42rem;
+  border-radius: 5px; background: var(--paper); font-size: .93em;
+}
+.choices li b, .choice-groups .blank { color: var(--accent); }
+.choice-groups .blank { display: block; margin-top: .62rem; font-size: .87em; }
+.answer { border-top: 1px solid var(--line); }
+.study-card summary { color: var(--accent); font-weight: 700; cursor: pointer; padding: .55rem 0; line-height: 1.4; }
+.study-card summary:focus-visible, .study-card a:focus-visible, .study-card pre:focus-visible {
+  outline: 2px solid var(--accent); outline-offset: 3px;
+}
+.answer-body { padding: .2rem 0 .35rem; }
+.answer-body strong { color: var(--accent); }
+.answer-supplement { margin: .8rem 0 0; }
+.answer-supplement .context { margin-top: .7rem; }
+.translation { font-size: .93em; margin: .75rem 0 0; border-top: 1px dashed var(--line); padding-top: .55rem; }
+.translation .mini-label { letter-spacing: .06em; }
+.card-footer {
+  padding: .15rem 22px .9rem; color: var(--subtle); font-size: .77rem; line-height: 1.46;
+}
+.credits p { margin: .15rem 0 .5rem; }
+.credits a, .card-footer > a { color: var(--accent); text-underline-offset: .15em; }
+.credits summary { font-size: .76rem; }
+.photos { display: grid; gap: 7px; }
+.photos.paired { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.frame { margin: 0; border: 1px solid var(--line); border-radius: 8px; background: #ece8de; overflow: hidden; }
+.frame img { display: block; width: 100%; max-height: 490px; object-fit: contain; }
+.paired .frame img { aspect-ratio: 1; object-fit: contain; background: #e4e6dc; }
+.frame figcaption { font-size: .78rem; padding: .28rem .5rem; color: var(--subtle); background: var(--paper); }
+.element-plate {
+  display: flex; flex-direction: column; justify-content: space-between; min-height: 127px; max-width: 270px;
+  margin-inline: auto; width: 100%; padding: 10px 18px 13px; border: 1px solid var(--accent);
+  border-radius: 12px; background: var(--accent-pale);
+}
+.element-plate b { font: 650 3.2rem/1 var(--font); align-self: center; }
+.element-plate span:last-child { color: var(--accent); align-self: center; text-align: center; font-size: .83em; }
+.element-number { font: 700 .9rem var(--mono); color: var(--accent); }
+.element-study { display: grid; gap: .75rem; }
+.atom-figure {
+  margin: 0; border: 1px solid var(--line); border-radius: 8px; padding: .68rem;
+  background: var(--paper);
+}
+.atom-figure figcaption { display: grid; gap: .16rem; font-size: .92em; }
+.atom-figure figcaption span { font-size: .87em; color: var(--subtle); }
+.atom-layout { display: grid; grid-template-columns: minmax(0, 226px) minmax(82px, 128px); justify-content: center; align-items: center; gap: .75rem; margin-top: .5rem; }
+.atom-layout .diagram { max-width: 226px; border: 0; background: transparent; }
+.shell-key { font-size: .84em; }
+.shell-key ol { padding: 0; margin: .25em 0; list-style: none; }
+.shell-key li { display: flex; justify-content: space-between; gap: .45em; border-bottom: 1px solid var(--line); padding-inline: .13em; }
+.shell-key b { font-variant-numeric: tabular-nums; color: var(--accent); }
+.atom-figure .atom-note { font-size: .84em; color: var(--subtle); margin: .56em 0 0; }
+.diagram .shell { stroke: #82877b; stroke-width: 1; fill: none; }
+.diagram .electron, .diagram .nucleus { fill: var(--accent); }
+.diagram .nucleus-label { fill: #fff; font-weight: 720; }
+.kana-plate { display: flex; align-items: center; justify-content: center; gap: .75rem; color: var(--accent); }
+.kana-plate .diagram { width: min(52%, 190px); margin: 0; border: 0; background: transparent; }
+.kana-plate span { font-weight: 720; }
+.kana-plate small { display: block; font-weight: 540; color: var(--subtle); }
+.visual-list { margin: 0; padding: 0; list-style: none; display: grid; gap: .35rem; counter-reset: steps; }
+.visual-list li {
+  display: flex; align-items: baseline; gap: .55rem; border: 1px solid var(--line); border-radius: 6px;
+  background: var(--surface); padding: .4rem .57rem; font-size: .91em;
+}
+.visual-list li::before { content: "•"; color: var(--accent); font-weight: 750; flex: none; }
+.visual-list.flow li::before { content: counter(steps, decimal-leading-zero); font: 700 .78em var(--mono); }
+.visual-list.flow li { counter-increment: steps; }
+.visual-list.timeline li { border-inline-start: 3px solid var(--accent); }
+.visual-list.timeline li::before { content: "↓"; }
+.visual-list.timeline li:last-child::before { content: "●"; }
+.visual-list.compare { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.data-table { overflow-x: auto; border: 1px solid var(--line); border-radius: 7px; }
+.data-table table { width: 100%; border-collapse: collapse; font-size: .88em; line-height: 1.34; }
+.data-table th, .data-table td { text-align: start; padding: .42rem .52rem; border-block-end: 1px solid var(--line); }
+.data-table th { background: var(--accent-pale); color: var(--accent); }
+.data-table tr:last-child td { border-block-end: 0; }
+.molecule {
+  padding: .9rem .65rem; background: var(--accent-pale); border: 1px solid var(--line);
+  color: var(--accent); text-align: center; border-radius: 7px; font: 660 clamp(.92rem, 3vw, 1.25rem) var(--mono);
+}
+.diagram {
+  display: block; width: 100%; max-width: 470px; height: auto; margin: auto;
+  overflow: hidden; background: var(--surface); border: 1px solid var(--line); border-radius: 8px;
+}
+.diagram text { fill: var(--ink); font: 13px var(--font); }
+.diagram .plot-title { font-weight: 700; }
+.diagram .grid, .diagram .rule, .diagram .axis, .diagram .curve, .diagram .accent, .diagram .guide,
+.diagram .stroke, .diagram .staff-rule { fill: none; stroke-linecap: round; stroke-linejoin: round; }
+.diagram .grid { stroke: #dad9d0; stroke-width: 1; }
+.diagram .rule { stroke: #64695f; stroke-width: 1.25; }
+.diagram .axis { stroke: #64695f; stroke-width: 1.4; }
+.diagram .curve { stroke: var(--accent); stroke-width: 2.6; }
+.diagram .accent { stroke: var(--signal); stroke-width: 2.25; }
+.diagram .guide { stroke: #71766e; stroke-dasharray: 4 3; stroke-width: 1.15; }
+.diagram .dot, .diagram .note { fill: var(--accent); }
+.diagram .open-point { fill: var(--surface); stroke: var(--accent); stroke-width: 2; }
+.diagram .region { fill: var(--accent-pale); stroke: var(--accent); stroke-width: 1.4; }
+.diagram .region-alt { fill: #ead9c5; stroke: var(--signal); stroke-width: 1.2; }
+.diagram .sun { fill: #edbe68; stroke: #8e552c; stroke-width: 1.4; }
+.diagram .world { fill: #9dc5c8; stroke: #285d6e; stroke-width: 1.6; }
+.diagram .moon { fill: #9e9f9e; stroke: #5e605c; stroke-width: 1.3; }
+.diagram .water { fill: #dae9ee; }
+.diagram .land { fill: #abb9a1; stroke: #5c6e56; stroke-width: .8; }
+.diagram .sky { fill: #eaf0f3; }
+.diagram .sand { fill: #f5dfbb; }
+.diagram .ground { fill: #ecd2be; }
+.diagram .haze { fill: #efdfd3; }
+.diagram .basalt { fill: #4e606b; }
+.diagram .band-fill { fill: #5a8597; }
+.diagram .ice-water { fill: #76a9b7; stroke: #285d6e; stroke-width: 1.25; }
+.diagram .solar-in { fill: none; stroke: #715108; stroke-width: 2.35; stroke-linejoin: round; }
+.diagram .infrared-escape { fill: none; stroke: var(--signal); stroke-width: 1.7; stroke-dasharray: 3 2; }
+.diagram .planet-band { fill: none; stroke: #c49160; stroke-width: 6; stroke-linecap: round; }
+.diagram .face-dot { fill: #493721; }
+.diagram .river, .diagram .river-branch { fill: none; stroke: #174e76; stroke-width: 2.8; stroke-linejoin: round; }
+.diagram .river-branch { stroke-width: 1.65; }
+.diagram .map-label { paint-order: stroke; stroke: #e7eee2; stroke-width: 2.3; stroke-linejoin: round; }
+.diagram .stroke { stroke: var(--ink); stroke-width: 3.25; }
+.diagram .stroke-no { fill: var(--accent); font-size: 9px; font-weight: 760; }
+.diagram .stroke-frame { stroke: #868c80; stroke-width: 1.2; fill: var(--paper); }
+.diagram .staff-rule { stroke: #5c645a; stroke-width: 1.2; }
+.diagram .clef { font-family: "Bravura", "Apple Symbols", "Noto Music", serif; font-size: 38px; }
+.diagram .accidental { font-size: 17px; }
+.diagram .pitch { font-family: var(--mono); font-size: 12px; }
+@media (max-width: 430px) {
+  .card-head { padding-inline: 16px; }
+  .card-main, .card-footer { padding-inline: 16px; }
+  .card-title { font-size: max(1.45rem, 7vw); }
+  .diagram text:not(.clef, .accidental, .stroke-no, .nucleus-label) { font-size: 15px; }
+  .atom-layout { grid-template-columns: minmax(0, 1fr); }
+  .shell-key ol { display: grid; grid-template-columns: repeat(auto-fit, minmax(70px, 1fr)); gap: .12em .5em; }
+}
+.sample-card { container-type: inline-size; }
+.knowledge-card {
+  --paper: #fff;
+  --surface: #f4f5f6;
+  --line: #e0e1e4;
+  --ink: #202126;
+  --subtle: #565a63;
+  --accent: #28577d;
+  --accent-pale: #e8eff5;
+  --signal: #8c5135;
+  --inset: clamp(17px, 6cqw, 27px);
+  --serif-cn: "Songti SC", "Noto Serif CJK SC", "Noto Serif SC", "SimSun", serif;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  align-content: start;
+  gap: 1.08rem;
+  padding: var(--inset);
+  border: 1px solid var(--line);
+  border-radius: 13px;
+  box-shadow: 0 1px 2px #1d213008;
+  font-size: 1rem;
+  line-height: 1.54;
+}
+.knowledge-card > * { min-width: 0; }
+.k-title {
+  margin: 0;
+  font: 650 clamp(1.38rem, 7cqw, 2rem)/1.12 var(--font);
+  letter-spacing: -.027em;
+  text-wrap: pretty;
+}
+.k-title:lang(zh), .k-title:lang(ja), .k-title:lang(ko) { letter-spacing: 0; line-height: 1.24; }
+.k-title-gloss {
+  display: block;
+  margin-top: .38em;
+  color: var(--subtle);
+  font: 450 1rem/1.4 var(--font);
+  letter-spacing: 0;
+}
+.knowledge-card p { margin: .6em 0; }
+.knowledge-card :is(.k-lead, .k-example, .k-note, .k-byline, .k-sentence, .k-gloss, .k-code-result, blockquote) > :first-child { margin-top: 0; }
+.knowledge-card :is(.k-lead, .k-example, .k-note, .k-byline, .k-sentence, .k-gloss, .k-code-result, blockquote) > :last-child { margin-bottom: 0; }
+.knowledge-card .k-label {
+  color: var(--subtle);
+  font-size: .81rem;
+  font-weight: 625;
+  line-height: 1.4;
+  margin: 0 0 .37rem;
+}
+.k-note { border-top: 1px solid var(--line); padding-top: .8rem; font-size: .91rem; }
+.k-credit { color: var(--subtle); font-size: .81rem; }
+.knowledge-card .credits summary {
+  width: fit-content;
+  min-height: 28px;
+  padding: .32rem 0;
+  font-weight: 550;
+  color: var(--subtle);
+}
+.portal .knowledge-card a { color: var(--accent); }
+.knowledge-card :not(pre) > code {
+  font: .93em var(--mono);
+  font-variant-ligatures: none;
+}
+.knowledge-card pre {
+  padding: .82rem 1rem;
+  margin: .7rem 0;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+  border-radius: 7px;
+  color: #f4f5f7;
+  background: #24272e;
+  font: .89rem/1.55 var(--mono);
+  font-variant-ligatures: none;
+  tab-size: 4;
+}
+.knowledge-card pre code { font: inherit; }
+.k-code-result { margin-top: .8rem; }
+
+/* Language: distinguish the entry, its meaning, and a model utterance. */
+:is(.layout-lexicon, .layout-bilingual) .k-title {
+  font-size: clamp(1.8rem, 9cqw, 2.75rem);
+  letter-spacing: -.045em;
+}
+.layout-lexicon .k-title { font-family: var(--display); font-weight: 650; }
+.layout-lexicon .k-example {
+  padding-inline-start: .85rem;
+  border-inline-start: 1px solid #bfc4cb;
+  font: 1.11rem/1.46 var(--display);
+}
+.layout-bilingual .k-example { padding-top: .85rem; border-top: 1px solid var(--line); }
+.k-sentence { font-weight: 440; }
+.k-gloss { color: var(--subtle); font-size: .91rem; margin-top: .45rem; }
+.layout-register .k-example { font: 1.17rem/1.42 var(--display); }
+.layout-register .k-lead { border-top: 1px solid var(--line); padding-top: .85rem; }
+.layout-phrase .k-example { padding: .75rem 0 0; border-top: 1px solid var(--line); }
+:is(.layout-phrase, .layout-glyph) :not(pre) > code { font: inherit; font-weight: 570; }
+.character-entry .k-title {
+  font: 650 clamp(2.95rem, 14cqw, 4.25rem)/1.05 var(--serif-cn);
+}
+.stroke-plate {
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  align-items: center;
+}
+.stroke-plate > :not(.k-head, .kind-kana) { grid-column: 1 / -1; }
+.stroke-plate .k-head { text-align: center; align-self: start; padding-top: .6rem; }
+.stroke-plate .k-title { font: 500 clamp(3.3rem, 18cqw, 5.5rem)/1.14 "Hiragino Sans", var(--font); }
+.knowledge-card .kana-plate {
+  display: grid;
+  gap: .43rem;
+  justify-items: center;
+  text-align: center;
+  color: var(--ink);
+}
+.knowledge-card .kana-plate .diagram { width: min(100%, 120px); max-width: none; background: transparent; }
+.knowledge-card .kana-plate span { font-size: .87rem; font-weight: 650; }
+.knowledge-card .kana-plate small { font-size: .8rem; font-weight: 450; }
+.knowledge-card .diagram .stroke-frame { stroke: #c4c9ce; }
+.knowledge-card .kana-plate .diagram .stroke-no { font-size: 10px; }
+
+/* Plots, schematics, and tabular references use the width for information. */
+.knowledge-card .diagram {
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  max-width: 460px;
+}
+.knowledge-card .diagram .grid { stroke: #d9dde1; }
+.knowledge-card .diagram :is(.axis, .rule, .staff-rule) { stroke: #565d65; }
+.knowledge-card .diagram .guide { stroke: #7c828a; }
+.knowledge-card .diagram .open-point { fill: var(--paper); }
+.knowledge-card .diagram .region-alt { fill: #efe1d9; }
+.knowledge-card :is(.kind-graph, .kind-diagram), .layout-staff .kind-staff { margin-inline: calc(5px - var(--inset)); }
+:is(.layout-atlas, .layout-map, .layout-blueprint) :is(.kind-diagram, .kind-map) {
+  background: var(--surface);
+  border-radius: 6px;
+  padding-block: .38rem;
+  margin-inline: calc(8px - var(--inset));
+}
+.layout-graph :is(.k-lead, .kind-graph) + .k-example { padding-top: .8rem; border-top: 1px solid var(--line); }
+.layout-staff .k-title { font-family: var(--display); }
+.layout-staff .kind-staff .diagram { background: #faf9f6; }
+.knowledge-card .diagram .pitch { font-size: 15px; }
+.knowledge-card .data-table { border: 0; border-block: 1px solid var(--line); border-radius: 0; }
+.knowledge-card .data-table table { font-size: .88rem; font-variant-numeric: tabular-nums; }
+.knowledge-card .data-table :is(td, th) { padding: .47rem .4rem; }
+.knowledge-card .data-table :is(td, th):first-child { padding-inline-start: .17rem; }
+.knowledge-card .data-table :is(td, th):last-child { padding-inline-end: .17rem; }
+.knowledge-card .data-table th { background: transparent; color: var(--subtle); font-weight: 625; }
+.layout-console .data-table :is(td, th) { padding-block: .36rem; }
+.knowledge-card .visual-list { gap: 0; }
+.knowledge-card .visual-list li {
+  font-size: .93rem;
+  border: 0;
+  border-radius: 0;
+  padding: .46rem 0;
+  background: transparent;
+}
+.knowledge-card .visual-list li + li { border-top: 1px solid var(--line); }
+.knowledge-card .visual-list li::before { color: var(--subtle); }
+.knowledge-card .visual-list.compare {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  border-block: 1px solid var(--line);
+}
+.knowledge-card .visual-list.compare li { padding: .6rem .6rem .6rem 0; }
+.knowledge-card .visual-list.compare li + li { border-top: 0; border-inline-start: 1px solid var(--line); padding-inline: .6rem 0; }
+.knowledge-card .visual-list.compare li::before { content: none; }
+.layout-chronicle .visual-list.timeline { border-inline-start: 1px solid #bfc4cb; margin-inline-start: .26rem; }
+.layout-chronicle .visual-list.timeline li { position: relative; display: block; border: 0; padding: .26rem 0 .26rem .94rem; }
+.layout-chronicle .visual-list.timeline li::before {
+  content: "";
+  position: absolute;
+  inset-inline-start: -.23rem;
+  inset-block-start: .8rem;
+  width: .4rem;
+  height: .4rem;
+  border-radius: 50%;
+  background: #666c75;
+}
+.layout-chronicle .k-title, .layout-atlas .k-title { font-family: var(--display); }
+.layout-molecule .molecule {
+  border: 0;
+  border-block: 1px solid var(--line);
+  border-radius: 0;
+  padding: 1rem .3rem;
+  background: transparent;
+  color: var(--ink);
+  font-size: clamp(1rem, 5.15cqw, 1.45rem);
+  overflow-wrap: anywhere;
+}
+
+/* Element reference: name and tile share one masthead above the shell key. */
+.layout-atom { grid-template-columns: minmax(0, 1fr) minmax(5.3rem, 30%); align-items: start; }
+.layout-atom .k-head { align-self: center; }
+.layout-atom .k-title { font-size: clamp(1.31rem, 6.85cqw, 1.96rem); }
+.layout-atom :is(.kind-element, .element-study) { display: contents; }
+.layout-atom :is(.atom-figure, .k-lead, .k-credit) { grid-column: 1 / -1; }
+.layout-atom .element-plate {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  justify-items: start;
+  min-height: 0;
+  gap: .21rem;
+  padding: .5rem .56rem;
+  background: var(--surface);
+  border: 0;
+  border-radius: 5px;
+}
+.layout-atom .element-number { color: var(--subtle); font: 600 .79rem/1.2 var(--mono); }
+.layout-atom .element-plate b { font: 630 clamp(1.65rem, 8cqw, 2.25rem)/1 var(--font); }
+.layout-atom .element-plate span:last-child {
+  color: var(--subtle);
+  font-size: .74rem;
+  line-height: 1.22;
+  text-align: start;
+}
+.layout-atom .atom-figure {
+  border: 0;
+  border-block: 1px solid var(--line);
+  border-radius: 0;
+  padding: .8rem 0 .9rem;
+}
+.layout-atom .atom-layout {
+  grid-template-columns: minmax(0, 1.4fr) minmax(90px, 1fr);
+  gap: .75rem;
+  margin: .55rem 0;
+}
+.layout-atom .atom-layout .diagram { width: min(100%, 176px); }
+.layout-atom .diagram .nucleus-label { font-size: 16px; }
+.layout-atom .diagram:not(:has(.shell ~ .shell)) :is(.shell, .electron) {
+  transform-origin: center;
+  transform: scale(1.42);
+}
+.layout-atom .shell-key li { border-bottom: 0; padding: 0; line-height: 1.3; }
+.layout-atom .shell-key b { color: var(--ink); }
+.layout-atom .atom-note { font-size: .8rem; line-height: 1.45; }
+
+/* Verse is typeset as text, with the interpretation outside the poem. */
+.knowledge-card blockquote { margin: 0; }
+:is(.layout-verse, .layout-lyric) .k-title { font-family: var(--serif-cn); }
+:is(.layout-verse, .layout-lyric) blockquote {
+  font: 500 clamp(1.05rem, 5.4cqw, 1.33rem)/1.86 var(--serif-cn);
+  text-wrap: pretty;
+}
+.layout-verse :is(.k-head, .k-source-text) { text-align: center; }
+.layout-lyric .k-source-text { padding-inline-start: .72rem; border-inline-start: 1px solid #c8cbd0; }
+.k-verse-line { display: block; }
+.layout-lyric .k-verse-line { padding-inline-start: 1em; text-indent: -1em; }
+.k-byline { margin-bottom: .85rem; font-size: .86rem; color: var(--subtle); }
+:is(.layout-verse, .layout-lyric, .layout-reading) .k-lead { padding-top: .85rem; border-top: 1px solid var(--line); }
+.layout-reading .k-title { font-family: var(--display); }
+.layout-reading .k-source-text { font: 1.105rem/1.55 var(--display); }
+
+/* Reproductions and identification plates retain their full subject. */
+.knowledge-card .frame {
+  border: 0;
+  border-radius: 5px;
+  background: var(--surface);
+}
+.knowledge-card .frame img { width: 100%; object-fit: contain; background: var(--surface); }
+.knowledge-card .frame figcaption { padding: .4rem 0 0; }
+.layout-gallery .frame img { height: clamp(8.4rem, 67cqw, 18rem); }
+.layout-gallery .k-title, .layout-field .k-title { font-family: var(--display); }
+.k-scientific {
+  display: block;
+  color: var(--subtle);
+  font: italic 400 .98rem/1.4 var(--display);
+  letter-spacing: 0;
+  margin-top: .22em;
+}
+.layout-gallery:not(.breed-portrait) .k-lead { font-size: .91rem; color: var(--subtle); }
+.layout-field .photos:not(.paired) img { aspect-ratio: 4 / 3; }
+.layout-field .photos:not(.paired) { margin-inline: calc(-1 * var(--inset)); }
+.layout-field .photos:not(.paired) .frame { border-radius: 0; }
+.layout-field .photos.paired { gap: .7rem; }
+.layout-field:not(.breed-profile) .k-lead { font-size: .91rem; color: var(--subtle); }
+.specimen { margin: 0; }
+.specimen img {
+  display: block;
+  width: 100%;
+  height: clamp(9rem, 64cqw, 20rem);
+  object-fit: contain;
+  background: #f7f5ef;
+  border-radius: 5px;
+}
+.specimen figcaption {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .15em .6em;
+  padding-top: .45em;
+  color: var(--subtle);
+  font-size: .81rem;
+}
+.specimen figcaption span:first-child { font-weight: 625; }
+.breed-portrait .kind-illustration { margin: calc(-1 * var(--inset)) calc(-1 * var(--inset)) 0; }
+.breed-portrait .specimen img { border-radius: 12px 12px 0 0; height: clamp(11rem, 75cqw, 20rem); }
+.breed-portrait .specimen figcaption { padding-inline: var(--inset); }
+
+.read-shell{width:min(100%, 680px);margin:0 auto}.single.read-page{background:#f5f5f7}</style></head><body class="single read-page"><main class="read-shell sample-card"><article class="study-card knowledge-card layout-map" lang="en" data-ordinal="5"><header class="k-head"><h1 class="k-title">The Canadian Shield: Old Rocks, Young Lakes</h1></header><div class="k-visual kind-map"><svg class="diagram" viewBox="0 0 360 205" role="img" aria-label="Canadian Shield, approximate location on an adapted Natural Earth basemap." xmlns="http://www.w3.org/2000/svg"><text class="plot-title" x="3.00" y="14.00" text-anchor="start">Canadian Shield</text><rect class="water" x="1" y="21" width="358" height="183" rx="5"/><path class="land" d="M 231.59,155.64 233.39,156.24 235.69,156.12 234.47,157.96 233.55,158.25 230.41,156.35 229.79,154.84 230.73,153.46 Z"/><path class="land" d="M 236.20,144.18 234.99,144.26 231.78,142.85 229.48,140.73 230.33,140.35 233.59,141.48 236.12,143.35 Z"/><path class="land" d="M 83.40,146.85 82.16,147.47 78.09,145.43 77.35,143.84 75.13,142.27 74.68,140.99 72.14,140.18 71.18,137.74 71.40,136.70 73.99,137.68 75.51,138.36 77.84,138.84 78.68,140.39 79.91,142.52 82.38,144.37 Z"/><path class="land" d="M 250.24,137.08 248.60,141.00 250.22,139.49 251.88,140.45 251.01,142.01 253.21,143.24 254.35,142.15 256.82,143.53 256.06,146.82 257.79,146.05 258.10,148.43 258.87,151.22 257.83,155.17 256.71,155.33 255.08,154.49 255.62,150.82 254.93,150.25 252.06,154.14 250.58,153.98 252.33,151.87 249.95,150.78 247.29,151.05 242.49,150.91 242.11,149.59 243.65,148.01 242.57,146.79 244.65,144.09 247.21,136.94 248.74,134.39 250.89,132.84 252.04,133.04 251.56,134.25 Z"/><path class="land" d="M 60.62,122.04 60.62,122.04 60.62,122.04 60.62,122.04 63.00,121.68 62.26,126.77 64.41,130.38 63.42,130.37 61.93,128.32 61.02,126.25 59.77,124.86 59.31,122.88 59.46,121.45 Z"/><path class="land" d="M 10.36,108.24 7.89,109.95 6.62,108.79 6.24,106.69 8.49,105.09 9.81,104.41 11.45,104.71 12.50,106.10 Z"/><path class="land" d="M 192.96,85.61 191.99,87.97 190.90,87.59 190.25,86.25 190.36,85.94 191.32,84.59 192.33,84.69 Z"/><path class="land" d="M 186.44,83.14 183.54,85.61 181.80,85.51 181.25,84.29 183.09,82.22 186.50,82.27 Z"/><path class="land" d="M 178.36,69.92 178.82,71.89 180.09,71.20 181.53,72.37 184.24,73.91 187.08,75.31 187.30,77.44 189.12,77.09 190.89,78.58 188.69,79.99 184.84,78.91 183.44,76.89 180.99,79.28 177.47,81.60 176.62,78.98 173.26,79.41 175.41,77.19 175.73,73.66 176.57,69.55 Z"/><path class="land" d="M 353.32,66.33 352.74,69.24 355.54,72.30 352.32,75.72 345.18,78.79 343.05,79.61 339.79,78.95 332.88,77.53 335.31,75.55 329.92,73.35 334.31,72.48 334.20,71.17 329.01,70.12 330.68,67.20 334.43,66.54 338.29,69.58 342.05,67.14 345.17,68.41 349.21,66.01 Z"/><path class="land" d="M 201.38,63.22 198.60,63.45 197.99,61.25 199.04,58.74 201.31,58.12 203.24,59.36 203.27,61.28 202.99,61.90 Z"/><path class="land" d="M 152.40,54.44 150.86,56.01 147.52,54.65 145.50,55.14 142.12,53.12 144.30,51.73 146.03,49.79 148.66,51.06 150.14,51.87 150.89,52.72 Z"/><path class="land" d="M 165.03,52.69 165.01,57.27 168.32,53.76 171.28,56.65 170.55,59.97 172.94,63.00 175.53,59.76 177.33,55.89 177.47,50.96 180.99,51.31 184.65,51.97 187.97,54.19 188.12,56.42 186.28,58.81 188.02,61.21 187.71,63.39 182.86,66.53 179.42,67.22 176.86,65.87 176.12,68.13 173.73,71.91 173.01,73.87 170.14,76.91 166.59,77.20 164.64,79.10 164.47,82.02 161.59,82.58 158.56,86.21 155.88,91.27 154.92,94.80 154.78,100.01 158.42,100.76 159.53,104.96 160.69,108.37 164.16,107.48 168.76,109.42 171.23,111.13 173.01,113.25 176.11,114.48 178.73,116.37 182.82,116.63 185.52,117.06 185.11,120.95 185.88,125.46 187.67,130.48 191.36,134.74 193.27,133.28 194.61,128.67 193.31,121.58 191.57,119.22 195.53,117.12 198.34,113.97 199.71,110.85 199.51,107.85 197.82,104.04 194.82,100.66 197.74,95.96 196.66,91.90 195.83,84.89 197.56,83.85 201.80,85.07 204.35,85.51 206.40,84.33 208.70,85.85 211.75,88.45 212.50,90.20 216.92,90.53 216.85,94.30 217.67,99.98 219.93,100.68 221.73,103.32 225.31,100.83 227.68,95.88 229.32,93.79 231.25,97.80 234.47,103.52 237.21,108.90 236.21,111.72 239.51,114.25 241.73,116.81 245.68,117.97 247.27,119.41 248.25,123.20 250.18,123.80 251.18,125.49 251.36,130.53 249.56,132.22 247.78,133.79 243.70,135.39 240.59,139.07 236.40,139.80 231.10,138.86 227.39,138.82 224.82,139.14 222.75,142.35 219.59,144.34 216.02,150.28 213.17,154.42 215.27,153.68 219.25,147.79 224.44,144.05 228.15,143.60 230.34,145.80 228.00,148.82 228.79,153.65 229.59,157.04 232.81,159.28 236.90,158.63 239.39,153.59 239.56,156.84 241.16,158.46 238.09,161.40 232.61,164.07 230.15,165.89 227.39,169.12 225.51,168.79 225.41,164.99 229.71,161.28 225.75,161.43 222.99,161.98 223.42,163.45 220.78,165.62 218.23,167.17 215.62,168.50 214.20,171.43 213.89,172.17 213.86,174.55 214.68,176.93 215.71,177.04 215.45,175.40 216.19,176.40 215.99,177.68 214.32,178.41 213.13,178.32 211.30,179.10 210.22,179.33 208.78,179.55 206.72,180.85 210.36,180.00 211.09,180.85 207.62,182.20 206.05,182.21 206.12,181.66 205.37,182.90 206.09,183.11 205.56,186.33 203.76,189.78 203.57,188.63 203.03,188.40 202.22,187.28 202.73,189.69 203.32,190.49 203.38,192.19 202.59,193.93 201.20,197.51 200.97,197.33 201.74,194.28 200.47,192.57 200.18,188.84 199.70,190.78 200.23,193.63 198.67,192.96 200.30,194.37 200.41,198.64 201.12,198.95 201.29,200.00 87.10,200.00 85.78,196.01 85.87,194.97 84.78,193.49 82.86,189.73 82.52,186.07 81.20,183.62 81.75,179.90 81.66,176.06 80.87,172.62 81.84,168.39 82.44,160.25 81.99,154.23 81.21,150.39 80.49,148.31 80.79,147.43 84.37,148.96 85.69,153.19 86.30,152.01 85.90,148.33 85.06,144.65 84.73,144.64 79.93,140.23 78.16,138.29 73.68,136.44 72.30,132.46 72.65,129.71 69.49,127.80 69.05,124.18 66.06,120.93 66.00,118.62 64.64,116.93 62.46,115.50 61.76,111.58 58.57,107.95 57.23,103.72 54.85,103.43 50.92,103.32 48.02,102.03 42.90,97.37 40.52,96.52 36.19,94.92 32.76,95.30 27.89,93.24 24.95,91.33 22.20,92.28 22.71,95.39 21.34,95.68 18.48,96.62 16.30,98.13 13.56,99.08 13.20,96.44 14.31,92.04 16.95,90.66 16.27,89.53 13.11,92.03 11.42,95.02 7.85,98.21 9.66,100.39 7.32,103.61 4.66,105.49 2.18,106.86 2.00,107.46 2.00,44.46 5.26,45.28 7.05,47.31 8.15,46.44 12.33,46.71 12.18,47.74 15.97,48.50 18.50,48.05 23.72,49.47 28.48,49.89 30.38,50.48 33.68,49.75 37.44,51.10 40.13,51.72 44.75,52.81 48.64,54.96 51.23,55.38 53.40,53.51 56.40,52.10 60.08,52.65 63.79,50.68 67.84,49.56 69.54,51.42 71.39,50.37 71.94,48.26 73.65,48.74 77.84,52.76 81.14,49.72 81.47,53.13 84.51,52.39 85.45,51.08 88.45,51.34 92.23,53.22 98.03,54.87 101.44,55.63 103.86,55.34 107.20,57.62 103.72,59.84 108.20,60.80 114.88,60.28 116.99,59.49 119.63,62.18 122.32,59.91 119.79,58.01 121.39,56.47 124.41,56.26 126.39,55.82 128.39,56.89 130.88,59.32 133.64,58.97 138.02,60.99 141.86,60.28 145.47,60.38 145.19,57.59 147.39,56.81 151.23,58.33 151.21,62.58 152.79,59.00 154.78,59.12 155.90,54.61 153.25,51.84 150.36,50.03 150.55,45.07 153.48,41.82 156.75,42.54 159.25,44.52 162.62,49.57 160.42,51.78 Z"/><path class="land" d="M 106.54,36.43 105.30,38.53 110.81,37.17 114.25,39.44 117.05,37.15 119.32,38.62 121.34,43.03 122.59,41.17 120.83,36.57 123.01,35.91 125.47,36.63 128.24,38.44 129.79,42.81 130.56,45.98 134.72,48.20 139.19,50.32 138.92,52.30 134.85,52.66 136.43,54.38 135.60,56.03 131.12,55.32 126.86,54.11 123.98,54.38 119.33,55.91 111.99,56.69 108.65,57.00 107.31,54.89 103.93,53.66 101.73,54.16 98.68,50.61 100.33,50.13 104.15,49.37 107.64,49.57 110.87,48.79 106.08,47.74 100.79,48.10 97.28,48.01 95.97,46.35 101.72,44.56 97.90,44.62 93.57,43.44 95.65,40.08 97.38,38.29 104.01,35.56 Z"/><path class="land" d="M 130.47,35.09 128.30,38.05 124.43,34.91 125.27,34.28 128.59,34.10 Z"/><path class="land" d="M 200.21,36.51 200.43,37.75 197.79,37.62 195.13,37.53 192.42,38.13 191.70,37.86 188.97,35.48 189.08,33.86 190.27,33.56 195.94,34.05 Z"/><path class="land" d="M 174.89,36.27 176.84,39.06 179.13,35.45 185.41,33.60 189.66,38.24 189.29,41.18 194.19,39.88 196.53,38.10 202.02,40.37 205.43,42.50 205.76,44.46 210.35,43.45 212.93,46.30 218.91,48.08 221.07,49.89 223.41,54.08 218.86,56.17 224.70,59.10 228.63,60.09 232.19,64.21 236.08,64.51 235.31,67.66 230.97,72.87 227.92,70.95 224.02,66.64 220.82,67.20 220.51,69.77 223.11,72.38 226.47,74.44 227.49,75.63 229.11,80.07 228.25,83.30 225.13,82.08 218.92,78.49 222.42,82.36 225.00,85.07 225.40,86.63 218.69,84.84 213.37,82.24 210.37,80.05 211.23,78.79 207.54,76.48 203.93,74.30 203.97,75.61 196.81,76.32 194.72,74.78 196.35,71.48 201.00,71.40 206.10,70.82 205.27,69.22 206.14,66.98 209.34,62.62 208.66,60.63 207.71,59.09 203.91,56.92 198.90,55.39 200.48,54.26 197.86,51.47 195.68,51.21 193.73,49.68 192.40,51.01 187.91,51.58 178.90,50.58 173.66,49.27 169.65,48.59 167.59,47.01 170.17,44.97 166.66,44.95 165.87,40.40 167.78,36.39 170.32,34.56 176.72,33.37 Z"/><path class="land" d="M 140.74,33.19 143.69,34.13 148.11,33.56 148.75,34.86 146.44,37.02 150.19,38.95 149.74,42.98 145.68,44.72 143.29,44.35 141.58,42.63 135.43,39.17 135.48,37.74 140.53,38.29 137.80,35.36 Z"/><path class="land" d="M 158.47,38.00 155.81,41.35 152.98,41.18 151.44,37.24 151.48,35.01 152.77,33.10 155.23,31.88 160.39,32.04 165.12,33.13 161.42,37.12 Z"/><path class="land" d="M 90.95,44.15 84.44,46.39 83.13,44.42 77.41,42.05 78.24,40.59 80.19,36.87 82.34,33.92 79.92,31.17 88.28,30.47 91.82,31.40 98.15,31.65 100.55,32.95 103.21,34.84 100.10,35.97 94.02,39.13 90.95,42.27 Z"/><path class="land" d="M 157.43,28.09 156.09,29.83 152.49,29.49 149.49,28.32 150.81,26.30 154.37,25.10 156.53,26.67 Z"/><path class="land" d="M 146.90,22.00 147.23,22.36 147.30,24.66 146.17,28.00 142.09,28.46 139.43,27.74 139.48,25.13 135.42,25.47 135.27,22.00 137.93,22.14 138.28,22.00 Z"/><path class="land" d="M 121.05,22.00 121.28,22.61 122.26,24.21 124.46,23.46 127.06,23.65 127.49,25.85 125.98,27.98 117.60,28.67 111.35,30.62 107.58,30.72 107.27,29.25 112.41,27.27 101.22,27.81 97.76,27.00 101.14,22.62 102.29,22.00 106.39,22.00 110.44,22.88 114.84,25.54 119.17,25.88 115.97,22.00 Z"/><path class="land" d="M 164.37,22.00 163.98,23.18 166.82,24.20 168.39,25.26 171.73,25.46 175.35,25.84 179.28,24.86 184.32,24.48 188.35,24.80 191.00,26.49 191.55,28.34 190.01,29.54 186.32,30.50 183.15,29.96 176.04,30.65 170.96,30.73 166.96,30.17 160.38,28.73 159.53,26.26 159.22,24.04 156.74,22.08 155.98,22.00 Z"/><path class="land" d="M 95.40,22.00 92.34,23.27 88.38,23.96 85.02,22.99 85.02,22.99 86.26,22.00 Z"/><path class="land" d="M 191.51,22.00 189.75,22.71 186.02,22.00 177.81,22.00 176.01,22.17 174.84,22.00 Z"/><path class="land" d="M 338.07,22.00 340.13,23.07 340.71,26.89 338.06,27.30 341.27,31.16 335.77,31.48 338.64,33.31 337.83,34.89 334.34,35.58 330.89,35.60 333.99,38.64 334.02,40.63 329.12,38.78 327.85,39.98 331.19,41.10 334.44,43.84 335.38,47.45 330.96,48.32 329.05,46.59 325.99,44.01 326.84,47.06 323.96,49.42 330.49,49.61 333.90,49.85 327.26,53.76 320.53,57.29 313.29,58.84 310.56,58.86 308.00,60.59 304.55,65.33 299.22,68.47 297.51,68.66 294.22,69.76 290.66,70.81 288.54,73.58 288.50,76.73 287.25,79.67 283.21,83.26 284.21,86.77 283.10,90.48 281.83,94.86 278.34,95.13 274.68,91.47 269.73,91.45 267.33,88.99 265.68,84.60 261.39,79.03 260.13,76.10 259.79,72.07 256.36,67.93 257.26,64.63 255.60,63.04 258.05,57.80 261.78,56.13 262.76,54.26 263.27,50.75 260.44,52.34 259.10,53.01 256.87,53.65 253.83,52.18 253.67,49.13 254.64,46.75 256.93,46.68 261.99,47.88 257.73,45.03 255.52,43.49 253.05,44.12 250.98,43.01 253.75,38.83 252.24,37.16 250.28,34.06 247.30,29.30 244.14,27.56 244.17,25.68 237.53,23.05 232.27,22.73 225.65,22.91 219.61,23.24 217.12,22.00 Z"/><circle class="dot" cx="146.57" cy="113.24" r="3.75"/><circle class="dot" cx="166.38" cy="140.16" r="3.75"/><circle class="dot" cx="193.62" cy="149.14" r="3.75"/><circle class="dot" cx="218.38" cy="135.68" r="3.75"/><circle class="dot" cx="228.29" cy="117.73" r="3.75"/><line class="axis" x1="332.00" y1="58.00" x2="332.00" y2="38.00"/><path class="axis" d="M 328.50,45.00 332.00,38.00 335.50,45.00"/><text class="" x="332.00" y="33.00" text-anchor="middle">N</text></svg></div><div class="k-lead"><p>The Canadian Shield is a broad area of ancient bedrock around Hudson Bay, near 58°N, 85°W. On a map, look for the lake-rich parts of northern Ontario and Québec south and east of the bay.</p></div><div class="k-example"><p class="k-label">Read the landscape</p><p>During the last ice ages, moving ice scoured the bedrock and glacial deposits disrupted drainage. When the ice retreated, many of the depressions filled with water, so the lakes are far younger than the underlying rocks.</p></div><footer class="k-credit"><details class="credits"><summary>Credits</summary><p>Land: <a href="https://www.naturalearthdata.com/about/terms-of-use/">Natural Earth</a> (public domain). Projected and annotated; feature location is schematic.</p></details></footer></article></main></body></html>
