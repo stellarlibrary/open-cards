@@ -1,0 +1,500 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'; img-src data:; form-action 'none'; base-uri 'none'"><title>Antarctica: Land Ice and Floating Ice | OpenCards</title><style>:root {
+  color-scheme: light;
+  --paper: #fffcf6;
+  --surface: #f2efe8;
+  --line: #ded8ce;
+  --ink: #23241f;
+  --subtle: #56594f;
+  --accent: #16584d;
+  --signal: #8c4d2b;
+  --accent-pale: #dcebe5;
+  --font: system-ui, -apple-system, "PingFang SC", "Hiragino Sans", "Apple SD Gothic Neo", sans-serif;
+  --display: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, "Songti SC", serif;
+  --mono: ui-monospace, SFMono-Regular, Menlo, monospace;
+}
+* { box-sizing: border-box; }
+.single { margin: 0; padding: clamp(10px, 3vw, 32px); background: #eae8df; color: var(--ink); }
+.single .study-card { margin-inline: auto; max-width: 720px; }
+.theme-english { --accent: #5e3a79; --accent-pale: #ece3f4; }
+.theme-language { --accent: #893c53; --accent-pale: #f4e3e7; }
+.theme-math { --accent: #284983; --accent-pale: #e3eaf7; }
+.theme-science { --accent: #16584d; --accent-pale: #dcebe5; }
+.theme-history { --accent: #7d461d; --accent-pale: #f2e6d5; }
+.theme-art { --accent: #8c3d35; --accent-pale: #f1e2dd; }
+.theme-nature { --accent: #29634c; --accent-pale: #dcece0; }
+.theme-practical { --accent: #405d22; --accent-pale: #e7edd8; }
+.study-card {
+  background: var(--paper); color: var(--ink); font: 16px/1.53 var(--font); min-width: 0;
+  border: 1px solid var(--line); border-top: 5px solid var(--accent); border-radius: 12px;
+  box-shadow: 0 2px 6px #211d1911; overflow-wrap: anywhere;
+}
+.card-head { padding: 18px 22px 10px; }
+.card-kicker {
+  display: flex; justify-content: space-between; gap: .75rem; align-items: baseline;
+  color: var(--accent); font-weight: 750; font-size: .73rem; letter-spacing: .025em;
+}
+.card-kicker .ordinal { font: 650 .77rem/1.3 var(--mono); white-space: nowrap; }
+.card-title { font: 700 clamp(1.55rem, 3.8vw, 2.4rem)/1.12 var(--display); margin: .55rem 0 0; text-wrap: pretty; }
+.theme-math .card-title, .theme-science .card-title, .theme-practical .card-title { font-family: var(--font); }
+.theme-language.lang-ja .card-title, .kind-element .card-title { letter-spacing: .01em; }
+.kind-kana .card-title { font-size: 2rem; }
+.card-main { display: grid; align-content: start; gap: .95rem; padding: 8px 22px 18px; }
+.card-main > * { min-width: 0; }
+.card-copy > :first-child, .answer-copy > :first-child { margin-top: 0; }
+.card-copy > :last-child, .answer-copy > :last-child { margin-bottom: 0; }
+.card-copy p, .answer-body p { margin: .5em 0; }
+.passage-list { padding-inline-start: 1.25em; }
+.passage-list li + li { margin-top: .18em; }
+.card-copy code, .answer-body code {
+  background: var(--surface); padding: .08em .25em; border-radius: 4px; font: .9em var(--mono);
+}
+.card-copy pre, .answer-body pre {
+  overflow: auto; white-space: pre; margin: .65rem 0; padding: .75rem;
+  background: #262b2c; color: #f5f5ec; border-radius: 7px; tab-size: 4;
+}
+.card-copy pre code, .answer-body pre code { background: none; padding: 0; overflow-wrap: normal; }
+.poem .context { font-family: var(--display); font-size: 1.05em; line-height: 1.75; }
+.mini-label {
+  display: block; color: var(--accent); margin: 0 0 .4rem; font: 750 .72rem/1.25 var(--font);
+  letter-spacing: .09em; text-transform: uppercase;
+}
+.question {
+  border-inline-start: 3px solid var(--accent); background: var(--accent-pale);
+  padding: .7rem .8rem; border-radius: 0 7px 7px 0;
+}
+.question .mini-label { margin-bottom: .28rem; }
+.question .stem { font-weight: 650; }
+.choices {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 123px), 1fr));
+  gap: .28rem .4rem; margin: .5rem 0 0; padding: 0; list-style: none;
+}
+.choices.long { grid-template-columns: 1fr; }
+.choices li {
+  display: flex; align-items: baseline; gap: .3em; border: 1px solid var(--line); padding: .28rem .42rem;
+  border-radius: 5px; background: var(--paper); font-size: .93em;
+}
+.choices li b, .choice-groups .blank { color: var(--accent); }
+.choice-groups .blank { display: block; margin-top: .62rem; font-size: .87em; }
+.answer { border-top: 1px solid var(--line); }
+.study-card summary { color: var(--accent); font-weight: 700; cursor: pointer; padding: .55rem 0; line-height: 1.4; }
+.study-card summary:focus-visible, .study-card a:focus-visible, .study-card pre:focus-visible {
+  outline: 2px solid var(--accent); outline-offset: 3px;
+}
+.answer-body { padding: .2rem 0 .35rem; }
+.answer-body strong { color: var(--accent); }
+.answer-supplement { margin: .8rem 0 0; }
+.answer-supplement .context { margin-top: .7rem; }
+.translation { font-size: .93em; margin: .75rem 0 0; border-top: 1px dashed var(--line); padding-top: .55rem; }
+.translation .mini-label { letter-spacing: .06em; }
+.card-footer {
+  padding: .15rem 22px .9rem; color: var(--subtle); font-size: .77rem; line-height: 1.46;
+}
+.credits p { margin: .15rem 0 .5rem; }
+.credits a, .card-footer > a { color: var(--accent); text-underline-offset: .15em; }
+.credits summary { font-size: .76rem; }
+.photos { display: grid; gap: 7px; }
+.photos.paired { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.frame { margin: 0; border: 1px solid var(--line); border-radius: 8px; background: #ece8de; overflow: hidden; }
+.frame img { display: block; width: 100%; max-height: 490px; object-fit: contain; }
+.paired .frame img { aspect-ratio: 1; object-fit: contain; background: #e4e6dc; }
+.frame figcaption { font-size: .78rem; padding: .28rem .5rem; color: var(--subtle); background: var(--paper); }
+.element-plate {
+  display: flex; flex-direction: column; justify-content: space-between; min-height: 127px; max-width: 270px;
+  margin-inline: auto; width: 100%; padding: 10px 18px 13px; border: 1px solid var(--accent);
+  border-radius: 12px; background: var(--accent-pale);
+}
+.element-plate b { font: 650 3.2rem/1 var(--font); align-self: center; }
+.element-plate span:last-child { color: var(--accent); align-self: center; text-align: center; font-size: .83em; }
+.element-number { font: 700 .9rem var(--mono); color: var(--accent); }
+.element-study { display: grid; gap: .75rem; }
+.atom-figure {
+  margin: 0; border: 1px solid var(--line); border-radius: 8px; padding: .68rem;
+  background: var(--paper);
+}
+.atom-figure figcaption { display: grid; gap: .16rem; font-size: .92em; }
+.atom-figure figcaption span { font-size: .87em; color: var(--subtle); }
+.atom-layout { display: grid; grid-template-columns: minmax(0, 226px) minmax(82px, 128px); justify-content: center; align-items: center; gap: .75rem; margin-top: .5rem; }
+.atom-layout .diagram { max-width: 226px; border: 0; background: transparent; }
+.shell-key { font-size: .84em; }
+.shell-key ol { padding: 0; margin: .25em 0; list-style: none; }
+.shell-key li { display: flex; justify-content: space-between; gap: .45em; border-bottom: 1px solid var(--line); padding-inline: .13em; }
+.shell-key b { font-variant-numeric: tabular-nums; color: var(--accent); }
+.atom-figure .atom-note { font-size: .84em; color: var(--subtle); margin: .56em 0 0; }
+.diagram .shell { stroke: #82877b; stroke-width: 1; fill: none; }
+.diagram .electron, .diagram .nucleus { fill: var(--accent); }
+.diagram .nucleus-label { fill: #fff; font-weight: 720; }
+.kana-plate { display: flex; align-items: center; justify-content: center; gap: .75rem; color: var(--accent); }
+.kana-plate .diagram { width: min(52%, 190px); margin: 0; border: 0; background: transparent; }
+.kana-plate span { font-weight: 720; }
+.kana-plate small { display: block; font-weight: 540; color: var(--subtle); }
+.visual-list { margin: 0; padding: 0; list-style: none; display: grid; gap: .35rem; counter-reset: steps; }
+.visual-list li {
+  display: flex; align-items: baseline; gap: .55rem; border: 1px solid var(--line); border-radius: 6px;
+  background: var(--surface); padding: .4rem .57rem; font-size: .91em;
+}
+.visual-list li::before { content: "•"; color: var(--accent); font-weight: 750; flex: none; }
+.visual-list.flow li::before { content: counter(steps, decimal-leading-zero); font: 700 .78em var(--mono); }
+.visual-list.flow li { counter-increment: steps; }
+.visual-list.timeline li { border-inline-start: 3px solid var(--accent); }
+.visual-list.timeline li::before { content: "↓"; }
+.visual-list.timeline li:last-child::before { content: "●"; }
+.visual-list.compare { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.data-table { overflow-x: auto; border: 1px solid var(--line); border-radius: 7px; }
+.data-table table { width: 100%; border-collapse: collapse; font-size: .88em; line-height: 1.34; }
+.data-table th, .data-table td { text-align: start; padding: .42rem .52rem; border-block-end: 1px solid var(--line); }
+.data-table th { background: var(--accent-pale); color: var(--accent); }
+.data-table tr:last-child td { border-block-end: 0; }
+.molecule {
+  padding: .9rem .65rem; background: var(--accent-pale); border: 1px solid var(--line);
+  color: var(--accent); text-align: center; border-radius: 7px; font: 660 clamp(.92rem, 3vw, 1.25rem) var(--mono);
+}
+.diagram {
+  display: block; width: 100%; max-width: 470px; height: auto; margin: auto;
+  overflow: hidden; background: var(--surface); border: 1px solid var(--line); border-radius: 8px;
+}
+.diagram text { fill: var(--ink); font: 13px var(--font); }
+.diagram .plot-title { font-weight: 700; }
+.diagram .grid, .diagram .rule, .diagram .axis, .diagram .curve, .diagram .accent, .diagram .guide,
+.diagram .stroke, .diagram .staff-rule { fill: none; stroke-linecap: round; stroke-linejoin: round; }
+.diagram .grid { stroke: #dad9d0; stroke-width: 1; }
+.diagram .rule { stroke: #64695f; stroke-width: 1.25; }
+.diagram .axis { stroke: #64695f; stroke-width: 1.4; }
+.diagram .curve { stroke: var(--accent); stroke-width: 2.6; }
+.diagram .accent { stroke: var(--signal); stroke-width: 2.25; }
+.diagram .guide { stroke: #71766e; stroke-dasharray: 4 3; stroke-width: 1.15; }
+.diagram .dot, .diagram .note { fill: var(--accent); }
+.diagram .open-point { fill: var(--surface); stroke: var(--accent); stroke-width: 2; }
+.diagram .region { fill: var(--accent-pale); stroke: var(--accent); stroke-width: 1.4; }
+.diagram .region-alt { fill: #ead9c5; stroke: var(--signal); stroke-width: 1.2; }
+.diagram .sun { fill: #edbe68; stroke: #8e552c; stroke-width: 1.4; }
+.diagram .world { fill: #9dc5c8; stroke: #285d6e; stroke-width: 1.6; }
+.diagram .moon { fill: #9e9f9e; stroke: #5e605c; stroke-width: 1.3; }
+.diagram .water { fill: #dae9ee; }
+.diagram .land { fill: #abb9a1; stroke: #5c6e56; stroke-width: .8; }
+.diagram .sky { fill: #eaf0f3; }
+.diagram .sand { fill: #f5dfbb; }
+.diagram .ground { fill: #ecd2be; }
+.diagram .haze { fill: #efdfd3; }
+.diagram .basalt { fill: #4e606b; }
+.diagram .band-fill { fill: #5a8597; }
+.diagram .ice-water { fill: #76a9b7; stroke: #285d6e; stroke-width: 1.25; }
+.diagram .solar-in { fill: none; stroke: #715108; stroke-width: 2.35; stroke-linejoin: round; }
+.diagram .infrared-escape { fill: none; stroke: var(--signal); stroke-width: 1.7; stroke-dasharray: 3 2; }
+.diagram .planet-band { fill: none; stroke: #c49160; stroke-width: 6; stroke-linecap: round; }
+.diagram .face-dot { fill: #493721; }
+.diagram .river, .diagram .river-branch { fill: none; stroke: #174e76; stroke-width: 2.8; stroke-linejoin: round; }
+.diagram .river-branch { stroke-width: 1.65; }
+.diagram .map-label { paint-order: stroke; stroke: #e7eee2; stroke-width: 2.3; stroke-linejoin: round; }
+.diagram .stroke { stroke: var(--ink); stroke-width: 3.25; }
+.diagram .stroke-no { fill: var(--accent); font-size: 9px; font-weight: 760; }
+.diagram .stroke-frame { stroke: #868c80; stroke-width: 1.2; fill: var(--paper); }
+.diagram .staff-rule { stroke: #5c645a; stroke-width: 1.2; }
+.diagram .clef { font-family: "Bravura", "Apple Symbols", "Noto Music", serif; font-size: 38px; }
+.diagram .accidental { font-size: 17px; }
+.diagram .pitch { font-family: var(--mono); font-size: 12px; }
+@media (max-width: 430px) {
+  .card-head { padding-inline: 16px; }
+  .card-main, .card-footer { padding-inline: 16px; }
+  .card-title { font-size: max(1.45rem, 7vw); }
+  .diagram text:not(.clef, .accidental, .stroke-no, .nucleus-label) { font-size: 15px; }
+  .atom-layout { grid-template-columns: minmax(0, 1fr); }
+  .shell-key ol { display: grid; grid-template-columns: repeat(auto-fit, minmax(70px, 1fr)); gap: .12em .5em; }
+}
+.sample-card { container-type: inline-size; }
+.knowledge-card {
+  --paper: #fff;
+  --surface: #f4f5f6;
+  --line: #e0e1e4;
+  --ink: #202126;
+  --subtle: #565a63;
+  --accent: #28577d;
+  --accent-pale: #e8eff5;
+  --signal: #8c5135;
+  --inset: clamp(17px, 6cqw, 27px);
+  --serif-cn: "Songti SC", "Noto Serif CJK SC", "Noto Serif SC", "SimSun", serif;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  align-content: start;
+  gap: 1.08rem;
+  padding: var(--inset);
+  border: 1px solid var(--line);
+  border-radius: 13px;
+  box-shadow: 0 1px 2px #1d213008;
+  font-size: 1rem;
+  line-height: 1.54;
+}
+.knowledge-card > * { min-width: 0; }
+.k-title {
+  margin: 0;
+  font: 650 clamp(1.38rem, 7cqw, 2rem)/1.12 var(--font);
+  letter-spacing: -.027em;
+  text-wrap: pretty;
+}
+.k-title:lang(zh), .k-title:lang(ja), .k-title:lang(ko) { letter-spacing: 0; line-height: 1.24; }
+.k-title-gloss {
+  display: block;
+  margin-top: .38em;
+  color: var(--subtle);
+  font: 450 1rem/1.4 var(--font);
+  letter-spacing: 0;
+}
+.knowledge-card p { margin: .6em 0; }
+.knowledge-card :is(.k-lead, .k-example, .k-note, .k-byline, .k-sentence, .k-gloss, .k-code-result, blockquote) > :first-child { margin-top: 0; }
+.knowledge-card :is(.k-lead, .k-example, .k-note, .k-byline, .k-sentence, .k-gloss, .k-code-result, blockquote) > :last-child { margin-bottom: 0; }
+.knowledge-card .k-label {
+  color: var(--subtle);
+  font-size: .81rem;
+  font-weight: 625;
+  line-height: 1.4;
+  margin: 0 0 .37rem;
+}
+.k-note { border-top: 1px solid var(--line); padding-top: .8rem; font-size: .91rem; }
+.k-credit { color: var(--subtle); font-size: .81rem; }
+.knowledge-card .credits summary {
+  width: fit-content;
+  min-height: 28px;
+  padding: .32rem 0;
+  font-weight: 550;
+  color: var(--subtle);
+}
+.portal .knowledge-card a { color: var(--accent); }
+.knowledge-card :not(pre) > code {
+  font: .93em var(--mono);
+  font-variant-ligatures: none;
+}
+.knowledge-card pre {
+  padding: .82rem 1rem;
+  margin: .7rem 0;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+  border-radius: 7px;
+  color: #f4f5f7;
+  background: #24272e;
+  font: .89rem/1.55 var(--mono);
+  font-variant-ligatures: none;
+  tab-size: 4;
+}
+.knowledge-card pre code { font: inherit; }
+.k-code-result { margin-top: .8rem; }
+
+/* Language: distinguish the entry, its meaning, and a model utterance. */
+:is(.layout-lexicon, .layout-bilingual) .k-title {
+  font-size: clamp(1.8rem, 9cqw, 2.75rem);
+  letter-spacing: -.045em;
+}
+.layout-lexicon .k-title { font-family: var(--display); font-weight: 650; }
+.layout-lexicon .k-example {
+  padding-inline-start: .85rem;
+  border-inline-start: 1px solid #bfc4cb;
+  font: 1.11rem/1.46 var(--display);
+}
+.layout-bilingual .k-example { padding-top: .85rem; border-top: 1px solid var(--line); }
+.k-sentence { font-weight: 440; }
+.k-gloss { color: var(--subtle); font-size: .91rem; margin-top: .45rem; }
+.layout-register .k-example { font: 1.17rem/1.42 var(--display); }
+.layout-register .k-lead { border-top: 1px solid var(--line); padding-top: .85rem; }
+.layout-phrase .k-example { padding: .75rem 0 0; border-top: 1px solid var(--line); }
+:is(.layout-phrase, .layout-glyph) :not(pre) > code { font: inherit; font-weight: 570; }
+.character-entry .k-title {
+  font: 650 clamp(2.95rem, 14cqw, 4.25rem)/1.05 var(--serif-cn);
+}
+.stroke-plate {
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  align-items: center;
+}
+.stroke-plate > :not(.k-head, .kind-kana) { grid-column: 1 / -1; }
+.stroke-plate .k-head { text-align: center; align-self: start; padding-top: .6rem; }
+.stroke-plate .k-title { font: 500 clamp(3.3rem, 18cqw, 5.5rem)/1.14 "Hiragino Sans", var(--font); }
+.knowledge-card .kana-plate {
+  display: grid;
+  gap: .43rem;
+  justify-items: center;
+  text-align: center;
+  color: var(--ink);
+}
+.knowledge-card .kana-plate .diagram { width: min(100%, 120px); max-width: none; background: transparent; }
+.knowledge-card .kana-plate span { font-size: .87rem; font-weight: 650; }
+.knowledge-card .kana-plate small { font-size: .8rem; font-weight: 450; }
+.knowledge-card .diagram .stroke-frame { stroke: #c4c9ce; }
+.knowledge-card .kana-plate .diagram .stroke-no { font-size: 10px; }
+
+/* Plots, schematics, and tabular references use the width for information. */
+.knowledge-card .diagram {
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  max-width: 460px;
+}
+.knowledge-card .diagram .grid { stroke: #d9dde1; }
+.knowledge-card .diagram :is(.axis, .rule, .staff-rule) { stroke: #565d65; }
+.knowledge-card .diagram .guide { stroke: #7c828a; }
+.knowledge-card .diagram .open-point { fill: var(--paper); }
+.knowledge-card .diagram .region-alt { fill: #efe1d9; }
+.knowledge-card :is(.kind-graph, .kind-diagram), .layout-staff .kind-staff { margin-inline: calc(5px - var(--inset)); }
+:is(.layout-atlas, .layout-map, .layout-blueprint) :is(.kind-diagram, .kind-map) {
+  background: var(--surface);
+  border-radius: 6px;
+  padding-block: .38rem;
+  margin-inline: calc(8px - var(--inset));
+}
+.layout-graph :is(.k-lead, .kind-graph) + .k-example { padding-top: .8rem; border-top: 1px solid var(--line); }
+.layout-staff .k-title { font-family: var(--display); }
+.layout-staff .kind-staff .diagram { background: #faf9f6; }
+.knowledge-card .diagram .pitch { font-size: 15px; }
+.knowledge-card .data-table { border: 0; border-block: 1px solid var(--line); border-radius: 0; }
+.knowledge-card .data-table table { font-size: .88rem; font-variant-numeric: tabular-nums; }
+.knowledge-card .data-table :is(td, th) { padding: .47rem .4rem; }
+.knowledge-card .data-table :is(td, th):first-child { padding-inline-start: .17rem; }
+.knowledge-card .data-table :is(td, th):last-child { padding-inline-end: .17rem; }
+.knowledge-card .data-table th { background: transparent; color: var(--subtle); font-weight: 625; }
+.layout-console .data-table :is(td, th) { padding-block: .36rem; }
+.knowledge-card .visual-list { gap: 0; }
+.knowledge-card .visual-list li {
+  font-size: .93rem;
+  border: 0;
+  border-radius: 0;
+  padding: .46rem 0;
+  background: transparent;
+}
+.knowledge-card .visual-list li + li { border-top: 1px solid var(--line); }
+.knowledge-card .visual-list li::before { color: var(--subtle); }
+.knowledge-card .visual-list.compare {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  border-block: 1px solid var(--line);
+}
+.knowledge-card .visual-list.compare li { padding: .6rem .6rem .6rem 0; }
+.knowledge-card .visual-list.compare li + li { border-top: 0; border-inline-start: 1px solid var(--line); padding-inline: .6rem 0; }
+.knowledge-card .visual-list.compare li::before { content: none; }
+.layout-chronicle .visual-list.timeline { border-inline-start: 1px solid #bfc4cb; margin-inline-start: .26rem; }
+.layout-chronicle .visual-list.timeline li { position: relative; display: block; border: 0; padding: .26rem 0 .26rem .94rem; }
+.layout-chronicle .visual-list.timeline li::before {
+  content: "";
+  position: absolute;
+  inset-inline-start: -.23rem;
+  inset-block-start: .8rem;
+  width: .4rem;
+  height: .4rem;
+  border-radius: 50%;
+  background: #666c75;
+}
+.layout-chronicle .k-title, .layout-atlas .k-title { font-family: var(--display); }
+.layout-molecule .molecule {
+  border: 0;
+  border-block: 1px solid var(--line);
+  border-radius: 0;
+  padding: 1rem .3rem;
+  background: transparent;
+  color: var(--ink);
+  font-size: clamp(1rem, 5.15cqw, 1.45rem);
+  overflow-wrap: anywhere;
+}
+
+/* Element reference: name and tile share one masthead above the shell key. */
+.layout-atom { grid-template-columns: minmax(0, 1fr) minmax(5.3rem, 30%); align-items: start; }
+.layout-atom .k-head { align-self: center; }
+.layout-atom .k-title { font-size: clamp(1.31rem, 6.85cqw, 1.96rem); }
+.layout-atom :is(.kind-element, .element-study) { display: contents; }
+.layout-atom :is(.atom-figure, .k-lead, .k-credit) { grid-column: 1 / -1; }
+.layout-atom .element-plate {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  justify-items: start;
+  min-height: 0;
+  gap: .21rem;
+  padding: .5rem .56rem;
+  background: var(--surface);
+  border: 0;
+  border-radius: 5px;
+}
+.layout-atom .element-number { color: var(--subtle); font: 600 .79rem/1.2 var(--mono); }
+.layout-atom .element-plate b { font: 630 clamp(1.65rem, 8cqw, 2.25rem)/1 var(--font); }
+.layout-atom .element-plate span:last-child {
+  color: var(--subtle);
+  font-size: .74rem;
+  line-height: 1.22;
+  text-align: start;
+}
+.layout-atom .atom-figure {
+  border: 0;
+  border-block: 1px solid var(--line);
+  border-radius: 0;
+  padding: .8rem 0 .9rem;
+}
+.layout-atom .atom-layout {
+  grid-template-columns: minmax(0, 1.4fr) minmax(90px, 1fr);
+  gap: .75rem;
+  margin: .55rem 0;
+}
+.layout-atom .atom-layout .diagram { width: min(100%, 176px); }
+.layout-atom .diagram .nucleus-label { font-size: 16px; }
+.layout-atom .diagram:not(:has(.shell ~ .shell)) :is(.shell, .electron) {
+  transform-origin: center;
+  transform: scale(1.42);
+}
+.layout-atom .shell-key li { border-bottom: 0; padding: 0; line-height: 1.3; }
+.layout-atom .shell-key b { color: var(--ink); }
+.layout-atom .atom-note { font-size: .8rem; line-height: 1.45; }
+
+/* Verse is typeset as text, with the interpretation outside the poem. */
+.knowledge-card blockquote { margin: 0; }
+:is(.layout-verse, .layout-lyric) .k-title { font-family: var(--serif-cn); }
+:is(.layout-verse, .layout-lyric) blockquote {
+  font: 500 clamp(1.05rem, 5.4cqw, 1.33rem)/1.86 var(--serif-cn);
+  text-wrap: pretty;
+}
+.layout-verse :is(.k-head, .k-source-text) { text-align: center; }
+.layout-lyric .k-source-text { padding-inline-start: .72rem; border-inline-start: 1px solid #c8cbd0; }
+.k-verse-line { display: block; }
+.layout-lyric .k-verse-line { padding-inline-start: 1em; text-indent: -1em; }
+.k-byline { margin-bottom: .85rem; font-size: .86rem; color: var(--subtle); }
+:is(.layout-verse, .layout-lyric, .layout-reading) .k-lead { padding-top: .85rem; border-top: 1px solid var(--line); }
+.layout-reading .k-title { font-family: var(--display); }
+.layout-reading .k-source-text { font: 1.105rem/1.55 var(--display); }
+
+/* Reproductions and identification plates retain their full subject. */
+.knowledge-card .frame {
+  border: 0;
+  border-radius: 5px;
+  background: var(--surface);
+}
+.knowledge-card .frame img { width: 100%; object-fit: contain; background: var(--surface); }
+.knowledge-card .frame figcaption { padding: .4rem 0 0; }
+.layout-gallery .frame img { height: clamp(8.4rem, 67cqw, 18rem); }
+.layout-gallery .k-title, .layout-field .k-title { font-family: var(--display); }
+.k-scientific {
+  display: block;
+  color: var(--subtle);
+  font: italic 400 .98rem/1.4 var(--display);
+  letter-spacing: 0;
+  margin-top: .22em;
+}
+.layout-gallery:not(.breed-portrait) .k-lead { font-size: .91rem; color: var(--subtle); }
+.layout-field .photos:not(.paired) img { aspect-ratio: 4 / 3; }
+.layout-field .photos:not(.paired) { margin-inline: calc(-1 * var(--inset)); }
+.layout-field .photos:not(.paired) .frame { border-radius: 0; }
+.layout-field .photos.paired { gap: .7rem; }
+.layout-field:not(.breed-profile) .k-lead { font-size: .91rem; color: var(--subtle); }
+.specimen { margin: 0; }
+.specimen img {
+  display: block;
+  width: 100%;
+  height: clamp(9rem, 64cqw, 20rem);
+  object-fit: contain;
+  background: #f7f5ef;
+  border-radius: 5px;
+}
+.specimen figcaption {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .15em .6em;
+  padding-top: .45em;
+  color: var(--subtle);
+  font-size: .81rem;
+}
+.specimen figcaption span:first-child { font-weight: 625; }
+.breed-portrait .kind-illustration { margin: calc(-1 * var(--inset)) calc(-1 * var(--inset)) 0; }
+.breed-portrait .specimen img { border-radius: 12px 12px 0 0; height: clamp(11rem, 75cqw, 20rem); }
+.breed-portrait .specimen figcaption { padding-inline: var(--inset); }
+
+.read-shell{width:min(100%, 680px);margin:0 auto}.single.read-page{background:#f5f5f7}</style></head><body class="single read-page"><main class="read-shell sample-card"><article class="study-card knowledge-card layout-map" lang="en" data-ordinal="15"><header class="k-head"><h1 class="k-title">Antarctica: Land Ice and Floating Ice</h1></header><div class="k-visual kind-map"><svg class="diagram" viewBox="0 0 360 205" role="img" aria-label="Ross Ice Shelf, approximate location on an adapted Natural Earth basemap." xmlns="http://www.w3.org/2000/svg"><text class="plot-title" x="3.00" y="14.00" text-anchor="start">Ross Ice Shelf</text><rect class="water" x="1" y="21" width="358" height="183" rx="5"/><path class="land" d="M 159.11,94.73 160.12,95.46 161.01,96.11 160.33,96.65 160.07,97.49 159.13,97.59 159.04,97.56 158.30,97.47 158.78,96.67 159.39,95.99 158.66,95.24 158.02,94.62 159.11,94.73 Z"/><path class="land" d="M 170.93,130.88 171.84,130.86 172.13,131.86 172.14,132.76 172.11,132.90 172.22,133.63 172.22,133.63 171.68,134.41 170.91,133.76 170.70,132.88 170.66,131.95 170.93,130.88 Z"/><path class="land" d="M 159.39,86.50 160.56,86.81 161.73,87.74 162.49,88.46 163.35,89.35 163.42,90.35 163.40,91.25 163.32,92.19 163.16,93.11 162.49,93.73 161.53,93.66 160.76,93.02 160.77,91.90 160.37,91.10 159.74,90.22 159.18,89.47 158.71,88.70 158.17,87.80 158.17,87.80 158.34,87.60 158.47,86.69 159.39,86.50 Z"/><path class="land" d="M 145.68,127.80 145.55,126.83 144.76,126.31 145.71,126.24 146.56,126.49 146.88,127.39 146.52,128.43 146.52,128.43 145.75,128.74 145.68,127.80 Z"/><path class="land" d="M 147.31,130.37 147.49,128.95 147.64,129.34 147.96,130.20 147.99,131.37 147.99,131.37 147.27,131.27 147.31,130.37 Z"/><path class="land" d="M 136.59,113.86 136.80,112.98 136.41,112.19 137.73,111.59 137.61,112.19 137.82,113.08 137.87,114.00 138.19,114.96 137.87,115.80 136.97,116.41 136.97,116.41 136.45,116.02 136.59,114.99 136.59,113.86 Z"/><path class="land" d="M 136.91,89.99 137.97,90.30 138.80,90.78 139.57,91.31 139.57,92.25 139.74,93.20 139.39,94.11 138.60,93.47 138.65,94.42 138.73,95.31 137.89,95.68 136.91,95.46 136.22,94.38 136.22,94.38 136.10,93.77 136.47,92.92 135.36,92.31 134.52,91.98 132.66,91.38 131.73,90.54 131.65,89.64 132.66,89.51 133.58,89.63 134.73,89.68 135.81,89.79 136.91,89.99 Z"/><path class="land" d="M 126.33,74.26 126.53,74.93 125.79,75.44 125.55,76.33 125.69,77.26 125.86,78.24 126.26,79.04 127.04,79.60 127.87,79.97 128.81,79.92 129.00,80.79 128.74,81.72 129.23,82.56 129.68,83.41 130.38,84.39 131.14,84.90 132.19,85.02 133.08,84.90 133.92,84.48 134.90,84.22 135.91,84.33 136.80,84.58 137.76,84.80 138.66,84.84 139.57,85.06 141.59,86.04 142.49,86.28 143.35,86.69 144.29,86.96 145.37,87.67 146.07,88.48 146.59,89.21 146.49,90.14 147.12,90.78 147.68,91.48 148.11,92.71 148.14,93.60 148.34,94.50 148.55,95.43 149.34,96.20 149.14,97.09 148.75,98.02 148.70,98.94 148.48,99.86 149.45,99.91 150.06,99.20 150.86,98.80 151.78,98.72 152.36,99.48 151.91,100.25 152.36,101.09 153.33,101.32 154.26,101.54 155.16,101.20 156.07,101.31 157.08,101.01 157.68,100.28 158.53,99.79 159.44,99.52 160.39,99.15 161.10,98.47 162.08,97.97 162.98,97.78 163.99,97.64 165.13,97.96 165.98,98.31 165.44,97.55 165.13,96.73 164.84,95.83 164.77,94.90 164.64,94.00 165.19,93.32 166.02,92.93 166.91,92.87 166.37,91.95 166.27,91.08 166.96,90.45 167.23,89.59 167.51,88.75 168.00,88.02 168.53,87.20 168.77,86.36 168.10,85.75 167.51,85.09 167.06,84.30 166.35,84.84 165.78,85.66 165.06,86.16 164.42,85.49 163.42,83.99 163.30,83.43 163.57,82.55 163.99,81.59 164.16,80.64 164.37,79.69 164.34,78.62 164.83,77.87 165.37,77.22 165.65,76.88 166.43,76.41 167.09,75.77 167.59,75.05 168.08,74.26 168.52,73.49 169.11,72.50 169.41,71.56 169.80,70.70 169.73,69.73 168.88,69.38 168.83,68.35 169.08,67.49 169.68,66.83 170.32,66.09 170.89,65.18 171.27,64.12 171.42,62.92 171.86,62.16 172.81,62.14 173.32,62.89 174.25,62.85 174.17,61.95 174.45,60.95 175.34,61.09 175.64,61.97 176.59,62.04 177.58,61.54 178.56,61.21 179.47,61.34 179.82,62.34 180.69,61.53 181.51,61.12 182.44,60.83 183.36,60.55 184.24,60.05 185.19,59.76 185.97,59.32 186.59,58.54 187.13,59.24 188.05,59.05 188.45,60.28 188.75,61.21 189.75,60.93 190.32,60.07 191.31,59.61 192.35,60.02 192.44,60.98 193.35,60.30 194.31,60.28 195.29,60.49 196.13,60.83 196.93,61.42 197.73,61.88 197.80,62.78 198.02,63.64 199.02,63.60 199.95,63.92 200.80,64.32 201.65,64.69 202.54,64.78 203.45,64.95 204.43,64.74 205.34,64.78 206.21,65.03 207.13,64.83 208.27,63.97 209.14,63.58 209.71,64.43 209.50,65.33 209.79,66.24 210.64,66.64 210.60,67.70 210.72,68.58 211.77,68.69 212.68,68.09 213.57,68.28 214.80,68.29 215.69,68.65 216.80,69.05 217.68,69.18 218.63,69.33 219.52,69.50 219.92,70.35 221.13,70.41 222.05,70.44 222.61,71.16 223.56,71.41 224.35,71.02 225.40,71.27 226.28,71.63 227.20,72.22 227.91,72.87 228.31,73.69 228.65,74.62 228.54,75.67 227.71,76.32 227.49,77.48 227.23,78.34 227.57,79.47 227.30,80.35 227.09,81.35 227.39,82.21 228.16,82.66 229.42,82.95 229.33,83.99 229.46,84.95 229.55,85.88 229.73,86.80 230.07,87.67 227.97,89.27 227.38,89.45 226.32,89.73 225.45,89.19 224.36,88.91 223.52,89.37 223.90,90.21 222.97,90.44 221.98,90.40 220.91,90.43 220.42,91.25 220.50,92.15 221.20,92.83 222.24,92.93 223.18,92.89 224.04,93.08 224.88,93.35 225.76,93.30 227.03,93.40 227.40,93.85 227.75,94.77 228.23,95.53 228.80,96.31 229.82,96.53 230.76,96.61 231.77,97.04 232.54,97.82 233.14,98.52 234.02,98.91 234.53,99.39 235.00,100.03 234.87,101.01 235.20,101.86 235.56,102.78 235.49,103.85 236.19,104.52 237.83,104.97 237.18,105.36 236.04,105.85 235.58,106.68 235.39,107.61 235.65,108.54 235.43,109.53 235.33,110.43 235.53,111.05 235.32,111.86 234.73,112.54 234.97,113.44 234.83,114.47 235.04,115.40 234.55,116.34 235.23,117.12 235.94,117.76 236.46,118.57 237.96,120.20 237.48,120.78 236.64,121.38 235.64,121.81 233.88,122.64 233.56,123.54 233.29,124.40 233.22,125.49 233.18,126.60 233.51,127.60 233.93,128.51 233.59,129.59 233.77,130.50 233.01,131.03 232.10,131.18 231.11,131.49 230.72,132.51 229.86,132.83 228.77,133.57 227.97,134.51 227.62,135.47 227.88,136.52 228.18,137.48 227.85,138.34 227.08,138.90 226.30,139.61 226.06,140.59 225.53,141.31 224.81,141.86 224.06,142.43 223.82,143.39 223.42,144.46 222.82,145.28 222.05,146.13 221.59,146.96 221.09,147.74 221.74,148.78 222.42,149.52 221.48,149.51 220.59,148.85 219.65,148.36 218.80,148.05 217.90,148.30 217.17,149.15 216.22,150.03 215.63,150.71 214.62,151.51 213.92,152.11 212.82,152.80 211.81,153.27 210.82,153.03 210.47,152.17 209.56,151.91 208.41,151.98 207.21,151.99 205.97,152.22 204.71,152.49 203.73,152.58 202.80,153.00 202.63,153.98 201.62,153.72 200.69,153.31 199.75,153.10 198.68,153.28 197.64,153.38 196.91,152.64 195.81,152.42 194.93,151.82 193.94,151.73 193.05,152.05 192.17,152.15 191.23,152.44 190.24,152.48 189.29,152.34 188.36,151.94 187.46,151.62 186.81,151.00 186.75,150.04 187.00,149.13 187.15,148.00 187.25,147.11 187.39,146.06 188.20,145.51 188.41,144.59 189.13,143.88 189.18,142.88 189.38,141.90 189.61,141.04 189.58,140.01 189.47,139.10 189.21,138.03 188.94,137.16 188.38,136.34 188.02,135.50 187.56,134.73 186.58,134.64 186.16,133.66 186.90,133.09 187.44,132.39 188.25,132.04 188.16,130.61 187.86,129.50 187.72,128.59 187.61,127.67 186.86,127.07 186.37,126.18 185.81,125.41 185.19,124.75 184.56,124.14 183.93,123.51 183.12,122.91 182.76,121.76 181.95,121.36 181.87,121.18 181.60,120.49 180.99,121.17 180.40,120.44 180.00,119.86 180.00,107.00 180.00,107.00 180.00,119.86 179.99,119.84 179.77,121.25 179.35,120.48 179.32,120.56 179.25,120.76 179.15,121.00 179.06,121.22 179.02,121.32 178.98,121.31 178.96,121.27 178.70,120.23 178.29,121.20 178.21,121.34 177.40,121.65 177.27,121.04 177.21,120.74 177.03,119.87 176.57,119.11 176.33,118.24 175.80,117.44 175.00,117.82 174.44,117.00 174.42,116.11 173.61,116.44 172.76,116.65 172.03,117.53 172.72,118.13 173.08,119.02 172.79,119.96 173.17,120.75 172.64,121.71 172.09,122.55 171.57,123.31 171.17,124.22 171.39,125.08 171.27,125.97 171.49,126.90 170.71,126.39 169.76,126.34 169.67,125.37 168.74,125.65 167.71,126.08 167.00,126.58 166.57,127.50 166.69,128.36 166.87,129.31 167.62,129.89 168.19,130.57 168.90,131.17 168.80,132.12 169.08,133.07 169.11,134.02 168.24,136.64 168.08,136.32 167.92,135.43 167.01,135.29 166.08,135.22 166.15,134.08 165.30,133.89 164.41,134.00 163.48,134.22 162.51,134.57 161.66,134.30 161.17,135.07 160.84,135.94 160.22,136.55 159.31,136.45 159.48,135.58 158.44,135.40 157.49,135.44 156.75,134.91 155.94,134.53 154.92,134.38 154.04,134.28 153.10,134.10 152.84,133.63 152.66,133.17 151.74,132.68 151.47,131.73 150.85,131.07 150.05,130.60 149.69,129.75 149.30,128.82 148.70,128.12 148.22,127.29 147.75,126.44 147.21,125.71 146.25,125.46 145.53,124.92 145.62,123.93 144.88,123.39 143.80,123.08 144.32,122.37 145.01,121.81 145.60,121.11 144.68,120.74 145.25,119.69 145.24,118.78 145.64,117.87 145.25,117.06 144.62,116.40 144.47,115.44 144.61,114.53 144.86,113.60 143.77,113.46 143.05,114.02 142.27,114.51 142.26,115.40 141.47,115.98 140.62,116.33 138.92,117.00 139.11,116.38 139.05,115.41 138.73,114.51 138.96,113.60 139.56,112.77 140.37,112.35 140.39,111.40 139.97,110.53 139.42,109.60 139.09,108.74 139.64,108.00 139.43,107.06 137.58,106.43 138.69,105.86 139.15,105.05 138.96,104.14 139.96,103.63 140.14,102.73 140.52,101.92 141.16,101.17 140.35,100.50 139.54,100.08 140.61,99.55 140.56,98.56 141.23,97.98 142.13,97.71 142.13,96.77 141.81,95.94 141.42,95.08 141.37,94.16 141.43,93.12 141.43,92.15 141.21,91.29 140.67,90.60 139.77,90.03 138.81,89.73 137.83,89.59 136.84,89.49 135.86,89.37 134.99,89.26 134.08,88.95 133.23,88.53 132.54,87.80 131.75,87.10 130.92,86.60 129.88,86.37 128.96,86.11 128.13,85.25 127.68,84.47 127.11,83.52 126.70,82.57 126.41,81.52 125.64,80.69 125.29,79.88 125.04,79.00 125.39,78.02 125.04,77.05 125.00,76.15 125.20,75.22 125.07,74.21 124.75,73.27 124.98,72.36 125.86,72.14 126.31,72.92 126.33,74.26 Z"/><circle class="dot" cx="178.30" cy="126.39" r="3.75"/><circle class="dot" cx="176.19" cy="131.02" r="3.75"/><circle class="dot" cx="182.33" cy="133.65" r="3.75"/><circle class="dot" cx="186.47" cy="132.96" r="3.75"/><circle class="open-point" cx="180.00" cy="107.00" r="3.00"/><text class="" x="184.00" y="104.00" text-anchor="start">South Pole</text></svg></div><div class="k-lead"><p>Map Antarctica in a south-polar view, with the South Pole at the center and the continental margin surrounded by the Southern Ocean. Mark the grounded ice sheet inland and a floating extension such as the Ross Ice Shelf.</p></div><div class="k-example"><p class="k-label">Read the landscape</p><p>Grounded ice adds water that was stored on land to the ocean. Floating ice already displaces seawater, though losing an ice shelf can let the grounded glaciers behind it flow into the ocean faster.</p></div><footer class="k-credit"><details class="credits"><summary>Credits</summary><p>Land: <a href="https://www.naturalearthdata.com/about/terms-of-use/">Natural Earth</a> (public domain). Projected and annotated; feature location is schematic.</p></details></footer></article></main></body></html>
