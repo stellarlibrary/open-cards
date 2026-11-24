@@ -480,9 +480,11 @@
   display: block;
   width: 100%;
   height: clamp(9rem, 64cqw, 20rem);
+  padding: .35rem;
   object-fit: contain;
   background: #f7f5ef;
-  border-radius: 5px;
+  border: 1px solid #e9e5dc;
+  border-radius: 6px;
 }
 .specimen figcaption {
   display: flex;
@@ -494,7 +496,13 @@
 }
 .specimen figcaption span:first-child { font-weight: 625; }
 .breed-portrait .kind-illustration { margin: calc(-1 * var(--inset)) calc(-1 * var(--inset)) 0; }
-.breed-portrait .specimen img { border-radius: 12px 12px 0 0; height: clamp(11rem, 75cqw, 20rem); }
+.breed-portrait .specimen img {
+  border: 0;
+  border-bottom: 1px solid var(--line);
+  border-radius: 12px 12px 0 0;
+  padding: .45rem .5rem 0;
+  height: clamp(11rem, 75cqw, 20rem);
+}
 .breed-portrait .specimen figcaption { padding-inline: var(--inset); }
 
-.read-shell{width:min(100%, 680px);margin:0 auto}.single.read-page{background:#f5f5f7}</style></head><body class="single read-page"><main class="read-shell sample-card"><article class="study-card knowledge-card layout-console" lang="en" data-ordinal="4"><header class="k-head"><h1 class="k-title">Deterministic ordering for pagination</h1></header><div class="k-lead"><p><code>LIMIT</code> and <code>OFFSET</code> need a predictable row order to make a stable page. Use <code>ORDER BY</code> with enough columns to break ties.</p></div><div class="k-visual kind-table"><div class="data-table"><table><thead><tr><th scope="col">id</th><th scope="col">customer</th></tr></thead><tbody><tr><td>1</td><td>Ada</td></tr><tr><td>2</td><td>Bo</td></tr><tr><td>3</td><td>Ada</td></tr><tr><td>4</td><td>Chen</td></tr><tr><td>5</td><td>Bo</td></tr></tbody></table></div></div><div class="k-example"><p class="k-label">Example and result</p><p>The values in <code>orders</code> are shown. IDs are unique. A page should return the first two names alphabetically.</p><pre tabindex="0"><code>SELECT id FROM orders ORDER BY customer, id LIMIT 2;</code></pre><div class="k-code-result"><p class="k-label">Result</p><p><strong>1, 3.</strong> Use the unique ID as a secondary sort key. <code>ORDER BY customer</code> alone does not determine the sequence of Ada&#x27;s two orders.</p></div></div></article></main></body></html>
+.read-shell{width:min(100%, 680px);margin:0 auto}.single.read-page{background:#f5f5f7}</style></head><body class="single read-page"><main class="read-shell sample-card"><article class="study-card knowledge-card layout-console" lang="en" data-ordinal="4"><header class="k-head"><h1 class="k-title">Deterministic ordering for pagination</h1></header><div class="k-lead"><p><code>LIMIT</code> and <code>OFFSET</code> need a predictable row order to make a stable page. Use <code>ORDER BY</code> with enough columns to break ties.</p></div><div class="k-visual kind-table"><div class="data-table"><table><thead><tr><th scope="col">id</th><th scope="col">customer</th></tr></thead><tbody><tr><td>1</td><td>Ada</td></tr><tr><td>2</td><td>Bo</td></tr><tr><td>3</td><td>Ada</td></tr><tr><td>4</td><td>Chen</td></tr><tr><td>5</td><td>Bo</td></tr></tbody></table></div></div><div class="k-example"><p class="k-label">Example and result</p><p>The values in <code>orders</code> are shown, with unique IDs. Page one fetches the first two orders sorted alphabetically by <code>customer</code>.</p><pre tabindex="0"><code>SELECT id FROM orders ORDER BY customer, id LIMIT 2;</code></pre><div class="k-code-result"><p class="k-label">Result</p><p>Page one returns order IDs <strong>1 and 3</strong> (Ada’s two orders in ID order). Adding unique <code>id</code> to <code>ORDER BY customer, id</code> breaks ties deterministically; <code>ORDER BY customer</code> alone leaves the order of Ada’s two rows unspecified.</p></div></div></article></main></body></html>

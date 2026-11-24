@@ -480,9 +480,11 @@
   display: block;
   width: 100%;
   height: clamp(9rem, 64cqw, 20rem);
+  padding: .35rem;
   object-fit: contain;
   background: #f7f5ef;
-  border-radius: 5px;
+  border: 1px solid #e9e5dc;
+  border-radius: 6px;
 }
 .specimen figcaption {
   display: flex;
@@ -494,7 +496,13 @@
 }
 .specimen figcaption span:first-child { font-weight: 625; }
 .breed-portrait .kind-illustration { margin: calc(-1 * var(--inset)) calc(-1 * var(--inset)) 0; }
-.breed-portrait .specimen img { border-radius: 12px 12px 0 0; height: clamp(11rem, 75cqw, 20rem); }
+.breed-portrait .specimen img {
+  border: 0;
+  border-bottom: 1px solid var(--line);
+  border-radius: 12px 12px 0 0;
+  padding: .45rem .5rem 0;
+  height: clamp(11rem, 75cqw, 20rem);
+}
 .breed-portrait .specimen figcaption { padding-inline: var(--inset); }
 
-.read-shell{width:min(100%, 680px);margin:0 auto}.single.read-page{background:#f5f5f7}</style></head><body class="single read-page"><main class="read-shell sample-card"><article class="study-card knowledge-card layout-atlas" lang="en" data-ordinal="13"><header class="k-head"><h1 class="k-title">Redshift</h1></header><div class="k-visual kind-diagram"><svg class="diagram" viewBox="0 0 360 190" role="img" aria-label="A spectral line appears at 550 nm instead of its rest wavelength 500 nm." xmlns="http://www.w3.org/2000/svg"><text class="" x="33.00" y="50.00" text-anchor="start">Rest</text><text class="" x="33.00" y="108.00" text-anchor="start">Observed</text><rect class="region" x="95" y="41" width="218" height="23" rx="3"/><line class="accent" x1="165.00" y1="41.00" x2="165.00" y2="64.00"/><text class="" x="165.00" y="80.00" text-anchor="middle">500 nm</text><rect class="region" x="95" y="100" width="218" height="23" rx="3"/><line class="accent" x1="225.00" y1="100.00" x2="225.00" y2="123.00"/><text class="" x="225.00" y="139.00" text-anchor="middle">550 nm</text><line class="axis" x1="126.00" y1="161.00" x2="311.00" y2="161.00"/><path class="axis" d="M 304.00,157.50 311.00,161.00 304.00,164.50"/><text class="" x="222.00" y="181.00" text-anchor="middle">Increasing wavelength</text></svg></div><div class="k-lead"><p>A distant galaxy has a recognizable spectral line at 550 nm where the rest wavelength is 500 nm.</p></div><div class="k-example"><p class="k-label">How it works</p><p><strong>z = (550 − 500) / 500 = 0.10.</strong> The line is at a longer wavelength than in the reference spectrum, regardless of its visible color.</p></div></article></main></body></html>
+.read-shell{width:min(100%, 680px);margin:0 auto}.single.read-page{background:#f5f5f7}</style></head><body class="single read-page"><main class="read-shell sample-card"><article class="study-card knowledge-card layout-atlas" lang="en" data-ordinal="13"><header class="k-head"><h1 class="k-title">Redshift</h1></header><div class="k-visual kind-diagram"><svg class="diagram" viewBox="0 0 360 190" role="img" aria-label="A spectral line appears at 550 nm instead of its rest wavelength 500 nm." xmlns="http://www.w3.org/2000/svg"><text class="" x="33.00" y="50.00" text-anchor="start">Rest</text><text class="" x="33.00" y="108.00" text-anchor="start">Observed</text><rect class="region" x="95" y="41" width="218" height="23" rx="3"/><line class="accent" x1="165.00" y1="41.00" x2="165.00" y2="64.00"/><text class="" x="165.00" y="80.00" text-anchor="middle">500 nm</text><rect class="region" x="95" y="100" width="218" height="23" rx="3"/><line class="accent" x1="225.00" y1="100.00" x2="225.00" y2="123.00"/><text class="" x="225.00" y="139.00" text-anchor="middle">550 nm</text><line class="axis" x1="126.00" y1="161.00" x2="311.00" y2="161.00"/><path class="axis" d="M 304.00,157.50 311.00,161.00 304.00,164.50"/><text class="" x="222.00" y="181.00" text-anchor="middle">Increasing wavelength</text></svg></div><div class="k-lead"><p>A distant galaxy has a recognizable spectral line at 550 nm where the rest wavelength is 500 nm.</p></div><div class="k-example"><p class="k-label">How it works</p><p>Its redshift is <strong><code>z = (550 − 500) / 500 = 0.10</code></strong>. In spectroscopy, &#x27;redshift&#x27; means a shift toward <strong>longer wavelengths</strong> relative to the laboratory rest line, regardless of the light&#x27;s visible color.</p></div></article></main></body></html>

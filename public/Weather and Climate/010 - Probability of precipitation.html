@@ -480,9 +480,11 @@
   display: block;
   width: 100%;
   height: clamp(9rem, 64cqw, 20rem);
+  padding: .35rem;
   object-fit: contain;
   background: #f7f5ef;
-  border-radius: 5px;
+  border: 1px solid #e9e5dc;
+  border-radius: 6px;
 }
 .specimen figcaption {
   display: flex;
@@ -494,7 +496,13 @@
 }
 .specimen figcaption span:first-child { font-weight: 625; }
 .breed-portrait .kind-illustration { margin: calc(-1 * var(--inset)) calc(-1 * var(--inset)) 0; }
-.breed-portrait .specimen img { border-radius: 12px 12px 0 0; height: clamp(11rem, 75cqw, 20rem); }
+.breed-portrait .specimen img {
+  border: 0;
+  border-bottom: 1px solid var(--line);
+  border-radius: 12px 12px 0 0;
+  padding: .45rem .5rem 0;
+  height: clamp(11rem, 75cqw, 20rem);
+}
 .breed-portrait .specimen figcaption { padding-inline: var(--inset); }
 
-.read-shell{width:min(100%, 680px);margin:0 auto}.single.read-page{background:#f5f5f7}</style></head><body class="single read-page"><main class="read-shell sample-card"><article class="study-card knowledge-card layout-atlas" lang="en" data-ordinal="10"><header class="k-head"><h1 class="k-title">Probability of precipitation</h1></header><div class="k-visual kind-table"><div class="data-table"><table><thead><tr><th scope="col">Forecast component</th><th scope="col">Meaning</th></tr></thead><tbody><tr><td>Place</td><td>the park location</td></tr><tr><td>Period</td><td>noon to 6 p.m.</td></tr><tr><td>40%</td><td>probability of measurable precipitation</td></tr></tbody></table></div></div><div class="k-lead"><p>A forecast probability refers to a stated threshold of precipitation at a place over a stated period. It is not the fraction of that period for which rain will fall.</p></div><div class="k-example"><p class="k-label">How it works</p><p>A forecast for one park says there is a 40% chance of precipitation from noon to 6 p.m. The forecast uses the chance of measurable precipitation at a point within that time window.</p><p>It gives a 40% probability of measurable precipitation at that location during the window. It does not specify how long any rain will last.</p></div></article></main></body></html>
+.read-shell{width:min(100%, 680px);margin:0 auto}.single.read-page{background:#f5f5f7}</style></head><body class="single read-page"><main class="read-shell sample-card"><article class="study-card knowledge-card layout-atlas" lang="en" data-ordinal="10"><header class="k-head"><h1 class="k-title">Probability of precipitation</h1></header><div class="k-visual kind-table"><div class="data-table"><table><thead><tr><th scope="col">Forecast component</th><th scope="col">Meaning</th></tr></thead><tbody><tr><td>Place</td><td>the park location</td></tr><tr><td>Period</td><td>noon to 6 p.m.</td></tr><tr><td>40%</td><td>probability of measurable precipitation</td></tr></tbody></table></div></div><div class="k-lead"><p>A forecast probability refers to a stated threshold of precipitation at a place over a stated period. It is not the fraction of that period for which rain will fall.</p></div><div class="k-example"><p class="k-label">How it works</p><p>A park forecast stating a <code>40%</code> chance of precipitation from noon to 6 p.m. means a <strong><code>40%</code> probability that measurable precipitation occurs at that park</strong> sometime in that window—not that rain will fall for <code>40%</code> of the six hours.</p></div></article></main></body></html>

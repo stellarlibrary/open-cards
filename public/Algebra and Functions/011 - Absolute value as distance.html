@@ -480,9 +480,11 @@
   display: block;
   width: 100%;
   height: clamp(9rem, 64cqw, 20rem);
+  padding: .35rem;
   object-fit: contain;
   background: #f7f5ef;
-  border-radius: 5px;
+  border: 1px solid #e9e5dc;
+  border-radius: 6px;
 }
 .specimen figcaption {
   display: flex;
@@ -494,7 +496,13 @@
 }
 .specimen figcaption span:first-child { font-weight: 625; }
 .breed-portrait .kind-illustration { margin: calc(-1 * var(--inset)) calc(-1 * var(--inset)) 0; }
-.breed-portrait .specimen img { border-radius: 12px 12px 0 0; height: clamp(11rem, 75cqw, 20rem); }
+.breed-portrait .specimen img {
+  border: 0;
+  border-bottom: 1px solid var(--line);
+  border-radius: 12px 12px 0 0;
+  padding: .45rem .5rem 0;
+  height: clamp(11rem, 75cqw, 20rem);
+}
 .breed-portrait .specimen figcaption { padding-inline: var(--inset); }
 
-.read-shell{width:min(100%, 680px);margin:0 auto}.single.read-page{background:#f5f5f7}</style></head><body class="single read-page"><main class="read-shell sample-card"><article class="study-card knowledge-card layout-graph" lang="en" data-ordinal="11"><header class="k-head"><h1 class="k-title">Absolute value as distance</h1></header><div class="k-lead"><p><code>|x−a|</code> is the distance from <code>x</code> to <code>a</code>. A bound on this distance describes an interval around <code>a</code>, not just an upper bound on <code>x</code>.</p></div><div class="k-visual kind-compare"><ul class="visual-list compare"><li>Inside must exceed −9</li><li>Inside must be less than 9</li></ul></div><div class="k-example"><p class="k-label">Worked example</p><p>A calibration rule accepts x when <code>|3x−6|&lt;9</code>.</p><p><strong>(−1,5)</strong>. The inside must satisfy <code>−9&lt;3x−6&lt;9</code>. Add 6 and divide by positive 3, keeping both inequalities strict.</p></div></article></main></body></html>
+.read-shell{width:min(100%, 680px);margin:0 auto}.single.read-page{background:#f5f5f7}</style></head><body class="single read-page"><main class="read-shell sample-card"><article class="study-card knowledge-card layout-graph" lang="en" data-ordinal="11"><header class="k-head"><h1 class="k-title">Absolute value as distance</h1></header><div class="k-lead"><p><code>|x−a|</code> is the distance from <code>x</code> to <code>a</code>. A bound on this distance describes an interval around <code>a</code>, not just an upper bound on <code>x</code>.</p></div><div class="k-visual kind-compare"><ul class="visual-list compare"><li>Inside must exceed −9</li><li>Inside must be less than 9</li></ul></div><div class="k-example"><p class="k-label">Worked example</p><p>A calibration rule accepts <code>x</code> when <code>|3x−6|&lt;9</code>, meaning <code>3x−6</code> lies strictly between <code>−9</code> and <code>9</code>: <code>−9&lt;3x−6&lt;9</code>. Adding <code>6</code> (<code>−3&lt;3x&lt;15</code>) and dividing by <code>3</code> gives the accepted interval <strong><code>(−1,5)</code></strong>.</p></div></article></main></body></html>

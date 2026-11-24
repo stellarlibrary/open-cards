@@ -480,9 +480,11 @@
   display: block;
   width: 100%;
   height: clamp(9rem, 64cqw, 20rem);
+  padding: .35rem;
   object-fit: contain;
   background: #f7f5ef;
-  border-radius: 5px;
+  border: 1px solid #e9e5dc;
+  border-radius: 6px;
 }
 .specimen figcaption {
   display: flex;
@@ -494,7 +496,13 @@
 }
 .specimen figcaption span:first-child { font-weight: 625; }
 .breed-portrait .kind-illustration { margin: calc(-1 * var(--inset)) calc(-1 * var(--inset)) 0; }
-.breed-portrait .specimen img { border-radius: 12px 12px 0 0; height: clamp(11rem, 75cqw, 20rem); }
+.breed-portrait .specimen img {
+  border: 0;
+  border-bottom: 1px solid var(--line);
+  border-radius: 12px 12px 0 0;
+  padding: .45rem .5rem 0;
+  height: clamp(11rem, 75cqw, 20rem);
+}
 .breed-portrait .specimen figcaption { padding-inline: var(--inset); }
 
 .read-shell{width:min(100%, 680px);margin:0 auto}.single.read-page{background:#f5f5f7}</style></head><body class="single read-page"><main class="read-shell sample-card"><article class="study-card knowledge-card layout-matrix" lang="en" data-ordinal="32"><header class="k-head"><h1 class="k-title">A particular solution shifts the null space</h1></header><div class="k-lead"><p>If <code>Ap=b</code>, every solution of <code>Ax=b</code> is <code>p+z</code> with <code>Az=0</code>. Subtracting <code>Ap=b</code> from <code>Ax=b</code> puts the difference in the null space, and adding a null vector to <code>p</code> leaves the output unchanged.</p></div><div class="k-visual kind-flow"><ol class="visual-list flow"><li>Find one point p with Ap=b</li><li>Add all directions z with Az=0</li></ol></div><div class="k-example"><p class="k-label">In use</p><p>Let <code>A=[[1,−2,0], [0,0,1]]</code> and <code>b=(5,2)</code>. The vector <code>p=(5,0,2)</code> satisfies <code>Ap=(5−2·0,2)=b</code>. For <code>Az=0</code>, the equations are <code>z₁−2z₂=0</code> and <code>z₃=0</code>, so <code>z=t(2,1,0)</code> for real <code>t</code>.</p><p>The full solution set is <code>(5,0,2)+t(2,1,0)</code>. Indeed <code>A(5+2t,t,2)=(5+2t−2t,2)=(5,2)</code> for every <code>t</code>.</p></div></article></main></body></html>

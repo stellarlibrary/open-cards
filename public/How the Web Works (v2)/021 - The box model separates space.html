@@ -480,9 +480,11 @@
   display: block;
   width: 100%;
   height: clamp(9rem, 64cqw, 20rem);
+  padding: .35rem;
   object-fit: contain;
   background: #f7f5ef;
-  border-radius: 5px;
+  border: 1px solid #e9e5dc;
+  border-radius: 6px;
 }
 .specimen figcaption {
   display: flex;
@@ -494,7 +496,13 @@
 }
 .specimen figcaption span:first-child { font-weight: 625; }
 .breed-portrait .kind-illustration { margin: calc(-1 * var(--inset)) calc(-1 * var(--inset)) 0; }
-.breed-portrait .specimen img { border-radius: 12px 12px 0 0; height: clamp(11rem, 75cqw, 20rem); }
+.breed-portrait .specimen img {
+  border: 0;
+  border-bottom: 1px solid var(--line);
+  border-radius: 12px 12px 0 0;
+  padding: .45rem .5rem 0;
+  height: clamp(11rem, 75cqw, 20rem);
+}
 .breed-portrait .specimen figcaption { padding-inline: var(--inset); }
 .v2-card {
   --v2-muted: #475462;
@@ -534,6 +542,7 @@
 .v2-figure .diagram .v2-draw-fill.ink { fill: var(--v2-ink); }
 .v2-figure .diagram .v2-draw-fill.signal { fill: var(--v2-second); }
 .v2-figure .diagram .v2-draw-fill.soft { fill: #dce8f0; }
+.v2-figure .diagram rect.v2-draw-fill.soft { stroke: #a8c0d3; stroke-width: .75; }
 .v2-figure .diagram .v2-draw-fill.mid { fill: #9abbd3; }
 .v2-figure .diagram .v2-draw-fill.warm { fill: #f0e4d7; }
 .v2-figure .diagram .v2-draw-fill.paper { fill: #fff; stroke: #8393a4; stroke-width: 1; }
@@ -608,4 +617,4 @@
   .v2-card .figure-drawing .diagram { width: calc(100% + 14px); max-width: none; margin-inline: -7px; }
 }
 
-.read-shell{width:min(100%, 680px);margin:0 auto}.single.read-page{background:#f5f5f7}</style></head><body class="single read-page"><main class="read-shell sample-card"><article class="study-card knowledge-card layout-signal-trace v2-card" lang="en" data-ordinal="21"><header class="k-head"><h1 class="k-title">The box model separates space</h1></header><div class="k-lead"><p>A CSS box has content, padding, border, and margin. Padding is inside the border; margin is outside and separates the box from neighbors.</p></div><div class="k-visual kind-plate"><figure class="v2-figure figure-drawing"><div class="v2-figure-title">One layered CSS box</div><div class="v2-figure-body"><svg class="diagram" viewBox="0 0 300 133" role="img" aria-label="One layered CSS box. The dashed outer boundary represents margin. The inner solid border encloses padding and then the white content region." xmlns="http://www.w3.org/2000/svg"><path class="v2-draw-line guide" d="M 22.00,16.00 278.00,16.00 278.00,112.00 22.00,112.00 22.00,16.00"/><rect class="v2-draw-fill ink" x="40" y="30" width="220" height="68" rx="1"/><rect class="v2-draw-fill soft" x="42" y="32" width="216" height="64" rx="1"/><rect class="v2-draw-fill white" x="69" y="49" width="162" height="30" rx="1"/><text class="v2-draw-text label" x="150.00" y="69.00" text-anchor="middle">Content</text><text class="v2-draw-text label" x="150.00" y="92.00" text-anchor="middle">Padding</text><text class="v2-draw-text label" x="246.00" y="128.00" text-anchor="end">Margin</text></svg></div><figcaption>The dashed outer boundary represents margin. The inner solid border encloses padding and then the white content region.</figcaption></figure></div><div class="k-example"><p class="k-label">Follow the trace</p><p>With <code>content-box</code>, 160 px content, 12 px padding on each side, and 1 px borders, the border box is 186 px wide. With <code>border-box</code>, a declared 160 px can include padding and border.</p></div><div class="k-note"><p class="k-label">Protocol note</p><p>Margins are not part of the border box under either sizing mode.</p></div></article></main></body></html>
+.read-shell{width:min(100%, 680px);margin:0 auto}.single.read-page{background:#f5f5f7}</style></head><body class="single read-page"><main class="read-shell sample-card"><article class="study-card knowledge-card layout-signal-trace v2-card" lang="en" data-ordinal="21"><header class="k-head"><h1 class="k-title">The box model separates space</h1></header><div class="k-lead"><p>A CSS box has content, padding, border, and margin. Padding is inside the border; margin is outside and separates the box from neighbors.</p></div><div class="k-visual kind-plate"><figure class="v2-figure figure-drawing"><div class="v2-figure-title">One layered CSS box</div><div class="v2-figure-body"><svg class="diagram" viewBox="0 0 300 168" role="img" aria-label="One layered CSS box. The dashed outer boundary marks margin, the dark frame is the border, the shaded ring is padding, and the inner box is content." xmlns="http://www.w3.org/2000/svg"><rect class="v2-draw-fill warm" x="20" y="12" width="260" height="144" rx="1"/><path class="v2-draw-line guide" d="M 20.00,12.00 280.00,12.00 280.00,156.00 20.00,156.00 20.00,12.00"/><rect class="v2-draw-fill ink" x="44" y="38" width="212" height="100" rx="1"/><rect class="v2-draw-fill soft" x="47" y="41" width="206" height="94" rx="1"/><rect class="v2-draw-fill paper" x="74" y="67" width="152" height="50" rx="1"/><line class="v2-draw-line ink" x1="242.00" y1="25.00" x2="242.00" y2="38.00"/><text class="v2-draw-text label" x="30.00" y="29.00" text-anchor="start">Margin</text><text class="v2-draw-text label" x="234.00" y="29.00" text-anchor="end">Border</text><text class="v2-draw-text label" x="58.00" y="59.00" text-anchor="start">Padding</text><text class="v2-draw-text label" x="150.00" y="97.00" text-anchor="middle">Content</text></svg></div><figcaption>The dashed outer boundary marks margin, the dark frame is the border, the shaded ring is padding, and the inner box is content.</figcaption></figure></div><div class="k-example"><p class="k-label">Follow the trace</p><p>With <code>content-box</code>, 160 px content, 12 px padding on each side, and 1 px borders, the border box is 186 px wide. With <code>border-box</code>, a declared 160 px can include padding and border.</p></div><div class="k-note"><p class="k-label">Protocol note</p><p>Margins are not part of the border box under either sizing mode.</p></div></article></main></body></html>

@@ -480,9 +480,11 @@
   display: block;
   width: 100%;
   height: clamp(9rem, 64cqw, 20rem);
+  padding: .35rem;
   object-fit: contain;
   background: #f7f5ef;
-  border-radius: 5px;
+  border: 1px solid #e9e5dc;
+  border-radius: 6px;
 }
 .specimen figcaption {
   display: flex;
@@ -494,7 +496,13 @@
 }
 .specimen figcaption span:first-child { font-weight: 625; }
 .breed-portrait .kind-illustration { margin: calc(-1 * var(--inset)) calc(-1 * var(--inset)) 0; }
-.breed-portrait .specimen img { border-radius: 12px 12px 0 0; height: clamp(11rem, 75cqw, 20rem); }
+.breed-portrait .specimen img {
+  border: 0;
+  border-bottom: 1px solid var(--line);
+  border-radius: 12px 12px 0 0;
+  padding: .45rem .5rem 0;
+  height: clamp(11rem, 75cqw, 20rem);
+}
 .breed-portrait .specimen figcaption { padding-inline: var(--inset); }
 .v2-card {
   --v2-muted: #475462;
@@ -534,6 +542,7 @@
 .v2-figure .diagram .v2-draw-fill.ink { fill: var(--v2-ink); }
 .v2-figure .diagram .v2-draw-fill.signal { fill: var(--v2-second); }
 .v2-figure .diagram .v2-draw-fill.soft { fill: #dce8f0; }
+.v2-figure .diagram rect.v2-draw-fill.soft { stroke: #a8c0d3; stroke-width: .75; }
 .v2-figure .diagram .v2-draw-fill.mid { fill: #9abbd3; }
 .v2-figure .diagram .v2-draw-fill.warm { fill: #f0e4d7; }
 .v2-figure .diagram .v2-draw-fill.paper { fill: #fff; stroke: #8393a4; stroke-width: 1; }
@@ -608,4 +617,4 @@
   .v2-card .figure-drawing .diagram { width: calc(100% + 14px); max-width: none; margin-inline: -7px; }
 }
 
-.read-shell{width:min(100%, 680px);margin:0 auto}.single.read-page{background:#f5f5f7}</style></head><body class="single read-page"><main class="read-shell sample-card"><article class="study-card knowledge-card layout-data-plate v2-card" lang="en" data-ordinal="7"><header class="k-head"><h1 class="k-title">Histograms group a number line</h1></header><div class="k-visual kind-plate"><figure class="v2-figure figure-drawing"><div class="v2-figure-title">Eleven journeys, binned by duration</div><div class="v2-figure-body"><svg class="diagram" viewBox="0 0 300 156" role="img" aria-label="Eleven journeys, binned by duration. Journey counts are 1 for 0–&lt;10, 3 for 10–&lt;20, 5 for 20–&lt;30, and 2 for 30–&lt;40 minutes." xmlns="http://www.w3.org/2000/svg"><rect class="v2-draw-fill soft" x="46" y="98" width="50" height="14" rx="1"/><rect class="v2-draw-fill soft" x="96" y="70" width="50" height="42" rx="1"/><rect class="v2-draw-fill accent" x="146" y="42" width="50" height="70" rx="1"/><rect class="v2-draw-fill soft" x="196" y="84" width="50" height="28" rx="1"/><line class="v2-draw-line ink" x1="44.00" y1="112.00" x2="249.00" y2="112.00"/><line class="v2-draw-line faint" x1="96.00" y1="70.00" x2="96.00" y2="112.00"/><line class="v2-draw-line faint" x1="146.00" y1="42.00" x2="146.00" y2="112.00"/><line class="v2-draw-line faint" x1="196.00" y1="84.00" x2="196.00" y2="112.00"/><text class="v2-draw-text label" x="71.00" y="90.00" text-anchor="middle">1</text><text class="v2-draw-text label" x="121.00" y="62.00" text-anchor="middle">3</text><text class="v2-draw-text label" x="171.00" y="34.00" text-anchor="middle">5</text><text class="v2-draw-text label" x="221.00" y="76.00" text-anchor="middle">2</text><text class="v2-draw-text label" x="46.00" y="132.00" text-anchor="middle">0</text><text class="v2-draw-text label" x="96.00" y="132.00" text-anchor="middle">10</text><text class="v2-draw-text label" x="146.00" y="132.00" text-anchor="middle">20</text><text class="v2-draw-text label" x="196.00" y="132.00" text-anchor="middle">30</text><text class="v2-draw-text label" x="246.00" y="132.00" text-anchor="middle">40</text><text class="v2-draw-text label" x="246.00" y="150.00" text-anchor="end">Minutes</text></svg></div><figcaption>Journey counts are 1 for 0–&lt;10, 3 for 10–&lt;20, 5 for 20–&lt;30, and 2 for 30–&lt;40 minutes.</figcaption></figure></div><div class="k-lead"><p>A histogram groups numeric observations into adjoining intervals. With equal-width bins, bar height can show count; the space along the axis is part of the data.</p></div><div class="k-example"><p class="k-label">Read the graphic</p><p>The four bins contain 1, 3, 5, and 2 journeys. The tallest bin, 20 to under 30 minutes, contains five journeys. The figure does not preserve their exact times.</p></div><div class="k-note"><p class="k-label">Reading limit</p><p>For unequal bin widths, plot frequency density so the area, not raw height, represents frequency.</p></div></article></main></body></html>
+.read-shell{width:min(100%, 680px);margin:0 auto}.single.read-page{background:#f5f5f7}</style></head><body class="single read-page"><main class="read-shell sample-card"><article class="study-card knowledge-card layout-data-plate v2-card" lang="en" data-ordinal="7"><header class="k-head"><h1 class="k-title">Histograms group a number line</h1></header><div class="k-visual kind-plate"><figure class="v2-figure figure-drawing"><div class="v2-figure-title">Eleven journeys, binned by duration</div><div class="v2-figure-body"><svg class="diagram" viewBox="0 0 300 158" role="img" aria-label="Eleven journeys, binned by duration. Journey counts are 1 for 0–&lt;10, 3 for 10–&lt;20, 5 for 20–&lt;30, and 2 for 30–&lt;40 minutes." xmlns="http://www.w3.org/2000/svg"><rect class="v2-draw-fill soft" x="46" y="98" width="50" height="14" rx="1"/><rect class="v2-draw-fill soft" x="96" y="70" width="50" height="42" rx="1"/><rect class="v2-draw-fill accent" x="146" y="42" width="50" height="70" rx="1"/><rect class="v2-draw-fill soft" x="196" y="84" width="50" height="28" rx="1"/><line class="v2-draw-line ink" x1="44.00" y1="112.00" x2="249.00" y2="112.00"/><line class="v2-draw-line faint" x1="96.00" y1="70.00" x2="96.00" y2="112.00"/><line class="v2-draw-line faint" x1="146.00" y1="42.00" x2="146.00" y2="112.00"/><line class="v2-draw-line faint" x1="196.00" y1="84.00" x2="196.00" y2="112.00"/><text class="v2-draw-text label" x="71.00" y="90.00" text-anchor="middle">1</text><text class="v2-draw-text label" x="121.00" y="62.00" text-anchor="middle">3</text><text class="v2-draw-text label" x="171.00" y="34.00" text-anchor="middle">5</text><text class="v2-draw-text label" x="221.00" y="76.00" text-anchor="middle">2</text><text class="v2-draw-text label" x="46.00" y="132.00" text-anchor="middle">0</text><text class="v2-draw-text label" x="96.00" y="132.00" text-anchor="middle">10</text><text class="v2-draw-text label" x="146.00" y="132.00" text-anchor="middle">20</text><text class="v2-draw-text label" x="196.00" y="132.00" text-anchor="middle">30</text><text class="v2-draw-text label" x="246.00" y="132.00" text-anchor="middle">40</text><text class="v2-draw-text label" x="246.00" y="150.00" text-anchor="end">Minutes</text></svg></div><figcaption>Journey counts are 1 for 0–&lt;10, 3 for 10–&lt;20, 5 for 20–&lt;30, and 2 for 30–&lt;40 minutes.</figcaption></figure></div><div class="k-lead"><p>A histogram groups numeric observations into adjoining intervals. With equal-width bins, bar height can show count; the space along the axis is part of the data.</p></div><div class="k-example"><p class="k-label">Read the graphic</p><p>The four bins contain 1, 3, 5, and 2 journeys. The tallest bin, 20 to under 30 minutes, contains five journeys. The figure does not preserve their exact times.</p></div><div class="k-note"><p class="k-label">Reading limit</p><p>For unequal bin widths, plot frequency density so the area, not raw height, represents frequency.</p></div></article></main></body></html>

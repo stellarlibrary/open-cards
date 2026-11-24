@@ -480,9 +480,11 @@
   display: block;
   width: 100%;
   height: clamp(9rem, 64cqw, 20rem);
+  padding: .35rem;
   object-fit: contain;
   background: #f7f5ef;
-  border-radius: 5px;
+  border: 1px solid #e9e5dc;
+  border-radius: 6px;
 }
 .specimen figcaption {
   display: flex;
@@ -494,7 +496,13 @@
 }
 .specimen figcaption span:first-child { font-weight: 625; }
 .breed-portrait .kind-illustration { margin: calc(-1 * var(--inset)) calc(-1 * var(--inset)) 0; }
-.breed-portrait .specimen img { border-radius: 12px 12px 0 0; height: clamp(11rem, 75cqw, 20rem); }
+.breed-portrait .specimen img {
+  border: 0;
+  border-bottom: 1px solid var(--line);
+  border-radius: 12px 12px 0 0;
+  padding: .45rem .5rem 0;
+  height: clamp(11rem, 75cqw, 20rem);
+}
 .breed-portrait .specimen figcaption { padding-inline: var(--inset); }
 
-.read-shell{width:min(100%, 680px);margin:0 auto}.single.read-page{background:#f5f5f7}</style></head><body class="single read-page"><main class="read-shell sample-card"><article class="study-card knowledge-card layout-blueprint" lang="en" data-ordinal="9"><header class="k-head"><h1 class="k-title">Bending at a boundary</h1></header><div class="k-lead"><p>A ray entering a higher-index medium slows down and bends toward the normal, unless it already meets the boundary along the normal.</p></div><div class="k-visual kind-diagram"><svg class="diagram" viewBox="0 0 360 190" role="img" aria-label="Refraction: light enters denser acrylic from air at 30 degrees from the normal." xmlns="http://www.w3.org/2000/svg"><rect class="water" x="10" y="90" width="340" height="85" rx="3"/><line class="axis" x1="10.00" y1="90.00" x2="350.00" y2="90.00"/><line class="guide" x1="180.00" y1="18.00" x2="180.00" y2="171.00"/><line class="accent" x1="140.00" y1="21.00" x2="180.00" y2="90.00"/><path class="accent" d="M 179.52,82.19 180.00,90.00 173.46,85.70"/><line class="accent" x1="180.00" y1="90.00" x2="205.00" y2="161.00"/><path class="accent" d="M 205.98,153.23 205.00,161.00 199.37,155.56"/><text class="" x="247.00" y="41.00" text-anchor="middle">Air · n = 1.00</text><text class="" x="247.00" y="131.00" text-anchor="middle">Acrylic · n = 1.50</text><text class="" x="152.00" y="64.00" text-anchor="middle">30°</text><text class="" x="186.00" y="128.00" text-anchor="start">θ₂</text><text class="" x="184.00" y="20.00" text-anchor="start">Normal</text></svg></div><div class="k-example"><p class="k-label">Worked example</p><p>Light enters acrylic (<code>n = 1.50</code>) from air (<code>n = 1.00</code>) at 30° to the normal. Snell&#x27;s law is <code>n₁ sin θ₁ = n₂ sin θ₂</code>, with angles measured from the normal.</p><p>Toward the normal, to about 19.5°. Its refracted sine is <code>1.00 × sin(30°) / 1.50 = 1/3</code>, smaller than the incident sine.</p></div></article></main></body></html>
+.read-shell{width:min(100%, 680px);margin:0 auto}.single.read-page{background:#f5f5f7}</style></head><body class="single read-page"><main class="read-shell sample-card"><article class="study-card knowledge-card layout-blueprint" lang="en" data-ordinal="9"><header class="k-head"><h1 class="k-title">Bending at a boundary</h1></header><div class="k-lead"><p>A ray entering a higher-index medium slows down and bends toward the normal, unless it already meets the boundary along the normal.</p></div><div class="k-visual kind-diagram"><svg class="diagram" viewBox="0 0 360 190" role="img" aria-label="Refraction: light enters denser acrylic from air at 30 degrees from the normal." xmlns="http://www.w3.org/2000/svg"><rect class="water" x="10" y="90" width="340" height="85" rx="3"/><line class="axis" x1="10.00" y1="90.00" x2="350.00" y2="90.00"/><line class="guide" x1="180.00" y1="18.00" x2="180.00" y2="171.00"/><line class="accent" x1="140.00" y1="21.00" x2="180.00" y2="90.00"/><path class="accent" d="M 179.52,82.19 180.00,90.00 173.46,85.70"/><line class="accent" x1="180.00" y1="90.00" x2="205.00" y2="161.00"/><path class="accent" d="M 205.98,153.23 205.00,161.00 199.37,155.56"/><text class="" x="247.00" y="41.00" text-anchor="middle">Air · n = 1.00</text><text class="" x="247.00" y="131.00" text-anchor="middle">Acrylic · n = 1.50</text><text class="" x="152.00" y="64.00" text-anchor="middle">30°</text><text class="" x="186.00" y="128.00" text-anchor="start">θ₂</text><text class="" x="184.00" y="20.00" text-anchor="start">Normal</text></svg></div><div class="k-example"><p class="k-label">Worked example</p><p>Entering acrylic (<code>n = 1.50</code>) from air (<code>n = 1.00</code>) at <code>30°</code> to the normal, light obeys Snell&#x27;s law (<code>1.00 sin 30° = 1.50 sin θ₂</code>, so <code>sin θ₂ = 1/3</code>) and bends <strong>toward the normal to about <code>19.5°</code></strong>.</p></div></article></main></body></html>

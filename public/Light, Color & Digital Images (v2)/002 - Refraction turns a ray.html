@@ -480,9 +480,11 @@
   display: block;
   width: 100%;
   height: clamp(9rem, 64cqw, 20rem);
+  padding: .35rem;
   object-fit: contain;
   background: #f7f5ef;
-  border-radius: 5px;
+  border: 1px solid #e9e5dc;
+  border-radius: 6px;
 }
 .specimen figcaption {
   display: flex;
@@ -494,7 +496,13 @@
 }
 .specimen figcaption span:first-child { font-weight: 625; }
 .breed-portrait .kind-illustration { margin: calc(-1 * var(--inset)) calc(-1 * var(--inset)) 0; }
-.breed-portrait .specimen img { border-radius: 12px 12px 0 0; height: clamp(11rem, 75cqw, 20rem); }
+.breed-portrait .specimen img {
+  border: 0;
+  border-bottom: 1px solid var(--line);
+  border-radius: 12px 12px 0 0;
+  padding: .45rem .5rem 0;
+  height: clamp(11rem, 75cqw, 20rem);
+}
 .breed-portrait .specimen figcaption { padding-inline: var(--inset); }
 .v2-card {
   --v2-muted: #475462;
@@ -534,6 +542,7 @@
 .v2-figure .diagram .v2-draw-fill.ink { fill: var(--v2-ink); }
 .v2-figure .diagram .v2-draw-fill.signal { fill: var(--v2-second); }
 .v2-figure .diagram .v2-draw-fill.soft { fill: #dce8f0; }
+.v2-figure .diagram rect.v2-draw-fill.soft { stroke: #a8c0d3; stroke-width: .75; }
 .v2-figure .diagram .v2-draw-fill.mid { fill: #9abbd3; }
 .v2-figure .diagram .v2-draw-fill.warm { fill: #f0e4d7; }
 .v2-figure .diagram .v2-draw-fill.paper { fill: #fff; stroke: #8393a4; stroke-width: 1; }
@@ -608,4 +617,4 @@
   .v2-card .figure-drawing .diagram { width: calc(100% + 14px); max-width: none; margin-inline: -7px; }
 }
 
-.read-shell{width:min(100%, 680px);margin:0 auto}.single.read-page{background:#f5f5f7}</style></head><body class="single read-page"><main class="read-shell sample-card"><article class="study-card knowledge-card layout-optical-plate v2-card" lang="en" data-ordinal="2"><header class="k-head"><h1 class="k-title">Refraction turns a ray</h1></header><div class="k-visual kind-plate"><figure class="v2-figure figure-drawing"><div class="v2-figure-title">Air to water at an oblique angle</div><div class="v2-figure-body"><svg class="diagram" viewBox="0 0 300 164" role="img" aria-label="Air to water at an oblique angle. The arcs are measured from the vertical normal. The incoming 45° ray travels at a smaller 32° angle in water." xmlns="http://www.w3.org/2000/svg"><rect class="v2-draw-fill soft" x="25" y="78" width="250" height="77" rx="1"/><line class="v2-draw-line guide" x1="150.00" y1="12.00" x2="150.00" y2="149.00"/><line class="v2-draw-line accent" x1="94.00" y1="22.00" x2="150.00" y2="78.00"/><path class="v2-draw-line accent" d="M 142.58,75.53 150.00,78.00 147.53,70.58"/><line class="v2-draw-line accent" x1="150.00" y1="78.00" x2="192.00" y2="145.00"/><path class="v2-draw-line accent" d="M 185.32,140.93 192.00,145.00 191.25,137.21"/><path class="v2-draw-line signal" d="M 127.00,55.00 134.00,50.00 142.00,47.00 150.00,46.00"/><path class="v2-draw-line signal" d="M 150.00,108.00 156.00,107.40 161.00,105.90 166.00,103.40"/><text class="v2-draw-text label" x="259.00" y="59.00" text-anchor="end">Air</text><text class="v2-draw-text label" x="259.00" y="134.00" text-anchor="end">Water</text><text class="v2-draw-text label" x="129.00" y="39.00" text-anchor="middle">45°</text><text class="v2-draw-text label" x="165.00" y="139.00" text-anchor="middle">32°</text></svg></div><figcaption>The arcs are measured from the vertical normal. The incoming 45° ray travels at a smaller 32° angle in water.</figcaption></figure></div><div class="k-lead"><p>A light ray changes direction at a boundary if its speed changes and it meets the surface obliquely. Entering a higher refractive index bends the ray toward the normal.</p></div><div class="k-example"><p class="k-label">At the image</p><p>From air into water, with indices about 1.00 and 1.33, a 45° incident ray refracts to about 32° by Snell’s law.</p></div><div class="k-note"><p class="k-label">In practice</p><p>A ray entering along the normal changes speed but not direction.</p></div></article></main></body></html>
+.read-shell{width:min(100%, 680px);margin:0 auto}.single.read-page{background:#f5f5f7}</style></head><body class="single read-page"><main class="read-shell sample-card"><article class="study-card knowledge-card layout-optical-plate v2-card" lang="en" data-ordinal="2"><header class="k-head"><h1 class="k-title">Refraction turns a ray</h1></header><div class="k-visual kind-plate"><figure class="v2-figure figure-drawing"><div class="v2-figure-title">Air to water at an oblique angle</div><div class="v2-figure-body"><svg class="diagram" viewBox="0 0 300 168" role="img" aria-label="Air to water at an oblique angle. The arcs are measured from the vertical normal. The incoming 45° ray travels at a smaller 32° angle in water." xmlns="http://www.w3.org/2000/svg"><rect class="v2-draw-fill soft" x="25" y="78" width="250" height="78" rx="1"/><line class="v2-draw-line faint" x1="25.00" y1="78.00" x2="275.00" y2="78.00"/><line class="v2-draw-line guide" x1="150.00" y1="12.00" x2="150.00" y2="153.00"/><line class="v2-draw-line accent" x1="94.00" y1="22.00" x2="150.00" y2="78.00"/><path class="v2-draw-line accent" d="M 142.58,75.53 150.00,78.00 147.53,70.58"/><line class="v2-draw-line accent" x1="150.00" y1="78.00" x2="195.00" y2="150.00"/><path class="v2-draw-line accent" d="M 188.32,145.92 195.00,150.00 194.26,142.21"/><path class="v2-draw-line signal" d="M 127.00,55.00 134.00,50.00 142.00,47.00 150.00,46.00"/><path class="v2-draw-line signal" d="M 150.00,110.00 156.00,109.40 162.00,107.70 167.00,105.10"/><text class="v2-draw-text label" x="259.00" y="59.00" text-anchor="end">Air</text><text class="v2-draw-text label" x="259.00" y="136.00" text-anchor="end">Water</text><text class="v2-draw-text label" x="127.00" y="37.00" text-anchor="middle">45°</text><text class="v2-draw-text label" x="166.00" y="143.00" text-anchor="middle">32°</text></svg></div><figcaption>The arcs are measured from the vertical normal. The incoming 45° ray travels at a smaller 32° angle in water.</figcaption></figure></div><div class="k-lead"><p>A light ray changes direction at a boundary if its speed changes and it meets the surface obliquely. Entering a higher refractive index bends the ray toward the normal.</p></div><div class="k-example"><p class="k-label">At the image</p><p>From air into water, with indices about 1.00 and 1.33, a 45° incident ray refracts to about 32° by Snell’s law.</p></div><div class="k-note"><p class="k-label">In practice</p><p>A ray entering along the normal changes speed but not direction.</p></div></article></main></body></html>

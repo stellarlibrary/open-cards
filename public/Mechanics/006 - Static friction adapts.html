@@ -480,9 +480,11 @@
   display: block;
   width: 100%;
   height: clamp(9rem, 64cqw, 20rem);
+  padding: .35rem;
   object-fit: contain;
   background: #f7f5ef;
-  border-radius: 5px;
+  border: 1px solid #e9e5dc;
+  border-radius: 6px;
 }
 .specimen figcaption {
   display: flex;
@@ -494,7 +496,13 @@
 }
 .specimen figcaption span:first-child { font-weight: 625; }
 .breed-portrait .kind-illustration { margin: calc(-1 * var(--inset)) calc(-1 * var(--inset)) 0; }
-.breed-portrait .specimen img { border-radius: 12px 12px 0 0; height: clamp(11rem, 75cqw, 20rem); }
+.breed-portrait .specimen img {
+  border: 0;
+  border-bottom: 1px solid var(--line);
+  border-radius: 12px 12px 0 0;
+  padding: .45rem .5rem 0;
+  height: clamp(11rem, 75cqw, 20rem);
+}
 .breed-portrait .specimen figcaption { padding-inline: var(--inset); }
 
-.read-shell{width:min(100%, 680px);margin:0 auto}.single.read-page{background:#f5f5f7}</style></head><body class="single read-page"><main class="read-shell sample-card"><article class="study-card knowledge-card layout-graph" lang="en" data-ordinal="6"><header class="k-head"><h1 class="k-title">Static friction adapts</h1></header><div class="k-lead"><p>Static friction can balance an applied tangential force up to <code>μₛN</code>. It does not automatically equal this maximum whenever surfaces are at rest.</p></div><div class="k-visual kind-table"><div class="data-table"><table><thead><tr><th scope="col">Value</th><th scope="col">Role</th></tr></thead><tbody><tr><td>9 N</td><td>applied push</td></tr><tr><td>13 N</td><td>maximum static friction</td></tr><tr><td>7 N</td><td>kinetic friction</td></tr></tbody></table></div></div><div class="k-example"><p class="k-label">Worked example</p><p>A book remains still while a 9 N horizontal push acts on it. Static friction can reach 13 N on this surface; kinetic friction after sliding starts would be 7 N.</p><p>9 N opposite the push. Static friction adjusts to balance the push up to its 13 N limit, and the book is not sliding.</p></div></article></main></body></html>
+.read-shell{width:min(100%, 680px);margin:0 auto}.single.read-page{background:#f5f5f7}</style></head><body class="single read-page"><main class="read-shell sample-card"><article class="study-card knowledge-card layout-graph" lang="en" data-ordinal="6"><header class="k-head"><h1 class="k-title">Static friction adapts</h1></header><div class="k-lead"><p>Static friction can balance an applied tangential force up to <code>μₛN</code>. It does not automatically equal this maximum whenever surfaces are at rest.</p></div><div class="k-visual kind-table"><div class="data-table"><table><thead><tr><th scope="col">Value</th><th scope="col">Role</th></tr></thead><tbody><tr><td>9 N</td><td>applied push</td></tr><tr><td>13 N</td><td>maximum static friction</td></tr><tr><td>7 N</td><td>kinetic friction</td></tr></tbody></table></div></div><div class="k-example"><p class="k-label">Worked example</p><p>When a <code>9 N</code> horizontal push acts on a resting book whose maximum static friction is <code>13 N</code> (and kinetic friction would be <code>7 N</code> if sliding), the actual friction force is <strong><code>9 N</code> opposite the push</strong>—matching the applied force rather than jumping to the <code>13 N</code> limit.</p></div></article></main></body></html>

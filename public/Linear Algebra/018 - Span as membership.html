@@ -480,9 +480,11 @@
   display: block;
   width: 100%;
   height: clamp(9rem, 64cqw, 20rem);
+  padding: .35rem;
   object-fit: contain;
   background: #f7f5ef;
-  border-radius: 5px;
+  border: 1px solid #e9e5dc;
+  border-radius: 6px;
 }
 .specimen figcaption {
   display: flex;
@@ -494,7 +496,13 @@
 }
 .specimen figcaption span:first-child { font-weight: 625; }
 .breed-portrait .kind-illustration { margin: calc(-1 * var(--inset)) calc(-1 * var(--inset)) 0; }
-.breed-portrait .specimen img { border-radius: 12px 12px 0 0; height: clamp(11rem, 75cqw, 20rem); }
+.breed-portrait .specimen img {
+  border: 0;
+  border-bottom: 1px solid var(--line);
+  border-radius: 12px 12px 0 0;
+  padding: .45rem .5rem 0;
+  height: clamp(11rem, 75cqw, 20rem);
+}
 .breed-portrait .specimen figcaption { padding-inline: var(--inset); }
 
 .read-shell{width:min(100%, 680px);margin:0 auto}.single.read-page{background:#f5f5f7}</style></head><body class="single read-page"><main class="read-shell sample-card"><article class="study-card knowledge-card layout-matrix" lang="en" data-ordinal="18"><header class="k-head"><h1 class="k-title">Span as membership</h1></header><div class="k-lead"><p>A vector is in a span when it can be written as a linear combination of the spanning vectors. The same coefficients must reproduce every coordinate.</p></div><div class="k-visual kind-table"><div class="data-table"><table><thead><tr><th scope="col">Coordinate</th><th scope="col">Constraint</th></tr></thead><tbody><tr><td>First</td><td>Coefficient of u</td></tr><tr><td>Second</td><td>Coefficient of w</td></tr><tr><td>Third</td><td>Check the combination</td></tr></tbody></table></div></div><div class="k-example"><p class="k-label">In use</p><p>With <code>u=(1,0,2)</code> and <code>w=(0,1,−1)</code>, the vector <code>(2,−1,5)</code> lies in their span: <code>2u−w=(2,−1,5)</code>.</p></div><div class="k-note"><p class="k-label">Note</p><p>The first two coordinates force the coefficients in this case, so an incorrect third coordinate would rule out membership.</p></div></article></main></body></html>

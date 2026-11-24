@@ -480,9 +480,11 @@
   display: block;
   width: 100%;
   height: clamp(9rem, 64cqw, 20rem);
+  padding: .35rem;
   object-fit: contain;
   background: #f7f5ef;
-  border-radius: 5px;
+  border: 1px solid #e9e5dc;
+  border-radius: 6px;
 }
 .specimen figcaption {
   display: flex;
@@ -494,7 +496,13 @@
 }
 .specimen figcaption span:first-child { font-weight: 625; }
 .breed-portrait .kind-illustration { margin: calc(-1 * var(--inset)) calc(-1 * var(--inset)) 0; }
-.breed-portrait .specimen img { border-radius: 12px 12px 0 0; height: clamp(11rem, 75cqw, 20rem); }
+.breed-portrait .specimen img {
+  border: 0;
+  border-bottom: 1px solid var(--line);
+  border-radius: 12px 12px 0 0;
+  padding: .45rem .5rem 0;
+  height: clamp(11rem, 75cqw, 20rem);
+}
 .breed-portrait .specimen figcaption { padding-inline: var(--inset); }
 
-.read-shell{width:min(100%, 680px);margin:0 auto}.single.read-page{background:#f5f5f7}</style></head><body class="single read-page"><main class="read-shell sample-card"><article class="study-card knowledge-card layout-atlas" lang="en" data-ordinal="9"><header class="k-head"><h1 class="k-title">Pulsars</h1></header><div class="k-visual kind-diagram"><svg class="diagram" viewBox="0 0 360 190" role="img" aria-label="A tilted pair of radiation beams rotates with a neutron star." xmlns="http://www.w3.org/2000/svg"><circle class="world" cx="167.00" cy="95.00" r="22.00"/><line class="guide" x1="167.00" y1="144.00" x2="167.00" y2="47.00"/><path class="region" d="M 152.00,80.00 80.00,20.00 114.00,17.00 Z"/><path class="region" d="M 182.00,108.00 245.00,160.00 212.00,173.00 Z"/><path class="accent" d="M 192.79,48.96 192.22,49.57 191.54,50.17 190.76,50.75 189.88,51.31 188.90,51.85 187.82,52.37 186.66,52.85 185.42,53.31 184.10,53.74 182.71,54.13 181.25,54.49 179.73,54.82 178.15,55.11 176.53,55.36 174.87,55.57 173.18,55.73 171.46,55.86 169.72,55.95 167.97,55.99 166.21,56.00 164.46,55.96 162.72,55.87 161.00,55.75 159.30,55.58 157.64,55.38 156.01,55.13 154.43,54.85 152.91,54.53 151.44,54.17 150.04,53.78 148.71,53.36 147.46,52.90 146.29,52.42 145.21,51.90 144.22,51.37 143.33,50.81 142.53,50.23 141.84,49.63 141.26,49.02 140.78,48.39"/><line class="accent" x1="141.84" y1="49.63" x2="140.78" y2="48.39"/><path class="accent" d="M 142.67,55.99 140.78,48.39 147.99,51.44"/><text class="" x="245.00" y="60.00" text-anchor="middle">Spin axis</text><line class="guide" x1="100.00" y1="29.00" x2="26.00" y2="48.00"/><text class="" x="30.00" y="52.00" text-anchor="start">Beam</text></svg></div><div class="k-lead"><p>A rotating neutron star has beams that can sweep through space. A radio telescope registers very regular pulses.</p></div><div class="k-example"><p class="k-label">How it works</p><p>We receive radiation when a beam crosses our line of sight; a lighthouse can look like it flashes although its lamp stays on.</p></div></article></main></body></html>
+.read-shell{width:min(100%, 680px);margin:0 auto}.single.read-page{background:#f5f5f7}</style></head><body class="single read-page"><main class="read-shell sample-card"><article class="study-card knowledge-card layout-atlas" lang="en" data-ordinal="9"><header class="k-head"><h1 class="k-title">Pulsars</h1></header><div class="k-visual kind-diagram"><svg class="diagram" viewBox="0 0 360 190" role="img" aria-label="A tilted pair of radiation beams rotates with a neutron star." xmlns="http://www.w3.org/2000/svg"><circle class="world" cx="167.00" cy="95.00" r="22.00"/><line class="guide" x1="167.00" y1="144.00" x2="167.00" y2="47.00"/><path class="region" d="M 152.00,80.00 80.00,20.00 114.00,17.00 Z"/><path class="region" d="M 182.00,108.00 245.00,160.00 212.00,173.00 Z"/><path class="accent" d="M 192.79,48.96 192.22,49.57 191.54,50.17 190.76,50.75 189.88,51.31 188.90,51.85 187.82,52.37 186.66,52.85 185.42,53.31 184.10,53.74 182.71,54.13 181.25,54.49 179.73,54.82 178.15,55.11 176.53,55.36 174.87,55.57 173.18,55.73 171.46,55.86 169.72,55.95 167.97,55.99 166.21,56.00 164.46,55.96 162.72,55.87 161.00,55.75 159.30,55.58 157.64,55.38 156.01,55.13 154.43,54.85 152.91,54.53 151.44,54.17 150.04,53.78 148.71,53.36 147.46,52.90 146.29,52.42 145.21,51.90 144.22,51.37 143.33,50.81 142.53,50.23 141.84,49.63 141.26,49.02 140.78,48.39"/><line class="accent" x1="141.84" y1="49.63" x2="140.78" y2="48.39"/><path class="accent" d="M 142.67,55.99 140.78,48.39 147.99,51.44"/><text class="" x="245.00" y="60.00" text-anchor="middle">Spin axis</text><line class="guide" x1="100.00" y1="29.00" x2="26.00" y2="48.00"/><text class="" x="30.00" y="52.00" text-anchor="start">Beam</text></svg></div><div class="k-lead"><p>A rotating neutron star has beams that can sweep through space. A radio telescope registers very regular pulses.</p></div><div class="k-example"><p class="k-label">How it works</p><p>The neutron star does not blink on and off: instead, we detect a pulse each time a <strong>steady radiation beam sweeps across Earth&#x27;s line of sight</strong>, just as a continuously lit lighthouse lamp appears to flash as it turns.</p></div></article></main></body></html>

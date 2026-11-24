@@ -480,9 +480,11 @@
   display: block;
   width: 100%;
   height: clamp(9rem, 64cqw, 20rem);
+  padding: .35rem;
   object-fit: contain;
   background: #f7f5ef;
-  border-radius: 5px;
+  border: 1px solid #e9e5dc;
+  border-radius: 6px;
 }
 .specimen figcaption {
   display: flex;
@@ -494,7 +496,13 @@
 }
 .specimen figcaption span:first-child { font-weight: 625; }
 .breed-portrait .kind-illustration { margin: calc(-1 * var(--inset)) calc(-1 * var(--inset)) 0; }
-.breed-portrait .specimen img { border-radius: 12px 12px 0 0; height: clamp(11rem, 75cqw, 20rem); }
+.breed-portrait .specimen img {
+  border: 0;
+  border-bottom: 1px solid var(--line);
+  border-radius: 12px 12px 0 0;
+  padding: .45rem .5rem 0;
+  height: clamp(11rem, 75cqw, 20rem);
+}
 .breed-portrait .specimen figcaption { padding-inline: var(--inset); }
 
-.read-shell{width:min(100%, 680px);margin:0 auto}.single.read-page{background:#f5f5f7}</style></head><body class="single read-page"><main class="read-shell sample-card"><article class="study-card knowledge-card layout-atlas" lang="en" data-ordinal="16"><header class="k-head"><h1 class="k-title">Enceladus</h1></header><div class="k-visual kind-diagram"><svg class="diagram" viewBox="0 0 360 190" role="img" aria-label="A spacecraft crosses a plume emerging from a fracture in Enceladus&#x27;s surface." xmlns="http://www.w3.org/2000/svg"><path class="curve" d="M 42.00,144.00 42.41,140.16 43.64,136.33 45.67,132.56 48.51,128.86 52.12,125.25 56.50,121.75 61.60,118.40 67.40,115.20 73.87,112.18 80.95,109.35 88.62,106.74 96.82,104.36 105.51,102.22 114.62,100.34 124.10,98.73 133.90,97.40 143.95,96.35 154.19,95.60 164.56,95.15 175.00,95.00 185.44,95.15 195.81,95.60 206.05,96.35 216.10,97.40 225.90,98.73 235.38,100.34 244.49,102.22 253.18,104.36 261.38,106.74 269.05,109.35 276.13,112.18 282.60,115.20 288.40,118.40 293.50,121.75 297.88,125.25 301.49,128.86 304.33,132.56 306.36,136.33 307.59,140.16 308.00,144.00"/><path class="axis" d="M 174.00,95.00 171.00,107.00 181.00,114.00 177.00,139.00"/><path class="guide" d="M 174.00,94.00 162.00,71.00 144.00,37.00"/><path class="guide" d="M 174.00,94.00 168.00,71.00 159.00,34.00"/><path class="guide" d="M 174.00,94.00 174.00,71.00 174.00,31.00"/><path class="guide" d="M 174.00,94.00 180.00,71.00 189.00,28.00"/><path class="guide" d="M 174.00,94.00 186.00,71.00 204.00,25.00"/><line class="accent" x1="75.00" y1="56.00" x2="270.00" y2="56.00"/><path class="accent" d="M 263.00,52.50 270.00,56.00 263.00,59.50"/><text class="" x="112.00" y="42.00" text-anchor="middle">Fly-through</text><text class="" x="236.00" y="27.00" text-anchor="middle">Plume</text></svg></div><div class="k-lead"><p>Cassini observed plumes over Enceladus&#x27;s south polar region and sampled material as it flew through them.</p></div><div class="k-example"><p class="k-label">How it works</p><p><strong>Sample the plume.</strong> Fractures allow material sourced below the surface to escape into space, where instruments can measure vapor and particles.</p></div></article></main></body></html>
+.read-shell{width:min(100%, 680px);margin:0 auto}.single.read-page{background:#f5f5f7}</style></head><body class="single read-page"><main class="read-shell sample-card"><article class="study-card knowledge-card layout-atlas" lang="en" data-ordinal="16"><header class="k-head"><h1 class="k-title">Enceladus</h1></header><div class="k-visual kind-diagram"><svg class="diagram" viewBox="0 0 360 190" role="img" aria-label="A spacecraft crosses a plume emerging from a fracture in Enceladus&#x27;s surface." xmlns="http://www.w3.org/2000/svg"><path class="curve" d="M 42.00,144.00 42.41,140.16 43.64,136.33 45.67,132.56 48.51,128.86 52.12,125.25 56.50,121.75 61.60,118.40 67.40,115.20 73.87,112.18 80.95,109.35 88.62,106.74 96.82,104.36 105.51,102.22 114.62,100.34 124.10,98.73 133.90,97.40 143.95,96.35 154.19,95.60 164.56,95.15 175.00,95.00 185.44,95.15 195.81,95.60 206.05,96.35 216.10,97.40 225.90,98.73 235.38,100.34 244.49,102.22 253.18,104.36 261.38,106.74 269.05,109.35 276.13,112.18 282.60,115.20 288.40,118.40 293.50,121.75 297.88,125.25 301.49,128.86 304.33,132.56 306.36,136.33 307.59,140.16 308.00,144.00"/><path class="axis" d="M 174.00,95.00 171.00,107.00 181.00,114.00 177.00,139.00"/><path class="guide" d="M 174.00,94.00 162.00,71.00 144.00,37.00"/><path class="guide" d="M 174.00,94.00 168.00,71.00 159.00,34.00"/><path class="guide" d="M 174.00,94.00 174.00,71.00 174.00,31.00"/><path class="guide" d="M 174.00,94.00 180.00,71.00 189.00,28.00"/><path class="guide" d="M 174.00,94.00 186.00,71.00 204.00,25.00"/><line class="accent" x1="75.00" y1="56.00" x2="270.00" y2="56.00"/><path class="accent" d="M 263.00,52.50 270.00,56.00 263.00,59.50"/><text class="" x="112.00" y="42.00" text-anchor="middle">Fly-through</text><text class="" x="236.00" y="27.00" text-anchor="middle">Plume</text></svg></div><div class="k-lead"><p>Cassini observed plumes over Enceladus&#x27;s south polar region and sampled material as it flew through them.</p></div><div class="k-example"><p class="k-label">How it works</p><p>By <strong>flying directly through the south-polar plumes</strong>, a spacecraft can sample subsurface vapor and ice grains vented through fractures into space—gathering chemical evidence of an internal ocean without landing or drilling.</p></div></article></main></body></html>

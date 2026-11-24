@@ -480,9 +480,11 @@
   display: block;
   width: 100%;
   height: clamp(9rem, 64cqw, 20rem);
+  padding: .35rem;
   object-fit: contain;
   background: #f7f5ef;
-  border-radius: 5px;
+  border: 1px solid #e9e5dc;
+  border-radius: 6px;
 }
 .specimen figcaption {
   display: flex;
@@ -494,7 +496,13 @@
 }
 .specimen figcaption span:first-child { font-weight: 625; }
 .breed-portrait .kind-illustration { margin: calc(-1 * var(--inset)) calc(-1 * var(--inset)) 0; }
-.breed-portrait .specimen img { border-radius: 12px 12px 0 0; height: clamp(11rem, 75cqw, 20rem); }
+.breed-portrait .specimen img {
+  border: 0;
+  border-bottom: 1px solid var(--line);
+  border-radius: 12px 12px 0 0;
+  padding: .45rem .5rem 0;
+  height: clamp(11rem, 75cqw, 20rem);
+}
 .breed-portrait .specimen figcaption { padding-inline: var(--inset); }
 
 .read-shell{width:min(100%, 680px);margin:0 auto}.single.read-page{background:#f5f5f7}</style></head><body class="single read-page"><main class="read-shell sample-card"><article class="study-card knowledge-card layout-chronicle" lang="en" data-ordinal="33"><header class="k-head"><h1 class="k-title">Plessy v. Ferguson</h1></header><div class="k-lead"><p>Louisiana required racially separate railroad cars. Homer Plessy deliberately challenged the law, and the Supreme Court upheld it in 1896.</p></div><div class="k-visual kind-compare"><ul class="visual-list compare"><li>Equality as a constitutional guarantee</li><li>Segregation upheld under the separate-but-equal doctrine</li></ul></div><div class="k-example"><p class="k-label">Why it matters</p><p>The majority treated compulsory separation as compatible with equal protection if facilities were nominally equal. That reasoning helped shield Jim Crow laws even though facilities and opportunities were generally unequal.</p></div></article></main></body></html>

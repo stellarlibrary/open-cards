@@ -480,9 +480,11 @@
   display: block;
   width: 100%;
   height: clamp(9rem, 64cqw, 20rem);
+  padding: .35rem;
   object-fit: contain;
   background: #f7f5ef;
-  border-radius: 5px;
+  border: 1px solid #e9e5dc;
+  border-radius: 6px;
 }
 .specimen figcaption {
   display: flex;
@@ -494,7 +496,13 @@
 }
 .specimen figcaption span:first-child { font-weight: 625; }
 .breed-portrait .kind-illustration { margin: calc(-1 * var(--inset)) calc(-1 * var(--inset)) 0; }
-.breed-portrait .specimen img { border-radius: 12px 12px 0 0; height: clamp(11rem, 75cqw, 20rem); }
+.breed-portrait .specimen img {
+  border: 0;
+  border-bottom: 1px solid var(--line);
+  border-radius: 12px 12px 0 0;
+  padding: .45rem .5rem 0;
+  height: clamp(11rem, 75cqw, 20rem);
+}
 .breed-portrait .specimen figcaption { padding-inline: var(--inset); }
 
 .read-shell{width:min(100%, 680px);margin:0 auto}.single.read-page{background:#f5f5f7}</style></head><body class="single read-page"><main class="read-shell sample-card"><article class="study-card knowledge-card layout-graph" lang="en" data-ordinal="21"><header class="k-head"><h1 class="k-title">Cosine gives the slope of sine</h1></header><div class="k-lead"><p>For angles measured in radians, <code>d(sin x)/dx=cos x</code> at every real input. The sign of the cosine tells whether the sine curve is rising or falling locally when that slope is nonzero.</p></div><div class="k-visual kind-graph"><svg class="diagram" viewBox="0 0 360 190" role="img" aria-label="y = sin x" xmlns="http://www.w3.org/2000/svg"><text class="plot-title" x="37.00" y="19.00" text-anchor="start">y = sin x</text><line class="grid" x1="47.84" y1="34.00" x2="47.84" y2="158.00"/><text class="" x="47.84" y="177.00" text-anchor="middle">0</text><line class="grid" x1="115.92" y1="34.00" x2="115.92" y2="158.00"/><text class="" x="115.92" y="177.00" text-anchor="middle">π/2</text><line class="grid" x1="184.00" y1="34.00" x2="184.00" y2="158.00"/><text class="" x="184.00" y="177.00" text-anchor="middle">π</text><line class="grid" x1="252.08" y1="34.00" x2="252.08" y2="158.00"/><text class="" x="252.08" y="177.00" text-anchor="middle">3π/2</text><line class="grid" x1="320.16" y1="34.00" x2="320.16" y2="158.00"/><text class="" x="320.16" y="177.00" text-anchor="middle">2π</text><line class="grid" x1="37.00" y1="138.22" x2="331.00" y2="138.22"/><text class="" x="30.00" y="142.22" text-anchor="end">-1</text><line class="grid" x1="37.00" y1="54.78" x2="331.00" y2="54.78"/><text class="" x="30.00" y="58.78" text-anchor="end">1</text><line class="axis" x1="37.00" y1="96.50" x2="341.00" y2="96.50"/><path class="axis" d="M 334.00,93.00 341.00,96.50 334.00,100.00"/><line class="axis" x1="47.84" y1="158.00" x2="47.84" y2="31.00"/><path class="axis" d="M 44.34,38.00 47.84,31.00 51.34,38.00"/><text class="" x="350.00" y="100.50" text-anchor="middle">x</text><text class="" x="58.84" y="33.00" text-anchor="middle">y</text><path class="curve" d="M 37.00,106.82 39.94,104.06 42.88,101.26 45.82,98.44 48.76,95.61 51.70,92.78 54.64,89.98 57.58,87.20 60.52,84.46 63.46,81.78 66.40,79.17 69.34,76.64 72.28,74.20 75.22,71.86 78.16,69.63 81.10,67.53 84.04,65.56 86.98,63.74 89.92,62.06 92.86,60.54 95.80,59.19 98.74,58.01 101.68,57.01 104.62,56.19 107.56,55.55 110.50,55.10 113.44,54.84 116.38,54.78 119.32,54.90 122.26,55.22 125.20,55.73 128.14,56.42 131.08,57.30 134.02,58.36 136.96,59.60 139.90,61.00 142.84,62.57 145.78,64.29 148.72,66.17 151.66,68.18 154.60,70.32 157.54,72.58 160.48,74.95 163.42,77.42 166.36,79.98 169.30,82.62 172.24,85.32 175.18,88.07 178.12,90.86 181.06,93.67 184.00,96.50 186.94,99.33 189.88,102.14 192.82,104.93 195.76,107.68 198.70,110.38 201.64,113.02 204.58,115.58 207.52,118.05 210.46,120.42 213.40,122.68 216.34,124.82 219.28,126.83 222.22,128.71 225.16,130.43 228.10,132.00 231.04,133.40 233.98,134.64 236.92,135.70 239.86,136.58 242.80,137.27 245.74,137.78 248.68,138.10 251.62,138.22 254.56,138.16 257.50,137.90 260.44,137.45 263.38,136.81 266.32,135.99 269.26,134.99 272.20,133.81 275.14,132.46 278.08,130.94 281.02,129.26 283.96,127.44 286.90,125.47 289.84,123.37 292.78,121.14 295.72,118.80 298.66,116.36 301.60,113.83 304.54,111.22 307.48,108.54 310.42,105.80 313.36,103.02 316.30,100.22 319.24,97.39 322.18,94.56 325.12,91.74 328.06,88.94 331.00,86.18"/></svg></div><div class="k-example"><p class="k-label">Worked example</p><p>On <code>y=sin x</code> at <code>x=π</code>, the height is <code>sin π=0</code> and the tangent slope is <code>cos π=−1</code>. For a small positive <code>h</code>, <code>sin(π−h)=sin h&gt;0</code>, while <code>sin(π+h)=−sin h&lt;0</code>.</p><p>The curve therefore crosses the axis from above to below, in agreement with its negative slope.</p></div></article></main></body></html>

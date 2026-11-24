@@ -480,9 +480,11 @@
   display: block;
   width: 100%;
   height: clamp(9rem, 64cqw, 20rem);
+  padding: .35rem;
   object-fit: contain;
   background: #f7f5ef;
-  border-radius: 5px;
+  border: 1px solid #e9e5dc;
+  border-radius: 6px;
 }
 .specimen figcaption {
   display: flex;
@@ -494,7 +496,13 @@
 }
 .specimen figcaption span:first-child { font-weight: 625; }
 .breed-portrait .kind-illustration { margin: calc(-1 * var(--inset)) calc(-1 * var(--inset)) 0; }
-.breed-portrait .specimen img { border-radius: 12px 12px 0 0; height: clamp(11rem, 75cqw, 20rem); }
+.breed-portrait .specimen img {
+  border: 0;
+  border-bottom: 1px solid var(--line);
+  border-radius: 12px 12px 0 0;
+  padding: .45rem .5rem 0;
+  height: clamp(11rem, 75cqw, 20rem);
+}
 .breed-portrait .specimen figcaption { padding-inline: var(--inset); }
 
-.read-shell{width:min(100%, 680px);margin:0 auto}.single.read-page{background:#f5f5f7}</style></head><body class="single read-page"><main class="read-shell sample-card"><article class="study-card knowledge-card layout-atlas" lang="en" data-ordinal="13"><header class="k-head"><h1 class="k-title">Ice–albedo feedback</h1></header><div class="k-visual kind-table"><div class="data-table"><table><thead><tr><th scope="col">Ground cover</th><th scope="col">Reflected fraction</th></tr></thead><tbody><tr><td>Snow</td><td>0.80</td></tr><tr><td>Bare ground</td><td>0.25</td></tr></tbody></table></div></div><div class="k-lead"><p>Bright snow and ice reflect more sunlight than many surfaces exposed when they melt. Less reflection can increase absorbed energy, reinforcing the original warming.</p></div><div class="k-example"><p class="k-label">How it works</p><p>Incoming sunlight is 200 W/m² in a model landscape. Snow-covered ground has albedo 0.80; after it melts, bare ground has albedo 0.25. Albedo is the fraction of light reflected; the rest is absorbed.</p><p>It rises by 110 W/m²: from 40 to 150 W/m². Warming that removes snow exposes darker ground, which absorbs more light and can cause further warming.</p></div></article></main></body></html>
+.read-shell{width:min(100%, 680px);margin:0 auto}.single.read-page{background:#f5f5f7}</style></head><body class="single read-page"><main class="read-shell sample-card"><article class="study-card knowledge-card layout-atlas" lang="en" data-ordinal="13"><header class="k-head"><h1 class="k-title">Ice–albedo feedback</h1></header><div class="k-visual kind-table"><div class="data-table"><table><thead><tr><th scope="col">Ground cover</th><th scope="col">Reflected fraction</th></tr></thead><tbody><tr><td>Snow</td><td>0.80</td></tr><tr><td>Bare ground</td><td>0.25</td></tr></tbody></table></div></div><div class="k-lead"><p>Bright snow and ice reflect more sunlight than many surfaces exposed when they melt. Less reflection can increase absorbed energy, reinforcing the original warming.</p></div><div class="k-example"><p class="k-label">How it works</p><p>Under <code>200 W/m²</code> of sunlight, melting snow (<code>albedo 0.80</code>, absorbing <code>40 W/m²</code>) down to bare ground (<code>albedo 0.25</code>, absorbing <code>150 W/m²</code>) <strong>boosts absorbed solar power by <code>110 W/m²</code></strong>—amplifying the warming in a positive feedback.</p></div></article></main></body></html>

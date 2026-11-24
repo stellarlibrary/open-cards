@@ -480,9 +480,11 @@
   display: block;
   width: 100%;
   height: clamp(9rem, 64cqw, 20rem);
+  padding: .35rem;
   object-fit: contain;
   background: #f7f5ef;
-  border-radius: 5px;
+  border: 1px solid #e9e5dc;
+  border-radius: 6px;
 }
 .specimen figcaption {
   display: flex;
@@ -494,7 +496,13 @@
 }
 .specimen figcaption span:first-child { font-weight: 625; }
 .breed-portrait .kind-illustration { margin: calc(-1 * var(--inset)) calc(-1 * var(--inset)) 0; }
-.breed-portrait .specimen img { border-radius: 12px 12px 0 0; height: clamp(11rem, 75cqw, 20rem); }
+.breed-portrait .specimen img {
+  border: 0;
+  border-bottom: 1px solid var(--line);
+  border-radius: 12px 12px 0 0;
+  padding: .45rem .5rem 0;
+  height: clamp(11rem, 75cqw, 20rem);
+}
 .breed-portrait .specimen figcaption { padding-inline: var(--inset); }
 
-.read-shell{width:min(100%, 680px);margin:0 auto}.single.read-page{background:#f5f5f7}</style></head><body class="single read-page"><main class="read-shell sample-card"><article class="study-card knowledge-card layout-toolkit" lang="en" data-ordinal="3"><header class="k-head"><h1 class="k-title">Reverse percentages</h1></header><div class="k-lead"><p>After multiplying by the factor for an increase or decrease, recover the original by dividing by that same factor. Subtracting the written rate does not generally undo the change.</p></div><div class="k-visual kind-flow"><ol class="visual-list flow"><li>Original × 0.8</li><li>Sale price $48</li></ol></div><div class="k-example"><p class="k-label">In practice</p><p>A bag is marked down by 20% from its original price. The sale price is $48.</p><p><strong>$60.</strong> The sale tag represents 80% of the original price, so divide 48 by 0.8. Adding 20% to $48 uses the wrong reference base.</p></div></article></main></body></html>
+.read-shell{width:min(100%, 680px);margin:0 auto}.single.read-page{background:#f5f5f7}</style></head><body class="single read-page"><main class="read-shell sample-card"><article class="study-card knowledge-card layout-toolkit" lang="en" data-ordinal="3"><header class="k-head"><h1 class="k-title">Reverse percentages</h1></header><div class="k-lead"><p>After multiplying by the factor for an increase or decrease, recover the original by dividing by that same factor. Subtracting the written rate does not generally undo the change.</p></div><div class="k-visual kind-flow"><ol class="visual-list flow"><li>Original × 0.8</li><li>Sale price $48</li></ol></div><div class="k-example"><p class="k-label">In practice</p><p>A bag marked down by <code>20%</code> sells for <code>$48</code>, which is <code>80%</code> (<code>0.80</code>) of its pre-sale price. Dividing recovers the <strong>original price <code>$48 ÷ 0.80 = $60</code></strong> (adding <code>20%</code> of <code>$48</code> would give <code>$57.60</code> by using the wrong base).</p></div></article></main></body></html>

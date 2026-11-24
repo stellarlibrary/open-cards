@@ -480,9 +480,11 @@
   display: block;
   width: 100%;
   height: clamp(9rem, 64cqw, 20rem);
+  padding: .35rem;
   object-fit: contain;
   background: #f7f5ef;
-  border-radius: 5px;
+  border: 1px solid #e9e5dc;
+  border-radius: 6px;
 }
 .specimen figcaption {
   display: flex;
@@ -494,7 +496,13 @@
 }
 .specimen figcaption span:first-child { font-weight: 625; }
 .breed-portrait .kind-illustration { margin: calc(-1 * var(--inset)) calc(-1 * var(--inset)) 0; }
-.breed-portrait .specimen img { border-radius: 12px 12px 0 0; height: clamp(11rem, 75cqw, 20rem); }
+.breed-portrait .specimen img {
+  border: 0;
+  border-bottom: 1px solid var(--line);
+  border-radius: 12px 12px 0 0;
+  padding: .45rem .5rem 0;
+  height: clamp(11rem, 75cqw, 20rem);
+}
 .breed-portrait .specimen figcaption { padding-inline: var(--inset); }
 
-.read-shell{width:min(100%, 680px);margin:0 auto}.single.read-page{background:#f5f5f7}</style></head><body class="single read-page"><main class="read-shell sample-card"><article class="study-card knowledge-card layout-graph" lang="en" data-ordinal="13"><header class="k-head"><h1 class="k-title">Torque and lever arms</h1></header><div class="k-lead"><p>Torque magnitude is force times the perpendicular distance from the pivot to its line of action. Pulling farther from the pivot can produce the same torque with less force.</p></div><div class="k-visual kind-table"><div class="data-table"><table><thead><tr><th scope="col">Push</th><th scope="col">Force (N)</th><th scope="col">Distance from hinge (m)</th></tr></thead><tbody><tr><td>A</td><td>6.0</td><td>0.75</td></tr><tr><td>B</td><td>10</td><td>0.30</td></tr></tbody></table></div></div><div class="k-example"><p class="k-label">Worked example</p><p>Two pushes would turn a door in the same direction. Each is perpendicular to the line from the hinge to the point of contact, so torque magnitude equals force times distance from the hinge.</p><p>Push A: <code>6.0 × 0.75 = 4.5 N·m</code>, versus <code>10 × 0.30 = 3.0 N·m</code> for B. A longer lever arm can compensate for a smaller force.</p></div></article></main></body></html>
+.read-shell{width:min(100%, 680px);margin:0 auto}.single.read-page{background:#f5f5f7}</style></head><body class="single read-page"><main class="read-shell sample-card"><article class="study-card knowledge-card layout-graph" lang="en" data-ordinal="13"><header class="k-head"><h1 class="k-title">Torque and lever arms</h1></header><div class="k-lead"><p>Torque magnitude is force times the perpendicular distance from the pivot to its line of action. Pulling farther from the pivot can produce the same torque with less force.</p></div><div class="k-visual kind-table"><div class="data-table"><table><thead><tr><th scope="col">Push</th><th scope="col">Force (N)</th><th scope="col">Distance from hinge (m)</th></tr></thead><tbody><tr><td>A</td><td>6.0</td><td>0.75</td></tr><tr><td>B</td><td>10</td><td>0.30</td></tr></tbody></table></div></div><div class="k-example"><p class="k-label">Worked example</p><p>For two perpendicular pushes on the same door, <strong>Push A produces the larger torque</strong> despite using a smaller force: <strong><code>6.0 N × 0.75 m = 4.5 N·m</code></strong> compared with <code>10 N × 0.30 m = 3.0 N·m</code> for Push B.</p></div></article></main></body></html>

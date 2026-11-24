@@ -480,9 +480,11 @@
   display: block;
   width: 100%;
   height: clamp(9rem, 64cqw, 20rem);
+  padding: .35rem;
   object-fit: contain;
   background: #f7f5ef;
-  border-radius: 5px;
+  border: 1px solid #e9e5dc;
+  border-radius: 6px;
 }
 .specimen figcaption {
   display: flex;
@@ -494,7 +496,13 @@
 }
 .specimen figcaption span:first-child { font-weight: 625; }
 .breed-portrait .kind-illustration { margin: calc(-1 * var(--inset)) calc(-1 * var(--inset)) 0; }
-.breed-portrait .specimen img { border-radius: 12px 12px 0 0; height: clamp(11rem, 75cqw, 20rem); }
+.breed-portrait .specimen img {
+  border: 0;
+  border-bottom: 1px solid var(--line);
+  border-radius: 12px 12px 0 0;
+  padding: .45rem .5rem 0;
+  height: clamp(11rem, 75cqw, 20rem);
+}
 .breed-portrait .specimen figcaption { padding-inline: var(--inset); }
 
-.read-shell{width:min(100%, 680px);margin:0 auto}.single.read-page{background:#f5f5f7}</style></head><body class="single read-page"><main class="read-shell sample-card"><article class="study-card knowledge-card layout-atlas" lang="en" data-ordinal="3"><header class="k-head"><h1 class="k-title">Venus</h1></header><div class="k-visual kind-diagram"><svg class="diagram" viewBox="0 0 360 190" role="img" aria-label="Energy-flow schematic, not a measurement. Sunlight reaches the ground. The surface emits infrared upward into dense carbon dioxide-rich air. The air re-emits infrared both outward and down." xmlns="http://www.w3.org/2000/svg"><text class="plot-title" x="20.00" y="27.00" text-anchor="start">Energy above Venus</text><rect class="sand" x="20" y="50" width="320" height="92" rx="7"/><rect class="ground" x="20" y="126" width="320" height="19" rx="2"/><line class="axis" x1="20.00" y1="126.00" x2="340.00" y2="126.00"/><text class="" x="330.00" y="76.00" text-anchor="end">CO₂-rich air</text><line class="solar-in" x1="83.00" y1="38.00" x2="83.00" y2="120.00"/><path class="solar-in" d="M 86.50,113.00 83.00,120.00 79.50,113.00"/><text class="" x="101.00" y="45.00" text-anchor="start">Sunlight</text><line class="accent" x1="161.00" y1="120.00" x2="161.00" y2="68.00"/><path class="accent" d="M 157.50,75.00 161.00,68.00 164.50,75.00"/><line class="infrared-escape" x1="161.00" y1="66.00" x2="161.00" y2="40.00"/><path class="infrared-escape" d="M 157.50,47.00 161.00,40.00 164.50,47.00"/><line class="accent" x1="168.00" y1="68.00" x2="227.00" y2="121.00"/><path class="accent" d="M 224.13,113.72 227.00,121.00 219.45,118.93"/><circle class="dot" cx="161.00" cy="68.00" r="3.00"/><text class="" x="180.00" y="141.00" text-anchor="middle">Surface</text><text class="" x="180.00" y="170.00" text-anchor="middle">Rust-colored arrows: infrared</text></svg></div><div class="k-lead"><p>Venus is farther from the Sun than Mercury. Yet Venus has the hotter surface, beneath a thick atmosphere rich in carbon dioxide.</p></div><div class="k-example"><p class="k-label">How it works</p><p><strong>It absorbs and re-emits infrared, including some back toward the surface.</strong> It is harder for energy from the ground to escape to space. The surface gets hotter than it would be without this greenhouse effect.</p></div></article></main></body></html>
+.read-shell{width:min(100%, 680px);margin:0 auto}.single.read-page{background:#f5f5f7}</style></head><body class="single read-page"><main class="read-shell sample-card"><article class="study-card knowledge-card layout-atlas" lang="en" data-ordinal="3"><header class="k-head"><h1 class="k-title">Venus</h1></header><div class="k-visual kind-diagram"><svg class="diagram" viewBox="0 0 360 190" role="img" aria-label="Energy-flow schematic, not a measurement. Sunlight reaches the ground. The surface emits infrared upward into dense carbon dioxide-rich air. The air re-emits infrared both outward and down." xmlns="http://www.w3.org/2000/svg"><text class="plot-title" x="20.00" y="27.00" text-anchor="start">Energy above Venus</text><rect class="sand" x="20" y="50" width="320" height="92" rx="7"/><rect class="ground" x="20" y="126" width="320" height="19" rx="2"/><line class="axis" x1="20.00" y1="126.00" x2="340.00" y2="126.00"/><text class="" x="330.00" y="76.00" text-anchor="end">CO₂-rich air</text><line class="solar-in" x1="83.00" y1="38.00" x2="83.00" y2="120.00"/><path class="solar-in" d="M 86.50,113.00 83.00,120.00 79.50,113.00"/><text class="" x="101.00" y="45.00" text-anchor="start">Sunlight</text><line class="accent" x1="161.00" y1="120.00" x2="161.00" y2="68.00"/><path class="accent" d="M 157.50,75.00 161.00,68.00 164.50,75.00"/><line class="infrared-escape" x1="161.00" y1="66.00" x2="161.00" y2="40.00"/><path class="infrared-escape" d="M 157.50,47.00 161.00,40.00 164.50,47.00"/><line class="accent" x1="168.00" y1="68.00" x2="227.00" y2="121.00"/><path class="accent" d="M 224.13,113.72 227.00,121.00 219.45,118.93"/><circle class="dot" cx="161.00" cy="68.00" r="3.00"/><text class="" x="180.00" y="141.00" text-anchor="middle">Surface</text><text class="" x="180.00" y="170.00" text-anchor="middle">Rust-colored arrows: infrared</text></svg></div><div class="k-lead"><p>Venus is farther from the Sun than Mercury. Yet Venus has the hotter surface, beneath a thick atmosphere rich in carbon dioxide.</p></div><div class="k-example"><p class="k-label">How it works</p><p>Sunlight warms the ground, which emits thermal infrared upward; <strong>Venus&#x27;s dense carbon dioxide atmosphere absorbs and re-emits that infrared</strong>, returning much of it toward the ground. Because heat escapes to space far less easily, this greenhouse effect keeps the surface much hotter than Mercury&#x27;s.</p></div></article></main></body></html>

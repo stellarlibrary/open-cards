@@ -480,9 +480,11 @@
   display: block;
   width: 100%;
   height: clamp(9rem, 64cqw, 20rem);
+  padding: .35rem;
   object-fit: contain;
   background: #f7f5ef;
-  border-radius: 5px;
+  border: 1px solid #e9e5dc;
+  border-radius: 6px;
 }
 .specimen figcaption {
   display: flex;
@@ -494,7 +496,13 @@
 }
 .specimen figcaption span:first-child { font-weight: 625; }
 .breed-portrait .kind-illustration { margin: calc(-1 * var(--inset)) calc(-1 * var(--inset)) 0; }
-.breed-portrait .specimen img { border-radius: 12px 12px 0 0; height: clamp(11rem, 75cqw, 20rem); }
+.breed-portrait .specimen img {
+  border: 0;
+  border-bottom: 1px solid var(--line);
+  border-radius: 12px 12px 0 0;
+  padding: .45rem .5rem 0;
+  height: clamp(11rem, 75cqw, 20rem);
+}
 .breed-portrait .specimen figcaption { padding-inline: var(--inset); }
 
 .read-shell{width:min(100%, 680px);margin:0 auto}.single.read-page{background:#f5f5f7}</style></head><body class="single read-page"><main class="read-shell sample-card"><article class="study-card knowledge-card layout-graph" lang="en" data-ordinal="23"><header class="k-head"><h1 class="k-title">The natural exponential equals its derivative</h1></header><div class="k-lead"><p>For all real <code>x</code>, the derivative of <code>eˣ</code> is <code>eˣ</code>. On this graph, the height at an input is also the tangent slope there.</p></div><div class="k-visual kind-graph"><svg class="diagram" viewBox="0 0 360 190" role="img" aria-label="y = eˣ" xmlns="http://www.w3.org/2000/svg"><text class="plot-title" x="37.00" y="19.00" text-anchor="start">y = eˣ</text><line class="grid" x1="72.00" y1="34.00" x2="72.00" y2="158.00"/><text class="" x="72.00" y="177.00" text-anchor="middle">-2</text><line class="grid" x1="142.00" y1="34.00" x2="142.00" y2="158.00"/><text class="" x="142.00" y="177.00" text-anchor="middle">-1</text><line class="grid" x1="212.00" y1="34.00" x2="212.00" y2="158.00"/><text class="" x="212.00" y="177.00" text-anchor="middle">0</text><line class="grid" x1="282.00" y1="34.00" x2="282.00" y2="158.00"/><text class="" x="282.00" y="177.00" text-anchor="middle">1</text><line class="grid" x1="37.00" y1="123.34" x2="331.00" y2="123.34"/><text class="" x="30.00" y="127.34" text-anchor="end">1</text><line class="grid" x1="37.00" y1="86.95" x2="331.00" y2="86.95"/><text class="" x="30.00" y="90.95" text-anchor="end">3</text><line class="grid" x1="37.00" y1="50.56" x2="331.00" y2="50.56"/><text class="" x="30.00" y="54.56" text-anchor="end">5</text><line class="axis" x1="37.00" y1="141.53" x2="341.00" y2="141.53"/><path class="axis" d="M 334.00,138.03 341.00,141.53 334.00,145.03"/><line class="axis" x1="212.00" y1="158.00" x2="212.00" y2="31.00"/><path class="axis" d="M 208.50,38.00 212.00,31.00 215.50,38.00"/><text class="" x="350.00" y="145.53" text-anchor="middle">x</text><text class="" x="223.00" y="33.00" text-anchor="middle">y</text><path class="curve" d="M 37.00,140.04 39.94,139.98 42.88,139.91 45.82,139.84 48.76,139.77 51.70,139.69 54.64,139.61 57.58,139.53 60.52,139.44 63.46,139.35 66.40,139.26 69.34,139.16 72.28,139.06 75.22,138.96 78.16,138.84 81.10,138.73 84.04,138.61 86.98,138.48 89.92,138.35 92.86,138.22 95.80,138.07 98.74,137.93 101.68,137.77 104.62,137.61 107.56,137.44 110.50,137.27 113.44,137.08 116.38,136.89 119.32,136.69 122.26,136.48 125.20,136.27 128.14,136.04 131.08,135.81 134.02,135.56 136.96,135.31 139.90,135.04 142.84,134.76 145.78,134.47 148.72,134.17 151.66,133.85 154.60,133.52 157.54,133.18 160.48,132.82 163.42,132.44 166.36,132.05 169.30,131.65 172.24,131.22 175.18,130.78 178.12,130.32 181.06,129.84 184.00,129.34 186.94,128.81 189.88,128.27 192.82,127.70 195.76,127.11 198.70,126.49 201.64,125.84 204.58,125.17 207.52,124.47 210.46,123.73 213.40,122.97 216.34,122.17 219.28,121.34 222.22,120.48 225.16,119.57 228.10,118.63 231.04,117.65 233.98,116.63 236.92,115.56 239.86,114.44 242.80,113.28 245.74,112.07 248.68,110.81 251.62,109.49 254.56,108.11 257.50,106.68 260.44,105.18 263.38,103.63 266.32,102.00 269.26,100.30 272.20,98.53 275.14,96.69 278.08,94.77 281.02,92.76 283.96,90.67 286.90,88.49 289.84,86.21 292.78,83.84 295.72,81.36 298.66,78.78 301.60,76.09 304.54,73.28 307.48,70.36 310.42,67.30 313.36,64.12 316.30,60.80 319.24,57.34 322.18,53.72 325.12,49.96 328.06,46.03 331.00,41.93"/><circle class="dot" cx="288.90" cy="86.95" r="4.00"/></svg></div><div class="k-example"><p class="k-label">Worked example</p><p>At <code>x=ln 3</code>, the inverse relationship between <code>ln</code> and the exponential gives <code>e^(ln 3)=3</code>. The derivative rule now gives <code>f′(ln 3)=e^(ln 3)=3</code>.</p><p>The marked point <code>(ln 3,3)</code> has tangent slope <code>3</code>, so the tangent rises three units per unit of horizontal run.</p></div><div class="k-note"><p class="k-label">Note</p><p>The identity applies to the base <code>e</code>; other exponential bases have a constant derivative factor.</p></div></article></main></body></html>

@@ -480,9 +480,11 @@
   display: block;
   width: 100%;
   height: clamp(9rem, 64cqw, 20rem);
+  padding: .35rem;
   object-fit: contain;
   background: #f7f5ef;
-  border-radius: 5px;
+  border: 1px solid #e9e5dc;
+  border-radius: 6px;
 }
 .specimen figcaption {
   display: flex;
@@ -494,7 +496,13 @@
 }
 .specimen figcaption span:first-child { font-weight: 625; }
 .breed-portrait .kind-illustration { margin: calc(-1 * var(--inset)) calc(-1 * var(--inset)) 0; }
-.breed-portrait .specimen img { border-radius: 12px 12px 0 0; height: clamp(11rem, 75cqw, 20rem); }
+.breed-portrait .specimen img {
+  border: 0;
+  border-bottom: 1px solid var(--line);
+  border-radius: 12px 12px 0 0;
+  padding: .45rem .5rem 0;
+  height: clamp(11rem, 75cqw, 20rem);
+}
 .breed-portrait .specimen figcaption { padding-inline: var(--inset); }
 
-.read-shell{width:min(100%, 680px);margin:0 auto}.single.read-page{background:#f5f5f7}</style></head><body class="single read-page"><main class="read-shell sample-card"><article class="study-card knowledge-card layout-atlas" lang="en" data-ordinal="27"><header class="k-head"><h1 class="k-title">Comet tails</h1></header><div class="k-visual kind-diagram"><svg class="diagram" viewBox="0 0 360 190" role="img" aria-label="Ion tail points away from the Sun, while the dust tail curves and the comet moves across the page." xmlns="http://www.w3.org/2000/svg"><circle class="sun" cx="67.00" cy="90.00" r="25.00"/><text class="" x="67.00" y="136.00" text-anchor="middle">Sun</text><circle class="moon" cx="187.00" cy="90.00" r="8.00"/><path class="curve" d="M 195.00,87.00 229.00,86.00 273.00,78.00 326.00,66.00"/><line class="accent" x1="196.00" y1="90.00" x2="332.00" y2="90.00"/><path class="accent" d="M 325.00,86.50 332.00,90.00 325.00,93.50"/><line class="axis" x1="185.00" y1="101.00" x2="220.00" y2="146.00"/><path class="axis" d="M 218.47,138.33 220.00,146.00 212.94,142.62"/><text class="" x="180.00" y="167.00" text-anchor="middle">Comet motion</text><text class="" x="291.00" y="105.00" text-anchor="middle">Ion tail</text><text class="" x="283.00" y="58.00" text-anchor="middle">Dust tail</text></svg></div><div class="k-lead"><p>A comet approaching the Sun can develop a dust tail and a more nearly straight ion tail.</p></div><div class="k-example"><p class="k-label">How it works</p><p>The ion tail points approximately away from the Sun under the solar wind, not necessarily behind the comet&#x27;s direction of motion.</p></div></article></main></body></html>
+.read-shell{width:min(100%, 680px);margin:0 auto}.single.read-page{background:#f5f5f7}</style></head><body class="single read-page"><main class="read-shell sample-card"><article class="study-card knowledge-card layout-atlas" lang="en" data-ordinal="27"><header class="k-head"><h1 class="k-title">Comet tails</h1></header><div class="k-visual kind-diagram"><svg class="diagram" viewBox="0 0 360 190" role="img" aria-label="Ion tail points away from the Sun, while the dust tail curves and the comet moves across the page." xmlns="http://www.w3.org/2000/svg"><circle class="sun" cx="67.00" cy="90.00" r="25.00"/><text class="" x="67.00" y="136.00" text-anchor="middle">Sun</text><circle class="moon" cx="187.00" cy="90.00" r="8.00"/><path class="curve" d="M 195.00,87.00 229.00,86.00 273.00,78.00 326.00,66.00"/><line class="accent" x1="196.00" y1="90.00" x2="332.00" y2="90.00"/><path class="accent" d="M 325.00,86.50 332.00,90.00 325.00,93.50"/><line class="axis" x1="185.00" y1="101.00" x2="220.00" y2="146.00"/><path class="axis" d="M 218.47,138.33 220.00,146.00 212.94,142.62"/><text class="" x="180.00" y="167.00" text-anchor="middle">Comet motion</text><text class="" x="291.00" y="105.00" text-anchor="middle">Ion tail</text><text class="" x="283.00" y="58.00" text-anchor="middle">Dust tail</text></svg></div><div class="k-lead"><p>A comet approaching the Sun can develop a dust tail and a more nearly straight ion tail.</p></div><div class="k-example"><p class="k-label">How it works</p><p>Driven outward by the solar wind, <strong>the ion tail always points approximately away from the Sun</strong> rather than trailing behind the comet&#x27;s path—so as an outbound comet recedes from the Sun, its ion tail extends roughly ahead of it.</p></div></article></main></body></html>

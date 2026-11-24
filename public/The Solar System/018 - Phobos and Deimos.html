@@ -480,9 +480,11 @@
   display: block;
   width: 100%;
   height: clamp(9rem, 64cqw, 20rem);
+  padding: .35rem;
   object-fit: contain;
   background: #f7f5ef;
-  border-radius: 5px;
+  border: 1px solid #e9e5dc;
+  border-radius: 6px;
 }
 .specimen figcaption {
   display: flex;
@@ -494,7 +496,13 @@
 }
 .specimen figcaption span:first-child { font-weight: 625; }
 .breed-portrait .kind-illustration { margin: calc(-1 * var(--inset)) calc(-1 * var(--inset)) 0; }
-.breed-portrait .specimen img { border-radius: 12px 12px 0 0; height: clamp(11rem, 75cqw, 20rem); }
+.breed-portrait .specimen img {
+  border: 0;
+  border-bottom: 1px solid var(--line);
+  border-radius: 12px 12px 0 0;
+  padding: .45rem .5rem 0;
+  height: clamp(11rem, 75cqw, 20rem);
+}
 .breed-portrait .specimen figcaption { padding-inline: var(--inset); }
 
-.read-shell{width:min(100%, 680px);margin:0 auto}.single.read-page{background:#f5f5f7}</style></head><body class="single read-page"><main class="read-shell sample-card"><article class="study-card knowledge-card layout-atlas" lang="en" data-ordinal="18"><header class="k-head"><h1 class="k-title">Phobos and Deimos</h1></header><div class="k-visual kind-diagram"><svg class="diagram" viewBox="0 0 360 190" role="img" aria-label="Phobos orbits closer than Deimos. Phobos takes 7.7 hours to orbit; Mars takes 24.6 hours to turn." xmlns="http://www.w3.org/2000/svg"><ellipse class="rule" cx="180" cy="93" rx="92" ry="40"/><ellipse class="guide" cx="180" cy="93" rx="139" ry="63"/><circle class="world" cx="180.00" cy="93.00" r="26.00"/><text class="" x="180.00" y="97.00" text-anchor="middle">Mars</text><circle class="moon" cx="88.00" cy="93.00" r="6.00"/><circle class="moon" cx="312.00" cy="113.00" r="5.00"/><text class="" x="63.00" y="76.00" text-anchor="middle">Phobos</text><text class="" x="297.00" y="139.00" text-anchor="middle">Deimos</text><text class="" x="180.00" y="175.00" text-anchor="middle">Phobos: 7.7 h per orbit · Mars: 24.6 h per spin</text></svg></div><div class="k-lead"><p>Mars has two small irregular moons. Phobos is closer, takes about 7.7 hours to orbit, and goes around Mars faster than the planet turns.</p></div><div class="k-example"><p class="k-label">How it works</p><p>Its eastward orbital motion overtakes the eastward turning surface, so it can rise in the west and set in the east as seen from Mars.</p></div></article></main></body></html>
+.read-shell{width:min(100%, 680px);margin:0 auto}.single.read-page{background:#f5f5f7}</style></head><body class="single read-page"><main class="read-shell sample-card"><article class="study-card knowledge-card layout-atlas" lang="en" data-ordinal="18"><header class="k-head"><h1 class="k-title">Phobos and Deimos</h1></header><div class="k-visual kind-diagram"><svg class="diagram" viewBox="0 0 360 190" role="img" aria-label="Phobos orbits closer than Deimos. Phobos takes 7.7 hours to orbit; Mars takes 24.6 hours to turn." xmlns="http://www.w3.org/2000/svg"><ellipse class="rule" cx="180" cy="93" rx="92" ry="40"/><ellipse class="guide" cx="180" cy="93" rx="139" ry="63"/><circle class="world" cx="180.00" cy="93.00" r="26.00"/><text class="" x="180.00" y="97.00" text-anchor="middle">Mars</text><circle class="moon" cx="88.00" cy="93.00" r="6.00"/><circle class="moon" cx="312.00" cy="113.00" r="5.00"/><text class="" x="63.00" y="76.00" text-anchor="middle">Phobos</text><text class="" x="297.00" y="139.00" text-anchor="middle">Deimos</text><text class="" x="180.00" y="175.00" text-anchor="middle">Phobos: 7.7 h per orbit · Mars: 24.6 h per spin</text></svg></div><div class="k-lead"><p>Mars has two small irregular moons. Phobos is closer, takes about 7.7 hours to orbit, and goes around Mars faster than the planet turns.</p></div><div class="k-example"><p class="k-label">How it works</p><p>Because <strong>Phobos</strong> orbits eastward in 7.7 hours—faster than Mars&#x27;s 24.6-hour eastward spin—Phobos overtakes the surface beneath it, <strong>rising in the west and setting in the east</strong> as seen from Mars.</p></div></article></main></body></html>

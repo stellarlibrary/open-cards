@@ -480,9 +480,11 @@
   display: block;
   width: 100%;
   height: clamp(9rem, 64cqw, 20rem);
+  padding: .35rem;
   object-fit: contain;
   background: #f7f5ef;
-  border-radius: 5px;
+  border: 1px solid #e9e5dc;
+  border-radius: 6px;
 }
 .specimen figcaption {
   display: flex;
@@ -494,7 +496,13 @@
 }
 .specimen figcaption span:first-child { font-weight: 625; }
 .breed-portrait .kind-illustration { margin: calc(-1 * var(--inset)) calc(-1 * var(--inset)) 0; }
-.breed-portrait .specimen img { border-radius: 12px 12px 0 0; height: clamp(11rem, 75cqw, 20rem); }
+.breed-portrait .specimen img {
+  border: 0;
+  border-bottom: 1px solid var(--line);
+  border-radius: 12px 12px 0 0;
+  padding: .45rem .5rem 0;
+  height: clamp(11rem, 75cqw, 20rem);
+}
 .breed-portrait .specimen figcaption { padding-inline: var(--inset); }
 
 .read-shell{width:min(100%, 680px);margin:0 auto}.single.read-page{background:#f5f5f7}</style></head><body class="single read-page"><main class="read-shell sample-card"><article class="study-card knowledge-card layout-graph" lang="en" data-ordinal="55"><header class="k-head"><h1 class="k-title">Moving limits contribute two signed rates</h1></header><div class="k-lead"><p>Let <code>L(x)</code> and <code>U(x)</code> be differentiable bounds with <code>f</code> continuous on an interval containing their values. By the Fundamental Theorem and chain rule, the derivative of the integral from <code>L(x)</code> to <code>U(x)</code> is <code>f(U(x))U′(x)−f(L(x))L′(x)</code>.</p></div><div class="k-visual kind-compare"><ul class="visual-list compare"><li>Upper: integrand at x² times 2x</li><li>Lower: subtract the integrand at x times 1</li></ul></div><div class="k-example"><p class="k-label">Worked example</p><p>The integrand <code>e^(−t²)</code> is continuous everywhere. Define <code>F(s)=∫₀ˢ e^(−t²) dt</code>, so <code>F′(s)=e^(−s²)</code>. The integral <code>B(x)</code> from <code>x</code> to <code>x²</code> is <code>F(x²)−F(x)</code> by additivity and orientation.</p><p>The upper term contributes <code>e^(−(x²)²)·2x</code>; the lower term contributes <code>e^(−x²)·1</code> with a minus sign. Thus <code>B′(x)=2x·e^(−x⁴)−e^(−x²)</code>.</p></div><div class="k-note"><p class="k-label">Note</p><p>The formula works even when the upper limit is numerically smaller than the lower limit.</p></div></article></main></body></html>

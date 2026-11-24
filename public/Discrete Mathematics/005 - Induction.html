@@ -480,9 +480,11 @@
   display: block;
   width: 100%;
   height: clamp(9rem, 64cqw, 20rem);
+  padding: .35rem;
   object-fit: contain;
   background: #f7f5ef;
-  border-radius: 5px;
+  border: 1px solid #e9e5dc;
+  border-radius: 6px;
 }
 .specimen figcaption {
   display: flex;
@@ -494,7 +496,13 @@
 }
 .specimen figcaption span:first-child { font-weight: 625; }
 .breed-portrait .kind-illustration { margin: calc(-1 * var(--inset)) calc(-1 * var(--inset)) 0; }
-.breed-portrait .specimen img { border-radius: 12px 12px 0 0; height: clamp(11rem, 75cqw, 20rem); }
+.breed-portrait .specimen img {
+  border: 0;
+  border-bottom: 1px solid var(--line);
+  border-radius: 12px 12px 0 0;
+  padding: .45rem .5rem 0;
+  height: clamp(11rem, 75cqw, 20rem);
+}
 .breed-portrait .specimen figcaption { padding-inline: var(--inset); }
 
-.read-shell{width:min(100%, 680px);margin:0 auto}.single.read-page{background:#f5f5f7}</style></head><body class="single read-page"><main class="read-shell sample-card"><article class="study-card knowledge-card layout-matrix" lang="en" data-ordinal="5"><header class="k-head"><h1 class="k-title">Induction</h1></header><div class="k-lead"><p>In induction, prove the initial case, then show that each case implies the next. The two steps together cover the whole stated sequence of integers.</p></div><div class="k-visual kind-flow"><ol class="visual-list flow"><li>Check n=1</li><li>Assume the sum formula at n</li><li>Add the next summand</li></ol></div><div class="k-example"><p class="k-label">In use</p><p>For n≥1, the claim is <code>Σ(4k−1)=n(2n+1)</code>, summing over k from 1 to n.</p><p>At n=1 both sides are <strong>3</strong>. Assuming the formula at n, append <code>4(n+1)−1</code>; then <code>n(2n+1)+4n+3=(n+1)(2n+3)</code>, the formula at n+1.</p></div></article></main></body></html>
+.read-shell{width:min(100%, 680px);margin:0 auto}.single.read-page{background:#f5f5f7}</style></head><body class="single read-page"><main class="read-shell sample-card"><article class="study-card knowledge-card layout-matrix" lang="en" data-ordinal="5"><header class="k-head"><h1 class="k-title">Induction</h1></header><div class="k-lead"><p>In induction, prove the initial case, then show that each case implies the next. The two steps together cover the whole stated sequence of integers.</p></div><div class="k-visual kind-flow"><ol class="visual-list flow"><li>Check n=1</li><li>Assume the sum formula at n</li><li>Add the next summand</li></ol></div><div class="k-example"><p class="k-label">In use</p><p>To prove <code>Σ(4k − 1) = n(2n + 1)</code> (summing <code>k = 1</code> to <code>n</code>) for <code>n ≥ 1</code>, first check <strong>base case <code>n = 1</code></strong>, where both sides equal <strong><code>3</code></strong>. Assuming the formula holds at <code>n</code>, adding <code>4(n + 1) − 1</code> gives <code>n(2n + 1) + 4n + 3 = (n + 1)(2n + 3)</code>, completing the induction step.</p></div></article></main></body></html>

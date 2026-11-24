@@ -480,9 +480,11 @@
   display: block;
   width: 100%;
   height: clamp(9rem, 64cqw, 20rem);
+  padding: .35rem;
   object-fit: contain;
   background: #f7f5ef;
-  border-radius: 5px;
+  border: 1px solid #e9e5dc;
+  border-radius: 6px;
 }
 .specimen figcaption {
   display: flex;
@@ -494,7 +496,13 @@
 }
 .specimen figcaption span:first-child { font-weight: 625; }
 .breed-portrait .kind-illustration { margin: calc(-1 * var(--inset)) calc(-1 * var(--inset)) 0; }
-.breed-portrait .specimen img { border-radius: 12px 12px 0 0; height: clamp(11rem, 75cqw, 20rem); }
+.breed-portrait .specimen img {
+  border: 0;
+  border-bottom: 1px solid var(--line);
+  border-radius: 12px 12px 0 0;
+  padding: .45rem .5rem 0;
+  height: clamp(11rem, 75cqw, 20rem);
+}
 .breed-portrait .specimen figcaption { padding-inline: var(--inset); }
 
-.read-shell{width:min(100%, 680px);margin:0 auto}.single.read-page{background:#f5f5f7}</style></head><body class="single read-page"><main class="read-shell sample-card"><article class="study-card knowledge-card layout-graph" lang="en" data-ordinal="11"><header class="k-head"><h1 class="k-title">Double integrals over rectangles</h1></header><div class="k-lead"><p>In an iterated integral over a rectangle, one variable is integrated at a time with the other fixed. For continuous integrands either order gives the same total.</p></div><div class="k-visual kind-table"><div class="data-table"><table><thead><tr><th scope="col">Integral</th><th scope="col">Bounds</th></tr></thead><tbody><tr><td>Inner in y</td><td>0 to 1</td></tr><tr><td>Outer in x</td><td>0 to 2</td></tr></tbody></table></div></div><div class="k-example"><p class="k-label">Worked example</p><p>A roof has height <code>x+2y</code> above the ground rectangle <code>0≤x≤2</code>, <code>0≤y≤1</code>.</p><p><strong>4 cubic units</strong>. The y integral runs from 0 to 1 and gives <code>x+1</code>. Integrate this slice area from x=0 to x=2 to get 4.</p></div></article></main></body></html>
+.read-shell{width:min(100%, 680px);margin:0 auto}.single.read-page{background:#f5f5f7}</style></head><body class="single read-page"><main class="read-shell sample-card"><article class="study-card knowledge-card layout-graph" lang="en" data-ordinal="11"><header class="k-head"><h1 class="k-title">Double integrals over rectangles</h1></header><div class="k-lead"><p>In an iterated integral over a rectangle, one variable is integrated at a time with the other fixed. For continuous integrands either order gives the same total.</p></div><div class="k-visual kind-table"><div class="data-table"><table><thead><tr><th scope="col">Integral</th><th scope="col">Bounds</th></tr></thead><tbody><tr><td>Inner in y</td><td>0 to 1</td></tr><tr><td>Outer in x</td><td>0 to 2</td></tr></tbody></table></div></div><div class="k-example"><p class="k-label">Worked example</p><p>Beneath the roof <code>z = x + 2y</code> over the ground rectangle <code>0 ≤ x ≤ 2</code>, <code>0 ≤ y ≤ 1</code>, integrating in <code>y</code> first gives slice area <code>∫₀¹ (x + 2y) dy = [xy + y²]₀¹ = x + 1</code>. Integrating across <code>x</code> then yields <strong>volume <code>∫₀² (x + 1) dx = [x²/2 + x]₀² = 4</code> cubic units</strong>.</p></div></article></main></body></html>

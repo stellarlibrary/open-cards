@@ -480,9 +480,11 @@
   display: block;
   width: 100%;
   height: clamp(9rem, 64cqw, 20rem);
+  padding: .35rem;
   object-fit: contain;
   background: #f7f5ef;
-  border-radius: 5px;
+  border: 1px solid #e9e5dc;
+  border-radius: 6px;
 }
 .specimen figcaption {
   display: flex;
@@ -494,7 +496,13 @@
 }
 .specimen figcaption span:first-child { font-weight: 625; }
 .breed-portrait .kind-illustration { margin: calc(-1 * var(--inset)) calc(-1 * var(--inset)) 0; }
-.breed-portrait .specimen img { border-radius: 12px 12px 0 0; height: clamp(11rem, 75cqw, 20rem); }
+.breed-portrait .specimen img {
+  border: 0;
+  border-bottom: 1px solid var(--line);
+  border-radius: 12px 12px 0 0;
+  padding: .45rem .5rem 0;
+  height: clamp(11rem, 75cqw, 20rem);
+}
 .breed-portrait .specimen figcaption { padding-inline: var(--inset); }
 .v2-card {
   --v2-muted: #475462;
@@ -534,6 +542,7 @@
 .v2-figure .diagram .v2-draw-fill.ink { fill: var(--v2-ink); }
 .v2-figure .diagram .v2-draw-fill.signal { fill: var(--v2-second); }
 .v2-figure .diagram .v2-draw-fill.soft { fill: #dce8f0; }
+.v2-figure .diagram rect.v2-draw-fill.soft { stroke: #a8c0d3; stroke-width: .75; }
 .v2-figure .diagram .v2-draw-fill.mid { fill: #9abbd3; }
 .v2-figure .diagram .v2-draw-fill.warm { fill: #f0e4d7; }
 .v2-figure .diagram .v2-draw-fill.paper { fill: #fff; stroke: #8393a4; stroke-width: 1; }
@@ -608,4 +617,4 @@
   .v2-card .figure-drawing .diagram { width: calc(100% + 14px); max-width: none; margin-inline: -7px; }
 }
 
-.read-shell{width:min(100%, 680px);margin:0 auto}.single.read-page{background:#f5f5f7}</style></head><body class="single read-page"><main class="read-shell sample-card"><article class="study-card knowledge-card layout-map-sheet v2-card" lang="en" data-ordinal="22"><header class="k-head"><h1 class="k-title">A dot density map is not an address book</h1></header><div class="k-visual kind-plate"><figure class="v2-figure figure-drawing"><div class="v2-figure-title">Five representative dots in one area</div><div class="v2-figure-body"><svg class="diagram" viewBox="0 0 300 129" role="img" aria-label="Five representative dots in one area. Five blue dots inside the schematic district encode 100 trips at 20 trips per dot; locations are invented." xmlns="http://www.w3.org/2000/svg"><path class="v2-draw-fill soft" d="M 46.00,27.00 133.00,16.00 245.00,27.00 254.00,92.00 187.00,109.00 55.00,103.00 Z"/><circle class="v2-draw-fill accent" cx="72.00" cy="61.00" r="4.00"/><circle class="v2-draw-fill accent" cx="110.00" cy="44.00" r="4.00"/><circle class="v2-draw-fill accent" cx="145.00" cy="77.00" r="4.00"/><circle class="v2-draw-fill accent" cx="180.00" cy="54.00" r="4.00"/><circle class="v2-draw-fill accent" cx="221.00" cy="78.00" r="4.00"/><text class="v2-draw-text label" x="150.00" y="126.00" text-anchor="middle">1 dot = 20 trips</text></svg></div><figcaption>Five blue dots inside the schematic district encode 100 trips at 20 trips per dot; locations are invented.</figcaption></figure></div><div class="k-lead"><p>A dot-density map can place representative dots within regions, with each dot standing for a fixed count. A dot is not necessarily the position of an observed individual.</p></div><div class="k-example"><p class="k-label">On the map</p><p>Five dots at 20 trips per dot represent 100 trips in a district. Without actual trip locations, the display cannot identify which corner generated them.</p></div><div class="k-note"><p class="k-label">Map reading note</p><p>Look for a statement about placement. A map of true event coordinates has a different interpretation.</p></div></article></main></body></html>
+.read-shell{width:min(100%, 680px);margin:0 auto}.single.read-page{background:#f5f5f7}</style></head><body class="single read-page"><main class="read-shell sample-card"><article class="study-card knowledge-card layout-map-sheet v2-card" lang="en" data-ordinal="22"><header class="k-head"><h1 class="k-title">A dot density map is not an address book</h1></header><div class="k-visual kind-plate"><figure class="v2-figure figure-drawing"><div class="v2-figure-title">Five representative dots in one area</div><div class="v2-figure-body"><svg class="diagram" viewBox="0 0 300 135" role="img" aria-label="Five representative dots in one area. Five blue dots inside the schematic district encode 100 trips at 20 trips per dot; locations are invented." xmlns="http://www.w3.org/2000/svg"><path class="v2-draw-fill soft" d="M 46.00,27.00 133.00,16.00 245.00,27.00 254.00,92.00 187.00,109.00 55.00,103.00 Z"/><circle class="v2-draw-fill accent" cx="72.00" cy="61.00" r="4.00"/><circle class="v2-draw-fill accent" cx="110.00" cy="44.00" r="4.00"/><circle class="v2-draw-fill accent" cx="145.00" cy="77.00" r="4.00"/><circle class="v2-draw-fill accent" cx="180.00" cy="54.00" r="4.00"/><circle class="v2-draw-fill accent" cx="221.00" cy="78.00" r="4.00"/><text class="v2-draw-text label" x="150.00" y="126.00" text-anchor="middle">1 dot = 20 trips</text></svg></div><figcaption>Five blue dots inside the schematic district encode 100 trips at 20 trips per dot; locations are invented.</figcaption></figure></div><div class="k-lead"><p>A dot-density map can place representative dots within regions, with each dot standing for a fixed count. A dot is not necessarily the position of an observed individual.</p></div><div class="k-example"><p class="k-label">On the map</p><p>Five dots at 20 trips per dot represent 100 trips in a district. Without actual trip locations, the display cannot identify which corner generated them.</p></div><div class="k-note"><p class="k-label">Map reading note</p><p>Look for a statement about placement. A map of true event coordinates has a different interpretation.</p></div></article></main></body></html>

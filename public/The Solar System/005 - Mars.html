@@ -480,9 +480,11 @@
   display: block;
   width: 100%;
   height: clamp(9rem, 64cqw, 20rem);
+  padding: .35rem;
   object-fit: contain;
   background: #f7f5ef;
-  border-radius: 5px;
+  border: 1px solid #e9e5dc;
+  border-radius: 6px;
 }
 .specimen figcaption {
   display: flex;
@@ -494,7 +496,13 @@
 }
 .specimen figcaption span:first-child { font-weight: 625; }
 .breed-portrait .kind-illustration { margin: calc(-1 * var(--inset)) calc(-1 * var(--inset)) 0; }
-.breed-portrait .specimen img { border-radius: 12px 12px 0 0; height: clamp(11rem, 75cqw, 20rem); }
+.breed-portrait .specimen img {
+  border: 0;
+  border-bottom: 1px solid var(--line);
+  border-radius: 12px 12px 0 0;
+  padding: .45rem .5rem 0;
+  height: clamp(11rem, 75cqw, 20rem);
+}
 .breed-portrait .specimen figcaption { padding-inline: var(--inset); }
 
-.read-shell{width:min(100%, 680px);margin:0 auto}.single.read-page{background:#f5f5f7}</style></head><body class="single read-page"><main class="read-shell sample-card"><article class="study-card knowledge-card layout-atlas" lang="en" data-ordinal="5"><header class="k-head"><h1 class="k-title">Mars</h1></header><div class="k-visual kind-diagram"><svg class="diagram" viewBox="0 0 360 190" role="img" aria-label="Simplified sketch of cross-bedding: a set of diagonal layers meets a horizontal bed boundary. This is not a view of Murray Buttes." xmlns="http://www.w3.org/2000/svg"><text class="plot-title" x="20.00" y="27.00" text-anchor="start">Layers inside a bed</text><rect class="sand" x="22" y="49" width="219" height="93" rx="4"/><line class="axis" x1="22.00" y1="72.00" x2="241.00" y2="72.00"/><line class="axis" x1="22.00" y1="127.00" x2="241.00" y2="127.00"/><line class="rule" x1="24.00" y1="73.00" x2="85.00" y2="126.00"/><line class="rule" x1="44.00" y1="73.00" x2="105.00" y2="126.00"/><line class="rule" x1="64.00" y1="73.00" x2="125.00" y2="126.00"/><line class="rule" x1="84.00" y1="73.00" x2="145.00" y2="126.00"/><line class="rule" x1="104.00" y1="73.00" x2="165.00" y2="126.00"/><line class="accent" x1="124.00" y1="73.00" x2="185.00" y2="126.00"/><line class="rule" x1="144.00" y1="73.00" x2="205.00" y2="126.00"/><line class="rule" x1="164.00" y1="73.00" x2="225.00" y2="126.00"/><circle class="dot" cx="185.00" cy="125.00" r="3.00"/><line class="guide" x1="188.00" y1="123.00" x2="247.00" y2="103.00"/><text class="" x="333.00" y="101.00" text-anchor="end">Sloped layer</text><text class="" x="180.00" y="170.00" text-anchor="middle">Simplified outcrop · not to scale</text></svg></div><div class="k-lead"><p>At Murray Buttes, the Curiosity rover found sandstone with inclined layers inside broader beds. The sketch shows how these smaller layers can meet a bed boundary.</p></div><div class="k-example"><p class="k-label">How it works</p><p><strong>The shape and arrangement of the layers.</strong> Wind deposits grains on the sloping face of a migrating dune and leaves slanted layers. The pattern at Murray Buttes supports a dune origin; wind and water can both make inclined layers, so the surrounding geology matters too.</p></div></article></main></body></html>
+.read-shell{width:min(100%, 680px);margin:0 auto}.single.read-page{background:#f5f5f7}</style></head><body class="single read-page"><main class="read-shell sample-card"><article class="study-card knowledge-card layout-atlas" lang="en" data-ordinal="5"><header class="k-head"><h1 class="k-title">Mars</h1></header><div class="k-visual kind-diagram"><svg class="diagram" viewBox="0 0 360 190" role="img" aria-label="Simplified sketch of cross-bedding: a set of diagonal layers meets a horizontal bed boundary. This is not a view of Murray Buttes." xmlns="http://www.w3.org/2000/svg"><text class="plot-title" x="20.00" y="27.00" text-anchor="start">Layers inside a bed</text><rect class="sand" x="22" y="49" width="219" height="93" rx="4"/><line class="axis" x1="22.00" y1="72.00" x2="241.00" y2="72.00"/><line class="axis" x1="22.00" y1="127.00" x2="241.00" y2="127.00"/><line class="rule" x1="24.00" y1="73.00" x2="85.00" y2="126.00"/><line class="rule" x1="44.00" y1="73.00" x2="105.00" y2="126.00"/><line class="rule" x1="64.00" y1="73.00" x2="125.00" y2="126.00"/><line class="rule" x1="84.00" y1="73.00" x2="145.00" y2="126.00"/><line class="rule" x1="104.00" y1="73.00" x2="165.00" y2="126.00"/><line class="accent" x1="124.00" y1="73.00" x2="185.00" y2="126.00"/><line class="rule" x1="144.00" y1="73.00" x2="205.00" y2="126.00"/><line class="rule" x1="164.00" y1="73.00" x2="225.00" y2="126.00"/><circle class="dot" cx="185.00" cy="125.00" r="3.00"/><line class="guide" x1="188.00" y1="123.00" x2="247.00" y2="103.00"/><text class="" x="333.00" y="101.00" text-anchor="end">Sloped layer</text><text class="" x="180.00" y="170.00" text-anchor="middle">Simplified outcrop · not to scale</text></svg></div><div class="k-lead"><p>At Murray Buttes, the Curiosity rover found sandstone with inclined layers inside broader beds. The sketch shows how these smaller layers can meet a bed boundary.</p></div><div class="k-example"><p class="k-label">How it works</p><p>Geologists recognize ancient dunes from <strong>the geometry of internal cross-bedding</strong> rather than from Mars&#x27;s reddish color. Wind deposits grains down the slip face of a migrating dune to leave slanted layers; because flowing water can also build inclined layers, surrounding geology is checked too.</p></div></article></main></body></html>

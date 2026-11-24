@@ -480,9 +480,11 @@
   display: block;
   width: 100%;
   height: clamp(9rem, 64cqw, 20rem);
+  padding: .35rem;
   object-fit: contain;
   background: #f7f5ef;
-  border-radius: 5px;
+  border: 1px solid #e9e5dc;
+  border-radius: 6px;
 }
 .specimen figcaption {
   display: flex;
@@ -494,7 +496,13 @@
 }
 .specimen figcaption span:first-child { font-weight: 625; }
 .breed-portrait .kind-illustration { margin: calc(-1 * var(--inset)) calc(-1 * var(--inset)) 0; }
-.breed-portrait .specimen img { border-radius: 12px 12px 0 0; height: clamp(11rem, 75cqw, 20rem); }
+.breed-portrait .specimen img {
+  border: 0;
+  border-bottom: 1px solid var(--line);
+  border-radius: 12px 12px 0 0;
+  padding: .45rem .5rem 0;
+  height: clamp(11rem, 75cqw, 20rem);
+}
 .breed-portrait .specimen figcaption { padding-inline: var(--inset); }
 
-.read-shell{width:min(100%, 680px);margin:0 auto}.single.read-page{background:#f5f5f7}</style></head><body class="single read-page"><main class="read-shell sample-card"><article class="study-card knowledge-card layout-molecule" lang="en" data-ordinal="3"><header class="k-head"><h1 class="k-title">Classifying alcohols</h1></header><div class="k-visual kind-table"><div class="data-table"><table><thead><tr><th scope="col">Structure</th><th scope="col">Condensed formula</th></tr></thead><tbody><tr><td>A</td><td>CH₃–CH₂–CH₂–OH</td></tr><tr><td>B</td><td>CH₃–CH(OH)–CH₃</td></tr></tbody></table></div></div><div class="k-lead"><p>An alcohol’s primary, secondary or tertiary label counts carbon neighbours of the carbon that bears the OH group. It is not the total number of carbons in the molecule.</p></div><div class="k-example"><p class="k-label">Structure in context</p><p>In an alcohol, the classification primary, secondary, or tertiary depends on whether the carbon bearing OH has one, two, or three carbon neighbors.</p><p>Propan-2-ol (B). Its OH-bearing carbon is bonded to a methyl group on each side, so it has two carbon neighbors.</p></div></article></main></body></html>
+.read-shell{width:min(100%, 680px);margin:0 auto}.single.read-page{background:#f5f5f7}</style></head><body class="single read-page"><main class="read-shell sample-card"><article class="study-card knowledge-card layout-molecule" lang="en" data-ordinal="3"><header class="k-head"><h1 class="k-title">Classifying alcohols</h1></header><div class="k-visual kind-table"><div class="data-table"><table><thead><tr><th scope="col">Structure</th><th scope="col">Condensed formula</th></tr></thead><tbody><tr><td>A</td><td>CH₃–CH₂–CH₂–OH</td></tr><tr><td>B</td><td>CH₃–CH(OH)–CH₃</td></tr></tbody></table></div></div><div class="k-lead"><p>An alcohol’s primary, secondary or tertiary label counts carbon neighbors of the carbon that bears the OH group. It is not the total number of carbons in the molecule.</p></div><div class="k-example"><p class="k-label">Structure in context</p><p><strong>Propan-2-ol (B)</strong> is a <strong>secondary alcohol</strong> because its <code>OH</code>-bearing carbon is bonded to two methyl carbons, whereas <strong>propan-1-ol (A)</strong> is a <strong>primary alcohol</strong> whose <code>OH</code>-bearing carbon has only one carbon neighbor.</p></div></article></main></body></html>

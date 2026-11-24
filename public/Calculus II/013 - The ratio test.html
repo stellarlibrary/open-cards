@@ -480,9 +480,11 @@
   display: block;
   width: 100%;
   height: clamp(9rem, 64cqw, 20rem);
+  padding: .35rem;
   object-fit: contain;
   background: #f7f5ef;
-  border-radius: 5px;
+  border: 1px solid #e9e5dc;
+  border-radius: 6px;
 }
 .specimen figcaption {
   display: flex;
@@ -494,7 +496,13 @@
 }
 .specimen figcaption span:first-child { font-weight: 625; }
 .breed-portrait .kind-illustration { margin: calc(-1 * var(--inset)) calc(-1 * var(--inset)) 0; }
-.breed-portrait .specimen img { border-radius: 12px 12px 0 0; height: clamp(11rem, 75cqw, 20rem); }
+.breed-portrait .specimen img {
+  border: 0;
+  border-bottom: 1px solid var(--line);
+  border-radius: 12px 12px 0 0;
+  padding: .45rem .5rem 0;
+  height: clamp(11rem, 75cqw, 20rem);
+}
 .breed-portrait .specimen figcaption { padding-inline: var(--inset); }
 
-.read-shell{width:min(100%, 680px);margin:0 auto}.single.read-page{background:#f5f5f7}</style></head><body class="single read-page"><main class="read-shell sample-card"><article class="study-card knowledge-card layout-graph" lang="en" data-ordinal="13"><header class="k-head"><h1 class="k-title">The ratio test</h1></header><div class="k-lead"><p>The limit of successive absolute ratios below <code>1</code> gives absolute convergence; above <code>1</code> gives divergence. A limit of exactly <code>1</code> is inconclusive.</p></div><div class="k-visual kind-flow"><ol class="visual-list flow"><li>Form the consecutive ratio</li><li>Cancel common factorial factors</li><li>Compare its limit with 1</li></ol></div><div class="k-example"><p class="k-label">Worked example</p><p><code>aₙ=5ⁿ/(n+1)!</code> for n≥1.</p><p><strong>Yes, absolutely.</strong> The consecutive ratio is <code>5/(n+2)</code>, which tends to 0&lt;1. The factorial contributes a new denominator factor at each step.</p></div></article></main></body></html>
+.read-shell{width:min(100%, 680px);margin:0 auto}.single.read-page{background:#f5f5f7}</style></head><body class="single read-page"><main class="read-shell sample-card"><article class="study-card knowledge-card layout-graph" lang="en" data-ordinal="13"><header class="k-head"><h1 class="k-title">The ratio test</h1></header><div class="k-lead"><p>The limit of successive absolute ratios below <code>1</code> gives absolute convergence; above <code>1</code> gives divergence. A limit of exactly <code>1</code> is inconclusive.</p></div><div class="k-visual kind-flow"><ol class="visual-list flow"><li>Form the consecutive ratio</li><li>Cancel common factorial factors</li><li>Compare its limit with 1</li></ol></div><div class="k-example"><p class="k-label">Worked example</p><p>For <code>aₙ = 5ⁿ/(n+1)!</code> (<code>n≥1</code>), the ratio of consecutive positive terms simplifies to <code>aₙ₊₁/aₙ = [5ⁿ⁺¹/(n+2)!] · [(n+1)!/5ⁿ] = 5/(n+2)</code>. As <code>n→∞</code>, this ratio approaches <code>0 &lt; 1</code>, so <strong>the series <code>Σ aₙ</code> converges absolutely by the ratio test</strong>.</p></div></article></main></body></html>

@@ -480,9 +480,11 @@
   display: block;
   width: 100%;
   height: clamp(9rem, 64cqw, 20rem);
+  padding: .35rem;
   object-fit: contain;
   background: #f7f5ef;
-  border-radius: 5px;
+  border: 1px solid #e9e5dc;
+  border-radius: 6px;
 }
 .specimen figcaption {
   display: flex;
@@ -494,7 +496,13 @@
 }
 .specimen figcaption span:first-child { font-weight: 625; }
 .breed-portrait .kind-illustration { margin: calc(-1 * var(--inset)) calc(-1 * var(--inset)) 0; }
-.breed-portrait .specimen img { border-radius: 12px 12px 0 0; height: clamp(11rem, 75cqw, 20rem); }
+.breed-portrait .specimen img {
+  border: 0;
+  border-bottom: 1px solid var(--line);
+  border-radius: 12px 12px 0 0;
+  padding: .45rem .5rem 0;
+  height: clamp(11rem, 75cqw, 20rem);
+}
 .breed-portrait .specimen figcaption { padding-inline: var(--inset); }
 
-.read-shell{width:min(100%, 680px);margin:0 auto}.single.read-page{background:#f5f5f7}</style></head><body class="single read-page"><main class="read-shell sample-card"><article class="study-card knowledge-card layout-matrix" lang="en" data-ordinal="8"><header class="k-head"><h1 class="k-title">Merging sorted runs</h1></header><div class="k-lead"><p>To merge two sorted runs, compare their first unused items and take the smaller one. Once a run is empty, append the rest of the other run.</p></div><div class="k-visual kind-compare"><ul class="visual-list compare"><li>Left 3, 8, 11</li><li>Right 2, 7</li></ul></div><div class="k-example"><p class="k-label">In use</p><p>From <code>[3, 8, 11]</code> and <code>[2, 7]</code>, take <code>2, 3, 7</code>. The second run is now empty, so append <code>8, 11</code>.</p></div></article></main></body></html>
+.read-shell{width:min(100%, 680px);margin:0 auto}.single.read-page{background:#f5f5f7}</style></head><body class="single read-page"><main class="read-shell sample-card"><article class="study-card knowledge-card layout-matrix" lang="en" data-ordinal="8"><header class="k-head"><h1 class="k-title">Merging sorted runs</h1></header><div class="k-lead"><p>To merge two sorted runs, compare their first unused items and take the smaller one. Once a run is empty, append the rest of the other run.</p></div><div class="k-visual kind-compare"><ul class="visual-list compare"><li>Left 3, 8, 11</li><li>Right 2, 7</li></ul></div><div class="k-example"><p class="k-label">In use</p><p>From <code>[3, 8, 11]</code> and <code>[2, 7]</code>, comparisons choose <code>2, 3, 7</code>. The second run is now empty, so appending <code>8, 11</code> gives <code>[2, 3, 7, 8, 11]</code>.</p></div></article></main></body></html>

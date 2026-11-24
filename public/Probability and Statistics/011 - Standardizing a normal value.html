@@ -480,9 +480,11 @@
   display: block;
   width: 100%;
   height: clamp(9rem, 64cqw, 20rem);
+  padding: .35rem;
   object-fit: contain;
   background: #f7f5ef;
-  border-radius: 5px;
+  border: 1px solid #e9e5dc;
+  border-radius: 6px;
 }
 .specimen figcaption {
   display: flex;
@@ -494,7 +496,13 @@
 }
 .specimen figcaption span:first-child { font-weight: 625; }
 .breed-portrait .kind-illustration { margin: calc(-1 * var(--inset)) calc(-1 * var(--inset)) 0; }
-.breed-portrait .specimen img { border-radius: 12px 12px 0 0; height: clamp(11rem, 75cqw, 20rem); }
+.breed-portrait .specimen img {
+  border: 0;
+  border-bottom: 1px solid var(--line);
+  border-radius: 12px 12px 0 0;
+  padding: .45rem .5rem 0;
+  height: clamp(11rem, 75cqw, 20rem);
+}
 .breed-portrait .specimen figcaption { padding-inline: var(--inset); }
 
-.read-shell{width:min(100%, 680px);margin:0 auto}.single.read-page{background:#f5f5f7}</style></head><body class="single read-page"><main class="read-shell sample-card"><article class="study-card knowledge-card layout-matrix" lang="en" data-ordinal="11"><header class="k-head"><h1 class="k-title">Standardizing a normal value</h1></header><div class="k-lead"><p>The z-score <code>(x−μ)/σ</code> locates a value in standard deviations from the mean. The sign says which side of the mean it lies on.</p></div><div class="k-visual kind-flow"><ol class="visual-list flow"><li>Start at 54 kg</li><li>Subtract the mean 48 kg</li><li>Divide by 4 kg per standard deviation</li></ol></div><div class="k-example"><p class="k-label">In use</p><p>Suppose the load X in kg is normal with mean 48 and standard deviation 4.</p><p><strong>Z≥1.5</strong>. Subtract the mean and divide by the positive standard deviation: <code>(54−48)/4=1.5</code>. The direction of the inequality stays the same.</p></div></article></main></body></html>
+.read-shell{width:min(100%, 680px);margin:0 auto}.single.read-page{background:#f5f5f7}</style></head><body class="single read-page"><main class="read-shell sample-card"><article class="study-card knowledge-card layout-matrix" lang="en" data-ordinal="11"><header class="k-head"><h1 class="k-title">Standardizing a normal value</h1></header><div class="k-lead"><p>The z-score <code>(x−μ)/σ</code> locates a value in standard deviations from the mean. The sign says which side of the mean it lies on.</p></div><div class="k-visual kind-flow"><ol class="visual-list flow"><li>Start at 54 kg</li><li>Subtract the mean 48 kg</li><li>Divide by 4 kg per standard deviation</li></ol></div><div class="k-example"><p class="k-label">In use</p><p>If load <code>X</code> (in kg) is normal with mean <code>μ = 48</code> and standard deviation <code>σ = 4</code>, standardizing the upper-tail event <code>X ≥ 54</code> subtracts <code>48</code> and divides by <code>4</code> to give the equivalent standard normal event <strong><code>Z ≥ (54−48)/4 = 1.5</code></strong>.</p></div></article></main></body></html>

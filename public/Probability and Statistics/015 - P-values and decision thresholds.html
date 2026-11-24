@@ -480,9 +480,11 @@
   display: block;
   width: 100%;
   height: clamp(9rem, 64cqw, 20rem);
+  padding: .35rem;
   object-fit: contain;
   background: #f7f5ef;
-  border-radius: 5px;
+  border: 1px solid #e9e5dc;
+  border-radius: 6px;
 }
 .specimen figcaption {
   display: flex;
@@ -494,7 +496,13 @@
 }
 .specimen figcaption span:first-child { font-weight: 625; }
 .breed-portrait .kind-illustration { margin: calc(-1 * var(--inset)) calc(-1 * var(--inset)) 0; }
-.breed-portrait .specimen img { border-radius: 12px 12px 0 0; height: clamp(11rem, 75cqw, 20rem); }
+.breed-portrait .specimen img {
+  border: 0;
+  border-bottom: 1px solid var(--line);
+  border-radius: 12px 12px 0 0;
+  padding: .45rem .5rem 0;
+  height: clamp(11rem, 75cqw, 20rem);
+}
 .breed-portrait .specimen figcaption { padding-inline: var(--inset); }
 
-.read-shell{width:min(100%, 680px);margin:0 auto}.single.read-page{background:#f5f5f7}</style></head><body class="single read-page"><main class="read-shell sample-card"><article class="study-card knowledge-card layout-matrix" lang="en" data-ordinal="15"><header class="k-head"><h1 class="k-title">P-values and decision thresholds</h1></header><div class="k-lead"><p>A p-value measures how unusual the observed result or a more extreme one would be under the null model. A prechosen threshold sets the rule for rejecting the null.</p></div><div class="k-visual kind-table"><div class="data-table"><table><thead><tr><th scope="col">Significance level</th><th scope="col">Decimal</th></tr></thead><tbody><tr><td>5%</td><td>0.05</td></tr><tr><td>1%</td><td>0.01</td></tr></tbody></table></div></div><div class="k-example"><p class="k-label">In use</p><p>A one-sided test for a shorter mean wait gave p=0.03 under the null model of equal mean waits.</p><p><strong>Reject at 5%, not at 1%.</strong> Under the null model, p is the probability of a test statistic at least as extreme in the alternative&#x27;s direction. It is not the probability the null is true.</p></div></article></main></body></html>
+.read-shell{width:min(100%, 680px);margin:0 auto}.single.read-page{background:#f5f5f7}</style></head><body class="single read-page"><main class="read-shell sample-card"><article class="study-card knowledge-card layout-matrix" lang="en" data-ordinal="15"><header class="k-head"><h1 class="k-title">P-values and decision thresholds</h1></header><div class="k-lead"><p>A p-value measures how unusual the observed result or a more extreme one would be under the null model. A prechosen threshold sets the rule for rejecting the null.</p></div><div class="k-visual kind-table"><div class="data-table"><table><thead><tr><th scope="col">Significance level</th><th scope="col">Decimal</th></tr></thead><tbody><tr><td>5%</td><td>0.05</td></tr><tr><td>1%</td><td>0.01</td></tr></tbody></table></div></div><div class="k-example"><p class="k-label">In use</p><p>In a one-sided test for a shorter mean wait under the null model of equal mean waits, observing <code>p = 0.03</code> leads us to <strong>reject the null at the <code>5%</code> level (<code>0.03 &lt; 0.05</code>) but not at the <code>1%</code> level</strong>. That <code>0.03</code> is the probability under the null of a test statistic at least this extreme, not the probability that the null is true.</p></div></article></main></body></html>

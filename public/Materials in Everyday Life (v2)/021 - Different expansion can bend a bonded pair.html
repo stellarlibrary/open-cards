@@ -480,9 +480,11 @@
   display: block;
   width: 100%;
   height: clamp(9rem, 64cqw, 20rem);
+  padding: .35rem;
   object-fit: contain;
   background: #f7f5ef;
-  border-radius: 5px;
+  border: 1px solid #e9e5dc;
+  border-radius: 6px;
 }
 .specimen figcaption {
   display: flex;
@@ -494,7 +496,13 @@
 }
 .specimen figcaption span:first-child { font-weight: 625; }
 .breed-portrait .kind-illustration { margin: calc(-1 * var(--inset)) calc(-1 * var(--inset)) 0; }
-.breed-portrait .specimen img { border-radius: 12px 12px 0 0; height: clamp(11rem, 75cqw, 20rem); }
+.breed-portrait .specimen img {
+  border: 0;
+  border-bottom: 1px solid var(--line);
+  border-radius: 12px 12px 0 0;
+  padding: .45rem .5rem 0;
+  height: clamp(11rem, 75cqw, 20rem);
+}
 .breed-portrait .specimen figcaption { padding-inline: var(--inset); }
 .v2-card {
   --v2-muted: #475462;
@@ -534,6 +542,7 @@
 .v2-figure .diagram .v2-draw-fill.ink { fill: var(--v2-ink); }
 .v2-figure .diagram .v2-draw-fill.signal { fill: var(--v2-second); }
 .v2-figure .diagram .v2-draw-fill.soft { fill: #dce8f0; }
+.v2-figure .diagram rect.v2-draw-fill.soft { stroke: #a8c0d3; stroke-width: .75; }
 .v2-figure .diagram .v2-draw-fill.mid { fill: #9abbd3; }
 .v2-figure .diagram .v2-draw-fill.warm { fill: #f0e4d7; }
 .v2-figure .diagram .v2-draw-fill.paper { fill: #fff; stroke: #8393a4; stroke-width: 1; }
@@ -608,4 +617,4 @@
   .v2-card .figure-drawing .diagram { width: calc(100% + 14px); max-width: none; margin-inline: -7px; }
 }
 
-.read-shell{width:min(100%, 680px);margin:0 auto}.single.read-page{background:#f5f5f7}</style></head><body class="single read-page"><main class="read-shell sample-card"><article class="study-card knowledge-card layout-material-sheet v2-card" lang="en" data-ordinal="21"><header class="k-head"><h1 class="k-title">Different expansion can bend a bonded pair</h1></header><div class="k-lead"><p>Two bonded strips with different expansion coefficients cannot freely expand to different lengths. On warming, the layer that wants to expand more tends to occupy the outside of the bend.</p></div><div class="k-visual kind-plate"><figure class="v2-figure figure-drawing"><div class="v2-figure-title">A bonded pair before and after heating</div><div class="v2-figure-body"><svg class="diagram" viewBox="0 0 300 139" role="img" aria-label="A bonded pair before and after heating. The high-expansion strip takes the longer arc outside the bend in the warmed pair." xmlns="http://www.w3.org/2000/svg"><line class="v2-draw-line accent" x1="30.00" y1="43.00" x2="124.00" y2="43.00"/><line class="v2-draw-line signal" x1="30.00" y1="52.00" x2="124.00" y2="52.00"/><path class="v2-draw-line accent" d="M 174.00,63.00 191.00,44.00 211.00,35.00 233.00,35.00 253.00,44.00 270.00,63.00"/><path class="v2-draw-line signal" d="M 179.00,68.00 196.00,53.00 213.00,46.00 232.00,46.00 248.00,53.00 265.00,68.00"/><text class="v2-draw-text label" x="77.00" y="98.00" text-anchor="middle">Before</text><text class="v2-draw-text label" x="221.00" y="98.00" text-anchor="middle">Warmer</text><text class="v2-draw-text label" x="150.00" y="130.00" text-anchor="middle">Blue: higher expansion</text></svg></div><figcaption>The high-expansion strip takes the longer arc outside the bend in the warmed pair.</figcaption></figure></div><div class="k-example"><p class="k-label">In use</p><p>If the top layer has higher expansion than the bottom layer, the warmed pair curves with the top layer on the convex side, under a simple freely bending arrangement.</p></div><div class="k-note"><p class="k-label">Specimen note</p><p>Layer thickness and stiffness affect curvature. The drawing exaggerates it to make the relationship visible.</p></div></article></main></body></html>
+.read-shell{width:min(100%, 680px);margin:0 auto}.single.read-page{background:#f5f5f7}</style></head><body class="single read-page"><main class="read-shell sample-card"><article class="study-card knowledge-card layout-material-sheet v2-card" lang="en" data-ordinal="21"><header class="k-head"><h1 class="k-title">Different expansion can bend a bonded pair</h1></header><div class="k-lead"><p>Two bonded strips with different expansion coefficients cannot freely expand to different lengths. On warming, the layer that wants to expand more tends to occupy the outside of the bend.</p></div><div class="k-visual kind-plate"><figure class="v2-figure figure-drawing"><div class="v2-figure-title">A bonded pair before and after heating</div><div class="v2-figure-body"><svg class="diagram" viewBox="0 0 300 138" role="img" aria-label="A bonded pair before and after heating. The two bonded layers touch along their interface; on warming, the higher-expansion top layer takes the outer arc." xmlns="http://www.w3.org/2000/svg"><rect class="v2-draw-fill accent" x="26" y="42" width="100" height="8" rx="1"/><rect class="v2-draw-fill signal" x="26" y="50" width="100" height="8" rx="1"/><path class="v2-draw-fill accent" d="M 169.60,49.70 181.40,43.00 194.10,38.00 207.40,35.00 221.00,34.00 234.60,35.00 247.90,38.00 260.60,43.00 272.40,49.70 268.00,56.40 257.20,50.20 245.60,45.70 233.40,42.90 221.00,42.00 208.60,42.90 196.40,45.70 184.80,50.20 174.00,56.40 Z"/><path class="v2-draw-fill signal" d="M 174.00,56.40 184.80,50.20 196.40,45.70 208.60,42.90 221.00,42.00 233.40,42.90 245.60,45.70 257.20,50.20 268.00,56.40 263.50,63.00 253.70,57.40 243.20,53.30 232.20,50.80 221.00,50.00 209.80,50.80 198.80,53.30 188.30,57.40 178.50,63.00 Z"/><text class="v2-draw-text label" x="76.00" y="95.00" text-anchor="middle">Before</text><text class="v2-draw-text label" x="221.00" y="95.00" text-anchor="middle">Warmer</text><text class="v2-draw-text label" x="150.00" y="126.00" text-anchor="middle">Blue: higher expansion</text></svg></div><figcaption>The two bonded layers touch along their interface; on warming, the higher-expansion top layer takes the outer arc.</figcaption></figure></div><div class="k-example"><p class="k-label">In use</p><p>If the top layer has higher expansion than the bottom layer, the warmed pair curves with the top layer on the convex side, under a simple freely bending arrangement.</p></div><div class="k-note"><p class="k-label">Specimen note</p><p>Layer thickness and stiffness affect curvature. The drawing exaggerates it to make the relationship visible.</p></div></article></main></body></html>

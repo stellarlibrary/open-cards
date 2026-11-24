@@ -480,9 +480,11 @@
   display: block;
   width: 100%;
   height: clamp(9rem, 64cqw, 20rem);
+  padding: .35rem;
   object-fit: contain;
   background: #f7f5ef;
-  border-radius: 5px;
+  border: 1px solid #e9e5dc;
+  border-radius: 6px;
 }
 .specimen figcaption {
   display: flex;
@@ -494,7 +496,13 @@
 }
 .specimen figcaption span:first-child { font-weight: 625; }
 .breed-portrait .kind-illustration { margin: calc(-1 * var(--inset)) calc(-1 * var(--inset)) 0; }
-.breed-portrait .specimen img { border-radius: 12px 12px 0 0; height: clamp(11rem, 75cqw, 20rem); }
+.breed-portrait .specimen img {
+  border: 0;
+  border-bottom: 1px solid var(--line);
+  border-radius: 12px 12px 0 0;
+  padding: .45rem .5rem 0;
+  height: clamp(11rem, 75cqw, 20rem);
+}
 .breed-portrait .specimen figcaption { padding-inline: var(--inset); }
 .v2-card {
   --v2-muted: #475462;
@@ -534,6 +542,7 @@
 .v2-figure .diagram .v2-draw-fill.ink { fill: var(--v2-ink); }
 .v2-figure .diagram .v2-draw-fill.signal { fill: var(--v2-second); }
 .v2-figure .diagram .v2-draw-fill.soft { fill: #dce8f0; }
+.v2-figure .diagram rect.v2-draw-fill.soft { stroke: #a8c0d3; stroke-width: .75; }
 .v2-figure .diagram .v2-draw-fill.mid { fill: #9abbd3; }
 .v2-figure .diagram .v2-draw-fill.warm { fill: #f0e4d7; }
 .v2-figure .diagram .v2-draw-fill.paper { fill: #fff; stroke: #8393a4; stroke-width: 1; }
@@ -608,4 +617,4 @@
   .v2-card .figure-drawing .diagram { width: calc(100% + 14px); max-width: none; margin-inline: -7px; }
 }
 
-.read-shell{width:min(100%, 680px);margin:0 auto}.single.read-page{background:#f5f5f7}</style></head><body class="single read-page"><main class="read-shell sample-card"><article class="study-card knowledge-card layout-map-sheet v2-card" lang="en" data-ordinal="3"><header class="k-head"><h1 class="k-title">Latitude and longitude</h1></header><div class="k-visual kind-plate"><figure class="v2-figure figure-drawing"><div class="v2-figure-title">Locate a pair on a graticule</div><div class="v2-figure-body"><svg class="diagram" viewBox="0 0 300 153" role="img" aria-label="Locate a pair on a graticule. The point sits on 30° N, at 60° E of the marked 0° meridian." xmlns="http://www.w3.org/2000/svg"><rect class="v2-draw-fill soft" x="42" y="22" width="215" height="106" rx="1"/><line class="v2-draw-line ink" x1="42.00" y1="87.00" x2="257.00" y2="87.00"/><line class="v2-draw-line ink" x1="128.00" y1="22.00" x2="128.00" y2="128.00"/><line class="v2-draw-line guide" x1="42.00" y1="53.00" x2="257.00" y2="53.00"/><line class="v2-draw-line guide" x1="207.00" y1="22.00" x2="207.00" y2="128.00"/><circle class="v2-draw-fill accent" cx="207.00" cy="53.00" r="4.00"/><text class="v2-draw-text label" x="38.00" y="57.00" text-anchor="end">30° N</text><text class="v2-draw-text label" x="37.00" y="91.00" text-anchor="end">0°</text><text class="v2-draw-text label" x="128.00" y="146.00" text-anchor="middle">0°</text><text class="v2-draw-text label" x="207.00" y="146.00" text-anchor="middle">60° E</text></svg></div><figcaption>The point sits on 30° N, at 60° E of the marked 0° meridian.</figcaption></figure></div><div class="k-lead"><p>Latitude specifies angle north or south of the equator. Longitude specifies angle east or west of the prime meridian. A coordinate pair needs its order and reference system.</p></div><div class="k-example"><p class="k-label">On the map</p><p>The marked point is 30° north, 60° east. It is above the equator and to the east of the prime meridian in this simplified grid.</p></div><div class="k-note"><p class="k-label">Map reading note</p><p>Some tools accept longitude before latitude. Write the two labels instead of relying on position.</p></div></article></main></body></html>
+.read-shell{width:min(100%, 680px);margin:0 auto}.single.read-page{background:#f5f5f7}</style></head><body class="single read-page"><main class="read-shell sample-card"><article class="study-card knowledge-card layout-map-sheet v2-card" lang="en" data-ordinal="3"><header class="k-head"><h1 class="k-title">Latitude and longitude</h1></header><div class="k-visual kind-plate"><figure class="v2-figure figure-drawing"><div class="v2-figure-title">Locate a pair on a graticule</div><div class="v2-figure-body"><svg class="diagram" viewBox="0 0 300 155" role="img" aria-label="Locate a pair on a graticule. The point sits on 30° N, at 60° E of the marked 0° meridian." xmlns="http://www.w3.org/2000/svg"><rect class="v2-draw-fill soft" x="50" y="22" width="215" height="106" rx="1"/><line class="v2-draw-line ink" x1="50.00" y1="87.00" x2="265.00" y2="87.00"/><line class="v2-draw-line ink" x1="136.00" y1="22.00" x2="136.00" y2="128.00"/><line class="v2-draw-line guide" x1="50.00" y1="53.00" x2="265.00" y2="53.00"/><line class="v2-draw-line guide" x1="215.00" y1="22.00" x2="215.00" y2="128.00"/><circle class="v2-draw-fill accent" cx="215.00" cy="53.00" r="4.00"/><text class="v2-draw-text label" x="45.00" y="57.00" text-anchor="end">30° N</text><text class="v2-draw-text label" x="45.00" y="91.00" text-anchor="end">0°</text><text class="v2-draw-text label" x="136.00" y="146.00" text-anchor="middle">0°</text><text class="v2-draw-text label" x="215.00" y="146.00" text-anchor="middle">60° E</text></svg></div><figcaption>The point sits on 30° N, at 60° E of the marked 0° meridian.</figcaption></figure></div><div class="k-lead"><p>Latitude specifies angle north or south of the equator. Longitude specifies angle east or west of the prime meridian. A coordinate pair needs its order and reference system.</p></div><div class="k-example"><p class="k-label">On the map</p><p>The marked point is 30° north, 60° east. It is above the equator and to the east of the prime meridian in this simplified grid.</p></div><div class="k-note"><p class="k-label">Map reading note</p><p>Some tools accept longitude before latitude. Write the two labels instead of relying on position.</p></div></article></main></body></html>

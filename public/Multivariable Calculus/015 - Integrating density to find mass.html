@@ -480,9 +480,11 @@
   display: block;
   width: 100%;
   height: clamp(9rem, 64cqw, 20rem);
+  padding: .35rem;
   object-fit: contain;
   background: #f7f5ef;
-  border-radius: 5px;
+  border: 1px solid #e9e5dc;
+  border-radius: 6px;
 }
 .specimen figcaption {
   display: flex;
@@ -494,7 +496,13 @@
 }
 .specimen figcaption span:first-child { font-weight: 625; }
 .breed-portrait .kind-illustration { margin: calc(-1 * var(--inset)) calc(-1 * var(--inset)) 0; }
-.breed-portrait .specimen img { border-radius: 12px 12px 0 0; height: clamp(11rem, 75cqw, 20rem); }
+.breed-portrait .specimen img {
+  border: 0;
+  border-bottom: 1px solid var(--line);
+  border-radius: 12px 12px 0 0;
+  padding: .45rem .5rem 0;
+  height: clamp(11rem, 75cqw, 20rem);
+}
 .breed-portrait .specimen figcaption { padding-inline: var(--inset); }
 
-.read-shell{width:min(100%, 680px);margin:0 auto}.single.read-page{background:#f5f5f7}</style></head><body class="single read-page"><main class="read-shell sample-card"><article class="study-card knowledge-card layout-graph" lang="en" data-ordinal="15"><header class="k-head"><h1 class="k-title">Integrating density to find mass</h1></header><div class="k-lead"><p>For a spatial density <code>ρ</code>, each tiny volume contributes approximately <code>ρ dV</code>. Integrating over the solid sums those contributions to obtain mass.</p></div><div class="k-visual kind-flow"><ol class="visual-list flow"><li>Triangle area 3 m²</li><li>Slice mass per metre 3(2+z)</li><li>Integrate from z=0 to 3 m</li></ol></div><div class="k-example"><p class="k-label">Worked example</p><p>A prism has a right triangular base with perpendicular sides 3 m and 2 m. The prism extends vertically from z=0 to 3 m and density is <code>ρ=2+z</code> kg/m³, with z in metres.</p><p><strong>31.5 kg</strong>. Each horizontal slice has area 3 m² and a constant density at its height. Integrate <code>3(2+z)</code> from 0 to 3, giving <code>3(6+9/2)</code>.</p></div></article></main></body></html>
+.read-shell{width:min(100%, 680px);margin:0 auto}.single.read-page{background:#f5f5f7}</style></head><body class="single read-page"><main class="read-shell sample-card"><article class="study-card knowledge-card layout-graph" lang="en" data-ordinal="15"><header class="k-head"><h1 class="k-title">Integrating density to find mass</h1></header><div class="k-lead"><p>For a spatial density <code>ρ</code>, each tiny volume contributes approximately <code>ρ dV</code>. Integrating over the solid sums those contributions to obtain mass.</p></div><div class="k-visual kind-flow"><ol class="visual-list flow"><li>Triangle area 3 m²</li><li>Slice mass per metre 3(2+z)</li><li>Integrate from z=0 to 3 m</li></ol></div><div class="k-example"><p class="k-label">Worked example</p><p>A vertical prism from <code>z = 0</code> to <code>z = 3 m</code> has a right-triangular base with legs <code>3 m</code> and <code>2 m</code> (area <code>½·3·2 = 3 m²</code>) and density <code>ρ(z) = 2 + z</code> kg/m³. Integrating horizontal slices gives <strong>total mass <code>∫₀³ 3(2 + z) dz = 3[2z + z²/2]₀³ = 3(6 + 9/2) = 31.5 kg</code></strong>.</p></div></article></main></body></html>

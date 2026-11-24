@@ -480,9 +480,11 @@
   display: block;
   width: 100%;
   height: clamp(9rem, 64cqw, 20rem);
+  padding: .35rem;
   object-fit: contain;
   background: #f7f5ef;
-  border-radius: 5px;
+  border: 1px solid #e9e5dc;
+  border-radius: 6px;
 }
 .specimen figcaption {
   display: flex;
@@ -494,7 +496,13 @@
 }
 .specimen figcaption span:first-child { font-weight: 625; }
 .breed-portrait .kind-illustration { margin: calc(-1 * var(--inset)) calc(-1 * var(--inset)) 0; }
-.breed-portrait .specimen img { border-radius: 12px 12px 0 0; height: clamp(11rem, 75cqw, 20rem); }
+.breed-portrait .specimen img {
+  border: 0;
+  border-bottom: 1px solid var(--line);
+  border-radius: 12px 12px 0 0;
+  padding: .45rem .5rem 0;
+  height: clamp(11rem, 75cqw, 20rem);
+}
 .breed-portrait .specimen figcaption { padding-inline: var(--inset); }
 
 .read-shell{width:min(100%, 680px);margin:0 auto}.single.read-page{background:#f5f5f7}</style></head><body class="single read-page"><main class="read-shell sample-card"><article class="study-card knowledge-card layout-graph" lang="en" data-ordinal="20"><header class="k-head"><h1 class="k-title">The quotient rule squares the denominator</h1></header><div class="k-lead"><p>For differentiable <code>u</code> and <code>v</code> at an input where <code>v≠0</code>, the derivative of <code>u/v</code> is <code>(u′v−uv′)/v²</code>. The numerator subtracts the term from the changing denominator.</p></div><div class="k-visual kind-table"><div class="data-table"><table><thead><tr><th scope="col">Part</th><th scope="col">Value at 1</th><th scope="col">Slope at 1</th></tr></thead><tbody><tr><td>Numerator</td><td>1</td><td>2</td></tr><tr><td>Denominator</td><td>2</td><td>2</td></tr></tbody></table></div></div><div class="k-example"><p class="k-label">Worked example</p><p>For <code>q(x)=(2x−1)/(x²+1)</code>, the numerator has derivative <code>2</code> and the denominator has derivative <code>2x</code>. At <code>x=1</code>, <code>u=1</code>, <code>v=2</code>, <code>u′=2</code>, and <code>v′=2</code>. The denominator is nonzero.</p><p>Substitution in the rule gives <code>q′(1)=(2·2−1·2)/2²=(4−2)/4=1/2</code>.</p></div><div class="k-note"><p class="k-label">Note</p><p>The order of the subtraction matters: start with the derivative of the numerator times the denominator.</p></div></article></main></body></html>

@@ -480,9 +480,11 @@
   display: block;
   width: 100%;
   height: clamp(9rem, 64cqw, 20rem);
+  padding: .35rem;
   object-fit: contain;
   background: #f7f5ef;
-  border-radius: 5px;
+  border: 1px solid #e9e5dc;
+  border-radius: 6px;
 }
 .specimen figcaption {
   display: flex;
@@ -494,7 +496,13 @@
 }
 .specimen figcaption span:first-child { font-weight: 625; }
 .breed-portrait .kind-illustration { margin: calc(-1 * var(--inset)) calc(-1 * var(--inset)) 0; }
-.breed-portrait .specimen img { border-radius: 12px 12px 0 0; height: clamp(11rem, 75cqw, 20rem); }
+.breed-portrait .specimen img {
+  border: 0;
+  border-bottom: 1px solid var(--line);
+  border-radius: 12px 12px 0 0;
+  padding: .45rem .5rem 0;
+  height: clamp(11rem, 75cqw, 20rem);
+}
 .breed-portrait .specimen figcaption { padding-inline: var(--inset); }
 
-.read-shell{width:min(100%, 680px);margin:0 auto}.single.read-page{background:#f5f5f7}</style></head><body class="single read-page"><main class="read-shell sample-card"><article class="study-card knowledge-card layout-graph" lang="en" data-ordinal="7"><header class="k-head"><h1 class="k-title">Completing the square</h1></header><div class="k-lead"><p>Writing a quadratic in vertex form isolates a squared term, making the vertex and minimum or maximum visible.</p></div><div class="k-visual kind-flow"><ol class="visual-list flow"><li>Halve 8 to get 4</li><li>Add and subtract 16</li><li>Read the vertex</li></ol></div><div class="k-example"><p class="k-label">Worked example</p><p><code>g(x)=x²+8x+11</code>.</p><p><strong>g(x)=(x+4)²−5; vertex (−4,−5).</strong> Squaring <code>x+4</code> adds 16, so subtract 16 from the original constant 11. The square is smallest at zero.</p></div></article></main></body></html>
+.read-shell{width:min(100%, 680px);margin:0 auto}.single.read-page{background:#f5f5f7}</style></head><body class="single read-page"><main class="read-shell sample-card"><article class="study-card knowledge-card layout-graph" lang="en" data-ordinal="7"><header class="k-head"><h1 class="k-title">Completing the square</h1></header><div class="k-lead"><p>Writing a quadratic in vertex form isolates a squared term, making the vertex and minimum or maximum visible.</p></div><div class="k-visual kind-flow"><ol class="visual-list flow"><li>Halve 8 to get 4</li><li>Add and subtract 16</li><li>Read the vertex</li></ol></div><div class="k-example"><p class="k-label">Worked example</p><p>To put <code>g(x)=x²+8x+11</code> into vertex form, halve the linear coefficient <code>8</code> to form <code>(x+4)² = x²+8x+16</code> and subtract <code>16</code> from <code>11</code>, giving <strong><code>g(x)=(x+4)²−5</code></strong>. Since <code>(x+4)²≥0</code> with equality at <code>x=−4</code>, the vertex (and minimum) is <strong><code>(−4,−5)</code></strong>.</p></div></article></main></body></html>

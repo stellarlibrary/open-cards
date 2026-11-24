@@ -480,9 +480,11 @@
   display: block;
   width: 100%;
   height: clamp(9rem, 64cqw, 20rem);
+  padding: .35rem;
   object-fit: contain;
   background: #f7f5ef;
-  border-radius: 5px;
+  border: 1px solid #e9e5dc;
+  border-radius: 6px;
 }
 .specimen figcaption {
   display: flex;
@@ -494,7 +496,13 @@
 }
 .specimen figcaption span:first-child { font-weight: 625; }
 .breed-portrait .kind-illustration { margin: calc(-1 * var(--inset)) calc(-1 * var(--inset)) 0; }
-.breed-portrait .specimen img { border-radius: 12px 12px 0 0; height: clamp(11rem, 75cqw, 20rem); }
+.breed-portrait .specimen img {
+  border: 0;
+  border-bottom: 1px solid var(--line);
+  border-radius: 12px 12px 0 0;
+  padding: .45rem .5rem 0;
+  height: clamp(11rem, 75cqw, 20rem);
+}
 .breed-portrait .specimen figcaption { padding-inline: var(--inset); }
 
-.read-shell{width:min(100%, 680px);margin:0 auto}.single.read-page{background:#f5f5f7}</style></head><body class="single read-page"><main class="read-shell sample-card"><article class="study-card knowledge-card layout-atlas" lang="en" data-ordinal="13"><header class="k-head"><h1 class="k-title">Cross-cutting relationships</h1></header><div class="k-visual kind-table"><div class="data-table"><table><thead><tr><th scope="col">Feature</th><th scope="col">Key relationship</th></tr></thead><tbody><tr><td>Bottom and middle beds</td><td>both cut by dike</td></tr><tr><td>Erosion surface</td><td>truncates dike</td></tr><tr><td>Top bed</td><td>deposited over erosion surface</td></tr></tbody></table></div></div><div class="k-lead"><p>A feature that cuts across another geological feature must be younger than the feature it cuts. This gives relative age, not the number of years since formation.</p></div><div class="k-example"><p class="k-label">How it works</p><p>Three sediment layers remain right side up. A dike, formed by magma in a fracture, cuts the bottom and middle layers but stops at an erosion surface. The top layer rests on that surface and is not cut.</p><p>Bottom layer, middle layer, dike, top layer. The dike is younger than the layers it cuts and older than the surface and top layer that cover its truncated end.</p></div></article></main></body></html>
+.read-shell{width:min(100%, 680px);margin:0 auto}.single.read-page{background:#f5f5f7}</style></head><body class="single read-page"><main class="read-shell sample-card"><article class="study-card knowledge-card layout-atlas" lang="en" data-ordinal="13"><header class="k-head"><h1 class="k-title">Cross-cutting relationships</h1></header><div class="k-visual kind-table"><div class="data-table"><table><thead><tr><th scope="col">Feature</th><th scope="col">Key relationship</th></tr></thead><tbody><tr><td>Bottom and middle beds</td><td>both cut by dike</td></tr><tr><td>Erosion surface</td><td>truncates dike</td></tr><tr><td>Top bed</td><td>deposited over erosion surface</td></tr></tbody></table></div></div><div class="k-lead"><p>A feature that cuts across another geological feature must be younger than the feature it cuts. This gives relative age, not the number of years since formation.</p></div><div class="k-example"><p class="k-label">How it works</p><p>In three upright beds where an igneous dike cuts the lower two beds, ends at an erosion surface, and is overlain by an uncut top bed, the order <strong>from oldest to youngest</strong> is <strong>bottom bed → middle bed → dike → erosion surface → top bed</strong>.</p></div></article></main></body></html>

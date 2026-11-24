@@ -480,9 +480,11 @@
   display: block;
   width: 100%;
   height: clamp(9rem, 64cqw, 20rem);
+  padding: .35rem;
   object-fit: contain;
   background: #f7f5ef;
-  border-radius: 5px;
+  border: 1px solid #e9e5dc;
+  border-radius: 6px;
 }
 .specimen figcaption {
   display: flex;
@@ -494,7 +496,13 @@
 }
 .specimen figcaption span:first-child { font-weight: 625; }
 .breed-portrait .kind-illustration { margin: calc(-1 * var(--inset)) calc(-1 * var(--inset)) 0; }
-.breed-portrait .specimen img { border-radius: 12px 12px 0 0; height: clamp(11rem, 75cqw, 20rem); }
+.breed-portrait .specimen img {
+  border: 0;
+  border-bottom: 1px solid var(--line);
+  border-radius: 12px 12px 0 0;
+  padding: .45rem .5rem 0;
+  height: clamp(11rem, 75cqw, 20rem);
+}
 .breed-portrait .specimen figcaption { padding-inline: var(--inset); }
 
-.read-shell{width:min(100%, 680px);margin:0 auto}.single.read-page{background:#f5f5f7}</style></head><body class="single read-page"><main class="read-shell sample-card"><article class="study-card knowledge-card layout-graph" lang="en" data-ordinal="2"><header class="k-head"><h1 class="k-title">Isosceles triangle angles</h1></header><div class="k-lead"><p>Equal sides of a triangle face equal angles. Together with the angle sum <code>180°</code>, that equality links the base and vertex angles.</p></div><div class="k-visual kind-diagram"><svg class="diagram" viewBox="0 0 360 190" role="img" aria-label="Triangle ABC has apex A, opening 38 degrees. Matching tick marks identify AB and AC as equal." xmlns="http://www.w3.org/2000/svg"><path class="curve" d="M 180.00,23.00 136.00,151.00 224.00,151.00 Z"/><path class="accent" d="M 166.33,62.71 167.27,63.02 168.22,63.31 169.18,63.58 170.14,63.83 171.11,64.05 172.09,64.25 173.07,64.42 174.05,64.58 175.04,64.71 176.03,64.81 177.02,64.89 178.01,64.95 179.01,64.99 180.00,65.00 180.99,64.99 181.99,64.95 182.98,64.89 183.97,64.81 184.96,64.71 185.95,64.58 186.93,64.42 187.91,64.25 188.89,64.05 189.86,63.83 190.82,63.58 191.78,63.31 192.73,63.02 193.67,62.71"/><line class="accent" x1="151.00" y1="81.00" x2="163.00" y2="85.00"/><line class="accent" x1="197.00" y1="85.00" x2="209.00" y2="81.00"/><text class="" x="181.00" y="17.00" text-anchor="middle">A</text><text class="" x="126.00" y="171.00" text-anchor="middle">B</text><text class="" x="234.00" y="171.00" text-anchor="middle">C</text><text class="" x="180.00" y="83.00" text-anchor="middle">38°</text><text class="" x="296.00" y="93.00" text-anchor="middle">AB = AC</text></svg></div><div class="k-example"><p class="k-label">Worked example</p><p>The sides AB and AC have equal length, and the angle at A is 38°.</p><p><strong>71° at both B and C.</strong> These angles are opposite the equal sides, so they share the remaining <code>180°−38°=142°</code> equally.</p></div></article></main></body></html>
+.read-shell{width:min(100%, 680px);margin:0 auto}.single.read-page{background:#f5f5f7}</style></head><body class="single read-page"><main class="read-shell sample-card"><article class="study-card knowledge-card layout-graph" lang="en" data-ordinal="2"><header class="k-head"><h1 class="k-title">Isosceles triangle angles</h1></header><div class="k-lead"><p>Equal sides of a triangle face equal angles. Together with the angle sum <code>180°</code>, that equality links the base and vertex angles.</p></div><div class="k-visual kind-diagram"><svg class="diagram" viewBox="0 0 360 190" role="img" aria-label="Triangle ABC has apex A, opening 38 degrees. Matching tick marks identify AB and AC as equal." xmlns="http://www.w3.org/2000/svg"><path class="curve" d="M 180.00,23.00 136.00,151.00 224.00,151.00 Z"/><path class="accent" d="M 166.33,62.71 167.27,63.02 168.22,63.31 169.18,63.58 170.14,63.83 171.11,64.05 172.09,64.25 173.07,64.42 174.05,64.58 175.04,64.71 176.03,64.81 177.02,64.89 178.01,64.95 179.01,64.99 180.00,65.00 180.99,64.99 181.99,64.95 182.98,64.89 183.97,64.81 184.96,64.71 185.95,64.58 186.93,64.42 187.91,64.25 188.89,64.05 189.86,63.83 190.82,63.58 191.78,63.31 192.73,63.02 193.67,62.71"/><line class="accent" x1="151.00" y1="81.00" x2="163.00" y2="85.00"/><line class="accent" x1="197.00" y1="85.00" x2="209.00" y2="81.00"/><text class="" x="181.00" y="17.00" text-anchor="middle">A</text><text class="" x="126.00" y="171.00" text-anchor="middle">B</text><text class="" x="234.00" y="171.00" text-anchor="middle">C</text><text class="" x="180.00" y="83.00" text-anchor="middle">38°</text><text class="" x="296.00" y="93.00" text-anchor="middle">AB = AC</text></svg></div><div class="k-example"><p class="k-label">Worked example</p><p>In isosceles triangle <code>ABC</code> with <code>AB = AC</code> and vertex angle <code>∠A = 38°</code>, the base angles <code>∠B</code> and <code>∠C</code> opposite the equal sides are equal and split the remaining <code>180° − 38° = 142°</code>, giving <strong><code>∠B = ∠C = 71°</code></strong>.</p></div></article></main></body></html>

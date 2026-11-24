@@ -480,9 +480,11 @@
   display: block;
   width: 100%;
   height: clamp(9rem, 64cqw, 20rem);
+  padding: .35rem;
   object-fit: contain;
   background: #f7f5ef;
-  border-radius: 5px;
+  border: 1px solid #e9e5dc;
+  border-radius: 6px;
 }
 .specimen figcaption {
   display: flex;
@@ -494,7 +496,13 @@
 }
 .specimen figcaption span:first-child { font-weight: 625; }
 .breed-portrait .kind-illustration { margin: calc(-1 * var(--inset)) calc(-1 * var(--inset)) 0; }
-.breed-portrait .specimen img { border-radius: 12px 12px 0 0; height: clamp(11rem, 75cqw, 20rem); }
+.breed-portrait .specimen img {
+  border: 0;
+  border-bottom: 1px solid var(--line);
+  border-radius: 12px 12px 0 0;
+  padding: .45rem .5rem 0;
+  height: clamp(11rem, 75cqw, 20rem);
+}
 .breed-portrait .specimen figcaption { padding-inline: var(--inset); }
 
-.read-shell{width:min(100%, 680px);margin:0 auto}.single.read-page{background:#f5f5f7}</style></head><body class="single read-page"><main class="read-shell sample-card"><article class="study-card knowledge-card layout-atlas" lang="en" data-ordinal="5"><header class="k-head"><h1 class="k-title">Isobar spacing</h1></header><div class="k-visual kind-table"><div class="data-table"><table><thead><tr><th scope="col">Region</th><th scope="col">Distance between 1016 and 1008 hPa lines</th></tr></thead><tbody><tr><td>A</td><td>80 km</td></tr><tr><td>B</td><td>240 km</td></tr></tbody></table></div></div><div class="k-lead"><p>Close isobars indicate a large horizontal pressure change over a short distance. That stronger pressure-gradient force often favours stronger winds, all else equal.</p></div><div class="k-example"><p class="k-label">How it works</p><p>On maps of the same scale, the same pair of isobars, 1016 and 1008 hPa, are closer together in region A than in B. Assume other factors affecting the wind are comparable.</p><p>A has three times the gradient: the same 8 hPa difference occurs over 80 km instead of 240 km. A steeper gradient exerts a stronger pressure-gradient force under comparable conditions.</p></div></article></main></body></html>
+.read-shell{width:min(100%, 680px);margin:0 auto}.single.read-page{background:#f5f5f7}</style></head><body class="single read-page"><main class="read-shell sample-card"><article class="study-card knowledge-card layout-atlas" lang="en" data-ordinal="5"><header class="k-head"><h1 class="k-title">Isobar spacing</h1></header><div class="k-visual kind-table"><div class="data-table"><table><thead><tr><th scope="col">Region</th><th scope="col">Distance between 1016 and 1008 hPa lines</th></tr></thead><tbody><tr><td>A</td><td>80 km</td></tr><tr><td>B</td><td>240 km</td></tr></tbody></table></div></div><div class="k-lead"><p>Close isobars indicate a large horizontal pressure change over a short distance. That stronger pressure-gradient force often favors stronger winds, all else equal.</p></div><div class="k-example"><p class="k-label">How it works</p><p>Across the same <code>8 hPa</code> drop (<code>1016</code> to <code>1008 hPa</code>), <strong>Region A has three times the horizontal pressure gradient of Region B</strong> because the lines sit <code>80 km</code> apart rather than <code>240 km</code>, exerting three times the pressure-gradient force.</p></div></article></main></body></html>

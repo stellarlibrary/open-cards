@@ -480,9 +480,11 @@
   display: block;
   width: 100%;
   height: clamp(9rem, 64cqw, 20rem);
+  padding: .35rem;
   object-fit: contain;
   background: #f7f5ef;
-  border-radius: 5px;
+  border: 1px solid #e9e5dc;
+  border-radius: 6px;
 }
 .specimen figcaption {
   display: flex;
@@ -494,7 +496,13 @@
 }
 .specimen figcaption span:first-child { font-weight: 625; }
 .breed-portrait .kind-illustration { margin: calc(-1 * var(--inset)) calc(-1 * var(--inset)) 0; }
-.breed-portrait .specimen img { border-radius: 12px 12px 0 0; height: clamp(11rem, 75cqw, 20rem); }
+.breed-portrait .specimen img {
+  border: 0;
+  border-bottom: 1px solid var(--line);
+  border-radius: 12px 12px 0 0;
+  padding: .45rem .5rem 0;
+  height: clamp(11rem, 75cqw, 20rem);
+}
 .breed-portrait .specimen figcaption { padding-inline: var(--inset); }
 
-.read-shell{width:min(100%, 680px);margin:0 auto}.single.read-page{background:#f5f5f7}</style></head><body class="single read-page"><main class="read-shell sample-card"><article class="study-card knowledge-card layout-graph" lang="en" data-ordinal="8"><header class="k-head"><h1 class="k-title">Unit-circle coordinates</h1></header><div class="k-lead"><p>A point on the unit circle at angle <code>θ</code> measured from the positive horizontal axis has coordinates <code>(cos θ, sin θ)</code>.</p></div><div class="k-visual kind-graph"><svg class="diagram" viewBox="0 0 360 190" role="img" aria-label="A ray at π/4 intersects a unit circle in the first quadrant." xmlns="http://www.w3.org/2000/svg"><line class="axis" x1="83.00" y1="91.00" x2="272.00" y2="91.00"/><line class="axis" x1="177.00" y1="175.00" x2="177.00" y2="11.00"/><circle class="curve" cx="177.00" cy="91.00" r="65.00"/><line class="accent" x1="177.00" y1="91.00" x2="240.00" y2="28.00"/><path class="accent" d="M 232.58,30.47 240.00,28.00 237.53,35.42"/><line class="guide" x1="223.00" y1="45.00" x2="223.00" y2="91.00"/><line class="guide" x1="177.00" y1="45.00" x2="223.00" y2="45.00"/><circle class="dot" cx="223.00" cy="45.00" r="4.00"/><text class="" x="261.00" y="85.00" text-anchor="middle">x</text><text class="" x="186.00" y="18.00" text-anchor="middle">y</text><text class="" x="207.00" y="84.00" text-anchor="middle">π/4</text><text class="" x="168.00" y="110.00" text-anchor="middle">0</text></svg></div><div class="k-example"><p class="k-label">Worked example</p><p>A ray at π/4 from the positive x-axis meets the unit circle in the first quadrant.</p><p><strong>(√2/2,√2/2)</strong>. The ray is on <code>y=x</code>; from <code>x²+y²=1</code> obtain <code>2x²=1</code> and take the positive root. The coordinates are cosine then sine.</p></div></article></main></body></html>
+.read-shell{width:min(100%, 680px);margin:0 auto}.single.read-page{background:#f5f5f7}</style></head><body class="single read-page"><main class="read-shell sample-card"><article class="study-card knowledge-card layout-graph" lang="en" data-ordinal="8"><header class="k-head"><h1 class="k-title">Unit-circle coordinates</h1></header><div class="k-lead"><p>A point on the unit circle at angle <code>θ</code> measured from the positive horizontal axis has coordinates <code>(cos θ, sin θ)</code>.</p></div><div class="k-visual kind-graph"><svg class="diagram" viewBox="0 0 360 190" role="img" aria-label="A ray at π/4 intersects a unit circle in the first quadrant." xmlns="http://www.w3.org/2000/svg"><line class="axis" x1="83.00" y1="91.00" x2="272.00" y2="91.00"/><line class="axis" x1="177.00" y1="175.00" x2="177.00" y2="11.00"/><circle class="curve" cx="177.00" cy="91.00" r="65.00"/><line class="accent" x1="177.00" y1="91.00" x2="240.00" y2="28.00"/><path class="accent" d="M 232.58,30.47 240.00,28.00 237.53,35.42"/><line class="guide" x1="223.00" y1="45.00" x2="223.00" y2="91.00"/><line class="guide" x1="177.00" y1="45.00" x2="223.00" y2="45.00"/><circle class="dot" cx="223.00" cy="45.00" r="4.00"/><text class="" x="261.00" y="85.00" text-anchor="middle">x</text><text class="" x="186.00" y="18.00" text-anchor="middle">y</text><text class="" x="207.00" y="84.00" text-anchor="middle">π/4</text><text class="" x="168.00" y="110.00" text-anchor="middle">0</text></svg></div><div class="k-example"><p class="k-label">Worked example</p><p>A ray at angle <code>π/4</code> from the positive x-axis lies along <code>y = x</code> in the first quadrant. Substituting <code>y = x</code> into <code>x² + y² = 1</code> gives <code>2x² = 1</code> with <code>x &gt; 0</code>, so the unit-circle intersection is <strong><code>(cos(π/4), sin(π/4)) = (√2/2, √2/2)</code></strong>.</p></div></article></main></body></html>

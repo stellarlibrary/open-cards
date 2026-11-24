@@ -480,9 +480,11 @@
   display: block;
   width: 100%;
   height: clamp(9rem, 64cqw, 20rem);
+  padding: .35rem;
   object-fit: contain;
   background: #f7f5ef;
-  border-radius: 5px;
+  border: 1px solid #e9e5dc;
+  border-radius: 6px;
 }
 .specimen figcaption {
   display: flex;
@@ -494,7 +496,13 @@
 }
 .specimen figcaption span:first-child { font-weight: 625; }
 .breed-portrait .kind-illustration { margin: calc(-1 * var(--inset)) calc(-1 * var(--inset)) 0; }
-.breed-portrait .specimen img { border-radius: 12px 12px 0 0; height: clamp(11rem, 75cqw, 20rem); }
+.breed-portrait .specimen img {
+  border: 0;
+  border-bottom: 1px solid var(--line);
+  border-radius: 12px 12px 0 0;
+  padding: .45rem .5rem 0;
+  height: clamp(11rem, 75cqw, 20rem);
+}
 .breed-portrait .specimen figcaption { padding-inline: var(--inset); }
 
-.read-shell{width:min(100%, 680px);margin:0 auto}.single.read-page{background:#f5f5f7}</style></head><body class="single read-page"><main class="read-shell sample-card"><article class="study-card knowledge-card layout-atlas" lang="en" data-ordinal="40"><header class="k-head"><h1 class="k-title">Ocean tides</h1></header><div class="k-visual kind-diagram"><svg class="diagram" viewBox="0 0 360 190" role="img" aria-label="Solar and lunar tidal patterns line up at new or full Moon and cross at quarter Moon." xmlns="http://www.w3.org/2000/svg"><ellipse class="rule" cx="95" cy="89" rx="62" ry="29"/><circle class="world" cx="95.00" cy="89.00" r="18.00"/><ellipse class="guide" cx="95" cy="89" rx="52" ry="23"/><text class="" x="95.00" y="162.00" text-anchor="middle">New or full</text><ellipse class="rule" cx="267" cy="89" rx="62" ry="29"/><circle class="world" cx="267.00" cy="89.00" r="18.00"/><ellipse class="guide" cx="267" cy="89" rx="27" ry="53"/><text class="" x="267.00" y="162.00" text-anchor="middle">Quarter</text><text class="" x="180.00" y="18.00" text-anchor="middle">Tide-generating patterns · greatly exaggerated</text></svg></div><div class="k-lead"><p>The Moon&#x27;s pull is slightly different on the near side and far side of Earth. The Sun also creates tides.</p></div><div class="k-example"><p class="k-label">How it works</p><p><strong>Solar and lunar tidal patterns line up at new and full moon.</strong> At quarter phases the patterns oppose one another in part. Coastline and basin shape affect exact local tides.</p></div></article></main></body></html>
+.read-shell{width:min(100%, 680px);margin:0 auto}.single.read-page{background:#f5f5f7}</style></head><body class="single read-page"><main class="read-shell sample-card"><article class="study-card knowledge-card layout-atlas" lang="en" data-ordinal="40"><header class="k-head"><h1 class="k-title">Ocean tides</h1></header><div class="k-visual kind-diagram"><svg class="diagram" viewBox="0 0 360 190" role="img" aria-label="Solar and lunar tidal patterns line up at new or full Moon and cross at quarter Moon." xmlns="http://www.w3.org/2000/svg"><ellipse class="rule" cx="95" cy="89" rx="62" ry="29"/><circle class="world" cx="95.00" cy="89.00" r="18.00"/><ellipse class="guide" cx="95" cy="89" rx="52" ry="23"/><text class="" x="95.00" y="162.00" text-anchor="middle">New or full</text><ellipse class="rule" cx="267" cy="89" rx="62" ry="29"/><circle class="world" cx="267.00" cy="89.00" r="18.00"/><ellipse class="guide" cx="267" cy="89" rx="27" ry="53"/><text class="" x="267.00" y="162.00" text-anchor="middle">Quarter</text><text class="" x="180.00" y="18.00" text-anchor="middle">Tide-generating patterns · greatly exaggerated</text></svg></div><div class="k-lead"><p>The Moon&#x27;s pull is slightly different on the near side and far side of Earth. The Sun also creates tides.</p></div><div class="k-example"><p class="k-label">How it works</p><p>Larger <strong>spring-tide</strong> ranges occur near <strong>new and full moon</strong>, when solar and lunar tidal forces line up, whereas at first and third quarter they pull at right angles and partly cancel. Local coastline and basin shapes strongly modify exact tide heights.</p></div></article></main></body></html>

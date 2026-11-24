@@ -480,9 +480,11 @@
   display: block;
   width: 100%;
   height: clamp(9rem, 64cqw, 20rem);
+  padding: .35rem;
   object-fit: contain;
   background: #f7f5ef;
-  border-radius: 5px;
+  border: 1px solid #e9e5dc;
+  border-radius: 6px;
 }
 .specimen figcaption {
   display: flex;
@@ -494,7 +496,13 @@
 }
 .specimen figcaption span:first-child { font-weight: 625; }
 .breed-portrait .kind-illustration { margin: calc(-1 * var(--inset)) calc(-1 * var(--inset)) 0; }
-.breed-portrait .specimen img { border-radius: 12px 12px 0 0; height: clamp(11rem, 75cqw, 20rem); }
+.breed-portrait .specimen img {
+  border: 0;
+  border-bottom: 1px solid var(--line);
+  border-radius: 12px 12px 0 0;
+  padding: .45rem .5rem 0;
+  height: clamp(11rem, 75cqw, 20rem);
+}
 .breed-portrait .specimen figcaption { padding-inline: var(--inset); }
 
-.read-shell{width:min(100%, 680px);margin:0 auto}.single.read-page{background:#f5f5f7}</style></head><body class="single read-page"><main class="read-shell sample-card"><article class="study-card knowledge-card layout-graph" lang="en" data-ordinal="14"><header class="k-head"><h1 class="k-title">Polar area element</h1></header><div class="k-lead"><p>In polar coordinates a short arc has length <code>r dθ</code>. Its product with radial thickness <code>dr</code> explains the area factor <code>r dr dθ</code>.</p></div><div class="k-visual kind-table"><div class="data-table"><table><thead><tr><th scope="col">Polar quantity</th><th scope="col">Value</th></tr></thead><tbody><tr><td>Radius</td><td>0 to 2</td></tr><tr><td>Angle</td><td>One full turn</td></tr><tr><td>Area factor</td><td>r</td></tr></tbody></table></div></div><div class="k-example"><p class="k-label">Worked example</p><p>Integrate <code>x²+y²</code> over the disk <code>x²+y²≤4</code> centred at the origin.</p><p><strong>8π</strong>. Use <code>0≤r≤2</code>, <code>0≤θ≤2π</code>; the integrand is r² and the area factor is r, so <code>∫₀² r³ dr=4</code> and the angular integral multiplies by 2π.</p></div></article></main></body></html>
+.read-shell{width:min(100%, 680px);margin:0 auto}.single.read-page{background:#f5f5f7}</style></head><body class="single read-page"><main class="read-shell sample-card"><article class="study-card knowledge-card layout-graph" lang="en" data-ordinal="14"><header class="k-head"><h1 class="k-title">Polar area element</h1></header><div class="k-lead"><p>In polar coordinates a short arc has length <code>r dθ</code>. Its product with radial thickness <code>dr</code> explains the area factor <code>r dr dθ</code>.</p></div><div class="k-visual kind-table"><div class="data-table"><table><thead><tr><th scope="col">Polar quantity</th><th scope="col">Value</th></tr></thead><tbody><tr><td>Radius</td><td>0 to 2</td></tr><tr><td>Angle</td><td>One full turn</td></tr><tr><td>Area factor</td><td>r</td></tr></tbody></table></div></div><div class="k-example"><p class="k-label">Worked example</p><p>Over the disk <code>x² + y² ≤ 4</code> (<code>0 ≤ r ≤ 2</code>, <code>0 ≤ θ ≤ 2π</code>), <code>x² + y²</code> becomes <code>r²</code> and <code>dA</code> becomes <code>r dr dθ</code>. Integrating <code>x² + y²</code> over the disk gives <strong><code>∫₀^(2π) ∫₀² r³ dr dθ = 2π · [r⁴/4]₀² = 8π</code></strong>.</p></div></article></main></body></html>

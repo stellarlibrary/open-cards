@@ -480,9 +480,11 @@
   display: block;
   width: 100%;
   height: clamp(9rem, 64cqw, 20rem);
+  padding: .35rem;
   object-fit: contain;
   background: #f7f5ef;
-  border-radius: 5px;
+  border: 1px solid #e9e5dc;
+  border-radius: 6px;
 }
 .specimen figcaption {
   display: flex;
@@ -494,7 +496,13 @@
 }
 .specimen figcaption span:first-child { font-weight: 625; }
 .breed-portrait .kind-illustration { margin: calc(-1 * var(--inset)) calc(-1 * var(--inset)) 0; }
-.breed-portrait .specimen img { border-radius: 12px 12px 0 0; height: clamp(11rem, 75cqw, 20rem); }
+.breed-portrait .specimen img {
+  border: 0;
+  border-bottom: 1px solid var(--line);
+  border-radius: 12px 12px 0 0;
+  padding: .45rem .5rem 0;
+  height: clamp(11rem, 75cqw, 20rem);
+}
 .breed-portrait .specimen figcaption { padding-inline: var(--inset); }
 
-.read-shell{width:min(100%, 680px);margin:0 auto}.single.read-page{background:#f5f5f7}</style></head><body class="single read-page"><main class="read-shell sample-card"><article class="study-card knowledge-card layout-atlas" lang="en" data-ordinal="48"><header class="k-head"><h1 class="k-title">Reading reflected light</h1></header><div class="k-visual kind-diagram"><svg class="diagram" viewBox="0 0 360 190" role="img" aria-label="Absorption spectrum with narrow dips at characteristic wavelengths." xmlns="http://www.w3.org/2000/svg"><path class="curve" d="M 31.00,60.00 70.00,47.00 96.00,44.00 113.00,51.00 125.00,105.00 132.00,54.00 160.00,48.00 179.00,52.00 189.00,92.00 198.00,50.00 235.00,43.00 250.00,45.00 258.00,72.00 265.00,47.00 298.00,48.00 323.00,58.00"/><line class="axis" x1="31.00" y1="130.00" x2="332.00" y2="130.00"/><path class="axis" d="M 325.00,126.50 332.00,130.00 325.00,133.50"/><text class="" x="186.00" y="153.00" text-anchor="middle">Wavelength →</text><line class="guide" x1="125.00" y1="105.00" x2="104.00" y2="96.00"/><text class="" x="14.00" y="94.00" text-anchor="start">Absorption dip</text></svg></div><div class="k-lead"><p>Venus&#x27;s clouds, Neptune&#x27;s atmosphere and an asteroid&#x27;s regolith scatter different portions of sunlight.</p></div><div class="k-example"><p class="k-label">How it works</p><p><strong>Different materials and illumination can give similar colors.</strong> Many narrow wavelength measurements can register characteristic absorption patterns that a broad-color image cannot resolve.</p></div></article></main></body></html>
+.read-shell{width:min(100%, 680px);margin:0 auto}.single.read-page{background:#f5f5f7}</style></head><body class="single read-page"><main class="read-shell sample-card"><article class="study-card knowledge-card layout-atlas" lang="en" data-ordinal="48"><header class="k-head"><h1 class="k-title">Reading reflected light</h1></header><div class="k-visual kind-diagram"><svg class="diagram" viewBox="0 0 360 190" role="img" aria-label="Absorption spectrum with narrow dips at characteristic wavelengths." xmlns="http://www.w3.org/2000/svg"><path class="curve" d="M 31.00,60.00 70.00,47.00 96.00,44.00 113.00,51.00 125.00,105.00 132.00,54.00 160.00,48.00 179.00,52.00 189.00,92.00 198.00,50.00 235.00,43.00 250.00,45.00 258.00,72.00 265.00,47.00 298.00,48.00 323.00,58.00"/><line class="axis" x1="31.00" y1="130.00" x2="332.00" y2="130.00"/><path class="axis" d="M 325.00,126.50 332.00,130.00 325.00,133.50"/><text class="" x="186.00" y="153.00" text-anchor="middle">Wavelength →</text><line class="guide" x1="125.00" y1="105.00" x2="104.00" y2="96.00"/><text class="" x="14.00" y="94.00" text-anchor="start">Absorption dip</text></svg></div><div class="k-lead"><p>Venus&#x27;s clouds, Neptune&#x27;s atmosphere and an asteroid&#x27;s regolith scatter different portions of sunlight.</p></div><div class="k-example"><p class="k-label">How it works</p><p>A broadband color image cannot uniquely identify surface or cloud molecules because <strong>different materials and lighting geometries can look alike in broad color</strong>. Spectroscopy across narrow wavelengths resolves diagnostic absorption bands.</p></div></article></main></body></html>

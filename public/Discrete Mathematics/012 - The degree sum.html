@@ -480,9 +480,11 @@
   display: block;
   width: 100%;
   height: clamp(9rem, 64cqw, 20rem);
+  padding: .35rem;
   object-fit: contain;
   background: #f7f5ef;
-  border-radius: 5px;
+  border: 1px solid #e9e5dc;
+  border-radius: 6px;
 }
 .specimen figcaption {
   display: flex;
@@ -494,7 +496,13 @@
 }
 .specimen figcaption span:first-child { font-weight: 625; }
 .breed-portrait .kind-illustration { margin: calc(-1 * var(--inset)) calc(-1 * var(--inset)) 0; }
-.breed-portrait .specimen img { border-radius: 12px 12px 0 0; height: clamp(11rem, 75cqw, 20rem); }
+.breed-portrait .specimen img {
+  border: 0;
+  border-bottom: 1px solid var(--line);
+  border-radius: 12px 12px 0 0;
+  padding: .45rem .5rem 0;
+  height: clamp(11rem, 75cqw, 20rem);
+}
 .breed-portrait .specimen figcaption { padding-inline: var(--inset); }
 
-.read-shell{width:min(100%, 680px);margin:0 auto}.single.read-page{background:#f5f5f7}</style></head><body class="single read-page"><main class="read-shell sample-card"><article class="study-card knowledge-card layout-matrix" lang="en" data-ordinal="12"><header class="k-head"><h1 class="k-title">The degree sum</h1></header><div class="k-lead"><p>Each edge of an undirected graph contributes two degree counts, one per end. The total degree is twice the number of edges and therefore even.</p></div><div class="k-visual kind-flow"><ol class="visual-list flow"><li>Add all vertex degrees</li><li>Divide by two for the two ends per edge</li></ol></div><div class="k-example"><p class="k-label">In use</p><p>A simple undirected graph has vertex degrees 3, 3, 2, 2, 2 and 2.</p><p><strong>7</strong>. The degrees sum to 14. The sum counts each edge at both ends, so divide by two.</p></div></article></main></body></html>
+.read-shell{width:min(100%, 680px);margin:0 auto}.single.read-page{background:#f5f5f7}</style></head><body class="single read-page"><main class="read-shell sample-card"><article class="study-card knowledge-card layout-matrix" lang="en" data-ordinal="12"><header class="k-head"><h1 class="k-title">The degree sum</h1></header><div class="k-lead"><p>Each edge of an undirected graph contributes two degree counts, one per end. The total degree is twice the number of edges and therefore even.</p></div><div class="k-visual kind-flow"><ol class="visual-list flow"><li>Add all vertex degrees</li><li>Divide by two for the two ends per edge</li></ol></div><div class="k-example"><p class="k-label">In use</p><p>A simple undirected graph with vertex degrees <code>3, 3, 2, 2, 2, 2</code> has degree sum <code>3 + 3 + 2 + 2 + 2 + 2 = 14</code>. Because each edge is counted at both endpoints, <strong>the graph has <code>14 / 2 = 7</code> edges</strong>.</p></div></article></main></body></html>

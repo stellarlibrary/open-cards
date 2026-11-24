@@ -480,9 +480,11 @@
   display: block;
   width: 100%;
   height: clamp(9rem, 64cqw, 20rem);
+  padding: .35rem;
   object-fit: contain;
   background: #f7f5ef;
-  border-radius: 5px;
+  border: 1px solid #e9e5dc;
+  border-radius: 6px;
 }
 .specimen figcaption {
   display: flex;
@@ -494,7 +496,13 @@
 }
 .specimen figcaption span:first-child { font-weight: 625; }
 .breed-portrait .kind-illustration { margin: calc(-1 * var(--inset)) calc(-1 * var(--inset)) 0; }
-.breed-portrait .specimen img { border-radius: 12px 12px 0 0; height: clamp(11rem, 75cqw, 20rem); }
+.breed-portrait .specimen img {
+  border: 0;
+  border-bottom: 1px solid var(--line);
+  border-radius: 12px 12px 0 0;
+  padding: .45rem .5rem 0;
+  height: clamp(11rem, 75cqw, 20rem);
+}
 .breed-portrait .specimen figcaption { padding-inline: var(--inset); }
 
-.read-shell{width:min(100%, 680px);margin:0 auto}.single.read-page{background:#f5f5f7}</style></head><body class="single read-page"><main class="read-shell sample-card"><article class="study-card knowledge-card layout-atlas" lang="en" data-ordinal="4"><header class="k-head"><h1 class="k-title">Earth</h1></header><div class="k-visual kind-diagram"><svg class="diagram" viewBox="0 0 360 190" role="img" aria-label="Two bars use different totals. About 71 percent of all surface area is covered by water rather than land. Only about 2.5 percent of all the water by volume is fresh; most is salty." xmlns="http://www.w3.org/2000/svg"><text class="plot-title" x="20.00" y="27.00" text-anchor="start">Surface area is not water volume</text><text class="" x="22.00" y="58.00" text-anchor="start">Water covers ≈71% of the surface</text><rect class="sand" x="22" y="69" width="316" height="17" rx="3"/><rect class="band-fill" x="22" y="69" width="224.35999999999999" height="17" rx="3"/><text class="" x="22.00" y="120.00" text-anchor="start">Fresh water is ≈2.5% of all water</text><rect class="band-fill" x="22" y="130" width="316" height="17" rx="3"/><rect class="water" x="22" y="130" width="7.9" height="17" rx="0"/><text class="" x="338.00" y="169.00" text-anchor="end">The rest is salty</text></svg></div><div class="k-lead"><p>The upper bar measures <strong>surface area</strong>. The lower bar measures <strong>water volume</strong>. The two percentages use different totals.</p></div><div class="k-example"><p class="k-label">How it works</p><p><strong>The percentages answer different questions.</strong> Oceans spread salty water across most of the surface. The small freshwater share is mostly in ice and groundwater; freshwater is not necessarily safe to drink.</p></div></article></main></body></html>
+.read-shell{width:min(100%, 680px);margin:0 auto}.single.read-page{background:#f5f5f7}</style></head><body class="single read-page"><main class="read-shell sample-card"><article class="study-card knowledge-card layout-atlas" lang="en" data-ordinal="4"><header class="k-head"><h1 class="k-title">Earth</h1></header><div class="k-visual kind-diagram"><svg class="diagram" viewBox="0 0 360 190" role="img" aria-label="Two bars use different totals. About 71 percent of all surface area is covered by water rather than land. Only about 2.5 percent of all the water by volume is fresh; most is salty." xmlns="http://www.w3.org/2000/svg"><text class="plot-title" x="20.00" y="27.00" text-anchor="start">Surface area is not water volume</text><text class="" x="22.00" y="58.00" text-anchor="start">Water covers ≈71% of the surface</text><rect class="sand" x="22" y="69" width="316" height="17" rx="3"/><rect class="band-fill" x="22" y="69" width="224.35999999999999" height="17" rx="3"/><text class="" x="22.00" y="120.00" text-anchor="start">Fresh water is ≈2.5% of all water</text><rect class="band-fill" x="22" y="130" width="316" height="17" rx="3"/><rect class="water" x="22" y="130" width="7.9" height="17" rx="0"/><text class="" x="338.00" y="169.00" text-anchor="end">The rest is salty</text></svg></div><div class="k-lead"><p>The upper bar measures <strong>surface area</strong> (about 71% water-covered). The lower bar measures <strong>total water volume</strong> (only about 2.5% fresh). The two percentages use different totals.</p></div><div class="k-example"><p class="k-label">How it works</p><p>Water covers most of Earth&#x27;s surface yet fresh water is scarce because <strong>oceans hold about 97.5% of Earth&#x27;s water as saltwater</strong>. Most of the small freshwater fraction is locked in ice and groundwater, and even fresh water is not automatically safe to drink.</p></div></article></main></body></html>

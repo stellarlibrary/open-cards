@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'; img-src data:; form-action 'none'; base-uri 'none'"><title>Du geste à la phrase de commentaire | OpenCards</title><style>:root {
+<html lang="de"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'; img-src data:; form-action 'none'; base-uri 'none'"><title>Wendepunkte und Krümmung | OpenCards</title><style>:root {
   color-scheme: light;
   --paper: #fffcf6;
   --surface: #f2efe8;
@@ -480,9 +480,11 @@
   display: block;
   width: 100%;
   height: clamp(9rem, 64cqw, 20rem);
+  padding: .35rem;
   object-fit: contain;
   background: #f7f5ef;
-  border-radius: 5px;
+  border: 1px solid #e9e5dc;
+  border-radius: 6px;
 }
 .specimen figcaption {
   display: flex;
@@ -494,7 +496,13 @@
 }
 .specimen figcaption span:first-child { font-weight: 625; }
 .breed-portrait .kind-illustration { margin: calc(-1 * var(--inset)) calc(-1 * var(--inset)) 0; }
-.breed-portrait .specimen img { border-radius: 12px 12px 0 0; height: clamp(11rem, 75cqw, 20rem); }
+.breed-portrait .specimen img {
+  border: 0;
+  border-bottom: 1px solid var(--line);
+  border-radius: 12px 12px 0 0;
+  padding: .45rem .5rem 0;
+  height: clamp(11rem, 75cqw, 20rem);
+}
 .breed-portrait .specimen figcaption { padding-inline: var(--inset); }
 
-.read-shell{width:min(100%, 680px);margin:0 auto}.single.read-page{background:#f5f5f7}</style></head><body class="single read-page"><main class="read-shell sample-card"><article class="study-card knowledge-card layout-reading" lang="fr" data-ordinal="2"><header class="k-head"><h1 class="k-title">Du geste à la phrase de commentaire</h1></header><div class="k-example k-source-text"><p>Dans Le Tartuffe de Molière (III, 2, éd. Chasles, Calmann-Lévy, 1888, t. III), Tartuffe sort un mouchoir devant Dorine : « Couvrez ce sein que je ne saurois voir. / Par de pareils objets les âmes sont blessées, » (<code>saurois</code> : forme ancienne de <code>saurais</code>).</p></div><div class="k-lead"><p class="k-label">Interprétation</p><p>En tendant son mouchoir, Tartuffe transforme son embarras personnel en <strong>leçon de morale générale</strong> : il passe de ce qu’il dit ne pas pouvoir regarder à un danger qu’il prétend commun à toutes les âmes.</p></div><div class="k-visual kind-table"><div class="data-table"><table><thead><tr><th scope="col">Sur scène</th><th scope="col">Dans la réplique</th></tr></thead><tbody><tr><td>un mouchoir sorti devant Dorine</td><td>passage du singulier au pluriel</td></tr></tbody></table></div></div></article></main></body></html>
+.read-shell{width:min(100%, 680px);margin:0 auto}.single.read-page{background:#f5f5f7}</style></head><body class="single read-page"><main class="read-shell sample-card"><article class="study-card knowledge-card layout-graph" lang="de" data-ordinal="8"><header class="k-head"><h1 class="k-title">Wendepunkte und Krümmung</h1></header><div class="k-lead"><p>An einem Wendepunkt wechselt die Krümmung. Eine Nullstelle von <code>f″</code> liefert bei glatten Funktionen zunächst einen Kandidaten; der Vorzeichenwechsel bestätigt ihn.</p></div><div class="k-visual kind-table"><div class="data-table"><table><thead><tr><th scope="col">Bereich</th><th scope="col">Vorzeichen von f″</th></tr></thead><tbody><tr><td>x&lt;−1</td><td>positiv</td></tr><tr><td>−1&lt;x&lt;1</td><td>negativ</td></tr><tr><td>x&gt;1</td><td>positiv</td></tr></tbody></table></div></div><div class="k-example"><p class="k-label">Beispiel</p><p>Für <code>f(x)=x⁴−6x²</code> hat <code>f″(x)=12x²−12=12(x−1)(x+1)</code> die Nullstellen <code>x=−1</code> und <code>x=1</code>. Da <code>f″</code> außerhalb von <code>[−1;1]</code> positiv und auf <code>(−1;1)</code> negativ ist, wechselt die Krümmung an beiden Stellen; mit <code>f(±1)=−5</code> ergeben sich die <strong>Wendepunkte <code>(−1|−5)</code> und <code>(1|−5)</code></strong>.</p></div></article></main></body></html>

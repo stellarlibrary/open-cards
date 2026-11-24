@@ -480,9 +480,11 @@
   display: block;
   width: 100%;
   height: clamp(9rem, 64cqw, 20rem);
+  padding: .35rem;
   object-fit: contain;
   background: #f7f5ef;
-  border-radius: 5px;
+  border: 1px solid #e9e5dc;
+  border-radius: 6px;
 }
 .specimen figcaption {
   display: flex;
@@ -494,7 +496,13 @@
 }
 .specimen figcaption span:first-child { font-weight: 625; }
 .breed-portrait .kind-illustration { margin: calc(-1 * var(--inset)) calc(-1 * var(--inset)) 0; }
-.breed-portrait .specimen img { border-radius: 12px 12px 0 0; height: clamp(11rem, 75cqw, 20rem); }
+.breed-portrait .specimen img {
+  border: 0;
+  border-bottom: 1px solid var(--line);
+  border-radius: 12px 12px 0 0;
+  padding: .45rem .5rem 0;
+  height: clamp(11rem, 75cqw, 20rem);
+}
 .breed-portrait .specimen figcaption { padding-inline: var(--inset); }
 
 .read-shell{width:min(100%, 680px);margin:0 auto}.single.read-page{background:#f5f5f7}</style></head><body class="single read-page"><main class="read-shell sample-card"><article class="study-card knowledge-card layout-matrix" lang="en" data-ordinal="43"><header class="k-head"><h1 class="k-title">Gram–Schmidt removes the component already accounted for</h1></header><div class="k-lead"><p>To make <code>b</code> orthogonal to a nonzero vector <code>a</code>, subtract its projection onto <code>a</code>: <code>b−[(b·a)/(a·a)]a</code>. If <code>a,b</code> are independent, the remainder is nonzero and can later be normalized.</p></div><div class="k-visual kind-flow"><ol class="visual-list flow"><li>Find the component of b along a</li><li>Subtract it</li><li>Keep the perpendicular remainder</li></ol></div><div class="k-example"><p class="k-label">In use</p><p>For <code>a=(1,2,0)</code> and <code>b=(3,1,4)</code>, the dot product is <code>3·1+1·2+4·0=5</code>, and <code>a·a=1+4=5</code>. The projection coefficient is <code>1</code>, so the perpendicular remainder is <code>b−a=(2,−1,4)</code>.</p><p>Its dot product with <code>a</code> is <code>2−2+0=0</code>. The span is unchanged: the remainder is a combination of <code>a,b</code>, and adding back <code>a</code> recovers <code>b</code>.</p></div><div class="k-note"><p class="k-label">Note</p><p>At this step the remainder is orthogonal, not necessarily of unit length.</p></div></article></main></body></html>

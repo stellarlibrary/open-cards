@@ -480,9 +480,11 @@
   display: block;
   width: 100%;
   height: clamp(9rem, 64cqw, 20rem);
+  padding: .35rem;
   object-fit: contain;
   background: #f7f5ef;
-  border-radius: 5px;
+  border: 1px solid #e9e5dc;
+  border-radius: 6px;
 }
 .specimen figcaption {
   display: flex;
@@ -494,7 +496,13 @@
 }
 .specimen figcaption span:first-child { font-weight: 625; }
 .breed-portrait .kind-illustration { margin: calc(-1 * var(--inset)) calc(-1 * var(--inset)) 0; }
-.breed-portrait .specimen img { border-radius: 12px 12px 0 0; height: clamp(11rem, 75cqw, 20rem); }
+.breed-portrait .specimen img {
+  border: 0;
+  border-bottom: 1px solid var(--line);
+  border-radius: 12px 12px 0 0;
+  padding: .45rem .5rem 0;
+  height: clamp(11rem, 75cqw, 20rem);
+}
 .breed-portrait .specimen figcaption { padding-inline: var(--inset); }
 
-.read-shell{width:min(100%, 680px);margin:0 auto}.single.read-page{background:#f5f5f7}</style></head><body class="single read-page"><main class="read-shell sample-card"><article class="study-card knowledge-card layout-console" lang="en" data-ordinal="9"><header class="k-head"><h1 class="k-title">Matching rows with INNER JOIN</h1></header><div class="k-lead"><p>An inner join returns matching pairs of rows. A row without a match contributes nothing; multiple matches can create multiple output rows.</p></div><div class="k-visual kind-flow"><ol class="visual-list flow"><li>Customers</li><li>Match by name</li><li>Orders</li></ol></div><div class="k-example"><p class="k-label">Example and result</p><p><code>customers(name)</code>: Ada, Bo, Chen, Dee. <code>orders(id, customer)</code>: (1, Ada), (2, Bo), (3, Ada), (4, Chen), (5, Bo).</p><pre tabindex="0"><code>SELECT customers.name, orders.id FROM customers JOIN orders ON orders.customer = customers.name ORDER BY orders.id;</code></pre><div class="k-code-result"><p class="k-label">Result</p><p><strong>Dee has no match; 5 rows remain.</strong> An inner join emits matching pairs, so a customer with two orders contributes two rows.</p></div></div></article></main></body></html>
+.read-shell{width:min(100%, 680px);margin:0 auto}.single.read-page{background:#f5f5f7}</style></head><body class="single read-page"><main class="read-shell sample-card"><article class="study-card knowledge-card layout-console" lang="en" data-ordinal="9"><header class="k-head"><h1 class="k-title">Matching rows with INNER JOIN</h1></header><div class="k-lead"><p>An inner join returns matching pairs of rows. A row without a match contributes nothing; multiple matches can create multiple output rows.</p></div><div class="k-visual kind-flow"><ol class="visual-list flow"><li>Customers</li><li>Match by name</li><li>Orders</li></ol></div><div class="k-example"><p class="k-label">Example and result</p><p><code>customers(name)</code>: Ada, Bo, Chen, Dee. <code>orders(id, customer)</code>: (1, Ada), (2, Bo), (3, Ada), (4, Chen), (5, Bo).</p><pre tabindex="0"><code>SELECT customers.name, orders.id FROM customers JOIN orders ON orders.customer = customers.name ORDER BY orders.id;</code></pre><div class="k-code-result"><p class="k-label">Result</p><p>The query returns five rows—<strong><code>(Ada, 1)</code>, <code>(Bo, 2)</code>, <code>(Ada, 3)</code>, <code>(Chen, 4)</code>, <code>(Bo, 5)</code></strong>—and omits <code>Dee</code>, who has no matching order. Customers with two orders appear twice, once per matching pair.</p></div></div></article></main></body></html>

@@ -480,9 +480,11 @@
   display: block;
   width: 100%;
   height: clamp(9rem, 64cqw, 20rem);
+  padding: .35rem;
   object-fit: contain;
   background: #f7f5ef;
-  border-radius: 5px;
+  border: 1px solid #e9e5dc;
+  border-radius: 6px;
 }
 .specimen figcaption {
   display: flex;
@@ -494,7 +496,13 @@
 }
 .specimen figcaption span:first-child { font-weight: 625; }
 .breed-portrait .kind-illustration { margin: calc(-1 * var(--inset)) calc(-1 * var(--inset)) 0; }
-.breed-portrait .specimen img { border-radius: 12px 12px 0 0; height: clamp(11rem, 75cqw, 20rem); }
+.breed-portrait .specimen img {
+  border: 0;
+  border-bottom: 1px solid var(--line);
+  border-radius: 12px 12px 0 0;
+  padding: .45rem .5rem 0;
+  height: clamp(11rem, 75cqw, 20rem);
+}
 .breed-portrait .specimen figcaption { padding-inline: var(--inset); }
 
 .read-shell{width:min(100%, 680px);margin:0 auto}.single.read-page{background:#f5f5f7}</style></head><body class="single read-page"><main class="read-shell sample-card"><article class="study-card knowledge-card layout-matrix" lang="en" data-ordinal="15"><header class="k-head"><h1 class="k-title">Row reduction builds an inverse beside the identity</h1></header><div class="k-lead"><p>For a square <code>A</code>, augment it with the identity of the same size and apply the same row operations to both blocks. If the left block becomes the identity, the right block is <code>A⁻¹</code>: the operations that undo <code>A</code> have now acted on the identity.</p></div><div class="k-visual kind-flow"><ol class="visual-list flow"><li>Place the identity beside A</li><li>Apply each row move to both blocks</li><li>Read the inverse beside the identity</li></ol></div><div class="k-example"><p class="k-label">In use</p><p>For <code>A=[[3,2], [1,1]]</code>, start with rows <code>(3,2 | 1,0)</code> and <code>(1,1 | 0,1)</code>.<br><code>R₁←R₁−2R₂</code> makes row 1 <code>(1,0 | 1,−2)</code>.<br><code>R₂←R₂−R₁</code> then makes row 2 <code>(0,1 | −1,3)</code>.</p><p>The left block is now the identity, so <code>A⁻¹=[[1,−2], [−1,3]]</code>. Its columns check out: <code>A(1,−1)=(1,0)</code> and <code>A(−2,3)=(0,1)</code>.</p></div><div class="k-note"><p class="k-label">Note</p><p>If row reduction cannot make the left block the identity, the square matrix has no inverse.</p></div></article></main></body></html>

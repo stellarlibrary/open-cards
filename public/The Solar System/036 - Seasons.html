@@ -480,9 +480,11 @@
   display: block;
   width: 100%;
   height: clamp(9rem, 64cqw, 20rem);
+  padding: .35rem;
   object-fit: contain;
   background: #f7f5ef;
-  border-radius: 5px;
+  border: 1px solid #e9e5dc;
+  border-radius: 6px;
 }
 .specimen figcaption {
   display: flex;
@@ -494,7 +496,13 @@
 }
 .specimen figcaption span:first-child { font-weight: 625; }
 .breed-portrait .kind-illustration { margin: calc(-1 * var(--inset)) calc(-1 * var(--inset)) 0; }
-.breed-portrait .specimen img { border-radius: 12px 12px 0 0; height: clamp(11rem, 75cqw, 20rem); }
+.breed-portrait .specimen img {
+  border: 0;
+  border-bottom: 1px solid var(--line);
+  border-radius: 12px 12px 0 0;
+  padding: .45rem .5rem 0;
+  height: clamp(11rem, 75cqw, 20rem);
+}
 .breed-portrait .specimen figcaption { padding-inline: var(--inset); }
 
-.read-shell{width:min(100%, 680px);margin:0 auto}.single.read-page{background:#f5f5f7}</style></head><body class="single read-page"><main class="read-shell sample-card"><article class="study-card knowledge-card layout-atlas" lang="en" data-ordinal="36"><header class="k-head"><h1 class="k-title">Seasons</h1></header><div class="k-visual kind-diagram"><svg class="diagram" viewBox="0 0 360 190" role="img" aria-label="Earth’s axis stays tilted in the same direction as it circles the Sun, reversing the hemisphere tilted sunward." xmlns="http://www.w3.org/2000/svg"><circle class="sun" cx="180.00" cy="94.00" r="24.00"/><text class="" x="180.00" y="139.00" text-anchor="middle">Sun</text><circle class="world" cx="74.00" cy="94.00" r="22.00"/><line class="axis" x1="58.00" y1="132.00" x2="90.00" y2="56.00"/><text class="" x="92.00" y="51.00" text-anchor="middle">N</text><circle class="world" cx="285.00" cy="94.00" r="22.00"/><line class="axis" x1="269.00" y1="132.00" x2="301.00" y2="56.00"/><text class="" x="303.00" y="51.00" text-anchor="middle">N</text><line class="axis" x1="146.00" y1="99.00" x2="105.00" y2="99.00"/><path class="axis" d="M 112.00,102.50 105.00,99.00 112.00,95.50"/><line class="axis" x1="212.00" y1="99.00" x2="253.00" y2="99.00"/><path class="axis" d="M 246.00,95.50 253.00,99.00 246.00,102.50"/><text class="" x="73.00" y="162.00" text-anchor="middle">North leans sunward</text><text class="" x="287.00" y="162.00" text-anchor="middle">South leans sunward</text></svg></div><div class="k-lead"><p>Earth is near perihelion in early January. Yet northern midlatitudes generally experience winter then.</p></div><div class="k-example"><p class="k-label">How it works</p><p><strong>Axial tilt.</strong> The hemisphere tipped toward the Sun has longer days and more direct sunlight; the other receives less daily sunlight. Earth–Sun distance is shared by both hemispheres.</p></div></article></main></body></html>
+.read-shell{width:min(100%, 680px);margin:0 auto}.single.read-page{background:#f5f5f7}</style></head><body class="single read-page"><main class="read-shell sample-card"><article class="study-card knowledge-card layout-atlas" lang="en" data-ordinal="36"><header class="k-head"><h1 class="k-title">Seasons</h1></header><div class="k-visual kind-diagram"><svg class="diagram" viewBox="0 0 360 190" role="img" aria-label="Earth’s axis stays tilted in the same direction as it circles the Sun, reversing the hemisphere tilted sunward." xmlns="http://www.w3.org/2000/svg"><circle class="sun" cx="180.00" cy="94.00" r="24.00"/><text class="" x="180.00" y="139.00" text-anchor="middle">Sun</text><circle class="world" cx="74.00" cy="94.00" r="22.00"/><line class="axis" x1="58.00" y1="132.00" x2="90.00" y2="56.00"/><text class="" x="92.00" y="51.00" text-anchor="middle">N</text><circle class="world" cx="285.00" cy="94.00" r="22.00"/><line class="axis" x1="269.00" y1="132.00" x2="301.00" y2="56.00"/><text class="" x="303.00" y="51.00" text-anchor="middle">N</text><line class="axis" x1="146.00" y1="99.00" x2="105.00" y2="99.00"/><path class="axis" d="M 112.00,102.50 105.00,99.00 112.00,95.50"/><line class="axis" x1="212.00" y1="99.00" x2="253.00" y2="99.00"/><path class="axis" d="M 246.00,95.50 253.00,99.00 246.00,102.50"/><text class="" x="73.00" y="162.00" text-anchor="middle">North leans sunward</text><text class="" x="287.00" y="162.00" text-anchor="middle">South leans sunward</text></svg></div><div class="k-lead"><p>Earth is near perihelion in early January. Yet northern midlatitudes generally experience winter then.</p></div><div class="k-example"><p class="k-label">How it works</p><p>Opposite seasons in the two hemispheres are caused by <strong>Earth&#x27;s axial tilt</strong>: the hemisphere leaning toward the Sun receives longer days and more direct sunlight, whereas Earth–Sun distance is shared by both hemispheres at once.</p></div></article></main></body></html>

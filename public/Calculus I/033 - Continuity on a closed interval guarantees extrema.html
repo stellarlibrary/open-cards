@@ -480,9 +480,11 @@
   display: block;
   width: 100%;
   height: clamp(9rem, 64cqw, 20rem);
+  padding: .35rem;
   object-fit: contain;
   background: #f7f5ef;
-  border-radius: 5px;
+  border: 1px solid #e9e5dc;
+  border-radius: 6px;
 }
 .specimen figcaption {
   display: flex;
@@ -494,7 +496,13 @@
 }
 .specimen figcaption span:first-child { font-weight: 625; }
 .breed-portrait .kind-illustration { margin: calc(-1 * var(--inset)) calc(-1 * var(--inset)) 0; }
-.breed-portrait .specimen img { border-radius: 12px 12px 0 0; height: clamp(11rem, 75cqw, 20rem); }
+.breed-portrait .specimen img {
+  border: 0;
+  border-bottom: 1px solid var(--line);
+  border-radius: 12px 12px 0 0;
+  padding: .45rem .5rem 0;
+  height: clamp(11rem, 75cqw, 20rem);
+}
 .breed-portrait .specimen figcaption { padding-inline: var(--inset); }
 
 .read-shell{width:min(100%, 680px);margin:0 auto}.single.read-page{background:#f5f5f7}</style></head><body class="single read-page"><main class="read-shell sample-card"><article class="study-card knowledge-card layout-graph" lang="en" data-ordinal="33"><header class="k-head"><h1 class="k-title">Continuity on a closed interval guarantees extrema</h1></header><div class="k-lead"><p>The Extreme Value Theorem guarantees an absolute minimum and maximum for a continuous function on a closed, bounded interval. Boundedness of the values alone is not enough.</p></div><div class="k-visual kind-compare"><ul class="visual-list compare"><li>Included: x=0, where f=0</li><li>Excluded: x=2, where the values would reach 2</li></ul></div><div class="k-example"><p class="k-label">Worked example</p><p>Restrict <code>f(x)=x</code> to <code>0≤x&lt;2</code>. It attains its minimum <code>0</code> at the included endpoint. But for any allowed <code>x</code>, the number <code>(x+2)/2</code> is between <code>x</code> and <code>2</code>; it is allowed and has a larger function value.</p><p>So <code>2</code> is an upper bound approached from below, not a maximum. The theorem does not apply because the interval leaves out <code>2</code>.</p></div></article></main></body></html>

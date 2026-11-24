@@ -480,9 +480,11 @@
   display: block;
   width: 100%;
   height: clamp(9rem, 64cqw, 20rem);
+  padding: .35rem;
   object-fit: contain;
   background: #f7f5ef;
-  border-radius: 5px;
+  border: 1px solid #e9e5dc;
+  border-radius: 6px;
 }
 .specimen figcaption {
   display: flex;
@@ -494,7 +496,13 @@
 }
 .specimen figcaption span:first-child { font-weight: 625; }
 .breed-portrait .kind-illustration { margin: calc(-1 * var(--inset)) calc(-1 * var(--inset)) 0; }
-.breed-portrait .specimen img { border-radius: 12px 12px 0 0; height: clamp(11rem, 75cqw, 20rem); }
+.breed-portrait .specimen img {
+  border: 0;
+  border-bottom: 1px solid var(--line);
+  border-radius: 12px 12px 0 0;
+  padding: .45rem .5rem 0;
+  height: clamp(11rem, 75cqw, 20rem);
+}
 .breed-portrait .specimen figcaption { padding-inline: var(--inset); }
 
-.read-shell{width:min(100%, 680px);margin:0 auto}.single.read-page{background:#f5f5f7}</style></head><body class="single read-page"><main class="read-shell sample-card"><article class="study-card knowledge-card layout-lab" lang="en" data-ordinal="10"><header class="k-head"><h1 class="k-title">Boyle’s law</h1></header><div class="k-lead"><p>At fixed temperature and amount, an ideal gas has <code>PV = constant</code>. Compressing it increases pressure because the same particles strike a smaller container more frequently per unit area.</p></div><div class="k-visual kind-table"><div class="data-table"><table><thead><tr><th scope="col">State</th><th scope="col">Volume (mL)</th><th scope="col">Pressure (kPa)</th></tr></thead><tbody><tr><td>Initial</td><td>750</td><td>108</td></tr><tr><td>Final</td><td>450</td><td>?</td></tr></tbody></table></div></div><div class="k-example"><p class="k-label">What you observe</p><p>A fixed amount of ideal gas takes up 750 mL at 108 kPa in a model cylinder. The volume decreases to 450 mL at constant temperature.</p><p>180 kPa. Since <code>P₁V₁ = P₂V₂</code>, the pressure becomes <code>108 × 750/450 = 180 kPa</code>. At the same temperature, the particles collide with the walls more often per unit area in the smaller space.</p></div></article></main></body></html>
+.read-shell{width:min(100%, 680px);margin:0 auto}.single.read-page{background:#f5f5f7}</style></head><body class="single read-page"><main class="read-shell sample-card"><article class="study-card knowledge-card layout-lab" lang="en" data-ordinal="10"><header class="k-head"><h1 class="k-title">Boyle’s law</h1></header><div class="k-lead"><p>At fixed temperature and amount, an ideal gas has <code>PV = constant</code>. Compressing it increases pressure because the same particles strike a smaller container more frequently per unit area.</p></div><div class="k-visual kind-table"><div class="data-table"><table><thead><tr><th scope="col">State</th><th scope="col">Volume (mL)</th><th scope="col">Pressure (kPa)</th></tr></thead><tbody><tr><td>Initial</td><td>750</td><td>108</td></tr><tr><td>Final</td><td>450</td><td>180</td></tr></tbody></table></div></div><div class="k-example"><p class="k-label">What you observe</p><p>Compressing a fixed sample of ideal gas from <code>750 mL</code> at <code>108 kPa</code> to <code>450 mL</code> at constant temperature raises its pressure to <strong><code>P₂ = 108 kPa × (750 / 450) = 180 kPa</code></strong>, as molecules strike the smaller wall area more often.</p></div></article></main></body></html>

@@ -480,9 +480,11 @@
   display: block;
   width: 100%;
   height: clamp(9rem, 64cqw, 20rem);
+  padding: .35rem;
   object-fit: contain;
   background: #f7f5ef;
-  border-radius: 5px;
+  border: 1px solid #e9e5dc;
+  border-radius: 6px;
 }
 .specimen figcaption {
   display: flex;
@@ -494,7 +496,13 @@
 }
 .specimen figcaption span:first-child { font-weight: 625; }
 .breed-portrait .kind-illustration { margin: calc(-1 * var(--inset)) calc(-1 * var(--inset)) 0; }
-.breed-portrait .specimen img { border-radius: 12px 12px 0 0; height: clamp(11rem, 75cqw, 20rem); }
+.breed-portrait .specimen img {
+  border: 0;
+  border-bottom: 1px solid var(--line);
+  border-radius: 12px 12px 0 0;
+  padding: .45rem .5rem 0;
+  height: clamp(11rem, 75cqw, 20rem);
+}
 .breed-portrait .specimen figcaption { padding-inline: var(--inset); }
 .v2-card {
   --v2-muted: #475462;
@@ -534,6 +542,7 @@
 .v2-figure .diagram .v2-draw-fill.ink { fill: var(--v2-ink); }
 .v2-figure .diagram .v2-draw-fill.signal { fill: var(--v2-second); }
 .v2-figure .diagram .v2-draw-fill.soft { fill: #dce8f0; }
+.v2-figure .diagram rect.v2-draw-fill.soft { stroke: #a8c0d3; stroke-width: .75; }
 .v2-figure .diagram .v2-draw-fill.mid { fill: #9abbd3; }
 .v2-figure .diagram .v2-draw-fill.warm { fill: #f0e4d7; }
 .v2-figure .diagram .v2-draw-fill.paper { fill: #fff; stroke: #8393a4; stroke-width: 1; }
@@ -608,4 +617,4 @@
   .v2-card .figure-drawing .diagram { width: calc(100% + 14px); max-width: none; margin-inline: -7px; }
 }
 
-.read-shell{width:min(100%, 680px);margin:0 auto}.single.read-page{background:#f5f5f7}</style></head><body class="single read-page"><main class="read-shell sample-card"><article class="study-card knowledge-card layout-market-model v2-card" lang="en" data-ordinal="16"><header class="k-head"><h1 class="k-title">Consumer surplus is above price and below demand</h1></header><div class="k-lead"><p>In the basic willingness-to-pay model, consumer surplus is the difference between what buyers would pay and what they actually pay. For continuous quantity, add that difference across traded units.</p></div><div class="k-visual kind-plate"><figure class="v2-figure figure-drawing"><div class="v2-figure-title">The triangle of buyer surplus</div><div class="v2-figure-body"><svg class="diagram" viewBox="0 0 300 146" role="img" aria-label="The triangle of buyer surplus. The shaded region is above the horizontal market price of 7 and below demand, from zero to quantity 5." xmlns="http://www.w3.org/2000/svg"><path class="v2-draw-fill soft" d="M 45.00,25.00 175.00,77.00 45.00,77.00 Z"/><path class="v2-draw-line ink" d="M 45.00,17.00 45.00,111.00 274.00,111.00"/><line class="v2-draw-line accent" x1="45.00" y1="25.00" x2="242.00" y2="104.00"/><line class="v2-draw-line guide" x1="45.00" y1="77.00" x2="252.00" y2="77.00"/><line class="v2-draw-line guide" x1="175.00" y1="77.00" x2="175.00" y2="111.00"/><text class="v2-draw-text label" x="38.00" y="30.00" text-anchor="end">12</text><text class="v2-draw-text label" x="38.00" y="82.00" text-anchor="end">7</text><text class="v2-draw-text label" x="175.00" y="130.00" text-anchor="middle">5</text><text class="v2-draw-text label" x="270.00" y="140.00" text-anchor="end">Quantity</text></svg></div><figcaption>The shaded region is above the horizontal market price of 7 and below demand, from zero to quantity 5.</figcaption></figure></div><div class="k-example"><p class="k-label">Worked example</p><p>A linear demand curve reaches price 12 at quantity zero. If price is 7 at quantity 5, the surplus triangle has height 5 and base 5, for an area of 12.5.</p></div><div class="k-note"><p class="k-label">Model conditions</p><p>Surplus is modeled value in price units. The figure assumes a single price and a linear demand segment.</p></div></article></main></body></html>
+.read-shell{width:min(100%, 680px);margin:0 auto}.single.read-page{background:#f5f5f7}</style></head><body class="single read-page"><main class="read-shell sample-card"><article class="study-card knowledge-card layout-market-model v2-card" lang="en" data-ordinal="16"><header class="k-head"><h1 class="k-title">Consumer surplus is above price and below demand</h1></header><div class="k-lead"><p>In the basic willingness-to-pay model, consumer surplus is the difference between what buyers would pay and what they actually pay. For continuous quantity, add that difference across traded units.</p></div><div class="k-visual kind-plate"><figure class="v2-figure figure-drawing"><div class="v2-figure-title">The triangle of buyer surplus</div><div class="v2-figure-body"><svg class="diagram" viewBox="0 0 300 156" role="img" aria-label="The triangle of buyer surplus. The shaded triangle lies above market price P = 7 and below demand, from quantity 0 to 5." xmlns="http://www.w3.org/2000/svg"><path class="v2-draw-fill soft" d="M 48.00,20.00 138.00,60.00 48.00,60.00 Z"/><path class="v2-draw-line accent" d="M 48.00,20.00 138.00,60.00 48.00,60.00 48.00,20.00"/><line class="v2-draw-line accent" x1="48.00" y1="20.00" x2="264.00" y2="116.00"/><line class="v2-draw-line guide" x1="138.00" y1="60.00" x2="242.00" y2="60.00"/><line class="v2-draw-line guide" x1="138.00" y1="60.00" x2="138.00" y2="116.00"/><path class="v2-draw-line ink" d="M 48.00,14.00 48.00,116.00 274.00,116.00"/><line class="v2-draw-line ink" x1="44.00" y1="20.00" x2="48.00" y2="20.00"/><line class="v2-draw-line ink" x1="44.00" y1="60.00" x2="48.00" y2="60.00"/><line class="v2-draw-line ink" x1="48.00" y1="116.00" x2="48.00" y2="120.00"/><line class="v2-draw-line ink" x1="138.00" y1="116.00" x2="138.00" y2="120.00"/><text class="v2-draw-text label" x="40.00" y="25.00" text-anchor="end">12</text><text class="v2-draw-text label" x="40.00" y="65.00" text-anchor="end">7</text><text class="v2-draw-text small" x="205.00" y="53.00" text-anchor="middle">P = 7</text><text class="v2-draw-text label" x="48.00" y="135.00" text-anchor="middle">0</text><text class="v2-draw-text label" x="138.00" y="135.00" text-anchor="middle">5</text><text class="v2-draw-text label" x="274.00" y="146.00" text-anchor="end">Quantity</text></svg></div><figcaption>The shaded triangle lies above market price P = 7 and below demand, from quantity 0 to 5.</figcaption></figure></div><div class="k-example"><p class="k-label">Worked example</p><p>A linear demand curve reaches price 12 at quantity zero. If price is 7 at quantity 5, the surplus triangle has height 5 and base 5, for an area of 12.5.</p></div><div class="k-note"><p class="k-label">Model conditions</p><p>Surplus is modeled value in price units. The figure assumes a single price and a linear demand segment.</p></div></article></main></body></html>

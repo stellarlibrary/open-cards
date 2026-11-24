@@ -480,9 +480,11 @@
   display: block;
   width: 100%;
   height: clamp(9rem, 64cqw, 20rem);
+  padding: .35rem;
   object-fit: contain;
   background: #f7f5ef;
-  border-radius: 5px;
+  border: 1px solid #e9e5dc;
+  border-radius: 6px;
 }
 .specimen figcaption {
   display: flex;
@@ -494,7 +496,13 @@
 }
 .specimen figcaption span:first-child { font-weight: 625; }
 .breed-portrait .kind-illustration { margin: calc(-1 * var(--inset)) calc(-1 * var(--inset)) 0; }
-.breed-portrait .specimen img { border-radius: 12px 12px 0 0; height: clamp(11rem, 75cqw, 20rem); }
+.breed-portrait .specimen img {
+  border: 0;
+  border-bottom: 1px solid var(--line);
+  border-radius: 12px 12px 0 0;
+  padding: .45rem .5rem 0;
+  height: clamp(11rem, 75cqw, 20rem);
+}
 .breed-portrait .specimen figcaption { padding-inline: var(--inset); }
 
-.read-shell{width:min(100%, 680px);margin:0 auto}.single.read-page{background:#f5f5f7}</style></head><body class="single read-page"><main class="read-shell sample-card"><article class="study-card knowledge-card layout-atlas" lang="en" data-ordinal="11"><header class="k-head"><h1 class="k-title">The Milky Way from inside</h1></header><div class="k-visual kind-diagram"><svg class="diagram" viewBox="0 0 360 190" role="img" aria-label="The Sun sits off-center in a flat galactic disk. A sight line along the disk crosses more of it." xmlns="http://www.w3.org/2000/svg"><ellipse class="region" cx="180" cy="99" rx="149" ry="28"/><ellipse class="region-alt" cx="180" cy="99" rx="40" ry="34"/><circle class="sun" cx="228.00" cy="102.00" r="5.00"/><line class="accent" x1="228.00" y1="103.00" x2="54.00" y2="104.00"/><path class="accent" d="M 61.02,107.46 54.00,104.00 60.98,100.46"/><line class="axis" x1="228.00" y1="100.00" x2="228.00" y2="37.00"/><path class="axis" d="M 224.50,44.00 228.00,37.00 231.50,44.00"/><text class="" x="241.00" y="35.00" text-anchor="start">Out of the disk</text><text class="" x="226.00" y="148.00" text-anchor="middle">Sun’s position</text><text class="" x="102.00" y="88.00" text-anchor="middle">Along the disk</text></svg></div><div class="k-lead"><p>The Milky Way glows as a bright band across dark skies. Dust patches cut across it.</p></div><div class="k-example"><p class="k-label">How it works</p><p><strong>We observe from within its flattened disk.</strong> Looking along the disk places many more stars in the line of sight than looking perpendicular to it.</p></div></article></main></body></html>
+.read-shell{width:min(100%, 680px);margin:0 auto}.single.read-page{background:#f5f5f7}</style></head><body class="single read-page"><main class="read-shell sample-card"><article class="study-card knowledge-card layout-atlas" lang="en" data-ordinal="11"><header class="k-head"><h1 class="k-title">The Milky Way from inside</h1></header><div class="k-visual kind-diagram"><svg class="diagram" viewBox="0 0 360 190" role="img" aria-label="The Sun sits off-center in a flat galactic disk. A sight line along the disk crosses more of it." xmlns="http://www.w3.org/2000/svg"><ellipse class="region" cx="180" cy="99" rx="149" ry="28"/><ellipse class="region-alt" cx="180" cy="99" rx="40" ry="34"/><circle class="sun" cx="228.00" cy="102.00" r="5.00"/><line class="accent" x1="228.00" y1="103.00" x2="54.00" y2="104.00"/><path class="accent" d="M 61.02,107.46 54.00,104.00 60.98,100.46"/><line class="axis" x1="228.00" y1="100.00" x2="228.00" y2="37.00"/><path class="axis" d="M 224.50,44.00 228.00,37.00 231.50,44.00"/><text class="" x="241.00" y="35.00" text-anchor="start">Out of the disk</text><text class="" x="226.00" y="148.00" text-anchor="middle">Sun’s position</text><text class="" x="102.00" y="88.00" text-anchor="middle">Along the disk</text></svg></div><div class="k-lead"><p>The Milky Way glows as a bright band across dark skies. Dust patches cut across it.</p></div><div class="k-example"><p class="k-label">How it works</p><p>The Milky Way appears as a band rather than a round patch because <strong>we observe from inside its flattened disk</strong>: looking along the disk plane intercepts far more stars and dust clouds than looking perpendicular out of the disk.</p></div></article></main></body></html>

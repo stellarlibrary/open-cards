@@ -480,9 +480,11 @@
   display: block;
   width: 100%;
   height: clamp(9rem, 64cqw, 20rem);
+  padding: .35rem;
   object-fit: contain;
   background: #f7f5ef;
-  border-radius: 5px;
+  border: 1px solid #e9e5dc;
+  border-radius: 6px;
 }
 .specimen figcaption {
   display: flex;
@@ -494,7 +496,13 @@
 }
 .specimen figcaption span:first-child { font-weight: 625; }
 .breed-portrait .kind-illustration { margin: calc(-1 * var(--inset)) calc(-1 * var(--inset)) 0; }
-.breed-portrait .specimen img { border-radius: 12px 12px 0 0; height: clamp(11rem, 75cqw, 20rem); }
+.breed-portrait .specimen img {
+  border: 0;
+  border-bottom: 1px solid var(--line);
+  border-radius: 12px 12px 0 0;
+  padding: .45rem .5rem 0;
+  height: clamp(11rem, 75cqw, 20rem);
+}
 .breed-portrait .specimen figcaption { padding-inline: var(--inset); }
 
-.read-shell{width:min(100%, 680px);margin:0 auto}.single.read-page{background:#f5f5f7}</style></head><body class="single read-page"><main class="read-shell sample-card"><article class="study-card knowledge-card layout-lab" lang="en" data-ordinal="2"><header class="k-head"><h1 class="k-title">Food-web links</h1></header><div class="k-lead"><p>Food-web arrows commonly point from food toward the organism consuming it, showing energy transfer. Loss of an intermediate species can affect both its prey and its consumers.</p></div><div class="k-visual kind-diagram"><svg class="diagram" viewBox="0 0 360 190" role="img" aria-label="Energy flows from algae to zooplankton, then to either small fish or predatory insects." xmlns="http://www.w3.org/2000/svg"><text class="" x="57.00" y="91.00" text-anchor="middle">Algae</text><text class="" x="171.00" y="91.00" text-anchor="middle">Zooplankton</text><text class="" x="303.00" y="52.00" text-anchor="middle">Small fish</text><text class="" x="303.00" y="138.00" text-anchor="middle">Predatory insect</text><line class="accent" x1="82.00" y1="87.00" x2="119.00" y2="87.00"/><path class="accent" d="M 112.00,83.50 119.00,87.00 112.00,90.50"/><line class="accent" x1="221.00" y1="80.00" x2="259.00" y2="52.00"/><path class="accent" d="M 251.29,53.33 259.00,52.00 255.44,58.97"/><line class="accent" x1="221.00" y1="95.00" x2="254.00" y2="127.00"/><path class="accent" d="M 251.41,119.61 254.00,127.00 246.54,124.64"/><text class="" x="180.00" y="172.00" text-anchor="middle">Arrow points from food to eater</text></svg></div><div class="k-example"><p class="k-label">What you observe</p><p>A pond food chain is <code>algae → water fleas → small fish</code>; arrows point from food to eater. Water fleas graze on algae and are the main food in this model for the fish. The water flea population suddenly drops, with other conditions initially unchanged.</p><p>The small fish lose a food source; the algae experience less grazing. The water fleas were both consumers of algae and prey for fish.</p></div></article></main></body></html>
+.read-shell{width:min(100%, 680px);margin:0 auto}.single.read-page{background:#f5f5f7}</style></head><body class="single read-page"><main class="read-shell sample-card"><article class="study-card knowledge-card layout-lab" lang="en" data-ordinal="2"><header class="k-head"><h1 class="k-title">Food-web links</h1></header><div class="k-lead"><p>Food-web arrows commonly point from food toward the organism consuming it, showing energy transfer. Loss of an intermediate species can affect both its prey and its consumers.</p></div><div class="k-visual kind-diagram"><svg class="diagram" viewBox="0 0 360 190" role="img" aria-label="Energy flows from algae to zooplankton, then to either small fish or predatory insects." xmlns="http://www.w3.org/2000/svg"><text class="" x="57.00" y="91.00" text-anchor="middle">Algae</text><text class="" x="171.00" y="91.00" text-anchor="middle">Zooplankton</text><text class="" x="303.00" y="52.00" text-anchor="middle">Small fish</text><text class="" x="303.00" y="138.00" text-anchor="middle">Predatory insect</text><line class="accent" x1="82.00" y1="87.00" x2="119.00" y2="87.00"/><path class="accent" d="M 112.00,83.50 119.00,87.00 112.00,90.50"/><line class="accent" x1="221.00" y1="80.00" x2="259.00" y2="52.00"/><path class="accent" d="M 251.29,53.33 259.00,52.00 255.44,58.97"/><line class="accent" x1="221.00" y1="95.00" x2="254.00" y2="127.00"/><path class="accent" d="M 251.41,119.61 254.00,127.00 246.54,124.64"/><text class="" x="180.00" y="172.00" text-anchor="middle">Arrow points from food to eater</text></svg></div><div class="k-example"><p class="k-label">What you observe</p><p>In a pond chain <code>algae → zooplankton (water fleas) → small fish</code>, a sudden drop in zooplankton immediately <strong>deprives small fish of food</strong> while <strong>relieving algae from grazing pressure</strong>, because zooplankton sit between the two levels.</p></div></article></main></body></html>

@@ -480,9 +480,11 @@
   display: block;
   width: 100%;
   height: clamp(9rem, 64cqw, 20rem);
+  padding: .35rem;
   object-fit: contain;
   background: #f7f5ef;
-  border-radius: 5px;
+  border: 1px solid #e9e5dc;
+  border-radius: 6px;
 }
 .specimen figcaption {
   display: flex;
@@ -494,7 +496,13 @@
 }
 .specimen figcaption span:first-child { font-weight: 625; }
 .breed-portrait .kind-illustration { margin: calc(-1 * var(--inset)) calc(-1 * var(--inset)) 0; }
-.breed-portrait .specimen img { border-radius: 12px 12px 0 0; height: clamp(11rem, 75cqw, 20rem); }
+.breed-portrait .specimen img {
+  border: 0;
+  border-bottom: 1px solid var(--line);
+  border-radius: 12px 12px 0 0;
+  padding: .45rem .5rem 0;
+  height: clamp(11rem, 75cqw, 20rem);
+}
 .breed-portrait .specimen figcaption { padding-inline: var(--inset); }
 
 .read-shell{width:min(100%, 680px);margin:0 auto}.single.read-page{background:#f5f5f7}</style></head><body class="single read-page"><main class="read-shell sample-card"><article class="study-card knowledge-card layout-bilingual" lang="zh-Hans" data-ordinal="30"><header class="k-head"><h1 class="k-title" lang="en">create</h1></header><div class="k-lead"><p><strong>动词</strong> · 创建原来没有的事物；创造。</p></div><div class="k-example"><p class="k-label">用法示例</p><div class="k-sentence" lang="en"><p>The dorm residents <strong>created a shared calendar</strong> so everyone could see when the washing machines were booked.</p></div><div class="k-gloss"><p>宿舍的住户建了一个共享日历，好让大家都能看到洗衣机哪些时段已被预约。</p></div></div><div class="k-note"><p class="k-label">辨析</p><p><strong>create a folder</strong> 是新建文件夹；<strong>rename a folder</strong> 只是给已有的文件夹改名。</p></div></article></main></body></html>
