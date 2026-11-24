@@ -480,9 +480,11 @@
   display: block;
   width: 100%;
   height: clamp(9rem, 64cqw, 20rem);
+  padding: .35rem;
   object-fit: contain;
   background: #f7f5ef;
-  border-radius: 5px;
+  border: 1px solid #e9e5dc;
+  border-radius: 6px;
 }
 .specimen figcaption {
   display: flex;
@@ -494,7 +496,13 @@
 }
 .specimen figcaption span:first-child { font-weight: 625; }
 .breed-portrait .kind-illustration { margin: calc(-1 * var(--inset)) calc(-1 * var(--inset)) 0; }
-.breed-portrait .specimen img { border-radius: 12px 12px 0 0; height: clamp(11rem, 75cqw, 20rem); }
+.breed-portrait .specimen img {
+  border: 0;
+  border-bottom: 1px solid var(--line);
+  border-radius: 12px 12px 0 0;
+  padding: .45rem .5rem 0;
+  height: clamp(11rem, 75cqw, 20rem);
+}
 .breed-portrait .specimen figcaption { padding-inline: var(--inset); }
 
 .read-shell{width:min(100%, 680px);margin:0 auto}.single.read-page{background:#f5f5f7}</style></head><body class="single read-page"><main class="read-shell sample-card"><article class="study-card knowledge-card layout-graph" lang="en" data-ordinal="40"><header class="k-head"><h1 class="k-title">A stationary point need not be an extremum</h1></header><div class="k-lead"><p>For a function continuous at a candidate point, the first derivative test compares the derivative signs on nearby intervals on either side. A change from positive to negative gives a local maximum; a change from negative to positive gives a local minimum.</p></div><div class="k-visual kind-graph"><svg class="diagram" viewBox="0 0 360 190" role="img" aria-label="y = x³" xmlns="http://www.w3.org/2000/svg"><text class="plot-title" x="37.00" y="19.00" text-anchor="start">y = x³</text><line class="grid" x1="106.63" y1="34.00" x2="106.63" y2="158.00"/><text class="" x="106.63" y="177.00" text-anchor="middle">-1</text><line class="grid" x1="184.00" y1="34.00" x2="184.00" y2="158.00"/><text class="" x="184.00" y="177.00" text-anchor="middle">0</text><line class="grid" x1="261.37" y1="34.00" x2="261.37" y2="158.00"/><text class="" x="261.37" y="177.00" text-anchor="middle">1</text><line class="grid" x1="37.00" y1="130.35" x2="331.00" y2="130.35"/><text class="" x="30.00" y="134.35" text-anchor="end">-4</text><line class="grid" x1="37.00" y1="62.65" x2="331.00" y2="62.65"/><text class="" x="30.00" y="66.65" text-anchor="end">4</text><line class="axis" x1="37.00" y1="96.50" x2="341.00" y2="96.50"/><path class="axis" d="M 334.00,93.00 341.00,96.50 334.00,100.00"/><line class="axis" x1="184.00" y1="158.00" x2="184.00" y2="31.00"/><path class="axis" d="M 180.50,38.00 184.00,31.00 187.50,38.00"/><text class="" x="350.00" y="100.50" text-anchor="middle">x</text><text class="" x="195.00" y="33.00" text-anchor="middle">y</text><path class="curve" d="M 37.00,154.54 39.94,151.12 42.88,147.85 45.82,144.71 48.76,141.69 51.70,138.81 54.64,136.05 57.58,133.42 60.52,130.90 63.46,128.50 66.40,126.22 69.34,124.04 72.28,121.98 75.22,120.02 78.16,118.16 81.10,116.41 84.04,114.75 86.98,113.19 89.92,111.71 92.86,110.33 95.80,109.04 98.74,107.82 101.68,106.69 104.62,105.64 107.56,104.66 110.50,103.75 113.44,102.92 116.38,102.15 119.32,101.44 122.26,100.80 125.20,100.21 128.14,99.68 131.08,99.21 134.02,98.78 136.96,98.40 139.90,98.07 142.84,97.77 145.78,97.52 148.72,97.30 151.66,97.12 154.60,96.96 157.54,96.84 160.48,96.74 163.42,96.66 166.36,96.60 169.30,96.56 172.24,96.53 175.18,96.51 178.12,96.50 181.06,96.50 184.00,96.50 186.94,96.50 189.88,96.50 192.82,96.49 195.76,96.47 198.70,96.44 201.64,96.40 204.58,96.34 207.52,96.26 210.46,96.16 213.40,96.04 216.34,95.88 219.28,95.70 222.22,95.48 225.16,95.23 228.10,94.93 231.04,94.60 233.98,94.22 236.92,93.79 239.86,93.32 242.80,92.79 245.74,92.20 248.68,91.56 251.62,90.85 254.56,90.08 257.50,89.25 260.44,88.34 263.38,87.36 266.32,86.31 269.26,85.18 272.20,83.96 275.14,82.67 278.08,81.29 281.02,79.81 283.96,78.25 286.90,76.59 289.84,74.84 292.78,72.98 295.72,71.02 298.66,68.96 301.60,66.78 304.54,64.50 307.48,62.10 310.42,59.58 313.36,56.95 316.30,54.19 319.24,51.31 322.18,48.29 325.12,45.15 328.06,41.88 331.00,38.46"/></svg></div><div class="k-example"><p class="k-label">Worked example</p><p>On the graph <code>f(x)=x³</code>, <code>f′(x)=3x²</code>, so <code>f′(0)=0</code>. For both <code>x&lt;0</code> and <code>x&gt;0</code>, <code>3x²&gt;0</code>; the function rises on each side. In fact, <code>f(x)&lt;f(0)=0</code> on the left and <code>f(x)&gt;0</code> on the right.</p><p>There is no change from rising to falling or vice versa, so <code>0</code> is neither a local maximum nor a local minimum.</p></div></article></main></body></html>

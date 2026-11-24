@@ -480,9 +480,11 @@
   display: block;
   width: 100%;
   height: clamp(9rem, 64cqw, 20rem);
+  padding: .35rem;
   object-fit: contain;
   background: #f7f5ef;
-  border-radius: 5px;
+  border: 1px solid #e9e5dc;
+  border-radius: 6px;
 }
 .specimen figcaption {
   display: flex;
@@ -494,7 +496,13 @@
 }
 .specimen figcaption span:first-child { font-weight: 625; }
 .breed-portrait .kind-illustration { margin: calc(-1 * var(--inset)) calc(-1 * var(--inset)) 0; }
-.breed-portrait .specimen img { border-radius: 12px 12px 0 0; height: clamp(11rem, 75cqw, 20rem); }
+.breed-portrait .specimen img {
+  border: 0;
+  border-bottom: 1px solid var(--line);
+  border-radius: 12px 12px 0 0;
+  padding: .45rem .5rem 0;
+  height: clamp(11rem, 75cqw, 20rem);
+}
 .breed-portrait .specimen figcaption { padding-inline: var(--inset); }
 
 .read-shell{width:min(100%, 680px);margin:0 auto}.single.read-page{background:#f5f5f7}</style></head><body class="single read-page"><main class="read-shell sample-card"><article class="study-card knowledge-card layout-graph" lang="en" data-ordinal="49"><header class="k-head"><h1 class="k-title">A Riemann sum becomes exact in the limit</h1></header><div class="k-lead"><p>For a continuous function on a closed, bounded interval, the definite integral is the limit of rectangle sums as the largest subinterval width shrinks to zero. A right-endpoint sum uses the function value at the right edge of each subinterval.</p></div><div class="k-visual kind-table"><div class="data-table"><table><thead><tr><th scope="col">Rectangle</th><th scope="col">Right height</th><th scope="col">Area</th></tr></thead><tbody><tr><td>First</td><td>1/n</td><td>1/n²</td></tr><tr><td>kth</td><td>k/n</td><td>k/n²</td></tr><tr><td>Last</td><td>1</td><td>1/n</td></tr></tbody></table></div></div><div class="k-example"><p class="k-label">Worked example</p><p>For <code>y=x</code> on <code>[0,1]</code>, divide into <code>n</code> equal intervals of width <code>1/n</code>. Rectangle <code>k</code>, for <code>k=1,…,n</code>, has right edge <code>k/n</code>, so its area is <code>k/n²</code>.</p><p>The integers from <code>1</code> to <code>n</code> sum to <code>n(n+1)/2</code>: adding the sum to its reverse gives <code>n</code> copies of <code>n+1</code>. Hence the rectangle total is <code>n(n+1)/(2n²)=1/2+1/(2n)</code>. As <code>n→∞</code> the last term vanishes, so the exact integral is <code>1/2</code>.</p></div><div class="k-note"><p class="k-label">Note</p><p>Every right-endpoint sum overestimates the area because <code>y=x</code> increases, but the excess tends to zero.</p></div></article></main></body></html>

@@ -480,9 +480,11 @@
   display: block;
   width: 100%;
   height: clamp(9rem, 64cqw, 20rem);
+  padding: .35rem;
   object-fit: contain;
   background: #f7f5ef;
-  border-radius: 5px;
+  border: 1px solid #e9e5dc;
+  border-radius: 6px;
 }
 .specimen figcaption {
   display: flex;
@@ -494,7 +496,13 @@
 }
 .specimen figcaption span:first-child { font-weight: 625; }
 .breed-portrait .kind-illustration { margin: calc(-1 * var(--inset)) calc(-1 * var(--inset)) 0; }
-.breed-portrait .specimen img { border-radius: 12px 12px 0 0; height: clamp(11rem, 75cqw, 20rem); }
+.breed-portrait .specimen img {
+  border: 0;
+  border-bottom: 1px solid var(--line);
+  border-radius: 12px 12px 0 0;
+  padding: .45rem .5rem 0;
+  height: clamp(11rem, 75cqw, 20rem);
+}
 .breed-portrait .specimen figcaption { padding-inline: var(--inset); }
 
-.read-shell{width:min(100%, 680px);margin:0 auto}.single.read-page{background:#f5f5f7}</style></head><body class="single read-page"><main class="read-shell sample-card"><article class="study-card knowledge-card layout-graph" lang="en" data-ordinal="3"><header class="k-head"><h1 class="k-title">Similar triangles and scale</h1></header><div class="k-lead"><p>Similar triangles have the same angles and proportional corresponding sides. Objects casting shadows at the same sun angle can form similar right triangles.</p></div><div class="k-visual kind-diagram"><svg class="diagram" viewBox="0 0 360 190" role="img" aria-label="Two right triangles share the sunlight angle. The 1.6 m marker&#x27;s shadow is 2 m; a taller pole has a 7.5 m shadow." xmlns="http://www.w3.org/2000/svg"><line class="rule" x1="12.00" y1="144.00" x2="350.00" y2="144.00"/><path class="curve" d="M 35.00,144.00 35.00,112.00 75.00,144.00 Z"/><path class="curve" d="M 140.00,144.00 140.00,24.00 290.00,144.00 Z"/><line class="guide" x1="30.00" y1="103.00" x2="35.00" y2="114.00"/><text class="" x="14.00" y="99.00" text-anchor="start">1.6 m</text><text class="" x="54.00" y="166.00" text-anchor="middle">2 m</text><text class="" x="218.00" y="166.00" text-anchor="middle">7.5 m</text><text class="" x="126.00" y="81.00" text-anchor="end">?</text><path class="axis" d="M 35.00,136.00 43.00,136.00 43.00,144.00"/><path class="axis" d="M 140.00,134.00 150.00,134.00 150.00,144.00"/><text class="" x="282.00" y="51.00" text-anchor="middle">Parallel rays</text></svg></div><div class="k-example"><p class="k-label">Worked example</p><p>On flat ground, a vertical 1.6 m marker casts a 2 m shadow while a vertical pole casts a 7.5 m shadow. The rays come in parallel.</p><p><strong>6 m</strong>. Each triangle has a right angle and the same sunlight angle, so they are similar. The height is <code>1.6·(7.5/2)</code>.</p></div></article></main></body></html>
+.read-shell{width:min(100%, 680px);margin:0 auto}.single.read-page{background:#f5f5f7}</style></head><body class="single read-page"><main class="read-shell sample-card"><article class="study-card knowledge-card layout-graph" lang="en" data-ordinal="3"><header class="k-head"><h1 class="k-title">Similar triangles and scale</h1></header><div class="k-lead"><p>Similar triangles have the same angles and proportional corresponding sides. Objects casting shadows at the same sun angle can form similar right triangles.</p></div><div class="k-visual kind-diagram"><svg class="diagram" viewBox="0 0 360 190" role="img" aria-label="Two right triangles share the sunlight angle. The 1.6 m marker&#x27;s shadow is 2 m; the 6 m pole casts a 7.5 m shadow." xmlns="http://www.w3.org/2000/svg"><line class="rule" x1="12.00" y1="144.00" x2="350.00" y2="144.00"/><path class="curve" d="M 35.00,144.00 35.00,112.00 75.00,144.00 Z"/><path class="curve" d="M 140.00,144.00 140.00,24.00 290.00,144.00 Z"/><line class="guide" x1="30.00" y1="103.00" x2="35.00" y2="114.00"/><text class="" x="14.00" y="99.00" text-anchor="start">1.6 m</text><text class="" x="54.00" y="166.00" text-anchor="middle">2 m</text><text class="" x="218.00" y="166.00" text-anchor="middle">7.5 m</text><text class="" x="126.00" y="81.00" text-anchor="end">h = 6 m</text><path class="axis" d="M 35.00,136.00 43.00,136.00 43.00,144.00"/><path class="axis" d="M 140.00,134.00 150.00,134.00 150.00,144.00"/><text class="" x="282.00" y="51.00" text-anchor="middle">Parallel rays</text></svg></div><div class="k-example"><p class="k-label">Worked example</p><p>On flat ground under parallel sunbeams, a vertical <code>1.6 m</code> marker casts a <code>2 m</code> shadow while a vertical pole casts a <code>7.5 m</code> shadow. Both right triangles share the sunlight angle and are similar, so the <strong>pole’s height is <code>1.6 · (7.5 / 2) = 6 m</code></strong>.</p></div></article></main></body></html>

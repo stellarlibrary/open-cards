@@ -480,9 +480,11 @@
   display: block;
   width: 100%;
   height: clamp(9rem, 64cqw, 20rem);
+  padding: .35rem;
   object-fit: contain;
   background: #f7f5ef;
-  border-radius: 5px;
+  border: 1px solid #e9e5dc;
+  border-radius: 6px;
 }
 .specimen figcaption {
   display: flex;
@@ -494,7 +496,13 @@
 }
 .specimen figcaption span:first-child { font-weight: 625; }
 .breed-portrait .kind-illustration { margin: calc(-1 * var(--inset)) calc(-1 * var(--inset)) 0; }
-.breed-portrait .specimen img { border-radius: 12px 12px 0 0; height: clamp(11rem, 75cqw, 20rem); }
+.breed-portrait .specimen img {
+  border: 0;
+  border-bottom: 1px solid var(--line);
+  border-radius: 12px 12px 0 0;
+  padding: .45rem .5rem 0;
+  height: clamp(11rem, 75cqw, 20rem);
+}
 .breed-portrait .specimen figcaption { padding-inline: var(--inset); }
 
-.read-shell{width:min(100%, 680px);margin:0 auto}.single.read-page{background:#f5f5f7}</style></head><body class="single read-page"><main class="read-shell sample-card"><article class="study-card knowledge-card layout-toolkit" lang="en" data-ordinal="12"><header class="k-head"><h1 class="k-title">Break-even quantity</h1></header><div class="k-lead"><p>Break-even is where revenue covers fixed and variable costs. If the unit contribution is positive, divide fixed cost by unit contribution and round up to a whole unit when needed.</p></div><div class="k-visual kind-table"><div class="data-table"><table><thead><tr><th scope="col">Choice</th><th scope="col">Monthly cost</th></tr></thead><tbody><tr><td>Plan</td><td>$12 + $3n</td></tr><tr><td>Per visit</td><td>$5n</td></tr></tbody></table></div></div><div class="k-example"><p class="k-label">In practice</p><p>A monthly plan costs $12 plus $3 per visit. Paying each time costs $5 per visit with no monthly fee.</p><p><strong>Six visits; the plan is cheaper at eight.</strong> Solve 12 + 3n = 5n. At eight visits the plan is $36 and pay-as-you-go is $40.</p></div></article></main></body></html>
+.read-shell{width:min(100%, 680px);margin:0 auto}.single.read-page{background:#f5f5f7}</style></head><body class="single read-page"><main class="read-shell sample-card"><article class="study-card knowledge-card layout-toolkit" lang="en" data-ordinal="12"><header class="k-head"><h1 class="k-title">Break-even quantity</h1></header><div class="k-lead"><p>Break-even is where revenue covers fixed and variable costs. If the unit contribution is positive, divide fixed cost by unit contribution and round up to a whole unit when needed.</p></div><div class="k-visual kind-table"><div class="data-table"><table><thead><tr><th scope="col">Choice</th><th scope="col">Monthly cost</th></tr></thead><tbody><tr><td>Plan</td><td>$12 + $3n</td></tr><tr><td>Per visit</td><td>$5n</td></tr></tbody></table></div></div><div class="k-example"><p class="k-label">In practice</p><p>Comparing a <code>$12 + $3n</code> monthly plan against <code>$5n</code> per visit, setting <code>12 + 3n = 5n</code> gives <strong>break-even at <code>n = 6</code> visits (<code>$30</code> each)</strong>; above six visits—such as <code>8</code> visits (<code>$36</code> on the plan versus <code>$40</code> per visit)—the monthly plan costs less.</p></div></article></main></body></html>

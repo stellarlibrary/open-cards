@@ -480,9 +480,11 @@
   display: block;
   width: 100%;
   height: clamp(9rem, 64cqw, 20rem);
+  padding: .35rem;
   object-fit: contain;
   background: #f7f5ef;
-  border-radius: 5px;
+  border: 1px solid #e9e5dc;
+  border-radius: 6px;
 }
 .specimen figcaption {
   display: flex;
@@ -494,7 +496,13 @@
 }
 .specimen figcaption span:first-child { font-weight: 625; }
 .breed-portrait .kind-illustration { margin: calc(-1 * var(--inset)) calc(-1 * var(--inset)) 0; }
-.breed-portrait .specimen img { border-radius: 12px 12px 0 0; height: clamp(11rem, 75cqw, 20rem); }
+.breed-portrait .specimen img {
+  border: 0;
+  border-bottom: 1px solid var(--line);
+  border-radius: 12px 12px 0 0;
+  padding: .45rem .5rem 0;
+  height: clamp(11rem, 75cqw, 20rem);
+}
 .breed-portrait .specimen figcaption { padding-inline: var(--inset); }
 
-.read-shell{width:min(100%, 680px);margin:0 auto}.single.read-page{background:#f5f5f7}</style></head><body class="single read-page"><main class="read-shell sample-card"><article class="study-card knowledge-card layout-toolkit" lang="en" data-ordinal="8"><header class="k-head"><h1 class="k-title">Impeachment, conviction and removal</h1></header><div class="k-lead"><p>The House impeaches by bringing charges. The Senate tries the impeachment; conviction requires two thirds of the senators present.</p></div><div class="k-visual kind-table"><div class="data-table"><table><thead><tr><th scope="col">House</th><th scope="col">Senate</th></tr></thead><tbody><tr><td>Decides whether to impeach</td><td>Tries the case and needs two thirds present to convict</td></tr></tbody></table></div></div><div class="k-example"><p class="k-label">In practice</p><p>An officer can be impeached but remain in office if the Senate does not convict. For an officer subject to removal, conviction and removal are distinct from any criminal prosecution.</p></div></article></main></body></html>
+.read-shell{width:min(100%, 680px);margin:0 auto}.single.read-page{background:#f5f5f7}</style></head><body class="single read-page"><main class="read-shell sample-card"><article class="study-card knowledge-card layout-toolkit" lang="en" data-ordinal="8"><header class="k-head"><h1 class="k-title">Impeachment, conviction and removal</h1></header><div class="k-lead"><p>The House of Representatives impeaches by voting articles of charge by simple majority. The Senate tries the impeachment, and conviction requires the concurrence of two thirds of the senators present.</p></div><div class="k-visual kind-table"><div class="data-table"><table><thead><tr><th scope="col">House</th><th scope="col">Senate</th></tr></thead><tbody><tr><td>Decides whether to impeach</td><td>Tries the case and needs two thirds present to convict</td></tr></tbody></table></div></div><div class="k-example"><p class="k-label">In practice</p><p>A federal officer impeached by the House remains in office if the Senate acquits or falls short of two thirds. Constitutional remedies upon conviction are limited to removal and possible disqualification from federal office, separate from any criminal prosecution.</p></div></article></main></body></html>

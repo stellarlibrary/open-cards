@@ -480,9 +480,11 @@
   display: block;
   width: 100%;
   height: clamp(9rem, 64cqw, 20rem);
+  padding: .35rem;
   object-fit: contain;
   background: #f7f5ef;
-  border-radius: 5px;
+  border: 1px solid #e9e5dc;
+  border-radius: 6px;
 }
 .specimen figcaption {
   display: flex;
@@ -494,7 +496,13 @@
 }
 .specimen figcaption span:first-child { font-weight: 625; }
 .breed-portrait .kind-illustration { margin: calc(-1 * var(--inset)) calc(-1 * var(--inset)) 0; }
-.breed-portrait .specimen img { border-radius: 12px 12px 0 0; height: clamp(11rem, 75cqw, 20rem); }
+.breed-portrait .specimen img {
+  border: 0;
+  border-bottom: 1px solid var(--line);
+  border-radius: 12px 12px 0 0;
+  padding: .45rem .5rem 0;
+  height: clamp(11rem, 75cqw, 20rem);
+}
 .breed-portrait .specimen figcaption { padding-inline: var(--inset); }
 
-.read-shell{width:min(100%, 680px);margin:0 auto}.single.read-page{background:#f5f5f7}</style></head><body class="single read-page"><main class="read-shell sample-card"><article class="study-card knowledge-card layout-atlas" lang="en" data-ordinal="2"><header class="k-head"><h1 class="k-title">Temperature and relative humidity</h1></header><div class="k-visual kind-table"><div class="data-table"><table><thead><tr><th scope="col">Stage</th><th scope="col">Actual vapor pressure (hPa)</th><th scope="col">Saturation vapor pressure (hPa)</th></tr></thead><tbody><tr><td>Cooler</td><td>12</td><td>16</td></tr><tr><td>Warmer</td><td>12</td><td>24</td></tr></tbody></table></div></div><div class="k-lead"><p>Relative humidity compares current water-vapour pressure with saturation pressure at the same temperature. Warming without adding water vapour usually lowers relative humidity.</p></div><div class="k-example"><p class="k-label">How it works</p><p>A parcel of air warms. Its actual water vapor pressure stays at 12 hPa, but its saturation vapor pressure rises from 16 to 24 hPa. Relative humidity is actual divided by saturation vapor pressure, expressed as a percentage.</p><p>It falls from 75% to 50%. The actual vapor pressure stays fixed while the saturation value in the denominator increases.</p></div></article></main></body></html>
+.read-shell{width:min(100%, 680px);margin:0 auto}.single.read-page{background:#f5f5f7}</style></head><body class="single read-page"><main class="read-shell sample-card"><article class="study-card knowledge-card layout-atlas" lang="en" data-ordinal="2"><header class="k-head"><h1 class="k-title">Temperature and relative humidity</h1></header><div class="k-visual kind-table"><div class="data-table"><table><thead><tr><th scope="col">Stage</th><th scope="col">Actual vapor pressure (hPa)</th><th scope="col">Saturation vapor pressure (hPa)</th></tr></thead><tbody><tr><td>Cooler</td><td>12</td><td>16</td></tr><tr><td>Warmer</td><td>12</td><td>24</td></tr></tbody></table></div></div><div class="k-lead"><p>Relative humidity compares current water-vapor pressure with saturation pressure at the same temperature. Warming without adding water vapor usually lowers relative humidity.</p></div><div class="k-example"><p class="k-label">How it works</p><p>When an air parcel warms at a fixed water-vapor pressure of <code>12 hPa</code> while saturation vapor pressure rises from <code>16 hPa</code> to <code>24 hPa</code>, <strong>relative humidity drops from <code>12/16 = 75%</code> to <code>12/24 = 50%</code></strong>.</p></div></article></main></body></html>

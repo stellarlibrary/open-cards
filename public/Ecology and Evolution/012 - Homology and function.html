@@ -480,9 +480,11 @@
   display: block;
   width: 100%;
   height: clamp(9rem, 64cqw, 20rem);
+  padding: .35rem;
   object-fit: contain;
   background: #f7f5ef;
-  border-radius: 5px;
+  border: 1px solid #e9e5dc;
+  border-radius: 6px;
 }
 .specimen figcaption {
   display: flex;
@@ -494,7 +496,13 @@
 }
 .specimen figcaption span:first-child { font-weight: 625; }
 .breed-portrait .kind-illustration { margin: calc(-1 * var(--inset)) calc(-1 * var(--inset)) 0; }
-.breed-portrait .specimen img { border-radius: 12px 12px 0 0; height: clamp(11rem, 75cqw, 20rem); }
+.breed-portrait .specimen img {
+  border: 0;
+  border-bottom: 1px solid var(--line);
+  border-radius: 12px 12px 0 0;
+  padding: .45rem .5rem 0;
+  height: clamp(11rem, 75cqw, 20rem);
+}
 .breed-portrait .specimen figcaption { padding-inline: var(--inset); }
 
-.read-shell{width:min(100%, 680px);margin:0 auto}.single.read-page{background:#f5f5f7}</style></head><body class="single read-page"><main class="read-shell sample-card"><article class="study-card knowledge-card layout-lab" lang="en" data-ordinal="12"><header class="k-head"><h1 class="k-title">Homology and function</h1></header><div class="k-lead"><p>Homologous structures share ancestry even when their present functions differ. Similar function alone does not establish shared structural ancestry.</p></div><div class="k-visual kind-table"><div class="data-table"><table><thead><tr><th scope="col">Limb</th><th scope="col">Main use here</th><th scope="col">Bone pattern</th></tr></thead><tbody><tr><td>Seal flipper</td><td>swimming</td><td>one upper-arm bone, two forearm bones, wrist and digits</td></tr><tr><td>Cat foreleg</td><td>walking</td><td>corresponding bones in the same order</td></tr></tbody></table></div></div><div class="k-example"><p class="k-label">What you observe</p><p>A seal&#x27;s flipper and a cat&#x27;s foreleg both have one upper-arm bone, two forearm bones, and corresponding wrist and digit bones. One mainly pushes against water; the other supports walking.</p><p>Shared ancestry. These limbs are homologous: the same underlying arrangement was inherited from a common ancestor and modified for different functions.</p></div></article></main></body></html>
+.read-shell{width:min(100%, 680px);margin:0 auto}.single.read-page{background:#f5f5f7}</style></head><body class="single read-page"><main class="read-shell sample-card"><article class="study-card knowledge-card layout-lab" lang="en" data-ordinal="12"><header class="k-head"><h1 class="k-title">Homology and function</h1></header><div class="k-lead"><p>Homologous structures share ancestry even when their present functions differ. Similar function alone does not establish shared structural ancestry.</p></div><div class="k-visual kind-table"><div class="data-table"><table><thead><tr><th scope="col">Limb</th><th scope="col">Main use here</th><th scope="col">Bone pattern</th></tr></thead><tbody><tr><td>Seal flipper</td><td>swimming</td><td>one upper-arm bone, two forearm bones, wrist and digits</td></tr><tr><td>Cat foreleg</td><td>walking</td><td>corresponding bones in the same order</td></tr></tbody></table></div></div><div class="k-example"><p class="k-label">What you observe</p><p>A seal&#x27;s swimming flipper and a cat&#x27;s walking foreleg share the same sequence—one upper-arm bone, two forearm bones, wrist, and digits—pointing to <strong>homologous inheritance from a common ancestor</strong> despite divergent functions.</p></div></article></main></body></html>

@@ -480,9 +480,11 @@
   display: block;
   width: 100%;
   height: clamp(9rem, 64cqw, 20rem);
+  padding: .35rem;
   object-fit: contain;
   background: #f7f5ef;
-  border-radius: 5px;
+  border: 1px solid #e9e5dc;
+  border-radius: 6px;
 }
 .specimen figcaption {
   display: flex;
@@ -494,7 +496,13 @@
 }
 .specimen figcaption span:first-child { font-weight: 625; }
 .breed-portrait .kind-illustration { margin: calc(-1 * var(--inset)) calc(-1 * var(--inset)) 0; }
-.breed-portrait .specimen img { border-radius: 12px 12px 0 0; height: clamp(11rem, 75cqw, 20rem); }
+.breed-portrait .specimen img {
+  border: 0;
+  border-bottom: 1px solid var(--line);
+  border-radius: 12px 12px 0 0;
+  padding: .45rem .5rem 0;
+  height: clamp(11rem, 75cqw, 20rem);
+}
 .breed-portrait .specimen figcaption { padding-inline: var(--inset); }
 
-.read-shell{width:min(100%, 680px);margin:0 auto}.single.read-page{background:#f5f5f7}</style></head><body class="single read-page"><main class="read-shell sample-card"><article class="study-card knowledge-card layout-toolkit" lang="en" data-ordinal="4"><header class="k-head"><h1 class="k-title">Dividing quantities in a ratio</h1></header><div class="k-lead"><p>A ratio <code>a:b</code> divides the total into <code>a+b</code> equal shares. Each group receives its specified number of shares.</p></div><div class="k-visual kind-table"><div class="data-table"><table><thead><tr><th scope="col">Shelf</th><th scope="col">Shares</th></tr></thead><tbody><tr><td>Fiction</td><td>5</td></tr><tr><td>Non-fiction</td><td>2</td></tr><tr><td>Both</td><td>7</td></tr></tbody></table></div></div><div class="k-example"><p class="k-label">In practice</p><p>A library puts 84 new books on the fiction and non-fiction shelves in the ratio 5:2, in that order.</p><p><strong>60 fiction and 24 non-fiction.</strong> There are 7 equal shares, so each share is 12 books. Allocate 5 shares and 2 shares respectively.</p></div></article></main></body></html>
+.read-shell{width:min(100%, 680px);margin:0 auto}.single.read-page{background:#f5f5f7}</style></head><body class="single read-page"><main class="read-shell sample-card"><article class="study-card knowledge-card layout-toolkit" lang="en" data-ordinal="4"><header class="k-head"><h1 class="k-title">Dividing quantities in a ratio</h1></header><div class="k-lead"><p>A ratio <code>a:b</code> divides the total into <code>a+b</code> equal shares. Each group receives its specified number of shares.</p></div><div class="k-visual kind-table"><div class="data-table"><table><thead><tr><th scope="col">Shelf</th><th scope="col">Shares</th></tr></thead><tbody><tr><td>Fiction</td><td>5</td></tr><tr><td>Non-fiction</td><td>2</td></tr><tr><td>Both</td><td>7</td></tr></tbody></table></div></div><div class="k-example"><p class="k-label">In practice</p><p>Putting <code>84</code> new books onto fiction and non-fiction shelves in the ratio <code>5 : 2</code> splits the total into <code>5 + 2 = 7</code> equal shares of <code>84 ÷ 7 = 12</code> books each, placing <strong><code>60</code> books on fiction (<code>5 × 12</code>) and <code>24</code> on non-fiction (<code>2 × 12</code>)</strong>.</p></div></article></main></body></html>

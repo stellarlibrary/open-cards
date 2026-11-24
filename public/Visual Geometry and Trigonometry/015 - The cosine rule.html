@@ -480,9 +480,11 @@
   display: block;
   width: 100%;
   height: clamp(9rem, 64cqw, 20rem);
+  padding: .35rem;
   object-fit: contain;
   background: #f7f5ef;
-  border-radius: 5px;
+  border: 1px solid #e9e5dc;
+  border-radius: 6px;
 }
 .specimen figcaption {
   display: flex;
@@ -494,7 +496,13 @@
 }
 .specimen figcaption span:first-child { font-weight: 625; }
 .breed-portrait .kind-illustration { margin: calc(-1 * var(--inset)) calc(-1 * var(--inset)) 0; }
-.breed-portrait .specimen img { border-radius: 12px 12px 0 0; height: clamp(11rem, 75cqw, 20rem); }
+.breed-portrait .specimen img {
+  border: 0;
+  border-bottom: 1px solid var(--line);
+  border-radius: 12px 12px 0 0;
+  padding: .45rem .5rem 0;
+  height: clamp(11rem, 75cqw, 20rem);
+}
 .breed-portrait .specimen figcaption { padding-inline: var(--inset); }
 
-.read-shell{width:min(100%, 680px);margin:0 auto}.single.read-page{background:#f5f5f7}</style></head><body class="single read-page"><main class="read-shell sample-card"><article class="study-card knowledge-card layout-graph" lang="en" data-ordinal="15"><header class="k-head"><h1 class="k-title">The cosine rule</h1></header><div class="k-lead"><p>If sides <code>a</code> and <code>b</code> enclose angle <code>C</code>, the opposite side satisfies <code>c²=a²+b²−2ab cos C</code>. At <code>90°</code> the relation reduces to Pythagoras.</p></div><div class="k-visual kind-diagram"><svg class="diagram" viewBox="0 0 360 190" role="img" aria-label="Triangle has sides 7 cm and 8 cm around the included angle of 60 degrees. The opposite side c is unknown." xmlns="http://www.w3.org/2000/svg"><path class="curve" d="M 67.00,151.00 219.00,151.00 133.50,35.82 Z"/><path class="accent" d="M 109.00,151.00 108.97,149.43 108.88,147.86 108.74,146.30 108.53,144.74 108.27,143.19 107.95,141.65 107.57,140.13 107.13,138.62 106.64,137.13 106.10,135.66 105.50,134.20 104.84,132.78 104.13,131.37 103.37,130.00 102.56,128.65 101.70,127.34 100.79,126.06 99.84,124.81 98.83,123.60 97.79,122.43 96.70,121.30 95.57,120.21 94.40,119.17 93.19,118.16 91.94,117.21 90.66,116.30 89.35,115.44 88.00,114.63"/><text class="" x="122.00" y="132.00" text-anchor="middle">60°</text><text class="" x="144.00" y="172.00" text-anchor="middle">8 cm</text><text class="" x="85.00" y="75.00" text-anchor="end">7 cm</text><text class="" x="199.00" y="80.00" text-anchor="start">c ?</text></svg></div><div class="k-example"><p class="k-label">Worked example</p><p>Two sides are 7 cm and 8 cm, and the angle between them is 60°.</p><p><strong>√57 cm</strong>. The cosine rule gives <code>c²=7²+8²−2·7·8 cos 60°=57</code>. The included angle belongs opposite the unknown side.</p></div></article></main></body></html>
+.read-shell{width:min(100%, 680px);margin:0 auto}.single.read-page{background:#f5f5f7}</style></head><body class="single read-page"><main class="read-shell sample-card"><article class="study-card knowledge-card layout-graph" lang="en" data-ordinal="15"><header class="k-head"><h1 class="k-title">The cosine rule</h1></header><div class="k-lead"><p>If sides <code>a</code> and <code>b</code> enclose angle <code>C</code>, the opposite side satisfies <code>c²=a²+b²−2ab cos C</code>. At <code>90°</code> the relation reduces to Pythagoras.</p></div><div class="k-visual kind-diagram"><svg class="diagram" viewBox="0 0 360 190" role="img" aria-label="Triangle has sides 7 cm and 8 cm around the included angle of 60 degrees. The opposite side c is √57 cm." xmlns="http://www.w3.org/2000/svg"><path class="curve" d="M 67.00,151.00 219.00,151.00 133.50,35.82 Z"/><path class="accent" d="M 109.00,151.00 108.97,149.43 108.88,147.86 108.74,146.30 108.53,144.74 108.27,143.19 107.95,141.65 107.57,140.13 107.13,138.62 106.64,137.13 106.10,135.66 105.50,134.20 104.84,132.78 104.13,131.37 103.37,130.00 102.56,128.65 101.70,127.34 100.79,126.06 99.84,124.81 98.83,123.60 97.79,122.43 96.70,121.30 95.57,120.21 94.40,119.17 93.19,118.16 91.94,117.21 90.66,116.30 89.35,115.44 88.00,114.63"/><text class="" x="122.00" y="132.00" text-anchor="middle">60°</text><text class="" x="144.00" y="172.00" text-anchor="middle">8 cm</text><text class="" x="85.00" y="75.00" text-anchor="end">7 cm</text><text class="" x="199.00" y="80.00" text-anchor="start">c = √57 cm</text></svg></div><div class="k-example"><p class="k-label">Worked example</p><p>In a triangle where sides of <code>7 cm</code> and <code>8 cm</code> enclose an angle of <code>60°</code>, the cosine rule gives <code>c² = 7² + 8² − 2·7·8 cos 60° = 49 + 64 − 56 = 57</code>, so the <strong>opposite side has exact length <code>c = √57 cm</code></strong>.</p></div></article></main></body></html>

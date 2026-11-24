@@ -480,9 +480,11 @@
   display: block;
   width: 100%;
   height: clamp(9rem, 64cqw, 20rem);
+  padding: .35rem;
   object-fit: contain;
   background: #f7f5ef;
-  border-radius: 5px;
+  border: 1px solid #e9e5dc;
+  border-radius: 6px;
 }
 .specimen figcaption {
   display: flex;
@@ -494,7 +496,13 @@
 }
 .specimen figcaption span:first-child { font-weight: 625; }
 .breed-portrait .kind-illustration { margin: calc(-1 * var(--inset)) calc(-1 * var(--inset)) 0; }
-.breed-portrait .specimen img { border-radius: 12px 12px 0 0; height: clamp(11rem, 75cqw, 20rem); }
+.breed-portrait .specimen img {
+  border: 0;
+  border-bottom: 1px solid var(--line);
+  border-radius: 12px 12px 0 0;
+  padding: .45rem .5rem 0;
+  height: clamp(11rem, 75cqw, 20rem);
+}
 .breed-portrait .specimen figcaption { padding-inline: var(--inset); }
 
-.read-shell{width:min(100%, 680px);margin:0 auto}.single.read-page{background:#f5f5f7}</style></head><body class="single read-page"><main class="read-shell sample-card"><article class="study-card knowledge-card layout-lab" lang="en" data-ordinal="15"><header class="k-head"><h1 class="k-title">Epistasis</h1></header><div class="k-lead"><p>An allele at one gene can mask the visible effects of another. If an earlier step in a process is blocked, variation in a later step may no longer be visible.</p></div><div class="k-visual kind-table"><div class="data-table"><table><thead><tr><th scope="col">Pigment-production genotype</th><th scope="col">What happens at the color locus</th></tr></thead><tbody><tr><td>At least one M</td><td>C or cc affects hue</td></tr><tr><td>mm</td><td>Neither hue appears</td></tr></tbody></table></div></div><div class="k-example"><p class="k-label">What you observe</p><p>In a model seed, at least one <code>M</code> allele is needed to make pigment at all. If there is pigment, <code>C</code> makes it copper-colored and <code>cc</code> makes it tan. An <code>mm</code> seed does not make pigment.</p><p>The <code>mm</code> genotype blocks pigment production, so <code>C</code> has nothing to change. One locus masks the effect of another, an interaction called epistasis.</p></div></article></main></body></html>
+.read-shell{width:min(100%, 680px);margin:0 auto}.single.read-page{background:#f5f5f7}</style></head><body class="single read-page"><main class="read-shell sample-card"><article class="study-card knowledge-card layout-lab" lang="en" data-ordinal="15"><header class="k-head"><h1 class="k-title">Epistasis</h1></header><div class="k-lead"><p>An allele at one gene can mask the visible effects of another. If an earlier step in a process is blocked, variation in a later step may no longer be visible.</p></div><div class="k-visual kind-table"><div class="data-table"><table><thead><tr><th scope="col">Pigment-production genotype</th><th scope="col">What happens at the color locus</th></tr></thead><tbody><tr><td>At least one M</td><td>C or cc affects hue</td></tr><tr><td>mm</td><td>Neither hue appears</td></tr></tbody></table></div></div><div class="k-example"><p class="k-label">What you observe</p><p>Where at least one <code>M</code> allele is required to make seed pigment before <code>C</code> (copper) versus <code>cc</code> (tan) sets the hue, <strong>an <code>mmCc</code> seed stays uncolored</strong> despite carrying <code>C</code>: <code>mm</code> blocks pigment synthesis upstream, masking the color locus by <strong>epistasis</strong>.</p></div></article></main></body></html>

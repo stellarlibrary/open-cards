@@ -480,9 +480,11 @@
   display: block;
   width: 100%;
   height: clamp(9rem, 64cqw, 20rem);
+  padding: .35rem;
   object-fit: contain;
   background: #f7f5ef;
-  border-radius: 5px;
+  border: 1px solid #e9e5dc;
+  border-radius: 6px;
 }
 .specimen figcaption {
   display: flex;
@@ -494,7 +496,13 @@
 }
 .specimen figcaption span:first-child { font-weight: 625; }
 .breed-portrait .kind-illustration { margin: calc(-1 * var(--inset)) calc(-1 * var(--inset)) 0; }
-.breed-portrait .specimen img { border-radius: 12px 12px 0 0; height: clamp(11rem, 75cqw, 20rem); }
+.breed-portrait .specimen img {
+  border: 0;
+  border-bottom: 1px solid var(--line);
+  border-radius: 12px 12px 0 0;
+  padding: .45rem .5rem 0;
+  height: clamp(11rem, 75cqw, 20rem);
+}
 .breed-portrait .specimen figcaption { padding-inline: var(--inset); }
 
-.read-shell{width:min(100%, 680px);margin:0 auto}.single.read-page{background:#f5f5f7}</style></head><body class="single read-page"><main class="read-shell sample-card"><article class="study-card knowledge-card layout-matrix" lang="en" data-ordinal="2"><header class="k-head"><h1 class="k-title">Counterexamples to implications</h1></header><div class="k-lead"><p>An implication <code>P ⇒ Q</code> is false exactly when <code>P</code> holds and <code>Q</code> fails. A case where <code>P</code> is false is not a counterexample.</p></div><div class="k-visual kind-table"><div class="data-table"><table><thead><tr><th scope="col">Statement</th><th scope="col">Needed for a counterexample</th></tr></thead><tbody><tr><td>Square is divisible by 8</td><td>True</td></tr><tr><td>Input is divisible by 8</td><td>False</td></tr></tbody></table></div></div><div class="k-example"><p class="k-label">In use</p><p>A claim says, “If n² is divisible by 8, then the integer n is divisible by 8.”</p><p><strong>n=4</strong> works. Its square is 16, divisible by 8, but 4 is not divisible by 8. The counterexample makes the hypothesis true and the conclusion false.</p></div></article></main></body></html>
+.read-shell{width:min(100%, 680px);margin:0 auto}.single.read-page{background:#f5f5f7}</style></head><body class="single read-page"><main class="read-shell sample-card"><article class="study-card knowledge-card layout-matrix" lang="en" data-ordinal="2"><header class="k-head"><h1 class="k-title">Counterexamples to implications</h1></header><div class="k-lead"><p>An implication <code>P ⇒ Q</code> is false exactly when <code>P</code> holds and <code>Q</code> fails. A case where <code>P</code> is false is not a counterexample.</p></div><div class="k-visual kind-table"><div class="data-table"><table><thead><tr><th scope="col">Statement</th><th scope="col">Needed for a counterexample</th></tr></thead><tbody><tr><td>Square is divisible by 8</td><td>True</td></tr><tr><td>Input is divisible by 8</td><td>False</td></tr></tbody></table></div></div><div class="k-example"><p class="k-label">In use</p><p>The implication “If <code>n²</code> is divisible by <code>8</code>, then the integer <code>n</code> is divisible by <code>8</code>” is <strong>disproved by <code>n = 4</code></strong>: the hypothesis holds (<code>4² = 16 = 8·2</code>) while the conclusion fails (<code>4</code> is not a multiple of <code>8</code>).</p></div></article></main></body></html>

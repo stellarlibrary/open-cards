@@ -480,9 +480,11 @@
   display: block;
   width: 100%;
   height: clamp(9rem, 64cqw, 20rem);
+  padding: .35rem;
   object-fit: contain;
   background: #f7f5ef;
-  border-radius: 5px;
+  border: 1px solid #e9e5dc;
+  border-radius: 6px;
 }
 .specimen figcaption {
   display: flex;
@@ -494,7 +496,13 @@
 }
 .specimen figcaption span:first-child { font-weight: 625; }
 .breed-portrait .kind-illustration { margin: calc(-1 * var(--inset)) calc(-1 * var(--inset)) 0; }
-.breed-portrait .specimen img { border-radius: 12px 12px 0 0; height: clamp(11rem, 75cqw, 20rem); }
+.breed-portrait .specimen img {
+  border: 0;
+  border-bottom: 1px solid var(--line);
+  border-radius: 12px 12px 0 0;
+  padding: .45rem .5rem 0;
+  height: clamp(11rem, 75cqw, 20rem);
+}
 .breed-portrait .specimen figcaption { padding-inline: var(--inset); }
 .v2-card {
   --v2-muted: #475462;
@@ -534,6 +542,7 @@
 .v2-figure .diagram .v2-draw-fill.ink { fill: var(--v2-ink); }
 .v2-figure .diagram .v2-draw-fill.signal { fill: var(--v2-second); }
 .v2-figure .diagram .v2-draw-fill.soft { fill: #dce8f0; }
+.v2-figure .diagram rect.v2-draw-fill.soft { stroke: #a8c0d3; stroke-width: .75; }
 .v2-figure .diagram .v2-draw-fill.mid { fill: #9abbd3; }
 .v2-figure .diagram .v2-draw-fill.warm { fill: #f0e4d7; }
 .v2-figure .diagram .v2-draw-fill.paper { fill: #fff; stroke: #8393a4; stroke-width: 1; }
@@ -608,4 +617,4 @@
   .v2-card .figure-drawing .diagram { width: calc(100% + 14px); max-width: none; margin-inline: -7px; }
 }
 
-.read-shell{width:min(100%, 680px);margin:0 auto}.single.read-page{background:#f5f5f7}</style></head><body class="single read-page"><main class="read-shell sample-card"><article class="study-card knowledge-card layout-map-sheet v2-card" lang="en" data-ordinal="4"><header class="k-head"><h1 class="k-title">Precision is not location accuracy</h1></header><div class="k-visual kind-plate"><figure class="v2-figure figure-drawing"><div class="v2-figure-title">A reported point and its uncertainty region</div><div class="v2-figure-body"><svg class="diagram" viewBox="0 0 300 127" role="img" aria-label="A reported point and its uncertainty region. A dot marks the returned coordinate; a larger disk represents possible location error, not extra decimal places." xmlns="http://www.w3.org/2000/svg"><path class="v2-draw-line faint" d="M 23.00,96.00 93.00,72.00 158.00,73.00 266.00,34.00"/><path class="v2-draw-line faint" d="M 39.00,39.00 126.00,54.00 177.00,98.00 280.00,114.00"/><circle class="v2-draw-fill soft" cx="150.00" cy="63.00" r="44.00"/><circle class="v2-draw-fill accent" cx="150.00" cy="63.00" r="4.00"/><line class="v2-draw-line ink" x1="155.00" y1="63.00" x2="204.00" y2="63.00"/><text class="v2-draw-text label" x="209.00" y="68.00" text-anchor="start">Fix</text><text class="v2-draw-text label" x="150.00" y="121.00" text-anchor="middle">Uncertainty region</text></svg></div><figcaption>A dot marks the returned coordinate; a larger disk represents possible location error, not extra decimal places.</figcaption></figure></div><div class="k-lead"><p>A coordinate with many digits is written precisely. Its actual position can still be uncertain because of the device, the source, or the way the location was collected.</p></div><div class="k-example"><p class="k-label">On the map</p><p>A phone may report a street position to six decimal places while signals reflected by buildings leave a much larger error. Use the estimated accuracy or surveyed reference rather than the digits alone.</p></div><div class="k-note"><p class="k-label">Map reading note</p><p>An accuracy circle is a model or estimate, not a guarantee that the point lies inside it.</p></div></article></main></body></html>
+.read-shell{width:min(100%, 680px);margin:0 auto}.single.read-page{background:#f5f5f7}</style></head><body class="single read-page"><main class="read-shell sample-card"><article class="study-card knowledge-card layout-map-sheet v2-card" lang="en" data-ordinal="4"><header class="k-head"><h1 class="k-title">Precision is not location accuracy</h1></header><div class="k-visual kind-plate"><figure class="v2-figure figure-drawing"><div class="v2-figure-title">A reported point and its uncertainty region</div><div class="v2-figure-body"><svg class="diagram" viewBox="0 0 300 130" role="img" aria-label="A reported point and its uncertainty region. A dot marks the returned coordinate; a larger disk represents possible location error, not extra decimal places." xmlns="http://www.w3.org/2000/svg"><path class="v2-draw-line faint" d="M 23.00,96.00 93.00,72.00 158.00,73.00 266.00,34.00"/><path class="v2-draw-line faint" d="M 39.00,39.00 126.00,54.00 177.00,98.00 280.00,114.00"/><circle class="v2-draw-fill soft" cx="150.00" cy="63.00" r="44.00"/><circle class="v2-draw-fill accent" cx="150.00" cy="63.00" r="4.00"/><line class="v2-draw-line ink" x1="155.00" y1="63.00" x2="204.00" y2="63.00"/><text class="v2-draw-text label" x="209.00" y="68.00" text-anchor="start">Fix</text><text class="v2-draw-text label" x="150.00" y="121.00" text-anchor="middle">Uncertainty region</text></svg></div><figcaption>A dot marks the returned coordinate; a larger disk represents possible location error, not extra decimal places.</figcaption></figure></div><div class="k-lead"><p>A coordinate with many digits is written precisely. Its actual position can still be uncertain because of the device, the source, or the way the location was collected.</p></div><div class="k-example"><p class="k-label">On the map</p><p>A phone may report a street position to six decimal places while signals reflected by buildings leave a much larger error. Use the estimated accuracy or surveyed reference rather than the digits alone.</p></div><div class="k-note"><p class="k-label">Map reading note</p><p>An accuracy circle is a model or estimate, not a guarantee that the point lies inside it.</p></div></article></main></body></html>

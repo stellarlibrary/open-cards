@@ -480,9 +480,11 @@
   display: block;
   width: 100%;
   height: clamp(9rem, 64cqw, 20rem);
+  padding: .35rem;
   object-fit: contain;
   background: #f7f5ef;
-  border-radius: 5px;
+  border: 1px solid #e9e5dc;
+  border-radius: 6px;
 }
 .specimen figcaption {
   display: flex;
@@ -494,7 +496,13 @@
 }
 .specimen figcaption span:first-child { font-weight: 625; }
 .breed-portrait .kind-illustration { margin: calc(-1 * var(--inset)) calc(-1 * var(--inset)) 0; }
-.breed-portrait .specimen img { border-radius: 12px 12px 0 0; height: clamp(11rem, 75cqw, 20rem); }
+.breed-portrait .specimen img {
+  border: 0;
+  border-bottom: 1px solid var(--line);
+  border-radius: 12px 12px 0 0;
+  padding: .45rem .5rem 0;
+  height: clamp(11rem, 75cqw, 20rem);
+}
 .breed-portrait .specimen figcaption { padding-inline: var(--inset); }
 
-.read-shell{width:min(100%, 680px);margin:0 auto}.single.read-page{background:#f5f5f7}</style></head><body class="single read-page"><main class="read-shell sample-card"><article class="study-card knowledge-card layout-atlas" lang="en" data-ordinal="12"><header class="k-head"><h1 class="k-title">The greenhouse effect</h1></header><div class="k-visual kind-flow"><ol class="visual-list flow"><li>absorbed sunlight enters</li><li>surface emits infrared</li><li>greenhouse gases affect the infrared escaping to space</li></ol></div><div class="k-lead"><p>Greenhouse gases absorb and emit infrared radiation, altering how efficiently heat escapes to space. Earth’s surface and lower atmosphere warm until the energy budget adjusts.</p></div><div class="k-example"><p class="k-label">How it works</p><p>Earth&#x27;s surface emits thermal infrared radiation. In a simple climate model, incoming absorbed sunlight stays fixed and extra greenhouse gas initially reduces the infrared energy escaping to space.</p><p>It gains energy because less leaves than enters. The surface warms, and in the model the warmer planet eventually emits enough to restore the balance at the top of the atmosphere.</p></div></article></main></body></html>
+.read-shell{width:min(100%, 680px);margin:0 auto}.single.read-page{background:#f5f5f7}</style></head><body class="single read-page"><main class="read-shell sample-card"><article class="study-card knowledge-card layout-atlas" lang="en" data-ordinal="12"><header class="k-head"><h1 class="k-title">The greenhouse effect</h1></header><div class="k-visual kind-flow"><ol class="visual-list flow"><li>absorbed sunlight enters</li><li>surface emits infrared</li><li>greenhouse gases affect the infrared escaping to space</li></ol></div><div class="k-lead"><p>Greenhouse gases absorb and emit infrared radiation, altering how efficiently heat escapes to space. Earth’s surface and lower atmosphere warm until the energy budget adjusts.</p></div><div class="k-example"><p class="k-label">How it works</p><p>If absorbed incoming sunlight stays fixed while added greenhouse gas cuts outgoing infrared to space, <strong>Earth initially gains net energy</strong>; the surface and lower atmosphere warm until stronger thermal emission restores energy balance at the top of the atmosphere.</p></div></article></main></body></html>

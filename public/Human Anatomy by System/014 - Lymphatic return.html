@@ -480,9 +480,11 @@
   display: block;
   width: 100%;
   height: clamp(9rem, 64cqw, 20rem);
+  padding: .35rem;
   object-fit: contain;
   background: #f7f5ef;
-  border-radius: 5px;
+  border: 1px solid #e9e5dc;
+  border-radius: 6px;
 }
 .specimen figcaption {
   display: flex;
@@ -494,7 +496,13 @@
 }
 .specimen figcaption span:first-child { font-weight: 625; }
 .breed-portrait .kind-illustration { margin: calc(-1 * var(--inset)) calc(-1 * var(--inset)) 0; }
-.breed-portrait .specimen img { border-radius: 12px 12px 0 0; height: clamp(11rem, 75cqw, 20rem); }
+.breed-portrait .specimen img {
+  border: 0;
+  border-bottom: 1px solid var(--line);
+  border-radius: 12px 12px 0 0;
+  padding: .45rem .5rem 0;
+  height: clamp(11rem, 75cqw, 20rem);
+}
 .breed-portrait .specimen figcaption { padding-inline: var(--inset); }
 
-.read-shell{width:min(100%, 680px);margin:0 auto}.single.read-page{background:#f5f5f7}</style></head><body class="single read-page"><main class="read-shell sample-card"><article class="study-card knowledge-card layout-lab" lang="en" data-ordinal="14"><header class="k-head"><h1 class="k-title">Lymphatic return</h1></header><div class="k-lead"><p>Lymphatic vessels collect fluid left in tissues and return it to the bloodstream. This is a route back to the circulation, not a second independent blood circuit.</p></div><div class="k-visual kind-flow"><ol class="visual-list flow"><li>fluid between cells</li><li>blind-ended collecting vessels</li><li>larger drainage vessels</li><li>veins</li></ol></div><div class="k-example"><p class="k-label">What you observe</p><p>Some fluid that leaves blood capillaries remains for a time between tissue cells. Small, blind-ended vessels near the cells can collect it.</p><p>Lymphatic vessels collect it as lymph and deliver it back to the venous circulation. This prevents a net buildup of excess interstitial fluid.</p></div></article></main></body></html>
+.read-shell{width:min(100%, 680px);margin:0 auto}.single.read-page{background:#f5f5f7}</style></head><body class="single read-page"><main class="read-shell sample-card"><article class="study-card knowledge-card layout-lab" lang="en" data-ordinal="14"><header class="k-head"><h1 class="k-title">Lymphatic return</h1></header><div class="k-lead"><p>Lymphatic vessels collect fluid left in tissues and return it to the bloodstream. This is a route back to the circulation, not a second independent blood circuit.</p></div><div class="k-visual kind-flow"><ol class="visual-list flow"><li>fluid between cells</li><li>blind-ended collecting vessels</li><li>larger drainage vessels</li><li>veins</li></ol></div><div class="k-example"><p class="k-label">What you observe</p><p>Excess interstitial fluid filtered out of blood capillaries enters blind-ended <strong>lymphatic capillaries</strong> as lymph and flows through larger lymphatic vessels back into the <strong>venous bloodstream</strong>, preventing fluid buildup in tissues.</p></div></article></main></body></html>

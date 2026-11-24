@@ -480,9 +480,11 @@
   display: block;
   width: 100%;
   height: clamp(9rem, 64cqw, 20rem);
+  padding: .35rem;
   object-fit: contain;
   background: #f7f5ef;
-  border-radius: 5px;
+  border: 1px solid #e9e5dc;
+  border-radius: 6px;
 }
 .specimen figcaption {
   display: flex;
@@ -494,7 +496,13 @@
 }
 .specimen figcaption span:first-child { font-weight: 625; }
 .breed-portrait .kind-illustration { margin: calc(-1 * var(--inset)) calc(-1 * var(--inset)) 0; }
-.breed-portrait .specimen img { border-radius: 12px 12px 0 0; height: clamp(11rem, 75cqw, 20rem); }
+.breed-portrait .specimen img {
+  border: 0;
+  border-bottom: 1px solid var(--line);
+  border-radius: 12px 12px 0 0;
+  padding: .45rem .5rem 0;
+  height: clamp(11rem, 75cqw, 20rem);
+}
 .breed-portrait .specimen figcaption { padding-inline: var(--inset); }
 
-.read-shell{width:min(100%, 680px);margin:0 auto}.single.read-page{background:#f5f5f7}</style></head><body class="single read-page"><main class="read-shell sample-card"><article class="study-card knowledge-card layout-molecule" lang="en" data-ordinal="5"><header class="k-head"><h1 class="k-title">Ethers</h1></header><div class="k-visual kind-table"><div class="data-table"><table><thead><tr><th scope="col">Drawing</th><th scope="col">Condensed formula</th></tr></thead><tbody><tr><td>A</td><td>CH₃–CH₂–OH</td></tr><tr><td>B</td><td>CH₃–O–CH₃</td></tr></tbody></table></div></div><div class="k-lead"><p>An ether has an oxygen bonded between two carbon groups, <code>R–O–R′</code>. An OH group has a hydrogen on oxygen instead.</p></div><div class="k-example"><p class="k-label">Structure in context</p><p>Ethanol and dimethyl ether share the molecular formula C₂H₆O, but their atoms are joined differently. Trace the bonds leading away from oxygen in both drawings.</p><p>B is the ether: oxygen bridges two carbon groups (<code>C–O–C</code>). A has an <code>O–H</code> bond, making its oxygen part of an alcohol group.</p></div></article></main></body></html>
+.read-shell{width:min(100%, 680px);margin:0 auto}.single.read-page{background:#f5f5f7}</style></head><body class="single read-page"><main class="read-shell sample-card"><article class="study-card knowledge-card layout-molecule" lang="en" data-ordinal="5"><header class="k-head"><h1 class="k-title">Ethers</h1></header><div class="k-visual kind-table"><div class="data-table"><table><thead><tr><th scope="col">Drawing</th><th scope="col">Condensed formula</th></tr></thead><tbody><tr><td>A</td><td>CH₃–CH₂–OH</td></tr><tr><td>B</td><td>CH₃–O–CH₃</td></tr></tbody></table></div></div><div class="k-lead"><p>An ether has an oxygen bonded between two carbon groups, <code>R–O–R′</code>. An OH group has a hydrogen on oxygen instead.</p></div><div class="k-example"><p class="k-label">Structure in context</p><p>Ethanol (<strong>A</strong>) and dimethyl ether (<strong>B</strong>) share the molecular formula <code>C₂H₆O</code>, yet <strong>B is the ether</strong> because oxygen bridges two carbon groups (<code>C–O–C</code>), whereas <strong>A</strong> has an <code>O–H</code> bond that makes it an alcohol.</p></div></article></main></body></html>

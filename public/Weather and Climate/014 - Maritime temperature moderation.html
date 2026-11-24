@@ -480,9 +480,11 @@
   display: block;
   width: 100%;
   height: clamp(9rem, 64cqw, 20rem);
+  padding: .35rem;
   object-fit: contain;
   background: #f7f5ef;
-  border-radius: 5px;
+  border: 1px solid #e9e5dc;
+  border-radius: 6px;
 }
 .specimen figcaption {
   display: flex;
@@ -494,7 +496,13 @@
 }
 .specimen figcaption span:first-child { font-weight: 625; }
 .breed-portrait .kind-illustration { margin: calc(-1 * var(--inset)) calc(-1 * var(--inset)) 0; }
-.breed-portrait .specimen img { border-radius: 12px 12px 0 0; height: clamp(11rem, 75cqw, 20rem); }
+.breed-portrait .specimen img {
+  border: 0;
+  border-bottom: 1px solid var(--line);
+  border-radius: 12px 12px 0 0;
+  padding: .45rem .5rem 0;
+  height: clamp(11rem, 75cqw, 20rem);
+}
 .breed-portrait .specimen figcaption { padding-inline: var(--inset); }
 
-.read-shell{width:min(100%, 680px);margin:0 auto}.single.read-page{background:#f5f5f7}</style></head><body class="single read-page"><main class="read-shell sample-card"><article class="study-card knowledge-card layout-atlas" lang="en" data-ordinal="14"><header class="k-head"><h1 class="k-title">Maritime temperature moderation</h1></header><div class="k-visual kind-table"><div class="data-table"><table><thead><tr><th scope="col">Town</th><th scope="col">Coldest-month mean (°C)</th><th scope="col">Warmest-month mean (°C)</th></tr></thead><tbody><tr><td>A</td><td>8</td><td>20</td></tr><tr><td>B</td><td>1</td><td>27</td></tr></tbody></table></div></div><div class="k-lead"><p>Water often warms and cools more slowly than land. Nearby oceans can reduce day-to-night and seasonal temperature swings in coastal places.</p></div><div class="k-example"><p class="k-label">How it works</p><p>The table gives the coldest- and warmest-month means for two fictional towns at similar latitude and elevation. One is on the coast under prevailing ocean winds; the other is far inland.</p><p>Town A, with a 12 °C range versus 26 °C for B. Ocean water warms and cools slowly, so air arriving from over it tends to moderate seasonal temperatures at the coast.</p></div></article></main></body></html>
+.read-shell{width:min(100%, 680px);margin:0 auto}.single.read-page{background:#f5f5f7}</style></head><body class="single read-page"><main class="read-shell sample-card"><article class="study-card knowledge-card layout-atlas" lang="en" data-ordinal="14"><header class="k-head"><h1 class="k-title">Maritime temperature moderation</h1></header><div class="k-visual kind-table"><div class="data-table"><table><thead><tr><th scope="col">Town</th><th scope="col">Coldest-month mean (°C)</th><th scope="col">Warmest-month mean (°C)</th></tr></thead><tbody><tr><td>A</td><td>8</td><td>20</td></tr><tr><td>B</td><td>1</td><td>27</td></tr></tbody></table></div></div><div class="k-lead"><p>Water often warms and cools more slowly than land. Nearby oceans can reduce day-to-night and seasonal temperature swings in coastal places.</p></div><div class="k-example"><p class="k-label">How it works</p><p>At similar latitude and elevation, <strong>coastal Town A has the smaller annual temperature range</strong> (<code>20 − 8 = 12 °C</code> versus <code>27 − 1 = 26 °C</code> inland at Town B) because ocean water warms and cools slowly, moderating air carried onshore.</p></div></article></main></body></html>

@@ -480,9 +480,11 @@
   display: block;
   width: 100%;
   height: clamp(9rem, 64cqw, 20rem);
+  padding: .35rem;
   object-fit: contain;
   background: #f7f5ef;
-  border-radius: 5px;
+  border: 1px solid #e9e5dc;
+  border-radius: 6px;
 }
 .specimen figcaption {
   display: flex;
@@ -494,7 +496,13 @@
 }
 .specimen figcaption span:first-child { font-weight: 625; }
 .breed-portrait .kind-illustration { margin: calc(-1 * var(--inset)) calc(-1 * var(--inset)) 0; }
-.breed-portrait .specimen img { border-radius: 12px 12px 0 0; height: clamp(11rem, 75cqw, 20rem); }
+.breed-portrait .specimen img {
+  border: 0;
+  border-bottom: 1px solid var(--line);
+  border-radius: 12px 12px 0 0;
+  padding: .45rem .5rem 0;
+  height: clamp(11rem, 75cqw, 20rem);
+}
 .breed-portrait .specimen figcaption { padding-inline: var(--inset); }
 
-.read-shell{width:min(100%, 680px);margin:0 auto}.single.read-page{background:#f5f5f7}</style></head><body class="single read-page"><main class="read-shell sample-card"><article class="study-card knowledge-card layout-console" lang="en" data-ordinal="13"><header class="k-head"><h1 class="k-title">Naming a subquery with WITH</h1></header><div class="k-lead"><p>A common table expression names an intermediate result for one statement. It can make the stages of a query explicit without creating a permanent table.</p></div><div class="k-visual kind-table"><div class="data-table"><table><thead><tr><th scope="col">id</th><th scope="col">amount</th><th scope="col">status</th></tr></thead><tbody><tr><td>1</td><td>20</td><td>paid</td></tr><tr><td>2</td><td>45</td><td>paid</td></tr><tr><td>3</td><td>15</td><td>open</td></tr><tr><td>4</td><td>35</td><td>paid</td></tr><tr><td>5</td><td>NULL</td><td>open</td></tr></tbody></table></div></div><div class="k-example"><p class="k-label">Example and result</p><p><code>orders</code> has the rows shown. A CTE called <code>paid</code> can name the intermediate set of paid orders.</p><pre tabindex="0"><code>WITH paid AS (SELECT amount FROM orders WHERE status = &#x27;paid&#x27;) SELECT SUM(amount) FROM paid;</code></pre><div class="k-code-result"><p class="k-label">Result</p><p><strong>100.</strong> Add 20 + 45 + 35. The CTE names the filtered relation for the following query, not for later statements.</p></div></div></article></main></body></html>
+.read-shell{width:min(100%, 680px);margin:0 auto}.single.read-page{background:#f5f5f7}</style></head><body class="single read-page"><main class="read-shell sample-card"><article class="study-card knowledge-card layout-console" lang="en" data-ordinal="13"><header class="k-head"><h1 class="k-title">Naming a subquery with WITH</h1></header><div class="k-lead"><p>A common table expression names an intermediate result for one statement. It can make the stages of a query explicit without creating a permanent table.</p></div><div class="k-visual kind-table"><div class="data-table"><table><thead><tr><th scope="col">id</th><th scope="col">amount</th><th scope="col">status</th></tr></thead><tbody><tr><td>1</td><td>20</td><td>paid</td></tr><tr><td>2</td><td>45</td><td>paid</td></tr><tr><td>3</td><td>15</td><td>open</td></tr><tr><td>4</td><td>35</td><td>paid</td></tr><tr><td>5</td><td>NULL</td><td>open</td></tr></tbody></table></div></div><div class="k-example"><p class="k-label">Example and result</p><p><code>orders</code> has the rows shown. A CTE called <code>paid</code> can name the intermediate set of paid orders.</p><pre tabindex="0"><code>WITH paid AS (SELECT amount FROM orders WHERE status = &#x27;paid&#x27;) SELECT SUM(amount) FROM paid;</code></pre><div class="k-code-result"><p class="k-label">Result</p><p>The query returns <strong><code>100</code></strong> (<code>20 + 45 + 35</code>). The <code>paid</code> CTE names the filtered three-row relation for the outer <code>SUM(amount)</code> query and exists only for this single statement.</p></div></div></article></main></body></html>

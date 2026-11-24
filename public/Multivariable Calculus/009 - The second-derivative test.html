@@ -480,9 +480,11 @@
   display: block;
   width: 100%;
   height: clamp(9rem, 64cqw, 20rem);
+  padding: .35rem;
   object-fit: contain;
   background: #f7f5ef;
-  border-radius: 5px;
+  border: 1px solid #e9e5dc;
+  border-radius: 6px;
 }
 .specimen figcaption {
   display: flex;
@@ -494,7 +496,13 @@
 }
 .specimen figcaption span:first-child { font-weight: 625; }
 .breed-portrait .kind-illustration { margin: calc(-1 * var(--inset)) calc(-1 * var(--inset)) 0; }
-.breed-portrait .specimen img { border-radius: 12px 12px 0 0; height: clamp(11rem, 75cqw, 20rem); }
+.breed-portrait .specimen img {
+  border: 0;
+  border-bottom: 1px solid var(--line);
+  border-radius: 12px 12px 0 0;
+  padding: .45rem .5rem 0;
+  height: clamp(11rem, 75cqw, 20rem);
+}
 .breed-portrait .specimen figcaption { padding-inline: var(--inset); }
 
-.read-shell{width:min(100%, 680px);margin:0 auto}.single.read-page{background:#f5f5f7}</style></head><body class="single read-page"><main class="read-shell sample-card"><article class="study-card knowledge-card layout-graph" lang="en" data-ordinal="9"><header class="k-head"><h1 class="k-title">The second-derivative test</h1></header><div class="k-lead"><p>At a critical point in two variables, a negative Hessian determinant indicates a saddle. A positive determinant gives a minimum or maximum according to the sign of <code>fₓₓ</code>.</p></div><div class="k-visual kind-flow"><ol class="visual-list flow"><li>Set the gradient to zero</li><li>Compute the Hessian determinant</li><li>Check the sign of fₓₓ</li></ol></div><div class="k-example"><p class="k-label">Worked example</p><p><code>f(x,y)=x²+2xy+3y²−4x−8y</code>.</p><p><strong>A strict local minimum at (1,1)</strong>. Setting both partials to zero gives <code>x+y=2</code> and <code>x+3y=4</code>. The Hessian determinant is <code>2·6−2²=8&gt;0</code> and <code>fₓₓ=2&gt;0</code>.</p></div></article></main></body></html>
+.read-shell{width:min(100%, 680px);margin:0 auto}.single.read-page{background:#f5f5f7}</style></head><body class="single read-page"><main class="read-shell sample-card"><article class="study-card knowledge-card layout-graph" lang="en" data-ordinal="9"><header class="k-head"><h1 class="k-title">The second-derivative test</h1></header><div class="k-lead"><p>At a critical point in two variables, a negative Hessian determinant indicates a saddle. A positive determinant gives a minimum or maximum according to the sign of <code>fₓₓ</code>.</p></div><div class="k-visual kind-flow"><ol class="visual-list flow"><li>Set the gradient to zero</li><li>Compute the Hessian determinant</li><li>Check the sign of fₓₓ</li></ol></div><div class="k-example"><p class="k-label">Worked example</p><p>For <code>f(x,y) = x² + 2xy + 3y² − 4x − 8y</code>, setting <code>fₓ = 2x + 2y − 4 = 0</code> and <code>fᵧ = 2x + 6y − 8 = 0</code> locates the sole stationary point <code>(1, 1)</code>. Since <code>fₓₓfᵧᵧ − fₓᵧ² = 2·6 − 2² = 8 &gt; 0</code> and <code>fₓₓ = 2 &gt; 0</code>, <strong><code>(1, 1)</code> is a strict local minimum</strong>.</p></div></article></main></body></html>

@@ -480,9 +480,11 @@
   display: block;
   width: 100%;
   height: clamp(9rem, 64cqw, 20rem);
+  padding: .35rem;
   object-fit: contain;
   background: #f7f5ef;
-  border-radius: 5px;
+  border: 1px solid #e9e5dc;
+  border-radius: 6px;
 }
 .specimen figcaption {
   display: flex;
@@ -494,7 +496,13 @@
 }
 .specimen figcaption span:first-child { font-weight: 625; }
 .breed-portrait .kind-illustration { margin: calc(-1 * var(--inset)) calc(-1 * var(--inset)) 0; }
-.breed-portrait .specimen img { border-radius: 12px 12px 0 0; height: clamp(11rem, 75cqw, 20rem); }
+.breed-portrait .specimen img {
+  border: 0;
+  border-bottom: 1px solid var(--line);
+  border-radius: 12px 12px 0 0;
+  padding: .45rem .5rem 0;
+  height: clamp(11rem, 75cqw, 20rem);
+}
 .breed-portrait .specimen figcaption { padding-inline: var(--inset); }
 
-.read-shell{width:min(100%, 680px);margin:0 auto}.single.read-page{background:#f5f5f7}</style></head><body class="single read-page"><main class="read-shell sample-card"><article class="study-card knowledge-card layout-chronicle" lang="en" data-ordinal="14"><header class="k-head"><h1 class="k-title">Public Health in Industrial Towns</h1></header><div class="k-lead"><p>Rapid urban growth left many streets overcrowded and poorly drained. Reports in the 1840s drew attention to sanitation, and the Public Health Act of 1848 established new machinery for action in England and Wales.</p></div><div class="k-visual kind-flow"><ol class="visual-list flow"><li>Overcrowding exposes sanitation failures</li><li>Parliament sets up public health boards</li><li>Authorities can organise drainage and water works</li></ol></div><div class="k-example"><p class="k-label">Why it matters</p><p>It created a central General Board of Health and routes for local boards to address problems such as drainage and water supply. Local action remained uneven, but a street’s sanitation could now be handled collectively rather than left to individual tenants.</p></div></article></main></body></html>
+.read-shell{width:min(100%, 680px);margin:0 auto}.single.read-page{background:#f5f5f7}</style></head><body class="single read-page"><main class="read-shell sample-card"><article class="study-card knowledge-card layout-chronicle" lang="en" data-ordinal="14"><header class="k-head"><h1 class="k-title">Public Health in Industrial Towns</h1></header><div class="k-lead"><p>Rapid urban growth left many streets overcrowded and poorly drained. Reports in the 1840s drew attention to sanitation, and the Public Health Act of 1848 established new machinery for action in England and Wales.</p></div><div class="k-visual kind-flow"><ol class="visual-list flow"><li>Overcrowding exposes sanitation failures</li><li>Parliament sets up public health boards</li><li>Authorities can organise drainage and water works</li></ol></div><div class="k-example"><p class="k-label">Why it matters</p><p>Passed amid cholera fears and Edwin Chadwick’s sanitary reports, the Public Health Act 1848 created a central General Board of Health and enabled towns to form local boards for drainage, sewerage, and water supply—treating street sanitation as a public responsibility rather than a tenant’s private burden.</p></div></article></main></body></html>

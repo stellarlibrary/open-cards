@@ -480,9 +480,11 @@
   display: block;
   width: 100%;
   height: clamp(9rem, 64cqw, 20rem);
+  padding: .35rem;
   object-fit: contain;
   background: #f7f5ef;
-  border-radius: 5px;
+  border: 1px solid #e9e5dc;
+  border-radius: 6px;
 }
 .specimen figcaption {
   display: flex;
@@ -494,7 +496,13 @@
 }
 .specimen figcaption span:first-child { font-weight: 625; }
 .breed-portrait .kind-illustration { margin: calc(-1 * var(--inset)) calc(-1 * var(--inset)) 0; }
-.breed-portrait .specimen img { border-radius: 12px 12px 0 0; height: clamp(11rem, 75cqw, 20rem); }
+.breed-portrait .specimen img {
+  border: 0;
+  border-bottom: 1px solid var(--line);
+  border-radius: 12px 12px 0 0;
+  padding: .45rem .5rem 0;
+  height: clamp(11rem, 75cqw, 20rem);
+}
 .breed-portrait .specimen figcaption { padding-inline: var(--inset); }
 
-.read-shell{width:min(100%, 680px);margin:0 auto}.single.read-page{background:#f5f5f7}</style></head><body class="single read-page"><main class="read-shell sample-card"><article class="study-card knowledge-card layout-graph" lang="en" data-ordinal="4"><header class="k-head"><h1 class="k-title">Net force and acceleration</h1></header><div class="k-lead"><p>For a constant mass, <code>a=Fnet/m</code>. Forces add as vectors, so opposing forces partly cancel before their sum determines acceleration.</p></div><div class="k-visual kind-diagram"><svg class="diagram" viewBox="0 0 360 190" role="img" aria-label="Cart with eastward pull, westward resistance and balanced vertical forces." xmlns="http://www.w3.org/2000/svg"><rect class="region" x="147" y="75" width="66" height="45" rx="5"/><line class="axis" x1="20.00" y1="132.00" x2="340.00" y2="132.00"/><line class="accent" x1="214.00" y1="96.00" x2="330.00" y2="96.00"/><path class="accent" d="M 323.00,92.50 330.00,96.00 323.00,99.50"/><line class="axis" x1="147.00" y1="96.00" x2="103.00" y2="96.00"/><path class="axis" d="M 110.00,99.50 103.00,96.00 110.00,92.50"/><line class="axis" x1="180.00" y1="76.00" x2="180.00" y2="31.00"/><path class="axis" d="M 176.50,38.00 180.00,31.00 183.50,38.00"/><line class="axis" x1="180.00" y1="120.00" x2="180.00" y2="165.00"/><path class="axis" d="M 183.50,158.00 180.00,165.00 176.50,158.00"/><text class="" x="281.00" y="81.00" text-anchor="middle">17 N east</text><text class="" x="82.00" y="82.00" text-anchor="middle">5 N west</text><text class="" x="180.00" y="103.00" text-anchor="middle">4.0 kg</text><text class="" x="190.00" y="31.00" text-anchor="start">N</text><text class="" x="190.00" y="165.00" text-anchor="start">W</text></svg></div><div class="k-example"><p class="k-label">Worked example</p><p>A 4.0 kg supply cart on a level floor is pulled 17 N east while rolling resistance acts 5 N west. Vertical forces balance.</p><p>3.0 m/s² east. The net force is <code>17 − 5 = 12 N</code> east, and Newton&#x27;s second law gives <code>12 N ÷ 4.0 kg</code>.</p></div></article></main></body></html>
+.read-shell{width:min(100%, 680px);margin:0 auto}.single.read-page{background:#f5f5f7}</style></head><body class="single read-page"><main class="read-shell sample-card"><article class="study-card knowledge-card layout-graph" lang="en" data-ordinal="4"><header class="k-head"><h1 class="k-title">Net force and acceleration</h1></header><div class="k-lead"><p>For a constant mass, <code>a=Fnet/m</code>. Forces add as vectors, so opposing forces partly cancel before their sum determines acceleration.</p></div><div class="k-visual kind-diagram"><svg class="diagram" viewBox="0 0 360 190" role="img" aria-label="Cart with eastward pull, westward resistance and balanced vertical forces." xmlns="http://www.w3.org/2000/svg"><rect class="region" x="147" y="75" width="66" height="45" rx="5"/><line class="axis" x1="20.00" y1="132.00" x2="340.00" y2="132.00"/><line class="accent" x1="214.00" y1="96.00" x2="330.00" y2="96.00"/><path class="accent" d="M 323.00,92.50 330.00,96.00 323.00,99.50"/><line class="axis" x1="147.00" y1="96.00" x2="103.00" y2="96.00"/><path class="axis" d="M 110.00,99.50 103.00,96.00 110.00,92.50"/><line class="axis" x1="180.00" y1="76.00" x2="180.00" y2="31.00"/><path class="axis" d="M 176.50,38.00 180.00,31.00 183.50,38.00"/><line class="axis" x1="180.00" y1="120.00" x2="180.00" y2="165.00"/><path class="axis" d="M 183.50,158.00 180.00,165.00 176.50,158.00"/><text class="" x="281.00" y="81.00" text-anchor="middle">17 N east</text><text class="" x="82.00" y="82.00" text-anchor="middle">5 N west</text><text class="" x="180.00" y="103.00" text-anchor="middle">4.0 kg</text><text class="" x="190.00" y="31.00" text-anchor="start">N</text><text class="" x="190.00" y="165.00" text-anchor="start">W</text></svg></div><div class="k-example"><p class="k-label">Worked example</p><p>A <code>4.0 kg</code> cart on a level floor pulled <code>17 N</code> east against <code>5 N</code> westward rolling resistance (with vertical forces balanced) feels a net force of <code>17 − 5 = 12 N</code> east, giving an acceleration of <strong><code>12 N ÷ 4.0 kg = 3.0 m/s²</code> east</strong>.</p></div></article></main></body></html>

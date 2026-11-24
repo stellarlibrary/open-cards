@@ -480,9 +480,11 @@
   display: block;
   width: 100%;
   height: clamp(9rem, 64cqw, 20rem);
+  padding: .35rem;
   object-fit: contain;
   background: #f7f5ef;
-  border-radius: 5px;
+  border: 1px solid #e9e5dc;
+  border-radius: 6px;
 }
 .specimen figcaption {
   display: flex;
@@ -494,7 +496,13 @@
 }
 .specimen figcaption span:first-child { font-weight: 625; }
 .breed-portrait .kind-illustration { margin: calc(-1 * var(--inset)) calc(-1 * var(--inset)) 0; }
-.breed-portrait .specimen img { border-radius: 12px 12px 0 0; height: clamp(11rem, 75cqw, 20rem); }
+.breed-portrait .specimen img {
+  border: 0;
+  border-bottom: 1px solid var(--line);
+  border-radius: 12px 12px 0 0;
+  padding: .45rem .5rem 0;
+  height: clamp(11rem, 75cqw, 20rem);
+}
 .breed-portrait .specimen figcaption { padding-inline: var(--inset); }
 
 .read-shell{width:min(100%, 680px);margin:0 auto}.single.read-page{background:#f5f5f7}</style></head><body class="single read-page"><main class="read-shell sample-card"><article class="study-card knowledge-card layout-graph" lang="en" data-ordinal="1"><header class="k-head"><h1 class="k-title">Secants and average rate of change</h1></header><div class="k-lead"><p>The average rate of change on <code>[a,b]</code> is <code>(f(b)−f(a))/(b−a)</code>. It is the slope of the line joining the two points on the graph.</p></div><div class="k-visual kind-graph"><svg class="diagram" viewBox="0 0 360 190" role="img" aria-label="y = x²" xmlns="http://www.w3.org/2000/svg"><text class="plot-title" x="37.00" y="19.00" text-anchor="start">y = x²</text><line class="grid" x1="104.59" y1="34.00" x2="104.59" y2="158.00"/><text class="" x="104.59" y="177.00" text-anchor="middle">0</text><line class="grid" x1="172.17" y1="34.00" x2="172.17" y2="158.00"/><text class="" x="172.17" y="177.00" text-anchor="middle">1</text><line class="grid" x1="239.76" y1="34.00" x2="239.76" y2="158.00"/><text class="" x="239.76" y="177.00" text-anchor="middle">2</text><line class="grid" x1="307.34" y1="34.00" x2="307.34" y2="158.00"/><text class="" x="307.34" y="177.00" text-anchor="middle">3</text><line class="grid" x1="37.00" y1="147.40" x2="331.00" y2="147.40"/><text class="" x="30.00" y="151.40" text-anchor="end">0</text><line class="grid" x1="37.00" y1="108.98" x2="331.00" y2="108.98"/><text class="" x="30.00" y="112.98" text-anchor="end">4</text><line class="grid" x1="37.00" y1="60.97" x2="331.00" y2="60.97"/><text class="" x="30.00" y="64.97" text-anchor="end">9</text><line class="axis" x1="37.00" y1="147.40" x2="341.00" y2="147.40"/><path class="axis" d="M 334.00,143.90 341.00,147.40 334.00,150.90"/><line class="axis" x1="104.59" y1="158.00" x2="104.59" y2="31.00"/><path class="axis" d="M 101.09,38.00 104.59,31.00 108.09,38.00"/><text class="" x="350.00" y="151.40" text-anchor="middle">x</text><text class="" x="115.59" y="33.00" text-anchor="middle">y</text><path class="curve" d="M 37.00,137.79 39.94,138.61 42.88,139.39 45.82,140.14 48.76,140.84 51.70,141.52 54.64,142.15 57.58,142.75 60.52,143.31 63.46,143.84 66.40,144.33 69.34,144.79 72.28,145.20 75.22,145.58 78.16,145.93 81.10,146.24 84.04,146.51 86.98,146.75 89.92,146.94 92.86,147.11 95.80,147.23 98.74,147.32 101.68,147.38 104.62,147.40 107.56,147.38 110.50,147.32 113.44,147.23 116.38,147.10 119.32,146.94 122.26,146.74 125.20,146.50 128.14,146.23 131.08,145.92 134.02,145.58 136.96,145.19 139.90,144.78 142.84,144.32 145.78,143.83 148.72,143.30 151.66,142.74 154.60,142.14 157.54,141.50 160.48,140.83 163.42,140.12 166.36,139.37 169.30,138.59 172.24,137.77 175.18,136.92 178.12,136.03 181.06,135.10 184.00,134.14 186.94,133.14 189.88,132.10 192.82,131.03 195.76,129.92 198.70,128.78 201.64,127.59 204.58,126.38 207.52,125.12 210.46,123.83 213.40,122.50 216.34,121.14 219.28,119.74 222.22,118.31 225.16,116.83 228.10,115.32 231.04,113.78 233.98,112.20 236.92,110.58 239.86,108.93 242.80,107.24 245.74,105.51 248.68,103.75 251.62,101.95 254.56,100.11 257.50,98.24 260.44,96.33 263.38,94.39 266.32,92.40 269.26,90.39 272.20,88.33 275.14,86.24 278.08,84.12 281.02,81.95 283.96,79.75 286.90,77.52 289.84,75.25 292.78,72.94 295.72,70.59 298.66,68.21 301.60,65.80 304.54,63.34 307.48,60.85 310.42,58.33 313.36,55.76 316.30,53.17 319.24,50.53 322.18,47.86 325.12,45.15 328.06,42.41 331.00,39.63"/><line class="accent" x1="172.17" y1="137.79" x2="307.34" y2="60.97"/><circle class="dot" cx="172.17" cy="137.79" r="4.00"/><circle class="dot" cx="307.34" cy="60.97" r="4.00"/><text class="" x="172.17" y="123.79" text-anchor="middle">(1, 1)</text><text class="" x="298.34" y="53.97" text-anchor="end">(3, 9)</text></svg></div><div class="k-example"><p class="k-label">Worked example</p><p>For <code>f(x)=x²</code> from 1 to 3, the graph rises from 1 to 9 over a run of 2. The secant slope is <code>8/2 = 4</code>.</p></div><div class="k-note"><p class="k-label">Note</p><p>The slope over a whole interval need not equal the instantaneous slope at either endpoint.</p></div></article></main></body></html>

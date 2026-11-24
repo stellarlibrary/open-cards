@@ -480,9 +480,11 @@
   display: block;
   width: 100%;
   height: clamp(9rem, 64cqw, 20rem);
+  padding: .35rem;
   object-fit: contain;
   background: #f7f5ef;
-  border-radius: 5px;
+  border: 1px solid #e9e5dc;
+  border-radius: 6px;
 }
 .specimen figcaption {
   display: flex;
@@ -494,7 +496,13 @@
 }
 .specimen figcaption span:first-child { font-weight: 625; }
 .breed-portrait .kind-illustration { margin: calc(-1 * var(--inset)) calc(-1 * var(--inset)) 0; }
-.breed-portrait .specimen img { border-radius: 12px 12px 0 0; height: clamp(11rem, 75cqw, 20rem); }
+.breed-portrait .specimen img {
+  border: 0;
+  border-bottom: 1px solid var(--line);
+  border-radius: 12px 12px 0 0;
+  padding: .45rem .5rem 0;
+  height: clamp(11rem, 75cqw, 20rem);
+}
 .breed-portrait .specimen figcaption { padding-inline: var(--inset); }
 .v2-card {
   --v2-muted: #475462;
@@ -534,6 +542,7 @@
 .v2-figure .diagram .v2-draw-fill.ink { fill: var(--v2-ink); }
 .v2-figure .diagram .v2-draw-fill.signal { fill: var(--v2-second); }
 .v2-figure .diagram .v2-draw-fill.soft { fill: #dce8f0; }
+.v2-figure .diagram rect.v2-draw-fill.soft { stroke: #a8c0d3; stroke-width: .75; }
 .v2-figure .diagram .v2-draw-fill.mid { fill: #9abbd3; }
 .v2-figure .diagram .v2-draw-fill.warm { fill: #f0e4d7; }
 .v2-figure .diagram .v2-draw-fill.paper { fill: #fff; stroke: #8393a4; stroke-width: 1; }
@@ -608,4 +617,4 @@
   .v2-card .figure-drawing .diagram { width: calc(100% + 14px); max-width: none; margin-inline: -7px; }
 }
 
-.read-shell{width:min(100%, 680px);margin:0 auto}.single.read-page{background:#f5f5f7}</style></head><body class="single read-page"><main class="read-shell sample-card"><article class="study-card knowledge-card layout-material-sheet v2-card" lang="en" data-ordinal="6"><header class="k-head"><h1 class="k-title">Stiff material and stiff part are different</h1></header><div class="k-lead"><p>Part stiffness measures load divided by deflection. It depends on material stiffness, geometry, and how the part is held.</p></div><div class="k-visual kind-plate"><figure class="v2-figure figure-drawing"><div class="v2-figure-title">The same rectangular section, rotated</div><div class="v2-figure-body"><svg class="diagram" viewBox="0 0 300 157" role="img" aria-label="The same rectangular section, rotated. The two sections have the same area. The deeper orientation resists vertical bending more for a beam of the same length and support." xmlns="http://www.w3.org/2000/svg"><rect class="v2-draw-fill soft" x="28" y="69" width="91" height="17" rx="1"/><rect class="v2-draw-fill soft" x="202" y="32" width="17" height="91" rx="1"/><line class="v2-draw-line accent" x1="74.00" y1="42.00" x2="74.00" y2="65.00"/><path class="v2-draw-line accent" d="M 70.50,58.00 74.00,65.00 77.50,58.00"/><line class="v2-draw-line accent" x1="210.00" y1="5.00" x2="210.00" y2="28.00"/><path class="v2-draw-line accent" d="M 206.50,21.00 210.00,28.00 213.50,21.00"/><text class="v2-draw-text label" x="74.00" y="143.00" text-anchor="middle">Flat</text><text class="v2-draw-text label" x="210.00" y="143.00" text-anchor="middle">On edge</text></svg></div><figcaption>The two sections have the same area. The deeper orientation resists vertical bending more for a beam of the same length and support.</figcaption></figure></div><div class="k-example"><p class="k-label">In use</p><p>Turning the same rectangular ruler on edge greatly reduces bending under the same load. The material and Young’s modulus did not change; the section’s resistance to bending did.</p></div><div class="k-note"><p class="k-label">Specimen note</p><p>This directional geometry effect is not evidence that the material itself is anisotropic.</p></div></article></main></body></html>
+.read-shell{width:min(100%, 680px);margin:0 auto}.single.read-page{background:#f5f5f7}</style></head><body class="single read-page"><main class="read-shell sample-card"><article class="study-card knowledge-card layout-material-sheet v2-card" lang="en" data-ordinal="6"><header class="k-head"><h1 class="k-title">Stiff material and stiff part are different</h1></header><div class="k-lead"><p>Part stiffness measures load divided by deflection. It depends on material stiffness, geometry, and how the part is held.</p></div><div class="k-visual kind-plate"><figure class="v2-figure figure-drawing"><div class="v2-figure-title">The same rectangular section, rotated</div><div class="v2-figure-body"><svg class="diagram" viewBox="0 0 300 165" role="img" aria-label="The same rectangular section, rotated. Both sections measure 60 × 10 mm and have the same area. The deeper orientation resists vertical bending far more." xmlns="http://www.w3.org/2000/svg"><rect class="v2-draw-fill soft" x="33" y="68" width="84" height="14" rx="1"/><path class="v2-draw-line ink" d="M 33.00,68.00 117.00,68.00 117.00,82.00 33.00,82.00 33.00,68.00"/><rect class="v2-draw-fill soft" x="205" y="33" width="14" height="84" rx="1"/><path class="v2-draw-line ink" d="M 205.00,33.00 219.00,33.00 219.00,117.00 205.00,117.00 205.00,33.00"/><line class="v2-draw-line accent" x1="75.00" y1="36.00" x2="75.00" y2="63.00"/><path class="v2-draw-line accent" d="M 71.50,56.00 75.00,63.00 78.50,56.00"/><line class="v2-draw-line accent" x1="212.00" y1="8.00" x2="212.00" y2="29.00"/><path class="v2-draw-line accent" d="M 208.50,22.00 212.00,29.00 215.50,22.00"/><text class="v2-draw-text label" x="75.00" y="135.00" text-anchor="middle">Flat</text><text class="v2-draw-text small" x="75.00" y="155.00" text-anchor="middle">60 × 10 mm</text><text class="v2-draw-text label" x="212.00" y="135.00" text-anchor="middle">On edge</text><text class="v2-draw-text small" x="212.00" y="155.00" text-anchor="middle">10 × 60 mm</text></svg></div><figcaption>Both sections measure 60 × 10 mm and have the same area. The deeper orientation resists vertical bending far more.</figcaption></figure></div><div class="k-example"><p class="k-label">In use</p><p>Turning the same rectangular ruler on edge greatly reduces bending under the same load. The material and Young’s modulus did not change; the section’s resistance to bending did.</p></div><div class="k-note"><p class="k-label">Specimen note</p><p>This directional geometry effect is not evidence that the material itself is anisotropic.</p></div></article></main></body></html>

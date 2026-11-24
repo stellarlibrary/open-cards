@@ -480,9 +480,11 @@
   display: block;
   width: 100%;
   height: clamp(9rem, 64cqw, 20rem);
+  padding: .35rem;
   object-fit: contain;
   background: #f7f5ef;
-  border-radius: 5px;
+  border: 1px solid #e9e5dc;
+  border-radius: 6px;
 }
 .specimen figcaption {
   display: flex;
@@ -494,7 +496,13 @@
 }
 .specimen figcaption span:first-child { font-weight: 625; }
 .breed-portrait .kind-illustration { margin: calc(-1 * var(--inset)) calc(-1 * var(--inset)) 0; }
-.breed-portrait .specimen img { border-radius: 12px 12px 0 0; height: clamp(11rem, 75cqw, 20rem); }
+.breed-portrait .specimen img {
+  border: 0;
+  border-bottom: 1px solid var(--line);
+  border-radius: 12px 12px 0 0;
+  padding: .45rem .5rem 0;
+  height: clamp(11rem, 75cqw, 20rem);
+}
 .breed-portrait .specimen figcaption { padding-inline: var(--inset); }
 
 .read-shell{width:min(100%, 680px);margin:0 auto}.single.read-page{background:#f5f5f7}</style></head><body class="single read-page"><main class="read-shell sample-card"><article class="study-card knowledge-card layout-matrix" lang="en" data-ordinal="1"><header class="k-head"><h1 class="k-title">Augmented matrices</h1></header><div class="k-lead"><p>An augmented matrix stores the coefficients of a linear system in fixed variable order, followed by the constants in a separate column.</p></div><div class="k-visual kind-table"><div class="data-table"><table><thead><tr><th scope="col">x column</th><th scope="col">y column</th><th scope="col">z column</th><th scope="col">Right side</th></tr></thead><tbody><tr><td>Coefficient of x</td><td>Coefficient of y</td><td>Coefficient of z</td><td>Constant</td></tr></tbody></table></div></div><div class="k-example"><p class="k-label">In use</p><p>In the order <code>x,y,z</code>, <code>2x−y=4</code> becomes <code>(2,−1,0 | 4)</code> and <code>y+3z=7</code> becomes <code>(0,1,3 | 7)</code>.</p></div><div class="k-note"><p class="k-label">Note</p><p>A variable not present in an equation has coefficient zero. Its column does not disappear.</p></div></article></main></body></html>

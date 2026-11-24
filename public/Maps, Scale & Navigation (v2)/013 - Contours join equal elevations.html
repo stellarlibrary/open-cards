@@ -480,9 +480,11 @@
   display: block;
   width: 100%;
   height: clamp(9rem, 64cqw, 20rem);
+  padding: .35rem;
   object-fit: contain;
   background: #f7f5ef;
-  border-radius: 5px;
+  border: 1px solid #e9e5dc;
+  border-radius: 6px;
 }
 .specimen figcaption {
   display: flex;
@@ -494,7 +496,13 @@
 }
 .specimen figcaption span:first-child { font-weight: 625; }
 .breed-portrait .kind-illustration { margin: calc(-1 * var(--inset)) calc(-1 * var(--inset)) 0; }
-.breed-portrait .specimen img { border-radius: 12px 12px 0 0; height: clamp(11rem, 75cqw, 20rem); }
+.breed-portrait .specimen img {
+  border: 0;
+  border-bottom: 1px solid var(--line);
+  border-radius: 12px 12px 0 0;
+  padding: .45rem .5rem 0;
+  height: clamp(11rem, 75cqw, 20rem);
+}
 .breed-portrait .specimen figcaption { padding-inline: var(--inset); }
 .v2-card {
   --v2-muted: #475462;
@@ -534,6 +542,7 @@
 .v2-figure .diagram .v2-draw-fill.ink { fill: var(--v2-ink); }
 .v2-figure .diagram .v2-draw-fill.signal { fill: var(--v2-second); }
 .v2-figure .diagram .v2-draw-fill.soft { fill: #dce8f0; }
+.v2-figure .diagram rect.v2-draw-fill.soft { stroke: #a8c0d3; stroke-width: .75; }
 .v2-figure .diagram .v2-draw-fill.mid { fill: #9abbd3; }
 .v2-figure .diagram .v2-draw-fill.warm { fill: #f0e4d7; }
 .v2-figure .diagram .v2-draw-fill.paper { fill: #fff; stroke: #8393a4; stroke-width: 1; }
@@ -608,4 +617,4 @@
   .v2-card .figure-drawing .diagram { width: calc(100% + 14px); max-width: none; margin-inline: -7px; }
 }
 
-.read-shell{width:min(100%, 680px);margin:0 auto}.single.read-page{background:#f5f5f7}</style></head><body class="single read-page"><main class="read-shell sample-card"><article class="study-card knowledge-card layout-map-sheet v2-card" lang="en" data-ordinal="13"><header class="k-head"><h1 class="k-title">Contours join equal elevations</h1></header><div class="k-visual kind-plate"><figure class="v2-figure figure-drawing"><div class="v2-figure-title">Three nested elevation contours</div><div class="v2-figure-body"><svg class="diagram" viewBox="0 0 300 144" role="img" aria-label="Three nested elevation contours. Outer, middle, and inner contours are 100, 120, and 140 m. The interval is 20 m." xmlns="http://www.w3.org/2000/svg"><ellipse class="v2-draw-fill soft" cx="141" cy="72" rx="114" ry="57"/><ellipse class="v2-draw-fill paper" cx="141" cy="72" rx="114" ry="57"/><ellipse class="v2-draw-fill soft" cx="141" cy="72" rx="87" ry="41"/><ellipse class="v2-draw-fill paper" cx="141" cy="72" rx="85" ry="39"/><ellipse class="v2-draw-fill soft" cx="141" cy="72" rx="52" ry="24"/><ellipse class="v2-draw-fill paper" cx="141" cy="72" rx="50" ry="22"/><text class="v2-draw-text label" x="234.00" y="54.00" text-anchor="middle">100</text><text class="v2-draw-text label" x="201.00" y="66.00" text-anchor="middle">120</text><text class="v2-draw-text strong" x="141.00" y="78.00" text-anchor="middle">140</text></svg></div><figcaption>Outer, middle, and inner contours are 100, 120, and 140 m. The interval is 20 m.</figcaption></figure></div><div class="k-lead"><p>Each contour joins points at the same mapped height. Adjacent standard contours differ by the stated contour interval, which describes height, not horizontal spacing.</p></div><div class="k-example"><p class="k-label">On the map</p><p>The loops are labeled 100, 120, and 140 m. Walking from the first to the third adds 40 m of net elevation regardless of how far apart the lines are on paper.</p></div><div class="k-note"><p class="k-label">Map reading note</p><p>A closed loop can also depict a depression if elevations decrease inward; read labels and symbols.</p></div></article></main></body></html>
+.read-shell{width:min(100%, 680px);margin:0 auto}.single.read-page{background:#f5f5f7}</style></head><body class="single read-page"><main class="read-shell sample-card"><article class="study-card knowledge-card layout-map-sheet v2-card" lang="en" data-ordinal="13"><header class="k-head"><h1 class="k-title">Contours join equal elevations</h1></header><div class="k-visual kind-plate"><figure class="v2-figure figure-drawing"><div class="v2-figure-title">Three nested elevation contours</div><div class="v2-figure-body"><svg class="diagram" viewBox="0 0 300 148" role="img" aria-label="Three nested elevation contours. Outer, middle, and inner contours are 100, 120, and 140 m. The interval is 20 m." xmlns="http://www.w3.org/2000/svg"><ellipse class="v2-draw-fill paper" cx="150" cy="74" rx="136" ry="60"/><ellipse class="v2-draw-fill paper" cx="150" cy="74" rx="88" ry="40"/><ellipse class="v2-draw-fill paper" cx="150" cy="74" rx="44" ry="21"/><text class="v2-draw-text label" x="262.00" y="79.00" text-anchor="middle">100</text><text class="v2-draw-text label" x="216.00" y="79.00" text-anchor="middle">120</text><text class="v2-draw-text strong" x="150.00" y="79.00" text-anchor="middle">140</text></svg></div><figcaption>Outer, middle, and inner contours are 100, 120, and 140 m. The interval is 20 m.</figcaption></figure></div><div class="k-lead"><p>Each contour joins points at the same mapped height. Adjacent standard contours differ by the stated contour interval, which describes height, not horizontal spacing.</p></div><div class="k-example"><p class="k-label">On the map</p><p>The loops are labeled 100, 120, and 140 m. Walking from the first to the third adds 40 m of net elevation regardless of how far apart the lines are on paper.</p></div><div class="k-note"><p class="k-label">Map reading note</p><p>A closed loop can also depict a depression if elevations decrease inward; read labels and symbols.</p></div></article></main></body></html>

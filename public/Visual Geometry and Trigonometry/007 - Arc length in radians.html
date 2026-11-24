@@ -480,9 +480,11 @@
   display: block;
   width: 100%;
   height: clamp(9rem, 64cqw, 20rem);
+  padding: .35rem;
   object-fit: contain;
   background: #f7f5ef;
-  border-radius: 5px;
+  border: 1px solid #e9e5dc;
+  border-radius: 6px;
 }
 .specimen figcaption {
   display: flex;
@@ -494,7 +496,13 @@
 }
 .specimen figcaption span:first-child { font-weight: 625; }
 .breed-portrait .kind-illustration { margin: calc(-1 * var(--inset)) calc(-1 * var(--inset)) 0; }
-.breed-portrait .specimen img { border-radius: 12px 12px 0 0; height: clamp(11rem, 75cqw, 20rem); }
+.breed-portrait .specimen img {
+  border: 0;
+  border-bottom: 1px solid var(--line);
+  border-radius: 12px 12px 0 0;
+  padding: .45rem .5rem 0;
+  height: clamp(11rem, 75cqw, 20rem);
+}
 .breed-portrait .specimen figcaption { padding-inline: var(--inset); }
 
-.read-shell{width:min(100%, 680px);margin:0 auto}.single.read-page{background:#f5f5f7}</style></head><body class="single read-page"><main class="read-shell sample-card"><article class="study-card knowledge-card layout-graph" lang="en" data-ordinal="7"><header class="k-head"><h1 class="k-title">Arc length in radians</h1></header><div class="k-lead"><p>An arc of radius <code>r</code> subtending angle <code>θ</code> radians has length <code>s=rθ</code>. Convert degrees before using this formula.</p></div><div class="k-visual kind-diagram"><svg class="diagram" viewBox="0 0 360 190" role="img" aria-label="A segment of the rim subtends a 150-degree central angle on a wheel with radius 18 cm." xmlns="http://www.w3.org/2000/svg"><circle class="rule" cx="171.00" cy="95.00" r="70.00"/><line class="rule" x1="171.00" y1="95.00" x2="241.00" y2="95.00"/><line class="rule" x1="171.00" y1="95.00" x2="110.38" y2="60.00"/><path class="accent" d="M 241.00,95.00 240.69,88.46 239.78,81.99 238.26,75.62 236.16,69.43 233.49,63.45 230.27,57.76 226.53,52.39 222.31,47.39 217.64,42.81 212.57,38.68 207.13,35.04 201.37,31.93 195.35,29.37 189.12,27.39 182.73,25.99 176.23,25.20 169.69,25.01 163.16,25.44 156.70,26.48 150.37,28.11 144.21,30.33 138.29,33.11 132.66,36.44 127.36,40.27 122.44,44.59 117.94,49.34 113.91,54.49 110.38,60.00"/><path class="accent" d="M 205.00,95.00 204.85,91.83 204.41,88.68 203.67,85.59 202.65,82.58 201.35,79.68 199.79,76.91 197.97,74.30 195.92,71.87 193.66,69.65 191.19,67.64 188.55,65.88 185.75,64.37 182.83,63.12 179.80,62.16 176.70,61.48 173.54,61.10 170.36,61.01 167.19,61.21 164.06,61.72 160.98,62.51 157.99,63.59 155.11,64.94 152.38,66.55 149.80,68.42 147.41,70.51 145.23,72.82 143.27,75.33 141.56,78.00"/><text class="" x="183.00" y="87.00" text-anchor="middle">150°</text><text class="" x="207.00" y="114.00" text-anchor="middle">18 cm</text><text class="" x="252.00" y="50.00" text-anchor="start">Arc length ?</text></svg></div><div class="k-example"><p class="k-label">Worked example</p><p>A wheel of radius 18 cm turns 150° about a fixed axle.</p><p><strong>15π cm</strong>. Convert to <code>150·π/180=5π/6</code> radians, then use <code>s=rθ=18·5π/6</code>. The formula requires the angle in radians.</p></div></article></main></body></html>
+.read-shell{width:min(100%, 680px);margin:0 auto}.single.read-page{background:#f5f5f7}</style></head><body class="single read-page"><main class="read-shell sample-card"><article class="study-card knowledge-card layout-graph" lang="en" data-ordinal="7"><header class="k-head"><h1 class="k-title">Arc length in radians</h1></header><div class="k-lead"><p>An arc of radius <code>r</code> subtending angle <code>θ</code> radians has length <code>s=rθ</code>. Convert degrees before using this formula.</p></div><div class="k-visual kind-diagram"><svg class="diagram" viewBox="0 0 360 190" role="img" aria-label="A segment of the rim subtends a 150-degree (5π/6 rad) central angle on a wheel with radius 18 cm." xmlns="http://www.w3.org/2000/svg"><circle class="rule" cx="171.00" cy="95.00" r="70.00"/><line class="rule" x1="171.00" y1="95.00" x2="241.00" y2="95.00"/><line class="rule" x1="171.00" y1="95.00" x2="110.38" y2="60.00"/><path class="accent" d="M 241.00,95.00 240.69,88.46 239.78,81.99 238.26,75.62 236.16,69.43 233.49,63.45 230.27,57.76 226.53,52.39 222.31,47.39 217.64,42.81 212.57,38.68 207.13,35.04 201.37,31.93 195.35,29.37 189.12,27.39 182.73,25.99 176.23,25.20 169.69,25.01 163.16,25.44 156.70,26.48 150.37,28.11 144.21,30.33 138.29,33.11 132.66,36.44 127.36,40.27 122.44,44.59 117.94,49.34 113.91,54.49 110.38,60.00"/><path class="accent" d="M 205.00,95.00 204.85,91.83 204.41,88.68 203.67,85.59 202.65,82.58 201.35,79.68 199.79,76.91 197.97,74.30 195.92,71.87 193.66,69.65 191.19,67.64 188.55,65.88 185.75,64.37 182.83,63.12 179.80,62.16 176.70,61.48 173.54,61.10 170.36,61.01 167.19,61.21 164.06,61.72 160.98,62.51 157.99,63.59 155.11,64.94 152.38,66.55 149.80,68.42 147.41,70.51 145.23,72.82 143.27,75.33 141.56,78.00"/><text class="" x="183.00" y="87.00" text-anchor="middle">150°</text><text class="" x="207.00" y="114.00" text-anchor="middle">18 cm</text><text class="" x="252.00" y="50.00" text-anchor="start">s = 15π cm</text></svg></div><div class="k-example"><p class="k-label">Worked example</p><p>When a wheel of radius <code>r = 18 cm</code> turns through <code>150°</code>, converting the central angle to radians gives <code>θ = 150 · (π/180) = 5π/6</code>. A point on the rim travels an <strong>arc length of <code>s = rθ = 18 · (5π/6) = 15π cm</code></strong>.</p></div></article></main></body></html>

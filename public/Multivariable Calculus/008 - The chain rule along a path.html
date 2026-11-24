@@ -480,9 +480,11 @@
   display: block;
   width: 100%;
   height: clamp(9rem, 64cqw, 20rem);
+  padding: .35rem;
   object-fit: contain;
   background: #f7f5ef;
-  border-radius: 5px;
+  border: 1px solid #e9e5dc;
+  border-radius: 6px;
 }
 .specimen figcaption {
   display: flex;
@@ -494,7 +496,13 @@
 }
 .specimen figcaption span:first-child { font-weight: 625; }
 .breed-portrait .kind-illustration { margin: calc(-1 * var(--inset)) calc(-1 * var(--inset)) 0; }
-.breed-portrait .specimen img { border-radius: 12px 12px 0 0; height: clamp(11rem, 75cqw, 20rem); }
+.breed-portrait .specimen img {
+  border: 0;
+  border-bottom: 1px solid var(--line);
+  border-radius: 12px 12px 0 0;
+  padding: .45rem .5rem 0;
+  height: clamp(11rem, 75cqw, 20rem);
+}
 .breed-portrait .specimen figcaption { padding-inline: var(--inset); }
 
-.read-shell{width:min(100%, 680px);margin:0 auto}.single.read-page{background:#f5f5f7}</style></head><body class="single read-page"><main class="read-shell sample-card"><article class="study-card knowledge-card layout-graph" lang="en" data-ordinal="8"><header class="k-head"><h1 class="k-title">The chain rule along a path</h1></header><div class="k-lead"><p>Along <code>(x(t),y(t))</code>, the rate of change of <code>f</code> is the gradient dotted with velocity: <code>fₓx′+fᵧy′</code>.</p></div><div class="k-visual kind-table"><div class="data-table"><table><thead><tr><th scope="col">Path coordinate</th><th scope="col">Value at t=1</th><th scope="col">Rate at t=1</th></tr></thead><tbody><tr><td>x</td><td>1</td><td>2</td></tr><tr><td>y</td><td>2</td><td>−1</td></tr></tbody></table></div></div><div class="k-example"><p class="k-label">Worked example</p><p>A sensor reads <code>T(x,y)=xy</code>. It follows <code>x=t²</code>, <code>y=3−t</code>.</p><p><strong>3 per unit t</strong>. The chain rule sums <code>Tₓ·x′+Tᵧ·y′</code>. At t=1 the contributions are <code>2·2</code> and <code>1·(−1)</code>.</p></div></article></main></body></html>
+.read-shell{width:min(100%, 680px);margin:0 auto}.single.read-page{background:#f5f5f7}</style></head><body class="single read-page"><main class="read-shell sample-card"><article class="study-card knowledge-card layout-graph" lang="en" data-ordinal="8"><header class="k-head"><h1 class="k-title">The chain rule along a path</h1></header><div class="k-lead"><p>Along <code>(x(t),y(t))</code>, the rate of change of <code>f</code> is the gradient dotted with velocity: <code>fₓx′+fᵧy′</code>.</p></div><div class="k-visual kind-table"><div class="data-table"><table><thead><tr><th scope="col">Path coordinate</th><th scope="col">Value at t=1</th><th scope="col">Rate at t=1</th></tr></thead><tbody><tr><td>x</td><td>1</td><td>2</td></tr><tr><td>y</td><td>2</td><td>−1</td></tr></tbody></table></div></div><div class="k-example"><p class="k-label">Worked example</p><p>A sensor reading <code>T(x,y) = xy</code> moves along <code>x(t) = t²</code>, <code>y(t) = 3 − t</code>. At <code>t = 1</code>, where <code>(x, y) = (1, 2)</code> and <code>(x′, y′) = (2, −1)</code>, the chain rule gives <strong><code>dT/dt = Tₓx′ + Tᵧy′ = 2(2) + 1(−1) = 3</code> per unit <code>t</code></strong>.</p></div></article></main></body></html>

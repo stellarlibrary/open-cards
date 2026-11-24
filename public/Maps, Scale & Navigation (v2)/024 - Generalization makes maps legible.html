@@ -480,9 +480,11 @@
   display: block;
   width: 100%;
   height: clamp(9rem, 64cqw, 20rem);
+  padding: .35rem;
   object-fit: contain;
   background: #f7f5ef;
-  border-radius: 5px;
+  border: 1px solid #e9e5dc;
+  border-radius: 6px;
 }
 .specimen figcaption {
   display: flex;
@@ -494,7 +496,13 @@
 }
 .specimen figcaption span:first-child { font-weight: 625; }
 .breed-portrait .kind-illustration { margin: calc(-1 * var(--inset)) calc(-1 * var(--inset)) 0; }
-.breed-portrait .specimen img { border-radius: 12px 12px 0 0; height: clamp(11rem, 75cqw, 20rem); }
+.breed-portrait .specimen img {
+  border: 0;
+  border-bottom: 1px solid var(--line);
+  border-radius: 12px 12px 0 0;
+  padding: .45rem .5rem 0;
+  height: clamp(11rem, 75cqw, 20rem);
+}
 .breed-portrait .specimen figcaption { padding-inline: var(--inset); }
 .v2-card {
   --v2-muted: #475462;
@@ -534,6 +542,7 @@
 .v2-figure .diagram .v2-draw-fill.ink { fill: var(--v2-ink); }
 .v2-figure .diagram .v2-draw-fill.signal { fill: var(--v2-second); }
 .v2-figure .diagram .v2-draw-fill.soft { fill: #dce8f0; }
+.v2-figure .diagram rect.v2-draw-fill.soft { stroke: #a8c0d3; stroke-width: .75; }
 .v2-figure .diagram .v2-draw-fill.mid { fill: #9abbd3; }
 .v2-figure .diagram .v2-draw-fill.warm { fill: #f0e4d7; }
 .v2-figure .diagram .v2-draw-fill.paper { fill: #fff; stroke: #8393a4; stroke-width: 1; }
@@ -608,4 +617,4 @@
   .v2-card .figure-drawing .diagram { width: calc(100% + 14px); max-width: none; margin-inline: -7px; }
 }
 
-.read-shell{width:min(100%, 680px);margin:0 auto}.single.read-page{background:#f5f5f7}</style></head><body class="single read-page"><main class="read-shell sample-card"><article class="study-card knowledge-card layout-map-sheet v2-card" lang="en" data-ordinal="24"><header class="k-head"><h1 class="k-title">Generalization makes maps legible</h1></header><div class="k-visual kind-plate"><figure class="v2-figure figure-drawing"><div class="v2-figure-title">A river trace before and after simplification</div><div class="v2-figure-body"><svg class="diagram" viewBox="0 0 300 133" role="img" aria-label="A river trace before and after simplification. The upper trace keeps small bends. The lower trace keeps the broad turns but removes minor wiggles." xmlns="http://www.w3.org/2000/svg"><path class="v2-draw-line accent" d="M 24.00,45.00 49.00,38.00 58.00,23.00 72.00,31.00 87.00,19.00 110.00,27.00 127.00,44.00 143.00,36.00 160.00,48.00 179.00,45.00 195.00,26.00 218.00,31.00 236.00,25.00 276.00,32.00"/><path class="v2-draw-line accent" d="M 24.00,108.00 87.00,82.00 143.00,103.00 179.00,108.00 201.00,88.00 276.00,94.00"/><text class="v2-draw-text label" x="24.00" y="19.00" text-anchor="start">Detail</text><text class="v2-draw-text label" x="24.00" y="82.00" text-anchor="start">Simplified</text></svg></div><figcaption>The upper trace keeps small bends. The lower trace keeps the broad turns but removes minor wiggles.</figcaption></figure></div><div class="k-lead"><p>At smaller map scales, simplification removes detail that would be too crowded to see. It may smooth shapes, combine features, or shift marks slightly for legibility.</p></div><div class="k-example"><p class="k-label">On the map</p><p>Many small bends in a river become fewer broader curves on a regional map. The broad course is useful, but tiny bends should not be measured from it.</p></div><div class="k-note"><p class="k-label">Map reading note</p><p>A simplified outline is not automatically incorrect; use it at the intended scale and precision.</p></div></article></main></body></html>
+.read-shell{width:min(100%, 680px);margin:0 auto}.single.read-page{background:#f5f5f7}</style></head><body class="single read-page"><main class="read-shell sample-card"><article class="study-card knowledge-card layout-map-sheet v2-card" lang="en" data-ordinal="24"><header class="k-head"><h1 class="k-title">Generalization makes maps legible</h1></header><div class="k-visual kind-plate"><figure class="v2-figure figure-drawing"><div class="v2-figure-title">A river trace before and after simplification</div><div class="v2-figure-body"><svg class="diagram" viewBox="0 0 300 144" role="img" aria-label="A river trace before and after simplification. The upper trace keeps small bends. The lower trace keeps the broad turns but removes minor wiggles." xmlns="http://www.w3.org/2000/svg"><path class="v2-draw-line accent" d="M 24.00,53.00 49.00,46.00 58.00,31.00 72.00,39.00 87.00,27.00 110.00,35.00 127.00,52.00 143.00,44.00 160.00,56.00 179.00,53.00 195.00,34.00 218.00,39.00 236.00,33.00 276.00,40.00"/><path class="v2-draw-line accent" d="M 24.00,122.00 87.00,96.00 143.00,117.00 179.00,122.00 201.00,102.00 276.00,108.00"/><text class="v2-draw-text label" x="24.00" y="19.00" text-anchor="start">Detail</text><text class="v2-draw-text label" x="24.00" y="84.00" text-anchor="start">Simplified</text></svg></div><figcaption>The upper trace keeps small bends. The lower trace keeps the broad turns but removes minor wiggles.</figcaption></figure></div><div class="k-lead"><p>At smaller map scales, simplification removes detail that would be too crowded to see. It may smooth shapes, combine features, or shift marks slightly for legibility.</p></div><div class="k-example"><p class="k-label">On the map</p><p>Many small bends in a river become fewer broader curves on a regional map. The broad course is useful, but tiny bends should not be measured from it.</p></div><div class="k-note"><p class="k-label">Map reading note</p><p>A simplified outline is not automatically incorrect; use it at the intended scale and precision.</p></div></article></main></body></html>

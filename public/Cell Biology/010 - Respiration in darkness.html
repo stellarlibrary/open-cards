@@ -480,9 +480,11 @@
   display: block;
   width: 100%;
   height: clamp(9rem, 64cqw, 20rem);
+  padding: .35rem;
   object-fit: contain;
   background: #f7f5ef;
-  border-radius: 5px;
+  border: 1px solid #e9e5dc;
+  border-radius: 6px;
 }
 .specimen figcaption {
   display: flex;
@@ -494,7 +496,13 @@
 }
 .specimen figcaption span:first-child { font-weight: 625; }
 .breed-portrait .kind-illustration { margin: calc(-1 * var(--inset)) calc(-1 * var(--inset)) 0; }
-.breed-portrait .specimen img { border-radius: 12px 12px 0 0; height: clamp(11rem, 75cqw, 20rem); }
+.breed-portrait .specimen img {
+  border: 0;
+  border-bottom: 1px solid var(--line);
+  border-radius: 12px 12px 0 0;
+  padding: .45rem .5rem 0;
+  height: clamp(11rem, 75cqw, 20rem);
+}
 .breed-portrait .specimen figcaption { padding-inline: var(--inset); }
 
-.read-shell{width:min(100%, 680px);margin:0 auto}.single.read-page{background:#f5f5f7}</style></head><body class="single read-page"><main class="read-shell sample-card"><article class="study-card knowledge-card layout-lab" lang="en" data-ordinal="10"><header class="k-head"><h1 class="k-title">Respiration in darkness</h1></header><div class="k-lead"><p>Plant cells can use stored organic molecules in cellular respiration to make ATP in the dark. Photosynthesis does not have to be running at the same time.</p></div><div class="k-visual kind-table"><div class="data-table"><table><thead><tr><th scope="col">Organelle</th><th scope="col">Process</th></tr></thead><tbody><tr><td>Chloroplast</td><td>light-dependent energy capture</td></tr><tr><td>Mitochondrion</td><td>aerobic respiration</td></tr></tbody></table></div></div><div class="k-example"><p class="k-label">What you observe</p><p>A green leaf cell has chloroplasts and mitochondria. At night, it still has access to stored sugars and oxygen, but it no longer receives the light needed for photosynthesis.</p><p>The mitochondrion. Aerobic respiration continues in darkness if fuel and oxygen are available; it does not depend directly on light.</p></div></article></main></body></html>
+.read-shell{width:min(100%, 680px);margin:0 auto}.single.read-page{background:#f5f5f7}</style></head><body class="single read-page"><main class="read-shell sample-card"><article class="study-card knowledge-card layout-lab" lang="en" data-ordinal="10"><header class="k-head"><h1 class="k-title">Respiration in darkness</h1></header><div class="k-lead"><p>Plant cells can use stored organic molecules in cellular respiration to make ATP in the dark. Photosynthesis does not have to be running at the same time.</p></div><div class="k-visual kind-table"><div class="data-table"><table><thead><tr><th scope="col">Organelle</th><th scope="col">Process</th></tr></thead><tbody><tr><td>Chloroplast</td><td>light-dependent energy capture</td></tr><tr><td>Mitochondrion</td><td>aerobic respiration</td></tr></tbody></table></div></div><div class="k-example"><p class="k-label">What you observe</p><p>At night, a green leaf cell stops light-driven chloroplast reactions, yet <strong>its mitochondria continue generating ATP</strong> via aerobic respiration as long as stored sugars and oxygen are available.</p></div></article></main></body></html>

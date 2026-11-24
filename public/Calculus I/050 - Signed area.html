@@ -480,9 +480,11 @@
   display: block;
   width: 100%;
   height: clamp(9rem, 64cqw, 20rem);
+  padding: .35rem;
   object-fit: contain;
   background: #f7f5ef;
-  border-radius: 5px;
+  border: 1px solid #e9e5dc;
+  border-radius: 6px;
 }
 .specimen figcaption {
   display: flex;
@@ -494,7 +496,13 @@
 }
 .specimen figcaption span:first-child { font-weight: 625; }
 .breed-portrait .kind-illustration { margin: calc(-1 * var(--inset)) calc(-1 * var(--inset)) 0; }
-.breed-portrait .specimen img { border-radius: 12px 12px 0 0; height: clamp(11rem, 75cqw, 20rem); }
+.breed-portrait .specimen img {
+  border: 0;
+  border-bottom: 1px solid var(--line);
+  border-radius: 12px 12px 0 0;
+  padding: .45rem .5rem 0;
+  height: clamp(11rem, 75cqw, 20rem);
+}
 .breed-portrait .specimen figcaption { padding-inline: var(--inset); }
 
 .read-shell{width:min(100%, 680px);margin:0 auto}.single.read-page{background:#f5f5f7}</style></head><body class="single read-page"><main class="read-shell sample-card"><article class="study-card knowledge-card layout-graph" lang="en" data-ordinal="50"><header class="k-head"><h1 class="k-title">Signed area</h1></header><div class="k-lead"><p>A definite integral over an interval with the limits in increasing order adds the area above the horizontal axis and subtracts the area below it. Split the interval at a sign change to account for each contribution.</p></div><div class="k-visual kind-graph"><svg class="diagram" viewBox="0 0 360 190" role="img" aria-label="y = x" xmlns="http://www.w3.org/2000/svg"><text class="plot-title" x="37.00" y="19.00" text-anchor="start">y = x</text><line class="grid" x1="54.29" y1="34.00" x2="54.29" y2="158.00"/><text class="" x="54.29" y="177.00" text-anchor="middle">-2</text><line class="grid" x1="123.47" y1="34.00" x2="123.47" y2="158.00"/><text class="" x="123.47" y="177.00" text-anchor="middle">-1</text><line class="grid" x1="192.65" y1="34.00" x2="192.65" y2="158.00"/><text class="" x="192.65" y="177.00" text-anchor="middle">0</text><line class="grid" x1="261.82" y1="34.00" x2="261.82" y2="158.00"/><text class="" x="261.82" y="177.00" text-anchor="middle">1</text><line class="grid" x1="37.00" y1="147.26" x2="331.00" y2="147.26"/><text class="" x="30.00" y="151.26" text-anchor="end">-2</text><line class="grid" x1="37.00" y1="119.45" x2="331.00" y2="119.45"/><text class="" x="30.00" y="123.45" text-anchor="end">-1</text><line class="grid" x1="37.00" y1="63.82" x2="331.00" y2="63.82"/><text class="" x="30.00" y="67.82" text-anchor="end">1</text><line class="axis" x1="37.00" y1="91.63" x2="341.00" y2="91.63"/><path class="axis" d="M 334.00,88.13 341.00,91.63 334.00,95.13"/><line class="axis" x1="192.65" y1="158.00" x2="192.65" y2="31.00"/><path class="axis" d="M 189.15,38.00 192.65,31.00 196.15,38.00"/><text class="" x="350.00" y="95.63" text-anchor="middle">x</text><text class="" x="203.65" y="33.00" text-anchor="middle">y</text><path class="region-alt" d="M 54.29,91.63 54.29,147.26 192.65,91.63 Z"/><path class="region" d="M 192.65,91.63 261.82,63.82 261.82,91.63 Z"/><path class="curve" d="M 37.00,154.22 39.94,153.04 42.88,151.85 45.82,150.67 48.76,149.49 51.70,148.31 54.64,147.13 57.58,145.94 60.52,144.76 63.46,143.58 66.40,142.40 69.34,141.21 72.28,140.03 75.22,138.85 78.16,137.67 81.10,136.49 84.04,135.30 86.98,134.12 89.92,132.94 92.86,131.76 95.80,130.57 98.74,129.39 101.68,128.21 104.62,127.03 107.56,125.85 110.50,124.66 113.44,123.48 116.38,122.30 119.32,121.12 122.26,119.94 125.20,118.75 128.14,117.57 131.08,116.39 134.02,115.21 136.96,114.02 139.90,112.84 142.84,111.66 145.78,110.48 148.72,109.30 151.66,108.11 154.60,106.93 157.54,105.75 160.48,104.57 163.42,103.38 166.36,102.20 169.30,101.02 172.24,99.84 175.18,98.66 178.12,97.47 181.06,96.29 184.00,95.11 186.94,93.93 189.88,92.74 192.82,91.56 195.76,90.38 198.70,89.20 201.64,88.02 204.58,86.83 207.52,85.65 210.46,84.47 213.40,83.29 216.34,82.11 219.28,80.92 222.22,79.74 225.16,78.56 228.10,77.38 231.04,76.19 233.98,75.01 236.92,73.83 239.86,72.65 242.80,71.47 245.74,70.28 248.68,69.10 251.62,67.92 254.56,66.74 257.50,65.55 260.44,64.37 263.38,63.19 266.32,62.01 269.26,60.83 272.20,59.64 275.14,58.46 278.08,57.28 281.02,56.10 283.96,54.91 286.90,53.73 289.84,52.55 292.78,51.37 295.72,50.19 298.66,49.00 301.60,47.82 304.54,46.64 307.48,45.46 310.42,44.28 313.36,43.09 316.30,41.91 319.24,40.73 322.18,39.55 325.12,38.36 328.06,37.18 331.00,36.00"/></svg></div><div class="k-example"><p class="k-label">Worked example</p><p>The line <code>y=x</code> crosses the axis at <code>0</code>. From <code>−2</code> to <code>0</code>, the triangle below the axis has base <code>2</code> and height <code>2</code>, contributing <code>−(2·2)/2=−2</code>. From <code>0</code> to <code>1</code>, the triangle above has base <code>1</code> and height <code>1</code>, contributing <code>1/2</code>.</p><p>Thus <code>∫₋₂¹ x dx=−2+1/2=−3/2</code>. The ordinary unsigned area of both pieces together is <code>2+1/2=5/2</code>.</p></div></article></main></body></html>

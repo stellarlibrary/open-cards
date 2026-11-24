@@ -480,9 +480,11 @@
   display: block;
   width: 100%;
   height: clamp(9rem, 64cqw, 20rem);
+  padding: .35rem;
   object-fit: contain;
   background: #f7f5ef;
-  border-radius: 5px;
+  border: 1px solid #e9e5dc;
+  border-radius: 6px;
 }
 .specimen figcaption {
   display: flex;
@@ -494,7 +496,13 @@
 }
 .specimen figcaption span:first-child { font-weight: 625; }
 .breed-portrait .kind-illustration { margin: calc(-1 * var(--inset)) calc(-1 * var(--inset)) 0; }
-.breed-portrait .specimen img { border-radius: 12px 12px 0 0; height: clamp(11rem, 75cqw, 20rem); }
+.breed-portrait .specimen img {
+  border: 0;
+  border-bottom: 1px solid var(--line);
+  border-radius: 12px 12px 0 0;
+  padding: .45rem .5rem 0;
+  height: clamp(11rem, 75cqw, 20rem);
+}
 .breed-portrait .specimen figcaption { padding-inline: var(--inset); }
 
-.read-shell{width:min(100%, 680px);margin:0 auto}.single.read-page{background:#f5f5f7}</style></head><body class="single read-page"><main class="read-shell sample-card"><article class="study-card knowledge-card layout-graph" lang="en" data-ordinal="10"><header class="k-head"><h1 class="k-title">The Pythagorean identity</h1></header><div class="k-lead"><p><code>sin²θ+cos²θ=1</code> gives the magnitude of either ratio from the other. The angle’s quadrant supplies the missing sign.</p></div><div class="k-visual kind-diagram"><svg class="diagram" viewBox="0 0 360 190" role="img" aria-label="Unit circle with x and y axes and the featured ray: θ; cos θ = −5/13." xmlns="http://www.w3.org/2000/svg"><line class="axis" x1="63.00" y1="96.00" x2="263.00" y2="96.00"/><path class="axis" d="M 256.00,92.50 263.00,96.00 256.00,99.50"/><line class="axis" x1="165.00" y1="171.00" x2="165.00" y2="12.00"/><path class="axis" d="M 161.50,19.00 165.00,12.00 168.50,19.00"/><circle class="rule" cx="165.00" cy="96.00" r="65.00"/><line class="curve" x1="165.00" y1="96.00" x2="140.00" y2="156.00"/><circle class="dot" cx="140.00" cy="156.00" r="3.00"/><line class="guide" x1="140.00" y1="156.00" x2="140.00" y2="96.00"/><path class="accent" d="M 202.00,96.00 201.56,90.32 200.25,84.77 198.11,79.49 195.18,74.60 191.54,70.22 187.26,66.45 182.46,63.38 177.24,61.08 171.73,59.62 166.07,59.02 160.37,59.29 154.79,60.44 149.45,62.43 144.48,65.21 139.99,68.73 136.10,72.90 132.89,77.61 130.45,82.76 128.83,88.22 128.06,93.87 128.17,99.57 129.16,105.18 130.99,110.58 133.64,115.63 137.02,120.21 141.07,124.22 145.69,127.56 150.77,130.15"/><text class="" x="292.00" y="45.00" text-anchor="middle">θ</text><text class="" x="282.00" y="157.00" text-anchor="middle">cos θ = −5/13</text><text class="" x="271.00" y="101.00" text-anchor="middle">x</text><text class="" x="179.00" y="17.00" text-anchor="middle">y</text></svg></div><div class="k-example"><p class="k-label">Worked example</p><p>In quadrant III, <code>cos θ=−5/13</code>.</p><p><strong>−12/13</strong>. The identity <code>sin²θ+cos²θ=1</code> gives <code>sin²θ=144/169</code>; take the negative root because the y-coordinate is negative in quadrant III.</p></div></article></main></body></html>
+.read-shell{width:min(100%, 680px);margin:0 auto}.single.read-page{background:#f5f5f7}</style></head><body class="single read-page"><main class="read-shell sample-card"><article class="study-card knowledge-card layout-graph" lang="en" data-ordinal="10"><header class="k-head"><h1 class="k-title">The Pythagorean identity</h1></header><div class="k-lead"><p><code>sin²θ+cos²θ=1</code> gives the magnitude of either ratio from the other. The angle’s quadrant supplies the missing sign.</p></div><div class="k-visual kind-diagram"><svg class="diagram" viewBox="0 0 360 190" role="img" aria-label="Unit circle with x and y axes and the featured ray: θ; cos θ = −5/13." xmlns="http://www.w3.org/2000/svg"><line class="axis" x1="63.00" y1="96.00" x2="263.00" y2="96.00"/><path class="axis" d="M 256.00,92.50 263.00,96.00 256.00,99.50"/><line class="axis" x1="165.00" y1="171.00" x2="165.00" y2="12.00"/><path class="axis" d="M 161.50,19.00 165.00,12.00 168.50,19.00"/><circle class="rule" cx="165.00" cy="96.00" r="65.00"/><line class="curve" x1="165.00" y1="96.00" x2="140.00" y2="156.00"/><circle class="dot" cx="140.00" cy="156.00" r="3.00"/><line class="guide" x1="140.00" y1="156.00" x2="140.00" y2="96.00"/><path class="accent" d="M 202.00,96.00 201.56,90.32 200.25,84.77 198.11,79.49 195.18,74.60 191.54,70.22 187.26,66.45 182.46,63.38 177.24,61.08 171.73,59.62 166.07,59.02 160.37,59.29 154.79,60.44 149.45,62.43 144.48,65.21 139.99,68.73 136.10,72.90 132.89,77.61 130.45,82.76 128.83,88.22 128.06,93.87 128.17,99.57 129.16,105.18 130.99,110.58 133.64,115.63 137.02,120.21 141.07,124.22 145.69,127.56 150.77,130.15"/><text class="" x="292.00" y="45.00" text-anchor="middle">θ</text><text class="" x="282.00" y="157.00" text-anchor="middle">cos θ = −5/13</text><text class="" x="271.00" y="101.00" text-anchor="middle">x</text><text class="" x="179.00" y="17.00" text-anchor="middle">y</text></svg></div><div class="k-example"><p class="k-label">Worked example</p><p>For an angle <code>θ</code> in quadrant III with <code>cos θ = −5/13</code>, the Pythagorean identity <code>sin²θ + cos²θ = 1</code> gives <code>sin²θ = 1 − 25/169 = 144/169</code>. Since the vertical coordinate is negative in quadrant III, <strong><code>sin θ = −12/13</code></strong>.</p></div></article></main></body></html>

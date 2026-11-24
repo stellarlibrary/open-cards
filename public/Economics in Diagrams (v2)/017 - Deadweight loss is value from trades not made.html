@@ -480,9 +480,11 @@
   display: block;
   width: 100%;
   height: clamp(9rem, 64cqw, 20rem);
+  padding: .35rem;
   object-fit: contain;
   background: #f7f5ef;
-  border-radius: 5px;
+  border: 1px solid #e9e5dc;
+  border-radius: 6px;
 }
 .specimen figcaption {
   display: flex;
@@ -494,7 +496,13 @@
 }
 .specimen figcaption span:first-child { font-weight: 625; }
 .breed-portrait .kind-illustration { margin: calc(-1 * var(--inset)) calc(-1 * var(--inset)) 0; }
-.breed-portrait .specimen img { border-radius: 12px 12px 0 0; height: clamp(11rem, 75cqw, 20rem); }
+.breed-portrait .specimen img {
+  border: 0;
+  border-bottom: 1px solid var(--line);
+  border-radius: 12px 12px 0 0;
+  padding: .45rem .5rem 0;
+  height: clamp(11rem, 75cqw, 20rem);
+}
 .breed-portrait .specimen figcaption { padding-inline: var(--inset); }
 .v2-card {
   --v2-muted: #475462;
@@ -534,6 +542,7 @@
 .v2-figure .diagram .v2-draw-fill.ink { fill: var(--v2-ink); }
 .v2-figure .diagram .v2-draw-fill.signal { fill: var(--v2-second); }
 .v2-figure .diagram .v2-draw-fill.soft { fill: #dce8f0; }
+.v2-figure .diagram rect.v2-draw-fill.soft { stroke: #a8c0d3; stroke-width: .75; }
 .v2-figure .diagram .v2-draw-fill.mid { fill: #9abbd3; }
 .v2-figure .diagram .v2-draw-fill.warm { fill: #f0e4d7; }
 .v2-figure .diagram .v2-draw-fill.paper { fill: #fff; stroke: #8393a4; stroke-width: 1; }
@@ -608,4 +617,4 @@
   .v2-card .figure-drawing .diagram { width: calc(100% + 14px); max-width: none; margin-inline: -7px; }
 }
 
-.read-shell{width:min(100%, 680px);margin:0 auto}.single.read-page{background:#f5f5f7}</style></head><body class="single read-page"><main class="read-shell sample-card"><article class="study-card knowledge-card layout-market-model v2-card" lang="en" data-ordinal="17"><header class="k-head"><h1 class="k-title">Deadweight loss is value from trades not made</h1></header><div class="k-lead"><p>A wedge can prevent units from trading even though buyers value them above sellers’ marginal cost. The forgone net value is deadweight loss under the model assumptions.</p></div><div class="k-visual kind-plate"><figure class="v2-figure figure-drawing"><div class="v2-figure-title">The area for the last unit that no longer trades</div><div class="v2-figure-body"><svg class="diagram" viewBox="0 0 300 145" role="img" aria-label="The area for the last unit that no longer trades. At quantity 4, demand is 2 above supply. The gap narrows to zero at quantity 5, forming the small shaded loss triangle." xmlns="http://www.w3.org/2000/svg"><path class="v2-draw-fill warm" d="M 146.00,43.00 146.00,103.00 228.00,73.00 Z"/><line class="v2-draw-line accent" x1="75.00" y1="17.00" x2="273.00" y2="89.00"/><line class="v2-draw-line signal" x1="75.00" y1="129.00" x2="273.00" y2="57.00"/><line class="v2-draw-line guide" x1="146.00" y1="43.00" x2="146.00" y2="117.00"/><line class="v2-draw-line guide" x1="228.00" y1="73.00" x2="228.00" y2="117.00"/><text class="v2-draw-text label" x="146.00" y="137.00" text-anchor="middle">Q = 4</text><text class="v2-draw-text label" x="228.00" y="137.00" text-anchor="middle">Q = 5</text><text class="v2-draw-text label" x="138.00" y="50.00" text-anchor="end">8</text><text class="v2-draw-text label" x="138.00" y="106.00" text-anchor="end">6</text></svg></div><figcaption>At quantity 4, demand is 2 above supply. The gap narrows to zero at quantity 5, forming the small shaded loss triangle.</figcaption></figure></div><div class="k-example"><p class="k-label">Worked example</p><p>A tax of 2 cuts quantity from 5 to 4 in a linear market. The lost gains from trade form a triangle with area ½ × 1 × 2 = 1. The tax revenue of 8 is a transfer, not that lost area.</p></div><div class="k-note"><p class="k-label">Model conditions</p><p>This baseline assumes no external effects or other distortion; taxes can improve outcomes when such costs would otherwise be ignored.</p></div></article></main></body></html>
+.read-shell{width:min(100%, 680px);margin:0 auto}.single.read-page{background:#f5f5f7}</style></head><body class="single read-page"><main class="read-shell sample-card"><article class="study-card knowledge-card layout-market-model v2-card" lang="en" data-ordinal="17"><header class="k-head"><h1 class="k-title">Deadweight loss is value from trades not made</h1></header><div class="k-lead"><p>A wedge can prevent units from trading even though buyers value them above sellers’ marginal cost. The forgone net value is deadweight loss under the model assumptions.</p></div><div class="k-visual kind-plate"><figure class="v2-figure figure-drawing"><div class="v2-figure-title">The area for the last unit that no longer trades</div><div class="v2-figure-body"><svg class="diagram" viewBox="0 0 300 156" role="img" aria-label="The area for the last unit that no longer trades. At quantity 4, demand is 8 and supply is 6. That gap narrows to zero at quantity 5, forming the shaded loss triangle." xmlns="http://www.w3.org/2000/svg"><path class="v2-draw-fill warm" d="M 148.00,44.00 148.00,100.00 218.00,72.00 Z"/><line class="v2-draw-line guide" x1="48.00" y1="44.00" x2="148.00" y2="44.00"/><line class="v2-draw-line guide" x1="48.00" y1="100.00" x2="148.00" y2="100.00"/><line class="v2-draw-line guide" x1="148.00" y1="100.00" x2="148.00" y2="118.00"/><line class="v2-draw-line guide" x1="218.00" y1="72.00" x2="218.00" y2="118.00"/><line class="v2-draw-line accent" x1="78.00" y1="16.00" x2="268.00" y2="92.00"/><line class="v2-draw-line signal" x1="103.00" y1="118.00" x2="268.00" y2="52.00"/><path class="v2-draw-line ink" d="M 148.00,44.00 148.00,100.00 218.00,72.00 148.00,44.00"/><path class="v2-draw-line ink" d="M 48.00,14.00 48.00,118.00 274.00,118.00"/><line class="v2-draw-line ink" x1="44.00" y1="44.00" x2="48.00" y2="44.00"/><line class="v2-draw-line ink" x1="44.00" y1="100.00" x2="48.00" y2="100.00"/><line class="v2-draw-line ink" x1="148.00" y1="118.00" x2="148.00" y2="122.00"/><line class="v2-draw-line ink" x1="218.00" y1="118.00" x2="218.00" y2="122.00"/><text class="v2-draw-text label" x="40.00" y="49.00" text-anchor="end">8</text><text class="v2-draw-text label" x="40.00" y="105.00" text-anchor="end">6</text><text class="v2-draw-text label" x="148.00" y="139.00" text-anchor="middle">Q = 4</text><text class="v2-draw-text label" x="218.00" y="139.00" text-anchor="middle">Q = 5</text></svg></div><figcaption>At quantity 4, demand is 8 and supply is 6. That gap narrows to zero at quantity 5, forming the shaded loss triangle.</figcaption></figure></div><div class="k-example"><p class="k-label">Worked example</p><p>A tax of 2 cuts quantity from 5 to 4 in a linear market. The lost gains from trade form a triangle with area ½ × 1 × 2 = 1. The tax revenue of 8 is a transfer, not that lost area.</p></div><div class="k-note"><p class="k-label">Model conditions</p><p>This baseline assumes no external effects or other distortion; taxes can improve outcomes when such costs would otherwise be ignored.</p></div></article></main></body></html>

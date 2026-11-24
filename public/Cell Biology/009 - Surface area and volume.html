@@ -480,9 +480,11 @@
   display: block;
   width: 100%;
   height: clamp(9rem, 64cqw, 20rem);
+  padding: .35rem;
   object-fit: contain;
   background: #f7f5ef;
-  border-radius: 5px;
+  border: 1px solid #e9e5dc;
+  border-radius: 6px;
 }
 .specimen figcaption {
   display: flex;
@@ -494,7 +496,13 @@
 }
 .specimen figcaption span:first-child { font-weight: 625; }
 .breed-portrait .kind-illustration { margin: calc(-1 * var(--inset)) calc(-1 * var(--inset)) 0; }
-.breed-portrait .specimen img { border-radius: 12px 12px 0 0; height: clamp(11rem, 75cqw, 20rem); }
+.breed-portrait .specimen img {
+  border: 0;
+  border-bottom: 1px solid var(--line);
+  border-radius: 12px 12px 0 0;
+  padding: .45rem .5rem 0;
+  height: clamp(11rem, 75cqw, 20rem);
+}
 .breed-portrait .specimen figcaption { padding-inline: var(--inset); }
 
-.read-shell{width:min(100%, 680px);margin:0 auto}.single.read-page{background:#f5f5f7}</style></head><body class="single read-page"><main class="read-shell sample-card"><article class="study-card knowledge-card layout-lab" lang="en" data-ordinal="9"><header class="k-head"><h1 class="k-title">Surface area and volume</h1></header><div class="k-lead"><p>For a cube of side <code>L</code>, area scales as <code>L²</code> and volume as <code>L³</code>. As the cube grows, the area available for exchange per unit volume declines.</p></div><div class="k-visual kind-table"><div class="data-table"><table><thead><tr><th scope="col">Model cell</th><th scope="col">Side length (μm)</th></tr></thead><tbody><tr><td>Small cube</td><td>2</td></tr><tr><td>Large cube</td><td>4</td></tr></tbody></table></div></div><div class="k-example"><p class="k-label">What you observe</p><p>Two idealized cube cells have side lengths of 2 μm and 4 μm. The outer membrane is the exchange surface. For side <code>s</code>, area is <code>6s²</code> and volume is <code>s³</code>.</p><p>The 2 μm cell has twice as much: <code>6/s</code> is 3 μm⁻¹ for the smaller cube and 1.5 μm⁻¹ for the larger cube.</p></div></article></main></body></html>
+.read-shell{width:min(100%, 680px);margin:0 auto}.single.read-page{background:#f5f5f7}</style></head><body class="single read-page"><main class="read-shell sample-card"><article class="study-card knowledge-card layout-lab" lang="en" data-ordinal="9"><header class="k-head"><h1 class="k-title">Surface area and volume</h1></header><div class="k-lead"><p>For a cube of side <code>L</code>, area scales as <code>L²</code> and volume as <code>L³</code>. As the cube grows, the area available for exchange per unit volume declines.</p></div><div class="k-visual kind-table"><div class="data-table"><table><thead><tr><th scope="col">Model cell</th><th scope="col">Side length (μm)</th></tr></thead><tbody><tr><td>Small cube</td><td>2</td></tr><tr><td>Large cube</td><td>4</td></tr></tbody></table></div></div><div class="k-example"><p class="k-label">What you observe</p><p>Comparing idealized cube cells of side <code>s = 2 μm</code> and <code>s = 4 μm</code> (<code>area / volume = 6s² / s³ = 6/s</code>), <strong>the smaller <code>2 μm</code> cell has twice the membrane surface area per unit volume</strong>: <code>3 μm⁻¹</code> versus <code>1.5 μm⁻¹</code>.</p></div></article></main></body></html>

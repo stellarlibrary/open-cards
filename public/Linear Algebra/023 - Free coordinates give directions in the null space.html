@@ -480,9 +480,11 @@
   display: block;
   width: 100%;
   height: clamp(9rem, 64cqw, 20rem);
+  padding: .35rem;
   object-fit: contain;
   background: #f7f5ef;
-  border-radius: 5px;
+  border: 1px solid #e9e5dc;
+  border-radius: 6px;
 }
 .specimen figcaption {
   display: flex;
@@ -494,7 +496,13 @@
 }
 .specimen figcaption span:first-child { font-weight: 625; }
 .breed-portrait .kind-illustration { margin: calc(-1 * var(--inset)) calc(-1 * var(--inset)) 0; }
-.breed-portrait .specimen img { border-radius: 12px 12px 0 0; height: clamp(11rem, 75cqw, 20rem); }
+.breed-portrait .specimen img {
+  border: 0;
+  border-bottom: 1px solid var(--line);
+  border-radius: 12px 12px 0 0;
+  padding: .45rem .5rem 0;
+  height: clamp(11rem, 75cqw, 20rem);
+}
 .breed-portrait .specimen figcaption { padding-inline: var(--inset); }
 
 .read-shell{width:min(100%, 680px);margin:0 auto}.single.read-page{background:#f5f5f7}</style></head><body class="single read-page"><main class="read-shell sample-card"><article class="study-card knowledge-card layout-matrix" lang="en" data-ordinal="23"><header class="k-head"><h1 class="k-title">Free coordinates give directions in the null space</h1></header><div class="k-lead"><p>The null space is the set of solutions of <code>Rx=0</code>. In echelon form, assign independent parameters to the free coordinates and solve each pivot equation to obtain all the null vectors.</p></div><div class="k-visual kind-table"><div class="data-table"><table><thead><tr><th scope="col">Free coordinate</th><th scope="col">Pivot coordinates it affects</th></tr></thead><tbody><tr><td>x₂=s</td><td>x₁</td></tr><tr><td>x₄=t</td><td>x₁ and x₃</td></tr></tbody></table></div></div><div class="k-example"><p class="k-label">In use</p><p>Take <code>R</code> with rows <code>(1,−3,0,2)</code>, <code>(0,0,1,−4)</code>, and <code>(0,0,0,0)</code>. Columns <code>1</code> and <code>3</code> have pivots. Set <code>x₂=s</code> and <code>x₄=t</code>. The equations <code>x₁−3s+2t=0</code> and <code>x₃−4t=0</code> give <code>x₁=3s−2t</code> and <code>x₃=4t</code>.</p><p>Every solution is <code>(3s−2t,s,4t,t)</code>, or <code>s(3,1,0,0)+t(−2,0,4,1)</code> for real <code>s,t</code>. These choices make both pivot equations zero; the zero row adds no restriction.</p></div><div class="k-note"><p class="k-label">Note</p><p>Each parameter direction has a <code>1</code> in its own free coordinate and <code>0</code> in the other, so the directions are independent.</p></div></article></main></body></html>

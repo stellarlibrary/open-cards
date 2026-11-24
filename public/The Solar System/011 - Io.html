@@ -480,9 +480,11 @@
   display: block;
   width: 100%;
   height: clamp(9rem, 64cqw, 20rem);
+  padding: .35rem;
   object-fit: contain;
   background: #f7f5ef;
-  border-radius: 5px;
+  border: 1px solid #e9e5dc;
+  border-radius: 6px;
 }
 .specimen figcaption {
   display: flex;
@@ -494,7 +496,13 @@
 }
 .specimen figcaption span:first-child { font-weight: 625; }
 .breed-portrait .kind-illustration { margin: calc(-1 * var(--inset)) calc(-1 * var(--inset)) 0; }
-.breed-portrait .specimen img { border-radius: 12px 12px 0 0; height: clamp(11rem, 75cqw, 20rem); }
+.breed-portrait .specimen img {
+  border: 0;
+  border-bottom: 1px solid var(--line);
+  border-radius: 12px 12px 0 0;
+  padding: .45rem .5rem 0;
+  height: clamp(11rem, 75cqw, 20rem);
+}
 .breed-portrait .specimen figcaption { padding-inline: var(--inset); }
 
-.read-shell{width:min(100%, 680px);margin:0 auto}.single.read-page{background:#f5f5f7}</style></head><body class="single read-page"><main class="read-shell sample-card"><article class="study-card knowledge-card layout-atlas" lang="en" data-ordinal="11"><header class="k-head"><h1 class="k-title">Io</h1></header><div class="k-visual kind-diagram"><svg class="diagram" viewBox="0 0 360 201" role="img" aria-label="Io follows a slightly eccentric orbit around Jupiter. Eccentricity and body sizes are exaggerated." xmlns="http://www.w3.org/2000/svg"><ellipse class="rule" cx="180" cy="95" rx="78" ry="76"/><circle class="world" cx="197.55" cy="95.00" r="25.00"/><text class="" x="197.55" y="99.00" text-anchor="middle">Jupiter</text><circle class="sun" cx="102.00" cy="95.00" r="7.00"/><text class="" x="78.00" y="99.00" text-anchor="middle">Io</text><text class="" x="180.00" y="187.00" text-anchor="middle">Eccentricity and sizes exaggerated</text></svg></div><div class="k-lead"><p>Io travels around Jupiter in a resonant chain with Europa and Ganymede. Its changing distance from Jupiter varies the strength of the tide within it.</p></div><div class="k-example"><p class="k-label">How it works</p><p><strong>Tidal flexing heats Io&#x27;s interior.</strong> A slightly eccentric orbit repeatedly changes the gravitational distortion; orbital resonance helps maintain that eccentricity.</p></div></article></main></body></html>
+.read-shell{width:min(100%, 680px);margin:0 auto}.single.read-page{background:#f5f5f7}</style></head><body class="single read-page"><main class="read-shell sample-card"><article class="study-card knowledge-card layout-atlas" lang="en" data-ordinal="11"><header class="k-head"><h1 class="k-title">Io</h1></header><div class="k-visual kind-diagram"><svg class="diagram" viewBox="0 0 360 201" role="img" aria-label="Io follows a slightly eccentric orbit around Jupiter. Eccentricity and body sizes are exaggerated." xmlns="http://www.w3.org/2000/svg"><ellipse class="rule" cx="180" cy="95" rx="78" ry="76"/><circle class="world" cx="197.55" cy="95.00" r="25.00"/><text class="" x="197.55" y="99.00" text-anchor="middle">Jupiter</text><circle class="sun" cx="102.00" cy="95.00" r="7.00"/><text class="" x="78.00" y="99.00" text-anchor="middle">Io</text><text class="" x="180.00" y="187.00" text-anchor="middle">Eccentricity and sizes exaggerated</text></svg></div><div class="k-lead"><p>Io travels around Jupiter in a resonant chain with Europa and Ganymede. Its changing distance from Jupiter varies the strength of the tide within it.</p></div><div class="k-example"><p class="k-label">How it works</p><p>Repeated <strong>tidal flexing heats Io&#x27;s interior</strong>, driving intense volcanism even in the cold outer solar system. An eccentric orbit continually flexes the moon&#x27;s shape, and orbital resonance with Europa and Ganymede keeps that eccentricity from damping out.</p></div></article></main></body></html>

@@ -480,9 +480,11 @@
   display: block;
   width: 100%;
   height: clamp(9rem, 64cqw, 20rem);
+  padding: .35rem;
   object-fit: contain;
   background: #f7f5ef;
-  border-radius: 5px;
+  border: 1px solid #e9e5dc;
+  border-radius: 6px;
 }
 .specimen figcaption {
   display: flex;
@@ -494,7 +496,13 @@
 }
 .specimen figcaption span:first-child { font-weight: 625; }
 .breed-portrait .kind-illustration { margin: calc(-1 * var(--inset)) calc(-1 * var(--inset)) 0; }
-.breed-portrait .specimen img { border-radius: 12px 12px 0 0; height: clamp(11rem, 75cqw, 20rem); }
+.breed-portrait .specimen img {
+  border: 0;
+  border-bottom: 1px solid var(--line);
+  border-radius: 12px 12px 0 0;
+  padding: .45rem .5rem 0;
+  height: clamp(11rem, 75cqw, 20rem);
+}
 .breed-portrait .specimen figcaption { padding-inline: var(--inset); }
 
-.read-shell{width:min(100%, 680px);margin:0 auto}.single.read-page{background:#f5f5f7}</style></head><body class="single read-page"><main class="read-shell sample-card"><article class="study-card knowledge-card layout-matrix" lang="en" data-ordinal="15"><header class="k-head"><h1 class="k-title">Shifting an affine recurrence</h1></header><div class="k-lead"><p>For <code>aₙ₊₁=raₙ+b</code> with <code>r≠1</code>, subtract the fixed point <code>b/(1−r)</code>. The shifted sequence then satisfies a geometric recurrence.</p></div><div class="k-visual kind-flow"><ol class="visual-list flow"><li>Add 2 to form bₙ</li><li>Use geometric growth from b₀=4</li><li>Subtract 2</li></ol></div><div class="k-example"><p class="k-label">In use</p><p><code>a₀=2</code> and <code>aₙ=3aₙ₋₁+4</code> for n≥1.</p><p><strong>aₙ=4·3ⁿ−2.</strong> Set <code>bₙ=aₙ+2</code>; then <code>bₙ=3(aₙ₋₁+2)=3bₙ₋₁</code> and <code>b₀=4</code>. Solve the geometric recurrence, then subtract 2.</p></div></article></main></body></html>
+.read-shell{width:min(100%, 680px);margin:0 auto}.single.read-page{background:#f5f5f7}</style></head><body class="single read-page"><main class="read-shell sample-card"><article class="study-card knowledge-card layout-matrix" lang="en" data-ordinal="15"><header class="k-head"><h1 class="k-title">Shifting an affine recurrence</h1></header><div class="k-lead"><p>For <code>aₙ₊₁=raₙ+b</code> with <code>r≠1</code>, subtract the fixed point <code>b/(1−r)</code>. The shifted sequence then satisfies a geometric recurrence.</p></div><div class="k-visual kind-flow"><ol class="visual-list flow"><li>Add 2 to form bₙ</li><li>Use geometric growth from b₀=4</li><li>Subtract 2</li></ol></div><div class="k-example"><p class="k-label">In use</p><p>For <code>a₀ = 2</code> and <code>aₙ = 3aₙ₋₁ + 4</code> (<code>n ≥ 1</code>), the fixed point <code>c = 3c + 4</code> is <code>c = −2</code>. Setting <code>bₙ = aₙ − (−2) = aₙ + 2</code> gives <code>b₀ = 4</code> and <code>bₙ = 3(aₙ₋₁ + 2) = 3bₙ₋₁</code>, so <code>bₙ = 4 · 3ⁿ</code> and <strong><code>aₙ = 4 · 3ⁿ − 2</code></strong>.</p></div></article></main></body></html>

@@ -480,9 +480,11 @@
   display: block;
   width: 100%;
   height: clamp(9rem, 64cqw, 20rem);
+  padding: .35rem;
   object-fit: contain;
   background: #f7f5ef;
-  border-radius: 5px;
+  border: 1px solid #e9e5dc;
+  border-radius: 6px;
 }
 .specimen figcaption {
   display: flex;
@@ -494,7 +496,13 @@
 }
 .specimen figcaption span:first-child { font-weight: 625; }
 .breed-portrait .kind-illustration { margin: calc(-1 * var(--inset)) calc(-1 * var(--inset)) 0; }
-.breed-portrait .specimen img { border-radius: 12px 12px 0 0; height: clamp(11rem, 75cqw, 20rem); }
+.breed-portrait .specimen img {
+  border: 0;
+  border-bottom: 1px solid var(--line);
+  border-radius: 12px 12px 0 0;
+  padding: .45rem .5rem 0;
+  height: clamp(11rem, 75cqw, 20rem);
+}
 .breed-portrait .specimen figcaption { padding-inline: var(--inset); }
 
 .read-shell{width:min(100%, 680px);margin:0 auto}.single.read-page{background:#f5f5f7}</style></head><body class="single read-page"><main class="read-shell sample-card"><article class="study-card knowledge-card layout-bilingual" lang="zh-Hans" data-ordinal="92"><header class="k-head"><h1 class="k-title" lang="en">persist</h1></header><div class="k-lead"><p><strong>动词</strong> · 某种状态或现象仍然存在；持续。</p></div><div class="k-example"><p class="k-label">用法示例</p><div class="k-sentence" lang="en"><p>The difference in error rates <strong>persisted</strong> after both groups received the same written instructions, suggesting that wording was not the only factor.</p></div><div class="k-gloss"><p>两组都拿到同样的书面说明后，错误率的差异依然存在，这表明措辞可能并不是唯一因素。</p></div></div><div class="k-note"><p class="k-label">辨析</p><p><strong>a difference persists</strong> 表示差异没有消失；不说明差异是在扩大、缩小，还是保持不变。</p></div></article></main></body></html>

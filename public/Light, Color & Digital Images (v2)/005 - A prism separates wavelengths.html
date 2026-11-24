@@ -480,9 +480,11 @@
   display: block;
   width: 100%;
   height: clamp(9rem, 64cqw, 20rem);
+  padding: .35rem;
   object-fit: contain;
   background: #f7f5ef;
-  border-radius: 5px;
+  border: 1px solid #e9e5dc;
+  border-radius: 6px;
 }
 .specimen figcaption {
   display: flex;
@@ -494,7 +496,13 @@
 }
 .specimen figcaption span:first-child { font-weight: 625; }
 .breed-portrait .kind-illustration { margin: calc(-1 * var(--inset)) calc(-1 * var(--inset)) 0; }
-.breed-portrait .specimen img { border-radius: 12px 12px 0 0; height: clamp(11rem, 75cqw, 20rem); }
+.breed-portrait .specimen img {
+  border: 0;
+  border-bottom: 1px solid var(--line);
+  border-radius: 12px 12px 0 0;
+  padding: .45rem .5rem 0;
+  height: clamp(11rem, 75cqw, 20rem);
+}
 .breed-portrait .specimen figcaption { padding-inline: var(--inset); }
 .v2-card {
   --v2-muted: #475462;
@@ -534,6 +542,7 @@
 .v2-figure .diagram .v2-draw-fill.ink { fill: var(--v2-ink); }
 .v2-figure .diagram .v2-draw-fill.signal { fill: var(--v2-second); }
 .v2-figure .diagram .v2-draw-fill.soft { fill: #dce8f0; }
+.v2-figure .diagram rect.v2-draw-fill.soft { stroke: #a8c0d3; stroke-width: .75; }
 .v2-figure .diagram .v2-draw-fill.mid { fill: #9abbd3; }
 .v2-figure .diagram .v2-draw-fill.warm { fill: #f0e4d7; }
 .v2-figure .diagram .v2-draw-fill.paper { fill: #fff; stroke: #8393a4; stroke-width: 1; }
@@ -608,4 +617,4 @@
   .v2-card .figure-drawing .diagram { width: calc(100% + 14px); max-width: none; margin-inline: -7px; }
 }
 
-.read-shell{width:min(100%, 680px);margin:0 auto}.single.read-page{background:#f5f5f7}</style></head><body class="single read-page"><main class="read-shell sample-card"><article class="study-card knowledge-card layout-optical-plate v2-card" lang="en" data-ordinal="5"><header class="k-head"><h1 class="k-title">A prism separates wavelengths</h1></header><div class="k-visual kind-plate"><figure class="v2-figure figure-drawing"><div class="v2-figure-title">A schematic beam through a glass prism</div><div class="v2-figure-body"><svg class="diagram" viewBox="0 0 300 143" role="img" aria-label="A schematic beam through a glass prism. The outgoing rays fan out. Violet is more deviated downward than red in this orientation." xmlns="http://www.w3.org/2000/svg"><path class="v2-draw-fill soft" d="M 142.00,18.00 195.00,114.00 86.00,114.00 Z"/><line class="v2-draw-line ink" x1="19.00" y1="68.00" x2="114.00" y2="68.00"/><line class="v2-draw-line faint" x1="114.00" y1="68.00" x2="170.00" y2="69.00"/><line class="v2-draw-line signal" x1="170.00" y1="69.00" x2="247.00" y2="82.00"/><line class="v2-draw-line faint" x1="170.00" y1="69.00" x2="247.00" y2="98.00"/><line class="v2-draw-line accent" x1="170.00" y1="69.00" x2="247.00" y2="116.00"/><text class="v2-draw-text label" x="253.00" y="84.00" text-anchor="start">Red</text><text class="v2-draw-text label" x="253.00" y="120.00" text-anchor="start">Violet</text></svg></div><figcaption>The outgoing rays fan out. Violet is more deviated downward than red in this orientation.</figcaption></figure></div><div class="k-lead"><p>In ordinary glass, refractive index generally differs with wavelength across visible light. A prism bends shorter visible wavelengths more than longer ones under the usual dispersion conditions.</p></div><div class="k-example"><p class="k-label">At the image</p><p>A narrow white beam contains many wavelengths. After a glass prism they spread into a continuum, with violet deviated more than red.</p></div><div class="k-note"><p class="k-label">In practice</p><p>Three drawn rays stand for a continuum, not three components hiding inside white light.</p></div></article></main></body></html>
+.read-shell{width:min(100%, 680px);margin:0 auto}.single.read-page{background:#f5f5f7}</style></head><body class="single read-page"><main class="read-shell sample-card"><article class="study-card knowledge-card layout-optical-plate v2-card" lang="en" data-ordinal="5"><header class="k-head"><h1 class="k-title">A prism separates wavelengths</h1></header><div class="k-visual kind-plate"><figure class="v2-figure figure-drawing"><div class="v2-figure-title">A schematic beam through a glass prism</div><div class="v2-figure-body"><svg class="diagram" viewBox="0 0 300 146" role="img" aria-label="A schematic beam through a glass prism. Refraction at both prism faces bends violet downward more than red, fanning the beam into a spectrum." xmlns="http://www.w3.org/2000/svg"><path class="v2-draw-fill soft" d="M 130.00,16.00 186.00,118.00 74.00,118.00 Z"/><path class="v2-draw-line faint" d="M 130.00,16.00 186.00,118.00 74.00,118.00 130.00,16.00"/><line class="v2-draw-line ink" x1="18.00" y1="60.00" x2="106.00" y2="60.00"/><line class="v2-draw-line ink" x1="18.00" y1="60.00" x2="72.00" y2="60.00"/><path class="v2-draw-line ink" d="M 65.00,63.50 72.00,60.00 65.00,56.50"/><path class="v2-draw-line signal" d="M 106.00,60.00 160.00,70.00 232.00,92.00"/><path class="v2-draw-line faint" d="M 106.00,60.00 162.00,74.00 232.00,108.00"/><path class="v2-draw-line accent" d="M 106.00,60.00 164.00,78.00 232.00,124.00"/><text class="v2-draw-text label" x="238.00" y="94.00" text-anchor="start">Red</text><text class="v2-draw-text label" x="238.00" y="126.00" text-anchor="start">Violet</text></svg></div><figcaption>Refraction at both prism faces bends violet downward more than red, fanning the beam into a spectrum.</figcaption></figure></div><div class="k-lead"><p>In ordinary glass, refractive index generally differs with wavelength across visible light. A prism bends shorter visible wavelengths more than longer ones under the usual dispersion conditions.</p></div><div class="k-example"><p class="k-label">At the image</p><p>A narrow white beam contains many wavelengths. After a glass prism they spread into a continuum, with violet deviated more than red.</p></div><div class="k-note"><p class="k-label">In practice</p><p>Three drawn rays stand for a continuum, not three components hiding inside white light.</p></div></article></main></body></html>

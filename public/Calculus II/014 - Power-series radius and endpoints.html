@@ -480,9 +480,11 @@
   display: block;
   width: 100%;
   height: clamp(9rem, 64cqw, 20rem);
+  padding: .35rem;
   object-fit: contain;
   background: #f7f5ef;
-  border-radius: 5px;
+  border: 1px solid #e9e5dc;
+  border-radius: 6px;
 }
 .specimen figcaption {
   display: flex;
@@ -494,7 +496,13 @@
 }
 .specimen figcaption span:first-child { font-weight: 625; }
 .breed-portrait .kind-illustration { margin: calc(-1 * var(--inset)) calc(-1 * var(--inset)) 0; }
-.breed-portrait .specimen img { border-radius: 12px 12px 0 0; height: clamp(11rem, 75cqw, 20rem); }
+.breed-portrait .specimen img {
+  border: 0;
+  border-bottom: 1px solid var(--line);
+  border-radius: 12px 12px 0 0;
+  padding: .45rem .5rem 0;
+  height: clamp(11rem, 75cqw, 20rem);
+}
 .breed-portrait .specimen figcaption { padding-inline: var(--inset); }
 
-.read-shell{width:min(100%, 680px);margin:0 auto}.single.read-page{background:#f5f5f7}</style></head><body class="single read-page"><main class="read-shell sample-card"><article class="study-card knowledge-card layout-graph" lang="en" data-ordinal="14"><header class="k-head"><h1 class="k-title">Power-series radius and endpoints</h1></header><div class="k-lead"><p>A power series converges absolutely inside its radius and diverges outside. The two endpoints must be tested separately.</p></div><div class="k-visual kind-table"><div class="data-table"><table><thead><tr><th scope="col">Position</th><th scope="col">What to test</th></tr></thead><tbody><tr><td>x=1</td><td>Left endpoint series</td></tr><tr><td>1&lt;x&lt;5</td><td>Ratio below 1</td></tr><tr><td>x=5</td><td>Right endpoint series</td></tr></tbody></table></div></div><div class="k-example"><p class="k-label">Worked example</p><p>A power series is <code>Σ (x−3)ⁿ/(n·2ⁿ)</code>, starting at n=1.</p><p><strong>[1,5)</strong>. The limiting absolute ratio is <code>|x−3|/2</code>, giving radius 2. At 1 the series is alternating harmonic and converges; at 5 it is harmonic and diverges.</p></div></article></main></body></html>
+.read-shell{width:min(100%, 680px);margin:0 auto}.single.read-page{background:#f5f5f7}</style></head><body class="single read-page"><main class="read-shell sample-card"><article class="study-card knowledge-card layout-graph" lang="en" data-ordinal="14"><header class="k-head"><h1 class="k-title">Power-series radius and endpoints</h1></header><div class="k-lead"><p>A power series converges absolutely inside its radius and diverges outside. The two endpoints must be tested separately.</p></div><div class="k-visual kind-table"><div class="data-table"><table><thead><tr><th scope="col">Position</th><th scope="col">What to test</th></tr></thead><tbody><tr><td>x=1</td><td>Left endpoint series</td></tr><tr><td>1&lt;x&lt;5</td><td>Ratio below 1</td></tr><tr><td>x=5</td><td>Right endpoint series</td></tr></tbody></table></div></div><div class="k-example"><p class="k-label">Worked example</p><p>For <code>Σ (x−3)ⁿ/(n·2ⁿ)</code> (<code>n≥1</code>), the ratio test gives limiting absolute ratio <code>|x−3|/2 &lt; 1</code>, so the radius of convergence is <code>2</code> around <code>x=3</code>. Testing the endpoints separately, <code>x=1</code> gives the convergent alternating harmonic series <code>Σ (−1)ⁿ/n</code> while <code>x=5</code> gives the divergent harmonic series <code>Σ 1/n</code>, yielding interval of convergence <strong><code>[1,5)</code></strong>.</p></div></article></main></body></html>

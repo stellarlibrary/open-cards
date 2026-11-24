@@ -480,9 +480,11 @@
   display: block;
   width: 100%;
   height: clamp(9rem, 64cqw, 20rem);
+  padding: .35rem;
   object-fit: contain;
   background: #f7f5ef;
-  border-radius: 5px;
+  border: 1px solid #e9e5dc;
+  border-radius: 6px;
 }
 .specimen figcaption {
   display: flex;
@@ -494,7 +496,13 @@
 }
 .specimen figcaption span:first-child { font-weight: 625; }
 .breed-portrait .kind-illustration { margin: calc(-1 * var(--inset)) calc(-1 * var(--inset)) 0; }
-.breed-portrait .specimen img { border-radius: 12px 12px 0 0; height: clamp(11rem, 75cqw, 20rem); }
+.breed-portrait .specimen img {
+  border: 0;
+  border-bottom: 1px solid var(--line);
+  border-radius: 12px 12px 0 0;
+  padding: .45rem .5rem 0;
+  height: clamp(11rem, 75cqw, 20rem);
+}
 .breed-portrait .specimen figcaption { padding-inline: var(--inset); }
 
 .read-shell{width:min(100%, 680px);margin:0 auto}.single.read-page{background:#f5f5f7}</style></head><body class="single read-page"><main class="read-shell sample-card"><article class="study-card knowledge-card layout-graph" lang="en" data-ordinal="26"><header class="k-head"><h1 class="k-title">An inner factor scales the trigonometric slope</h1></header><div class="k-lead"><p>When cosine takes a differentiable angle <code>u(x)</code> in radians, its derivative is <code>−sin(u(x))·u′(x)</code>. The slope per radian must be multiplied by the angle&#x27;s rate per unit of <code>x</code>.</p></div><div class="k-visual kind-flow"><ol class="visual-list flow"><li>Scale x by 5 to get the angle</li><li>Take its cosine</li></ol></div><div class="k-example"><p class="k-label">Worked example</p><p>In <code>f(x)=cos(5x)</code>, the inner angle <code>5x</code> has derivative <code>5</code>, so <code>f′(x)=−5sin(5x)</code>. At <code>x=π/10</code> the angle is <code>5π/10=π/2</code> and <code>sin(π/2)=1</code>.</p><p>The slope there is <code>−5·1=−5</code>. Using just <code>−sin(5x)</code> would give <code>−1</code> and would measure the change per radian rather than per unit of <code>x</code>.</p></div></article></main></body></html>

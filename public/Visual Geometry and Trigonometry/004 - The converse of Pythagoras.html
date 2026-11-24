@@ -480,9 +480,11 @@
   display: block;
   width: 100%;
   height: clamp(9rem, 64cqw, 20rem);
+  padding: .35rem;
   object-fit: contain;
   background: #f7f5ef;
-  border-radius: 5px;
+  border: 1px solid #e9e5dc;
+  border-radius: 6px;
 }
 .specimen figcaption {
   display: flex;
@@ -494,7 +496,13 @@
 }
 .specimen figcaption span:first-child { font-weight: 625; }
 .breed-portrait .kind-illustration { margin: calc(-1 * var(--inset)) calc(-1 * var(--inset)) 0; }
-.breed-portrait .specimen img { border-radius: 12px 12px 0 0; height: clamp(11rem, 75cqw, 20rem); }
+.breed-portrait .specimen img {
+  border: 0;
+  border-bottom: 1px solid var(--line);
+  border-radius: 12px 12px 0 0;
+  padding: .45rem .5rem 0;
+  height: clamp(11rem, 75cqw, 20rem);
+}
 .breed-portrait .specimen figcaption { padding-inline: var(--inset); }
 
-.read-shell{width:min(100%, 680px);margin:0 auto}.single.read-page{background:#f5f5f7}</style></head><body class="single read-page"><main class="read-shell sample-card"><article class="study-card knowledge-card layout-graph" lang="en" data-ordinal="4"><header class="k-head"><h1 class="k-title">The converse of Pythagoras</h1></header><div class="k-lead"><p>If the square of a triangle’s longest side equals the sum of the other squares, the angle facing that longest side is right.</p></div><div class="k-visual kind-graph"><svg class="diagram" viewBox="0 0 360 190" role="img" aria-label="Right triangle: horizontal side 4, vertical side 3, hypotenuse 5." xmlns="http://www.w3.org/2000/svg"><path class="curve" d="M 94.00,146.00 254.00,146.00 254.00,26.00 Z"/><path class="axis" d="M 239.00,146.00 239.00,131.00 254.00,131.00"/><path class="accent" d="M 137.00,146.00 135.00,136.00 129.00,128.00"/><text class="" x="147.00" y="133.00" text-anchor="middle">θ</text><text class="" x="175.00" y="168.00" text-anchor="middle">4</text><text class="" x="269.00" y="91.00" text-anchor="middle">3</text><text class="" x="163.00" y="83.00" text-anchor="middle">5</text></svg></div><div class="k-example"><p class="k-label">Worked example</p><p>Three straight supports of lengths 3, 4 and 5 form a triangle.</p><p>The <strong>side of length 5</strong>. Since <code>3²+4²=5²</code>, the converse of the Pythagorean theorem guarantees a right angle opposite the longest side.</p></div></article></main></body></html>
+.read-shell{width:min(100%, 680px);margin:0 auto}.single.read-page{background:#f5f5f7}</style></head><body class="single read-page"><main class="read-shell sample-card"><article class="study-card knowledge-card layout-graph" lang="en" data-ordinal="4"><header class="k-head"><h1 class="k-title">The converse of Pythagoras</h1></header><div class="k-lead"><p>If the square of a triangle’s longest side equals the sum of the other squares, the angle facing that longest side is right.</p></div><div class="k-visual kind-graph"><svg class="diagram" viewBox="0 0 360 190" role="img" aria-label="Right triangle: horizontal side 4, vertical side 3, hypotenuse 5." xmlns="http://www.w3.org/2000/svg"><path class="curve" d="M 94.00,146.00 254.00,146.00 254.00,26.00 Z"/><path class="axis" d="M 239.00,146.00 239.00,131.00 254.00,131.00"/><path class="accent" d="M 137.00,146.00 135.00,136.00 129.00,128.00"/><text class="" x="147.00" y="133.00" text-anchor="middle">θ</text><text class="" x="175.00" y="168.00" text-anchor="middle">4</text><text class="" x="269.00" y="91.00" text-anchor="middle">3</text><text class="" x="163.00" y="83.00" text-anchor="middle">5</text></svg></div><div class="k-example"><p class="k-label">Worked example</p><p>Three straight supports of lengths <code>3</code>, <code>4</code>, and <code>5</code> form a triangle satisfying <code>3² + 4² = 9 + 16 = 25 = 5²</code>. By the converse of the Pythagorean theorem, the triangle has a <strong>right angle opposite the longest side of length <code>5</code></strong>.</p></div></article></main></body></html>

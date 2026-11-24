@@ -480,9 +480,11 @@
   display: block;
   width: 100%;
   height: clamp(9rem, 64cqw, 20rem);
+  padding: .35rem;
   object-fit: contain;
   background: #f7f5ef;
-  border-radius: 5px;
+  border: 1px solid #e9e5dc;
+  border-radius: 6px;
 }
 .specimen figcaption {
   display: flex;
@@ -494,7 +496,13 @@
 }
 .specimen figcaption span:first-child { font-weight: 625; }
 .breed-portrait .kind-illustration { margin: calc(-1 * var(--inset)) calc(-1 * var(--inset)) 0; }
-.breed-portrait .specimen img { border-radius: 12px 12px 0 0; height: clamp(11rem, 75cqw, 20rem); }
+.breed-portrait .specimen img {
+  border: 0;
+  border-bottom: 1px solid var(--line);
+  border-radius: 12px 12px 0 0;
+  padding: .45rem .5rem 0;
+  height: clamp(11rem, 75cqw, 20rem);
+}
 .breed-portrait .specimen figcaption { padding-inline: var(--inset); }
 
-.read-shell{width:min(100%, 680px);margin:0 auto}.single.read-page{background:#f5f5f7}</style></head><body class="single read-page"><main class="read-shell sample-card"><article class="study-card knowledge-card layout-staff" lang="en" data-ordinal="12"><header class="k-head"><h1 class="k-title">A dotted note</h1></header><div class="k-visual kind-diagram"><svg class="diagram" viewBox="0 0 360 152" role="img" aria-label="In four-four, a dotted quarter note is followed by an eighth note, both on pitch G4." xmlns="http://www.w3.org/2000/svg"><line class="staff-rule" x1="16.00" y1="91.00" x2="345.00" y2="91.00"/><line class="staff-rule" x1="16.00" y1="81.00" x2="345.00" y2="81.00"/><line class="staff-rule" x1="16.00" y1="71.00" x2="345.00" y2="71.00"/><line class="staff-rule" x1="16.00" y1="61.00" x2="345.00" y2="61.00"/><line class="staff-rule" x1="16.00" y1="51.00" x2="345.00" y2="51.00"/><text class="clef" x="36.00" y="89.00" text-anchor="middle">𝄞</text><text class="" x="60.00" y="67.00" text-anchor="middle">4</text><text class="" x="60.00" y="86.00" text-anchor="middle">4</text><ellipse class="note" cx="133" cy="81" rx="7" ry="4.3" transform="rotate(-16 133 81)"/><line class="curve" x1="139.00" y1="81.00" x2="139.00" y2="52.00"/><circle class="dot" cx="146.00" cy="76.00" r="2.00"/><ellipse class="note" cx="245" cy="81" rx="7" ry="4.3" transform="rotate(-16 245 81)"/><line class="curve" x1="251.00" y1="81.00" x2="251.00" y2="52.00"/><path class="curve" d="M 251.00,52.00 261.00,61.00 262.00,67.00 260.00,73.00"/><text class="" x="135.00" y="135.00" text-anchor="middle">Dotted quarter</text><text class="" x="250.00" y="135.00" text-anchor="middle">Eighth</text></svg></div><div class="k-lead"><p>A single dot adds half the undotted duration. A dotted quarter note lasts a quarter plus an eighth.</p></div><div class="k-example"><p class="k-label">Hear and read it</p><p>In <code>4/4</code>, a quarter note occupies one beat and an eighth note half a beat. A dot adds half the undotted note’s value.</p><p><strong>Two beats.</strong> The dotted quarter takes <code>1 + 1/2</code> beats; the eighth adds <code>1/2</code>, bringing the total to <code>2</code>.</p></div></article></main></body></html>
+.read-shell{width:min(100%, 680px);margin:0 auto}.single.read-page{background:#f5f5f7}</style></head><body class="single read-page"><main class="read-shell sample-card"><article class="study-card knowledge-card layout-staff" lang="en" data-ordinal="12"><header class="k-head"><h1 class="k-title">A dotted note</h1></header><div class="k-visual kind-diagram"><svg class="diagram" viewBox="0 0 360 152" role="img" aria-label="In four-four, a dotted quarter note is followed by an eighth note, both on pitch G4." xmlns="http://www.w3.org/2000/svg"><line class="staff-rule" x1="16.00" y1="91.00" x2="345.00" y2="91.00"/><line class="staff-rule" x1="16.00" y1="81.00" x2="345.00" y2="81.00"/><line class="staff-rule" x1="16.00" y1="71.00" x2="345.00" y2="71.00"/><line class="staff-rule" x1="16.00" y1="61.00" x2="345.00" y2="61.00"/><line class="staff-rule" x1="16.00" y1="51.00" x2="345.00" y2="51.00"/><text class="clef" x="36.00" y="89.00" text-anchor="middle">𝄞</text><text class="" x="60.00" y="67.00" text-anchor="middle">4</text><text class="" x="60.00" y="86.00" text-anchor="middle">4</text><ellipse class="note" cx="133" cy="81" rx="7" ry="4.3" transform="rotate(-16 133 81)"/><line class="curve" x1="139.00" y1="81.00" x2="139.00" y2="52.00"/><circle class="dot" cx="146.00" cy="76.00" r="2.00"/><ellipse class="note" cx="245" cy="81" rx="7" ry="4.3" transform="rotate(-16 245 81)"/><line class="curve" x1="251.00" y1="81.00" x2="251.00" y2="52.00"/><path class="curve" d="M 251.00,52.00 261.00,61.00 262.00,67.00 260.00,73.00"/><text class="" x="135.00" y="135.00" text-anchor="middle">Dotted quarter</text><text class="" x="250.00" y="135.00" text-anchor="middle">Eighth</text></svg></div><div class="k-lead"><p>A single dot adds half the undotted duration. A dotted quarter note lasts a quarter plus an eighth.</p></div><div class="k-example"><p class="k-label">Hear and read it</p><p>In <code>4/4</code>, where a quarter note gets one beat, the shown rhythm pairs a dotted quarter note with a single eighth note.</p><p>Together they fill <strong>two beats</strong>: the dotted quarter lasts <code>1 + 1/2 = 1.5</code> beats, and the following eighth note adds the remaining <code>1/2</code> beat to complete beat two.</p></div></article></main></body></html>
